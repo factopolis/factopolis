@@ -2,12 +2,13 @@
   "title": "LieDB"
 }
 
-LieDB is a non-partisan site to track when politicians lie.  We
-don't do any fact-checking ourselves, but instead provide links to
-trusted third-parties who have verified claims to be false.
+LieDB is a non-partisan, collaboratively edited site to track when
+politicians lie.  We don't do any fact-checking ourselves, but instead
+provide links to trusted third-parties who have verified claims to be
+false.
 
-While anyone is free to submit new material, but this site is **not**
-a wiki.  Contributions are checked before they are posted, and all
+While anyone is free to submit new material, but this site is not a
+wiki.  Contributions are checked before they are posted, and all
 sources must be credible.
 
 Political party doesn't matter, and there are no geographical or
@@ -17,3 +18,9 @@ be political figure.  Examples of political figures include:
  * Politicians
  * Political staffers in public-facing roles such as press secretaries
  * Pundits & talking heads
+
+If you're interested in helping improve LieDB (there is a *lot* to
+do!), head over to the [GitHub
+project](https://github.com/liedb/liedb).  You can file issues,
+including as requesting new entries in the database, or even file pull
+requests after making the change yourself.
