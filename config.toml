@@ -2,6 +2,9 @@ languageCode = "en-us"
 title = "LieDB"
 baseurl = "https://liedb.github.io/"
 
+[params]
+analytics = "UA-101930305-1"
+
 [[params.navlinks]]
 name = "Home"
 url = ""
