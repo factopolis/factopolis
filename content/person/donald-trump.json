@@ -690,6 +690,21 @@
                     "source": "https://www.dailyherald.com/article/20170624/news/306249964"
                 }
             ]
+        },
+        {
+            "id": "only-reporters-care-about-trumps-tax-returns",
+            "instances": [
+                {
+                    "date": "2017-01-11",
+                    "quote": "You know, the only one that cares about my tax returns are the reporters, OK?",
+                    "source": "http://www.cnbc.com/2017/01/11/transcript-of-president-elect-donald-j-trumps-news-conference.html"
+                },
+                {
+                    "date": "2017-05-11",
+                    "quote": "…nobody cares about my tax return except for the reporters.",
+                    "source": "http://www.economist.com/Trumptranscript"
+                }
+            ]
         }
     ]
 }
