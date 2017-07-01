@@ -1,0 +1,35 @@
+<div id="menu" class="hidden-xs col-sm-4 col-md-3">
+  <div id="menu-content" class="vertical-align">
+    {{ if eq .Type "person" }}
+      <h1 class="text-center"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+      {{ if isset .Params "picture" }}
+        <img id="profile-pic" src="{{ .Params.picture }}" alt="{{ .Title }}" class="img-circle center-block">
+      {{ end }}
+      <div id="social" class="text-center">
+	{{ if .Params.wikipedia }}
+	<a href="https://en.wikipedia.org/wiki/{{ .Params.wikipedia }}"><i class="fa fa-wikipedia-w fa-2x" aria-hidden="true"></i></a>
+	{{ end }}
+
+	{{ if .Params.twitter }}
+	<a href="https://twitter.com/{{ .Params.twitter }}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+	{{ end }}
+
+	{{ if .Params.web }}
+	<a href="{{ .Params.web }}"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></a>
+	{{ end }}
+      </div>
+    {{ else }}
+      {{ if eq .Type "claim" }}
+        <h1 class="text-center"><a href="{{ .Permalink }}">Claim: {{ .Title }}</a></h1>
+      {{ else }}
+        <h1 class="text-center"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+      {{ end }}
+      <div id="links" class="text-center">
+        {{ $url := .Site.BaseURL }}
+        {{ range .Site.Params.navlinks }}
+        <a href="{{ $url }}{{ .url }}">{{ .name }}</a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>

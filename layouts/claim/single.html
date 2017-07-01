@@ -1,0 +1,84 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+
+{{ $claimID := .File.BaseFileName }}
+{{ $claim := getJSON "content/claim/" .File.BaseFileName ".json" }}
+
+<main>
+  <header>
+    <h1>Claim: {{ $claim.title }}</h1>
+  </header>
+
+  <article>
+    {{ if .Content }}
+    <section>
+      <h2>Details</h2>
+
+      {{ .Content }}
+    </section>
+    {{ end }}
+
+    <section>
+      <h2>The Truth</h2>
+
+      <p>{{ $claim.summary }}</p>
+
+      <section>
+	<h3>Sources</h3>
+
+	{{ range $check := $claim.checks }}
+	<blockquote>
+	  <p>
+	    {{ if $check.quote }}
+	    {{ $check.quote | markdownify }}
+	    {{ else }}
+	    {{ $check.shortQuote | markdownify }}
+	    {{ end }}
+	  </p>
+
+	  <footer>
+	    <cite>
+	      {{ if $check.url }}<a href="{{ $check.url }}">{{ end }}
+	      {{ $check.name }}
+  	      {{ if $check.date }}
+  	        on {{ $check.date }}
+	      {{ end }}
+	      {{ if $check.url }}</a>{{ end }}
+	    </cite>
+	  </footer>
+	</blockquote>
+	{{ end }}
+      </section>
+    </section>
+
+    <section>
+      <h2>Claimants</h2>
+
+      <ul>
+	{{ range $claimant := $claim.claimants }}
+	{{ $claimantData := getJSON "content/person/" $claimant ".json" }}
+	<li>
+	  <a href="/person/{{ $claimant }}#claim-{{ $claimID }}">{{ $claimantData.name }}</a>
+	  {{ range where $claimantData.claims "id" "==" $claimID }}
+	    {{ $claimCount := .instances | len }}
+	    {{ if (sub $claimCount 1) }}
+	      on {{ $claimCount }} occasions
+	    {{ end }}
+	  {{ end }}
+	</li>
+	{{ end }}
+      </ul>
+
+    </section>
+  </article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+  <a href=" {{ .Site.BaseURL }}" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+{{ if .Site.DisqusShortname }}
+  {{ template "_internal/disqus.html" . }}
+{{ end }}
+
+{{ partial "footer.html" . }}

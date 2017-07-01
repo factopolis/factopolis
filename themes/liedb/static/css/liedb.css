@@ -1,0 +1,37 @@
+ol.offices-held {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.fact-check-links {
+    list-style-type: none;
+    padding: 0;
+    float: right;
+}
+
+main.person div.lie-counter {
+    clear: right;
+}
+
+ul.fact-check-links > li {
+    padding: 0 0.5em;
+    display: inline-block;
+}
+
+dl.claims {
+    margin-left: 1em;
+}
+
+dl.claims > dd {
+    margin-bottom: 3em;
+    margin-left: 1em;
+}
+
+dl.claims > dd blockquote {
+    font-size: 100%;
+}
+
+#menu-content h1 {
+    text-transform: none;
+    font-variant: small-caps;
+}

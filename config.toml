@@ -1,0 +1,15 @@
+languageCode = "en-us"
+title = "LieDB"
+baseurl = "https://liedb.com/"
+
+[[params.navlinks]]
+name = "Home"
+url = ""
+
+[[params.navlinks]]
+name = "Claims"
+url = "claim/"
+
+[[params.navlinks]]
+name = "People"
+url = "person/"

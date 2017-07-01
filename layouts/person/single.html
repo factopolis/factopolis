@@ -1,0 +1,96 @@
+{{ $data := getJSON "content/person/" .File.BaseFileName ".json" }}
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+
+<main class="person">
+  <header>
+    <ul class="fact-check-links">
+      {{ if .Params.politifact }}
+        <li>
+	  <a href="http://www.politifact.com/personalities/{{ .Params.politifact }}/"><img src="{{ .Site.BaseURL }}/img/PolitiFact.png" alt="PolitiFact" /></a>
+	</li>
+      {{ end }}
+      {{ if .Params.factcheckorg }}
+        <li>
+	  <a href="http://www.factcheck.org/person/{{ .Params.factcheckorg }}/"><img src="{{ .Site.BaseURL }}/img/FactCheck.org.png" alt="FactCheck.org" /></a>
+	</li>
+      {{ end }}
+      {{ if .Params.snopes }}
+        <li>
+	  <a href="http://www.snopes.com/tag/{{ .Params.factcheckorg }}/"><img src="{{ .Site.BaseURL }}/img/Snopes.png" alt="Snopes" /></a>
+	</li>
+      {{ end }}
+    </ul>
+
+    <h1>{{ $data.name }}</h1>
+
+    <div class="lie-counter">
+      <p>
+	We currently have {{ $data.claims | len }} false claims made
+	by {{ $data.name }} in our database (not counting repeats).
+      </p>
+    </div>
+
+    <h4>Offices Held</h4>
+
+    <ol class="offices-held">
+    {{ range $office := $data.offices }}
+      <li>
+	{{ $office.title }} {{ if $office.from }}({{ dateFormat "2006" $office.from }}-{{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }}){{ end }}
+      </li>
+    {{ end }}
+    </ol>
+  </header>
+
+  <article>
+    <h2>False Claims</h2>
+
+    <dl class="claims">
+      {{ range $claim := $data.claims }}
+      {{ $claimInfo := getJSON "content/claim/" $claim.id ".json" }}
+      <dt id="claim-{{ $claim.id }}">
+	<h3><a href="/claim/{{ $claim.id }}">{{ $claimInfo.title }}</a></h3>
+      </dt>
+
+      <dd>
+	<div class="claim-quotes">
+	  {{ range $instance := $claim.instances }}
+	  <blockquote>
+	    <p>{{ $instance.quote | markdownify }}</p>
+
+	    <footer>
+	      <cite>
+		{{ if $instance.source }}<a href="{{ $instance.source }}">{{ end }}
+		{{ $data.name }}
+  		{{ if $instance.date }}
+  		  on {{ $instance.date }}
+		{{ end }}
+		{{ if $instance.source }}</a>{{ end }}
+	      </cite>
+	    </footer>
+	  </blockquote>
+	  {{ end }}
+	</div>
+
+	<div>
+	  <h4>The Truth</h4>
+
+	  <p>
+	    {{ $claimInfo.summary | markdownify }}
+	  </p>
+	</div>
+      </dd>
+      {{ end }}
+    </dl>
+  </article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+  <a href=" {{ .Site.BaseURL }}" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+{{ if .Site.DisqusShortname }}
+  {{ template "_internal/disqus.html" . }}
+{{ end }}
+
+{{ partial "footer.html" . }}

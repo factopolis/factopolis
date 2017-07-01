@@ -1,0 +1,695 @@
+{
+    "name": "Donald Trump",
+    "offices": [
+        {
+            "title": "President of the United States of America",
+            "from": "2017-01-21"
+        }
+    ],
+    "claims": [
+        {
+            "id": "trump-opposed-iraq",
+            "instances": [
+                {
+                    "date": "2017-01-21",
+                    "quote": "I wasn't a fan of Iraq. I didn't want to go into Iraq.",
+                    "source": "http://transcripts.factcheck.org/remarks-president-trump-vice-president-pence-cia-headquarters/"
+                },
+                {
+                    "date": "2017-04-02",
+                    "quote": "And I was totally opposed to the war in the Middle East which I think finally has been proven, people tried very hard to say I wasn’t but you’ve seen that it is now improving.",
+                    "source": "http://transcripts.factcheck.org/remarks-president-trump-vice-president-pence-cia-headquarters/"
+                }
+            ]
+        },
+        {
+            "id": "trump-time-cover-frequency",
+            "instances": [
+                {
+                    "date": "2017-01-21",
+                    "quote": "A reporter for Time magazine — and I have been on their cover 14 or 15 times. I think we have the all-time record in the history of Time magazine.",
+                    "source": "http://transcripts.factcheck.org/remarks-president-trump-vice-president-pence-cia-headquarters/"
+                }
+            ]
+        },
+        {
+            "id": "2016-election-voter-fraud",
+            "instances": [
+                {
+                    "date": "2017-01-23",
+                    "quote": "Between 3 million and 5 million illegal votes caused me to lose the popular vote.",
+                    "source": "https://www.washingtonpost.com/news/post-politics/wp/2017/01/23/at-white-house-trump-tells-congressional-leaders-3-5-million-illegal-ballots-cost-him-the-popular-vote/"
+                },
+                {
+                    "date": "2017-01-25",
+                    "quote": "Take a look at the Pew reports (which show voter fraud.)"
+                },
+                {
+                    "date": "2017-03-22",
+                    "quote": "Well now if you take a look at the votes, when I say that, I mean mostly they register wrong, in other words, for the votes, they register incorrectly, and/or illegally. And they then vote. You have tremendous numbers of people.",
+                    "source": "http://time.com/4710456/donald-trump-time-interview-truth-falsehood/"
+                }
+            ]
+        },
+        {
+            "id": "trump-inauguration-crowd-size",
+            "instances": [
+                {
+                    "date": "2017-01-25",
+                    "quote": "Now, the audience was the biggest ever. But this crowd was massive. Look how far back it goes. This crowd was massive."
+                }
+            ]
+        },
+        {
+            "id": "pew-report-showed-2016-voter-fraud",
+            "instances": [
+                {
+                    "date": "2017-01-25",
+                    "quote": "Take a look at the Pew reports (which show voter fraud.)"
+                }
+            ]
+        },
+        {
+            "id": "aca-caused-millions-to-lose-insurance",
+            "instances": [
+                {
+                    "date": "2017-01-25",
+                    "quote": "You had millions of people that now aren't insured anymore."
+                }
+            ]
+        },
+        {
+            "id": "two-people-killed-during-obama-speech",
+            "instances": [
+                {
+                    "date": "2017-01-25",
+                    "quote": "So, look, when President Obama was there two weeks ago making a speech, very nice speech. Two people were shot and killed during his speech. You can't have that."
+                }
+            ]
+        },
+        {
+            "id": "unvettable",
+            "instances": [
+                {
+                    "date": "2017-01-26",
+                    "quote": "We've taken in tens of thousands of people. We know nothing about them. They can say they vet them. They didn't vet them. They have no papers. How can you vet somebody when you don't know anything about them and you have no papers? How do you vet them? You can't."
+                },
+                {
+                    "date": "2017-02-18",
+                    "quote": "And there was no way to vet those people. There was no documentation. There was no nothing."
+                }
+            ]
+        },
+        {
+            "id": "trump-saved-millions-on-f-35",
+            "instances": [
+                {
+                    "date": "2017-01-26",
+                    "quote": "I cut off hundreds of millions of dollars off one particular plane, hundreds of millions of dollars in a short period of time. It wasn't like I spent, like, weeks, hours, less than hours, and many, many hundreds of millions of dollars. And the plane's going to be better."
+                },
+                {
+                    "date": "2017-02-06",
+                    "quote": "I have already saved more than $700 million when I got involved in the negotiation on the F-35."
+                },
+                {
+                    "date": "2017-02-07",
+                    "quote": "I saved more than $600 million. I got involved in negotiation on a fighter jet, the F-35."
+                },
+                {
+                    "date": "2017-02-27",
+                    "quote": "On one plane, on a small order of one plane, I saved $725 million. And I would say I devoted about, if I added it up, all those calls, probably about an hour. So I think that might be my highest and best use."
+                },
+                {
+                    "date": "2017-03-13",
+                    "quote": "I saved a lot of money on those jets, didn't I? Did I do a good job? More than $725 million on them."
+                },
+                {
+                    "date": "2017-03-15",
+                    "quote": "On the airplanes, I saved $725 million. Probably took me a half an hour if you added up all of the times."
+                },
+                {
+                    "date": "2017-03-20",
+                    "quote": "With just one negotiation on one set of airplanes, I saved the taxpayers of our country over $700 million."
+                },
+                {
+                    "date": "2017-03-21",
+                    "quote": "To save taxpayer dollars, I’ve already begun negotiating better contracts for the federal government — saving over $700 million on just one set of airplanes of which there are many sets."
+                },
+                {
+                    "date": "2017-04-06",
+                    "quote": "If you look at the kind of cost-cutting we’ve been able to achieve with the military and at the same time ordering vast amounts of equipment — saved hundreds of millions of dollars on airplanes, and really billions, because if you take that out over a period of years it’s many billions of dollars — I think we’ve had a tremendous success."
+                },
+                {
+                    "date": "2017-04-21",
+                    "quote": "On 90 planes I saved $725 million. It's actually a little bit more than that, but it's $725 million."
+                },
+                {
+                    "date": "2017-04-28",
+                    "quote": "The F-35 fighter jet program — it was way over budget. I’ve saved $725 million plus, just by getting involved in the negotiation."
+                },
+                {
+                    "date": "2017-04-29",
+                    "quote": "I've already saved more than $725 million on a simple order of F-35 planes. I got involved in the negotiation."
+                },
+                {
+                    "date": "2017-04-29",
+                    "quote": "I was negotiating to reduce the price of the big fighter jet contract, the F-35, which was totally out of control. I will save billions and billions and billions of dollars."
+                },
+                {
+                    "date": "2017-05-01",
+                    "quote": "The F-35 fighter jet — I saved — I got involved in the negotiation. It's 2,500 jets. I negotiated for 90 planes, lot 10. I got $725 million off the price."
+                },
+                {
+                    "date": "2017-05-02",
+                    "quote": "I love the Air Force.  I love those planes.  I love buying those planes at a reduced price.  I have been really — I have cut billions — I have to tell you this, and they can check, right, Martha?  I have cut billions and billions of dollars off plane contracts sitting here.  Do they give me credit?  No, but that’s okay.",
+                    "source": "https://www.whitehouse.gov/the-press-office/2017/05/02/remarks-president-trump-presentation-commander-chief-trophy-united"
+                }
+            ]
+        },
+        {
+            "id": "nyt-apologized-to-trump-for-negative-coverage",
+            "instances": [
+                {
+                    "date": "2017-01-28",
+                    "quote": "Thr [sic] coverage about me in the @nytimes and the @washingtonpost gas [sic] been so false and angry that the times actually apologized to its….. …dwindling subscribers and readers.They got me wrong right from the beginning and still have not changed course, and never will. DISHONEST",
+                    "source": "https://nypost.com/2017/01/28/trump-slams-new-york-times-washington-post-in-tweets/"
+                },
+                {
+                    "date": "2017-02-04",
+                    "quote": "After being forced to apologize for its bad and inaccurate coverage of me after winning the election, the FAKE NEWS @nytimes is still lost!"
+                },
+                {
+                    "date": "2017-02-06",
+                    "quote": "The failing @nytimes was forced to apologize to its subscribers for the poor reporting it did on my election win. Now they are worse!"
+                },
+                {
+                    "date": "2017-03-29",
+                    "quote": "Remember when the failing @nytimes apologized to its subscribers, right after the election, because their coverage was so wrong. Now worse!"
+                },
+                {
+                    "date": "2017-04-29",
+                    "quote": "They're incompetent, dishonest people who after an election had to apologize because they covered it, us, me, but all of us, they covered it so badly that they felt they were forced to apologize because their predictions were so bad."
+                }
+            ]
+        },
+        {
+            "id": "trump-84-percent-cuban-american-vote-2016",
+            "instances": [
+                {
+                    "date": "2017-01-29",
+                    "quote": "The Cuban-Americans, I got 84 percent of that vote."
+                }
+            ]
+        },
+        {
+            "id": "delays-caused-by-delta-not-travel-ban",
+            "instances": [
+                {
+                    "date": "2017-01-30",
+                    "quote": "Big problems at airports were caused by Delta computer outage."
+                },
+                {
+                    "date": "2017-02-16",
+                    "quote": "That’s the other thing that was wrong with the travel ban. You had Delta with a massive problem with their computer system at the airports."
+                }
+            ]
+        },
+        {
+            "id": "only-109-affected-by-travel-ban",
+            "instances": [
+                {
+                    "date": "2017-01-30",
+                    "quote": "Only 109 people out of 325,000 were detained and held for questioning. Big problems at airports were caused by Delta computer outage."
+                },
+                {
+                    "date": "2017-02-05",
+                    "quote": "We had 109 people out of hundreds of thousands of travelers and all we did was vet those people very, very carefully."
+                }
+            ]
+        },
+        {
+            "id": "trump-protesters-paid",
+            "instances": [
+                {
+                    "date": "2017-02-03",
+                    "quote": "Professional anarchists, thugs and paid protesters are proving the point of the millions of people who voted to MAKE AMERICA GREAT AGAIN!",
+                    "source": "https://twitter.com/realDonaldTrump/status/827483841589891073"
+                },
+                {
+                    "date": "2017-04-16",
+                    "quote": "Someone should look into who paid for the small organized rallies yesterday. The election is over!",
+                    "source": "https://twitter.com/realdonaldtrump/status/853597199619543041"
+                }
+            ]
+        },
+        {
+            "id": "terrorism-not-reported-on",
+            "instances": [
+                {
+                    "date": "2017-02-06",
+                    "quote": "Radical Islamic terrorists are determined to strike our homeland as they did on 9 / 11, as they did from Boston to Orlando to San Bernardino, and all across Europe. You've seen what happened in Paris and Nice. All over Europe it's happening. It's gotten to a point where it's not even being reported. And in many cases the very, very dishonest press doesn't want to report it. They have their reasons and you understand that."
+                }
+            ]
+        },
+        {
+            "id": "obama-policies-created-isis",
+            "instances": [
+                {
+                    "date": "2017-02-06",
+                    "quote": "And the previous administration allowed it to happen because we shouldn't have been in Iraq, but we shouldn't have gotten out the way we got out. It created a vacuum, ISIS was formed."
+                }
+            ]
+        },
+        {
+            "id": "highest-murder-rate-in-47-years",
+            "instances": [
+                {
+                    "date": "2017-02-07",
+                    "quote": "And yet the murder rate in our country is the highest it’s been in 47 years, right? Did you know that? Forty-seven years."
+                }
+            ]
+        },
+        {
+            "id": "cuomo-didnt-ask-blumenthal-about-vietnam",
+            "instances": [
+                {
+                    "date": "2017-02-09",
+                    "quote": "Chris Cuomo, in his interview with Sen. Blumenthal, never asked him about his long-term lie about his brave “service” in Vietnam. FAKE NEWS!",
+                    "source": "https://twitter.com/realDonaldTrump/status/829681034564341760"
+                }
+            ]
+        },
+        {
+            "id": "blumenthal-misrepresented-gorsuch",
+            "instances": [
+                {
+                    "date": "2017-02-09",
+                    "quote": "Sen. Richard Blumenthal… now misrepresents what Judge Gorsuch told him?",
+                    "source": "https://twitter.com/realDonaldTrump/status/829681034564341760"
+                }
+            ]
+        },
+        {
+            "id": "trump-didnt-know-about-flynn",
+            "instances": [
+                {
+                    "date": "2017-02-10",
+                    "quote": "I don’t know about it. I haven’t seen it. What report is that?"
+                }
+            ]
+        },
+        {
+            "id": "media-didnt-cover-trump-florida-crowds",
+            "instances": [
+                {
+                    "date": "2017-02-12",
+                    "quote": "Just leaving Florida. Big crowds of enthusiastic supporters lining the road that the FAKE NEWS media refuses to mention. Very dishonest!",
+                    "source": "https://twitter.com/realDonaldTrump/status/830904083519242241"
+                }
+            ]
+        },
+        {
+            "id": "2016-biggest-electoral-college-win-since-reagan",
+            "instances": [
+                {
+                    "date": "2017-02-16",
+                    "quote": "We got 306 because people came out and voted like they've never seen before so that's the way it goes. I guess it was the biggest Electoral College win since Ronald Reagan.",
+                    "source": "http://time.com/4673993/donald-trump-campaign-electoral-college-win/"
+                }
+            ]
+        },
+        {
+            "id": "trump-responsible-for-10k-walmart-jobs",
+            "instances": [
+                {
+                    "date": "2017-02-16",
+                    "quote": "Walmart announced it will create 10,000 jobs in the United States just this year because of our various plans and initiatives.",
+                    "source": "https://www.whitehouse.gov/the-press-office/2017/02/16/remarks-president-trump-press-conference"
+                }
+            ]
+        },
+        {
+            "id": "wikiliks-info-unclassified",
+            "instances": [
+                {
+                    "date": "2017-02-16",
+                    "quote": "When WikiLeaks, which I had nothing to do with, comes out and happens to give, they’re not giving classified information."
+                }
+            ]
+        },
+        {
+            "id": "travel-ban-rollout-smooth",
+            "instances": [
+                {
+                    "date": "2017-02-16",
+                    "quote": "Let me tell you about the travel ban.  We had a very smooth rollout of the travel ban. But we had a bad court. Got a bad decision.",
+                    "source": "https://www.whitehouse.gov/the-press-office/2017/02/16/remarks-president-trump-press-conference"
+                }
+            ]
+        },
+        {
+            "id": "clinton-gave-20-percent-of-americas-uranium-to-russia",
+            "instances": [
+                {
+                    "date": "2016-10-24",
+                    "quote": "Hillary Clinton gave them 20 percent of our uranium — gave Russia for a big payment.",
+                    "source": "https://www.washingtonpost.com/news/fact-checker/wp/2016/10/26/the-facts-behind-trumps-repeated-claim-about-hillary-clintons-role-in-the-russian-uranium-deal/"
+                },
+                {
+                    "date": "2016-10-25",
+                    "quote": "Remember that Hillary Clinton gave Russia 20 percent of American uranium and, you know, she was paid a fortune. You know, they got a tremendous amount of money.",
+                    "source": "https://www.washingtonpost.com/news/fact-checker/wp/2016/10/26/the-facts-behind-trumps-repeated-claim-about-hillary-clintons-role-in-the-russian-uranium-deal/"
+                },
+                {
+                    "date": "2017-02-16",
+                    "quote": "You know, they say I’m close to Russia. Hillary Clinton gave away 20 percent of the uranium in the United States. She’s close to Russia.",
+                    "source": "https://www.whitehouse.gov/the-press-office/2017/02/16/remarks-president-trump-press-conference"
+                }
+            ]
+        },
+        {
+            "id": "nobody-mentioned-clinton-receiving-debate-questions",
+            "instances": [
+                {
+                    "date": "2017-02-16",
+                    "quote": "They’re giving stuff — what was said at an office about Hillary cheating on the debates. Which, by the way, nobody mentions. Nobody mentions that Hillary received the questions to the debates.",
+                    "source": "https://www.whitehouse.gov/the-press-office/2017/02/16/remarks-president-trump-press-conference"
+                }
+            ]
+        },
+        {
+            "id": "terror-attack-in-sweden",
+            "instances": [
+                {
+                    "date": "2017-02-18",
+                    "quote": "We’ve got to keep our country safe. You look at what’s happening in Germany. You look at what’s happening last night in Sweden. Sweden, who would believe this? Sweden. They took in large numbers. They’re having problems like they never thought possible. You look at what’s happening in Brussels. You look at what’s happening all over the world. Take a look at Nice. Take a look at Paris."
+                }
+            ]
+        },
+        {
+            "id": "cpac-lines-six-blocks",
+            "instances": [
+                {
+                    "date": "2017-02-24",
+                    "quote": "By the way, you folks are in here, the place is packed — there are lines that go back six blocks.  And I tell you that because you won’t read about it, okay?  But there are lines that go back six blocks.  There is such love in this country for everything we stand for.  You saw that on Election Day.  And you’re going to see it more and more.",
+                    "source": "https://www.whitehouse.gov/the-press-office/2017/02/24/remarks-president-trump-conservative-political-action-conference"
+                }
+            ]
+        },
+        {
+            "id": "ice-endorsed-trump",
+            "instances": [
+                {
+                    "date": "2017-02-24",
+                    "quote": "They came and endorsed me, ICE came and endorsed me.  They never endorsed a presidential candidate before.  They might not even be allowed to.  But they were disgusted with what they saw.",
+                    "source": "https://www.whitehouse.gov/the-press-office/2017/02/24/remarks-president-trump-conservative-political-action-conference"
+                }
+            ]
+        },
+        {
+            "id": "obamacare-increased-coverage-by-very-few-people",
+            "instances": [
+                {
+                    "date": "2017-02-24",
+                    "quote": "Obamacare covers very few people.\n\nAnd remember, deduct from the number all of the people that had great health care that they loved, that was taken away from them; was taken away from them.",
+                    "source": "https://www.whitehouse.gov/the-press-office/2017/02/24/remarks-president-trump-conservative-political-action-conference"
+                },
+                {
+                    "date": "2017-03-13",
+                    "quote": "First of all, it covers very few people.",
+                    "source": "https://www.nytimes.com/2017/03/13/us/politics/fact-check-trump-obamacare-health-care.html"
+                }
+            ]
+        },
+        {
+            "id": "half-obamacare-insurers-stopped-participating",
+            "instances": [
+                {
+                    "date": "2017-02-27",
+                    "quote": "Since Obamacare went into effect, nearly half of the insurers are stopped and have stopped from participating in the Obamacare exchanges.",
+                    "source": "https://www.whitehouse.gov/the-press-office/2017/02/27/remarks-president-trump-listening-session-health-insurance-company-ceos"
+                }
+            ]
+        },
+        {
+            "id": "trump-nato-partners-increased-spending",
+            "instances": [
+                {
+                    "date": "2017-02-28",
+                    "quote": "We strongly support NATO, an alliance forged through the bonds of two World Wars that dethroned fascism, and a Cold War that defeated communism.\n\nBut our partners must meet their financial obligations.\n\nAnd now, based on our very strong and frank discussions, they are beginning to do just that.",
+                    "source": "http://www.cnn.com/2017/02/28/politics/donald-trump-speech-transcript-full-text/index.html"
+                },
+                {
+                    "date": "2017-04-29",
+                    "quote": "We're also getting NATO countries to finally step up and contribute their fair share. They've begun to increase their contributions by billions of dollars, but we are not going to be satisfied until everyone pays what they owe.",
+                    "source": "http://www.cnn.com/TRANSCRIPTS/1704/29/se.02.html"
+                },
+                {
+                    "date": "2017-05-08",
+                    "quote": "You know we’ve gotten billions of dollars more in NATO than hat we’re getting. All because of me. I mean it’s not like a bragging thing, I’m just saying.",
+                    "source": "http://time.com/4775040/donald-trump-time-interview-being-president/"
+                }
+            ]
+        },
+        {
+            "id": "waters-of-us-costing-hundreds-of-thousands-of-jobs",
+            "instances": [
+                {
+                    "date": "2017-02-28",
+                    "quote": "But a few years ago, the EPA decided that navigable waters can mean nearly every puddle or every ditch on a farmer’s land or anyplace else that they decide. Right? It was a massive power grab. The EPA’s regulators were putting people out of jobs by the hundreds of thousands and regulations and permits started treating our wonderful small farmers and small businesses as if they were a major industrial polluter. They treated them horribly. Horribly.",
+                    "source": "https://www.whitehouse.gov/the-press-office/2017/02/28/remarks-president-trump-signing-waters-united-states-wotus-executive"
+                }
+            ]
+        },
+        {
+            "id": "5-year-lobbying-ban-on-executive-branch",
+            "instances": [
+                {
+                    "date": "2017-02-28",
+                    "quote": "We have begun to drain the swamp of government corruption by imposing a 5-year ban on lobbying by Executive Branch Officials – and a lifetime ban on becoming lobbyists for a foreign government.",
+                    "source": "https://www.whitehouse.gov/the-press-office/2017/02/28/remarks-president-trump-signing-waters-united-states-wotus-executive"
+                }
+            ]
+        },
+        {
+            "id": "democrats-not-approving-trump-cabinet",
+            "instances": [
+                {
+                    "date": "2017-03-03",
+                    "quote": "It is so pathetic that the Dems have still not approved my full Cabinet.",
+                    "source": "https://twitter.com/realDonaldTrump/status/837638488656920576"
+                }
+            ]
+        },
+        {
+            "id": "obama-tapped-trumps-wires",
+            "instances": [
+                {
+                    "date": "2017-03-04",
+                    "quote": "Terrible! Just found out that Obama had my “wires tapped” in Trump Tower just before the victory. Nothing found. This is McCarthyism!",
+                    "source": "https://twitter.com/realDonaldTrump/status/837989835818287106"
+                },
+                {
+                    "date": "2017-03-04",
+                    "quote": "How low has President Obama gone to tapp my phones during the very sacred election process. This is Nixon/Watergate. Bad (or sick) guy!",
+                    "source": "https://twitter.com/realDonaldTrump/status/837996746236182529"
+                },
+                {
+                    "date": "2017-04-02",
+                    "quote": "Now, my last tweet — you know, the one that you are talking about, perhaps — was the one about being, in quotes, wiretapped, meaning surveilled. Guess what, it is turning out to be true.",
+                    "source": "http://www.politico.com/story/2017/04/trump-surveillance-financial-times-interview-236819"
+                },
+                {
+                    "date": "2017-04-29",
+                    "quote": "I think our side's been proven very strongly. And everybody's talking about it. And frankly it should be discussed.",
+                    "source": "http://www.cbsnews.com/news/president-trump-oval-office-interview-cbs-this-morning-full-transcript/"
+                }
+            ]
+        },
+        {
+            "id": "122-prisoners-obama-released-from-gitmo-returned-to-battlefield",
+            "instances": [
+                {
+                    "date": "2017-03-07",
+                    "quote": "122 vicious prisoners, released by the Obama Administration from Gitmo, have returned to the battlefield. Just another terrible decision!",
+                    "source": "https://twitter.com/realDonaldTrump/status/839084268991229952"
+                }
+            ]
+        },
+        {
+            "id": "half-of-tennessee-has-no-obamacare-insurer",
+            "instances": [
+                {
+                    "date": "2017-03-17",
+                    "quote": "I was in Tennessee — I was just telling the folks — and half of the state has no insurance company, and the other half is going to lose the insurance company.",
+                    "source": "https://www.c-span.org/video/?425589-101/president-trump-says-republican-study-committee-now-backs-health-care-bill"
+                },
+                {
+                    "date": "2017-04-02",
+                    "quote": "You have many states coming up where they’re going to have no insurance company. O.K.? It’s already happened in Tennessee. It’s happening in Kentucky. Tennessee only has half coverage. Half the state is gone. They left.",
+                    "source": "https://www.nytimes.com/2017/04/05/us/politics/donald-trump-interview-new-york-times-transcript.html"
+                }
+            ]
+        },
+        {
+            "id": "trump-sweden-riot-death",
+            "instances": [
+                {
+                    "date": "2017-03-22",
+                    "quote": "Sweden. I make the statement, everyone goes crazy. The next day they have a massive riot, and death, and problems.",
+                    "source": "http://time.com/4710456/donald-trump-time-interview-truth-falsehood/"
+                }
+            ]
+        },
+        {
+            "id": "nato-doesnt-cover-terrorism",
+            "instances": [
+                {
+                    "date": "2017-03-22",
+                    "quote": "NATO, obsolete, because it doesn’t cover terrorism.",
+                    "source": "http://time.com/4710456/donald-trump-time-interview-truth-falsehood/"
+                },
+                {
+                    "date": "2017-04-12",
+                    "quote": "The secretary general and I had a productive discussion about what more NATO can do in the fight against terrorism. I complained about that a long time ago and they made a change, and now they do fight terrorism.",
+                    "source": "https://www.whitehouse.gov/the-press-office/2017/04/12/joint-press-conference-president-trump-and-nato-secretary-general"
+                }
+            ]
+        },
+        {
+            "id": "nyt-removed-wiretapped-from-headline",
+            "instances": [
+                {
+                    "date": "2017-03-22",
+                    "quote": "Here, headline, for the front page of the New York Times, “Wiretapped data used in inquiry of Trump aides.” That’s a headline. Now they then dropped that headline, I never saw this until this morning. They then dropped that headline, and they used another headline without the word wiretap, but they did mean wiretap. Wiretapped data used in inquiry. Then changed after that, they probably didn’t like it. And they changed the title. They took the wiretap word out.",
+                    "source": "http://time.com/4710456/donald-trump-time-interview-truth-falsehood/"
+                }
+            ]
+        },
+        {
+            "id": "trump-michigan-plants",
+            "instances": [
+                {
+                    "date": "2017-03-31",
+                    "quote": "We have a lot of plants going up now in Michigan that were never going to be there if I — if I didn’t win this election, those plants would never even think about going back.  They were gone.",
+                    "source": "https://www.whitehouse.gov/the-press-office/2017/03/31/remarks-president-trump-listening-session-national-association"
+                }
+            ]
+        },
+        {
+            "id": "trump-didnt-know-steve-bannon",
+            "instances": [
+                {
+                    "date": "2017-04-11",
+                    "quote": "I like Steve, but you have to remember he was not involved in my campaign until very late. I had already beaten all the senators and all the governors, and I didn’t know Steve.",
+                    "source": "https://nypost.com/2017/04/11/trump-wont-definitively-say-he-still-backs-bannon/"
+                }
+            ]
+        },
+        {
+            "id": "democrats-obstructing-trump-nominees",
+            "instances": [
+                {
+                    "date": "2017-04-12",
+                    "quote": "You can't do it faster, because they're obstructing. They're obstructionists. So I have people — hundreds of people that we're trying to get through. I mean you have — you see the backlog. We can't get them through.",
+                    "source": "https://www.washingtonpost.com/news/the-fix/wp/2017/04/12/president-trumps-throughly-confusing-fox-business-interview-annotated/"
+                }
+            ]
+        },
+        {
+            "id": "mosul-campaign-expected-to-take-one-week",
+            "instances": [
+                {
+                    "date": "2017-04-12",
+                    "quote": "Mosul was supposed to last for a week and now they've been fighting it for many months and so many more people died.",
+                    "source": "https://www.washingtonpost.com/news/the-fix/wp/2017/04/12/president-trumps-throughly-confusing-fox-business-interview-annotated/"
+                }
+            ]
+        },
+        {
+            "id": "trump-didnt-change-stance-on-china",
+            "instances": [
+                {
+                    "date": "2017-04-18",
+                    "quote": "The fake media goes, “Donald Trump has changed his stance on China.” I haven’t changed my stance. China is trying to help us. I don’t know if they’re going to be able to or not. But why would I want to start heavy heavy trade or currency statements against somebody who is out there right now trying to stop what could be a very bad situation. You understand that.",
+                    "source": "http://www.cnn.com/2017/04/18/politics/president-donald-trump-chinese-president-xi-friendly/index.html"
+                }
+            ]
+        },
+        {
+            "id": "trump-hadnt-heard-of-wikileaks",
+            "instances": [
+                {
+                    "date": "2017-04-23",
+                    "quote": "When Wikileaks came out ... never heard of Wikileaks, never heard of it.",
+                    "source": "https://apnews.com/c810d7de280a47e88848b0ac74690c83"
+                }
+            ]
+        },
+        {
+            "id": "democrats-blocking-miners-healthcare",
+            "instances": [
+                {
+                    "date": "2017-04-27",
+                    "quote": "I want to help our miners while the Democrats are blocking their healthcare.",
+                    "source": "https://twitter.com/realdonaldtrump/status/857604537003200512"
+                }
+            ]
+        },
+        {
+            "id": "us-canada-trade-deficit",
+            "instances": [
+                {
+                    "date": "2017-04-28",
+                    "quote": "The trade deficit with Mexico is close to $70 billion, even with Canada it’s $17 billion trade deficit with Canada.",
+                    "source": "http://www.factcheck.org/2017/05/trumps-100-day-boasts/"
+                }
+            ]
+        },
+        {
+            "id": "trump-got-china-to-stop-manipulating-their-currency",
+            "instances": [
+                {
+                    "date": "2017-04-29",
+                    "quote": "As you know, I've been a big critic of China, and I've been talking about currency manipulation for a long time. But I have to tell you that during the election, number one, they stopped.",
+                    "source": "http://www.cnn.com/TRANSCRIPTS/1704/29/se.02.html"
+                },
+                {
+                    "date": "2017-04-29",
+                    "quote": "But when they talk about currency manipulation, and I did say I would call China, if they were, a currency manipulator, early in my tenure. And then I get there. Number one, they — as soon as I got elected, they stopped. They're not — it's not going down anymore, their currency.",
+                    "source": "http://www.cbsnews.com/news/trump-interview-full-transcript-face-the-nation/"
+                },
+                {
+                    "date": "2017-05-01",
+                    "quote": "First of all, since I started running, they haven't increased their — you know, they have not manipulated their currency. I think that was out of respect to me and the campaign.",
+                    "source": "https://www.washingtonpost.com/news/fact-checker/wp/2017/05/16/president-trumps-evolving-claims-about-when-china-stopped-manipulating-its-currency/"
+                },
+                {
+                    "date": "2017-05-04",
+                    "quote": "Number two, they’re actually not a currency [manipulator]. You know, since I’ve been talking about currency manipulation with respect to them and other countries, they stopped.",
+                    "source": "http://www.economist.com/Trumptranscript"
+                }
+            ]
+        },
+        {
+            "id": "house-healtcare-bill-would-protect-pre-existing-conditions",
+            "instances": [
+                {
+                    "date": "2017-05-01",
+                    "quote": "Well, we are protecting pre-existing conditions. And it’ll be every good — bit as good on pre-existing conditions as Obamacare.",
+                    "source": "https://www.bloomberg.com/news/articles/2017-05-01/president-donald-trump-interviewed-by-bloomberg-news-transcript"
+                }
+            ]
+        },
+        {
+            "id": "us-highest-tax-rate",
+            "instances": [
+                {
+                    "date": "2017-05-04",
+                    "quote": "Because right now, we are one of the highest-taxed nations in the world.",
+                    "source": "https://www.dailyherald.com/article/20170624/news/306249964"
+                }
+            ]
+        }
+    ]
+}
