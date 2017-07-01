@@ -1,0 +1,23 @@
+sudo: false
+dist: trusty
+
+language: go
+go: 1.8
+
+install:
+  - go version
+  - go get github.com/kardianos/govendor
+  - govendor get -v github.com/gohugoio/hugo
+
+script:
+  - "$GOPATH/bin/hugo --theme=liedb --verbose"
+
+deploy:
+  provider: pages
+  local_dir: public
+  repo: liedb/liedb.github.io
+  target_branch: master
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
