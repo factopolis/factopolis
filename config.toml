@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "LieDB"
-baseurl = "https://liedb.com/"
+baseurl = "https://liedb.github.io/"
 
 [[params.navlinks]]
 name = "Home"
