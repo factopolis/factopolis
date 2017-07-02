@@ -164,6 +164,9 @@ claims:
           dollars off plane contracts sitting here.  Do they give me
           credit?  No, but that’s okay.
         source: https://www.whitehouse.gov/the-press-office/2017/05/02/remarks-president-trump-presentation-commander-chief-trophy-united
+      - date: 2017-05-13
+        quote:
+          I'm cutting the price of airplanes with Lockheed.
 
   - id: nyt-apologized-to-trump-for-negative-coverage
     instances:
@@ -713,4 +716,89 @@ claims:
         quote:
           …nobody cares about my tax return except for the reporters.
         source: http://www.economist.com/Trumptranscript
+
+  - id: trump-colbert-highest-rated
+    instances:
+      - date: 2017-05-08
+        quote:
+          But when I did his show, which by the way was very highly
+          rated. It was high — highest rating. The highest rating he’s
+          ever had.
+        source: https://www.independent.co.uk/arts-entertainment/trump-stephen-colbert-attack-video-interviw-lester-holt-a7731246.html
+
+  - id: clapper-confirmed-no-evidence-of-russia-trump-collusion
+    instances:
+      - date: 2017-05-08
+        quote:
+          Director Clapper reiterated what everybody, including the
+          fake media already knows- there is "no evidence" of
+          collusion w/ Russia and Trump.
+        source: https://twitter.com/realdonaldtrump/status/861712617299210240
+      - date: 2017-05-12
+        quote:
+          When James Clapper himself, and virtually everyone else with
+          knowledge of the witch hunt, says there is no collusion,
+          when does it end?
+        source: https://twitter.com/realdonaldtrump/status/863014620516233216
+
+  - id: trump-russia-collusion-excuse-by-democrats-for-losing-election
+    instances:
+      - date: 2017-05-12
+        quote:
+          Again, the story that there was collusion between the
+          Russians & Trump campaign was fabricated by Dems as an
+          excuse for losing the election.
+        source: https://twitter.com/realdonaldtrump/status/862998775731818496
+
+  - id: trump-successful-trip-saved-billions-and-millions-of-jobs
+    instances:
+      - date: 2017-05-26
+        quote:
+          Just arrived in Italy for the G7. Trip has been very
+          successful. We made and saved the USA many billions of
+          dollars and millions of jobs.
+        source: https://twitter.com/realdonaldtrump/status/868047480847568896
+
+  - id: paris-agreement-didnt-allow-us-to-build-coal-plants
+    instances:
+      - date: 2017-06-01
+        quote:
+          China will be allowed to build hundreds of additional coal
+          plants. So, we can’t build the plants, but they can,
+          according to this agreement. India will be allowed to double
+          its coal production by 2020.
+        source: http://transcripts.factcheck.org/president-trump-paris-climate-accord/
+
+  - id: london-terror-attack-no-reason-to-be-alarmed
+    instances:
+      - date: 2017-06-04
+        quote:
+          At least 7 dead and 48 wounded in terror attack and Mayor of
+          London says there is "no reason to be alarmed!"
+        source: https://twitter.com/realdonaldtrump/status/871328428963901440
+
+  - id: doj-submitted-watered-down-travel-ban-to-sc
+    instances:
+      - date: 2017-06-05
+        quote:
+          The Justice Dept. should have stayed with the original
+          Travel Ban, not the watered down, politically correct
+          version they submitted to S.C.
+        source: https://twitter.com/realdonaldtrump/status/871675245043888128
+
+  - id: paris-agreement-binding
+    instances:
+      - date: 2017-06-21
+        quote:
+          And they all say it's non-binding. Like hell it's non-binding.
+        source: http://www.washingtonexaminer.com/trump-on-paris-climate-agreement-like-hell-its-non-binding/article/2626729
+
+  - id: half-of-ms-13-deported
+    instances:
+      - date: 2017-06-28
+        quote:
+          MS-13 is a prime target. They are bad people. And we’ve
+          gotten many of them out already.  You know, we’re pretty
+          much at the 50 percent mark.
+        source: https://www.whitehouse.gov/the-press-office/2017/06/28/remarks-president-trump-during-meeting-immigration-crime-victims
 ---

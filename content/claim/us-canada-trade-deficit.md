@@ -1,6 +1,6 @@
 ---
 title: US Has $7 Billion Trade Deficit with Canada
-summary:
+summary: The U.S. had an $8.1 billion trade surplus, not deficit, with Canada in 2016.
 checks:
   - name: The New York Times
     shortQuote: The U.S. had an $8.1 billion trade surplus, not deficit, with Canada in 2016.

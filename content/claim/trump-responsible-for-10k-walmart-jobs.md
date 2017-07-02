@@ -1,6 +1,6 @@
 ---
 title: Trump Responsible For 10,000 Walmart Jobs
-summary:
+summary: The jobs are a result of its investment plans announced in October 2016.
 checks:
   - name: The New York Times
     shortQuote: The jobs are a result of its investment plans announced in October 2016.
