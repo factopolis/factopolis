@@ -1,4 +1,4 @@
-{{ $data := getJSON "content/person/" .File.BaseFileName ".json" }}
+{{ $data := index .Site.Data.person .File.BaseFileName }}
 {{ partial "head.html" . }}
 {{ partial "nav.html" . }}
 
@@ -26,7 +26,7 @@
 
     <div class="lie-counter">
       <p>
-	We currently have {{ $data.claims | len }} false claims made
+	We currently have {{ $data.claims | len }} distinct false claims made
 	by {{ $data.name }} in our database (not counting repeats).
       </p>
     </div>
@@ -46,8 +46,9 @@
     <h2>False Claims</h2>
 
     <dl class="claims">
+      {{ $claims := .Site.Data.claim }}
       {{ range $claim := $data.claims }}
-      {{ $claimInfo := getJSON "content/claim/" $claim.id ".json" }}
+      {{ $claimInfo := index $claims $claim.id }}
       <dt id="claim-{{ $claim.id }}">
 	<h3><a href="/claim/{{ $claim.id }}">{{ $claimInfo.title }}</a></h3>
       </dt>

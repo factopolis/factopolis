@@ -2,7 +2,7 @@
 {{ partial "nav.html" . }}
 
 {{ $claimID := .File.BaseFileName }}
-{{ $claim := getJSON "content/claim/" .File.BaseFileName ".json" }}
+{{ $claim := index .Site.Data.claim $claimID }}
 
 <main>
   <header>
@@ -55,17 +55,18 @@
       <h2>Claimants</h2>
 
       <ul>
-	{{ range $claimant := $claim.claimants }}
-	{{ $claimantData := getJSON "content/person/" $claimant ".json" }}
-	<li>
-	  <a href="/person/{{ $claimant }}#claim-{{ $claimID }}">{{ $claimantData.name }}</a>
-	  {{ range where $claimantData.claims "id" "==" $claimID }}
+	{{ range $personID, $person := .Site.Data.person }}
+  	  {{ range $claim := where $person.claims "id" "==" $claimID }}
 	    {{ $claimCount := .instances | len }}
-	    {{ if (sub $claimCount 1) }}
-	      on {{ $claimCount }} occasions
-	    {{ end }}
+	    <li>
+	      <a href="/person/{{ $personID | htmlEscape }}#claim-{{ $claimID | htmlEscape }}">
+		{{ $person.name }}
+		{{ if (sub $claimCount 1) }}
+	          on {{ $claimCount }} occasions
+		{{ end }}
+	      </a>
+	    </li>
 	  {{ end }}
-	</li>
 	{{ end }}
       </ul>
 
