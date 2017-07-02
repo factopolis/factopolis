@@ -1,6 +1,10 @@
-{{ $data := index .Site.Data.person .File.BaseFileName }}
 {{ partial "head.html" . }}
 {{ partial "nav.html" . }}
+
+  {{ range $x := where .Site.Pages "Type" "claim" }}
+  {{/* {{ $x.Params }} */}}
+  {{ end }}
+
 
 <main class="person">
   <header>
@@ -22,19 +26,19 @@
       {{ end }}
     </ul>
 
-    <h1>{{ $data.name }}</h1>
+    <h1>{{ .Params.Title }}</h1>
 
     <div class="lie-counter">
       <p>
-	We currently have {{ $data.claims | len }} distinct false claims made
-	by {{ $data.name }} in our database (not counting repeats).
+	We currently have {{ .Params.claims | len }} distict false claims made
+	by {{ .Params.Title }} in our database (not counting repeats).
       </p>
     </div>
 
     <h4>Offices Held</h4>
 
     <ol class="offices-held">
-    {{ range $office := $data.offices }}
+    {{ range $office := .Params.offices }}
       <li>
 	{{ $office.title }} {{ if $office.from }}({{ dateFormat "2006" $office.from }}-{{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }}){{ end }}
       </li>
@@ -45,12 +49,16 @@
   <article>
     <h2>False Claims</h2>
 
-    <dl class="claims">
-      {{ $claims := .Site.Data.claim }}
-      {{ range $claim := $data.claims }}
-      {{ $claimInfo := index $claims $claim.id }}
+    <dl>
+      {{ $pages := .Site.Pages }}
+      {{ range $claim := .Params.claims }}
+      {{ $claimURL := printf "/claim/%s/" $claim.id }}
+
+      {{ range $claimPage := where $pages "Type" "claim" }}
+      {{ if eq $claimPage.URL $claimURL }}
+
       <dt id="claim-{{ $claim.id }}">
-	<h3><a href="/claim/{{ $claim.id }}">{{ $claimInfo.title }}</a></h3>
+	<h3><a href="/claim/{{ $claim.id }}">{{ $claimPage.Title }}</a></h3>
       </dt>
 
       <dd>
@@ -62,7 +70,7 @@
 	    <footer>
 	      <cite>
 		{{ if $instance.source }}<a href="{{ $instance.source }}">{{ end }}
-		{{ $data.name }}
+		{{ $.Title }}
   		{{ if $instance.date }}
   		  on {{ $instance.date }}
 		{{ end }}
@@ -73,16 +81,19 @@
 	  {{ end }}
 	</div>
 
-	{{ if $claimInfo.summary }}
+	{{ if $claimPage.Params.summary }}
 	<div>
 	  <h4>The Truth</h4>
 
 	  <p>
-	    {{ $claimInfo.summary | markdownify }}
+	    {{ $claimPage.Params.summary | markdownify }}
 	  </p>
 	</div>
 	{{ end }}
       </dd>
+
+      {{ end }}
+      {{ end }}
       {{ end }}
     </dl>
   </article>

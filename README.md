@@ -8,7 +8,7 @@ from JSON files, which are intentionally usable by other sites.
 The main data sources right now are in `content/claim` and
 `content/person`.  I'll add documentation for how to work with these
 when I have time, but until then it shouldn't be too hard to figure
-out.
+out—just look in the `content/` folder.
 
 To view the site locally, first [install
 Hugo](https://gohugo.io/overview/installing/), then run

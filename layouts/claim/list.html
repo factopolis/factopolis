@@ -7,15 +7,15 @@
   </header>
 
   <ul class="claim-list">
-    {{ range $claimID, $claim := .Site.Data.claim }}
-      <li>
-	<div class="claim">
-	  <a href="{{ .Site.BaseURL }}/claim/{{ $claimID }}/">{{ $claim.title }}</a>
+    {{ range .Data.Pages }}
+    <li>
+      <div class="claim">
+	<a href="{{ .Permalink }}">{{ .Title }}</a>
 	</div>
 	<div class="truth">
-	  Reality: {{ $claim.summary }}
+	  Reality: {{ .Params.summary }}
 	</div>
-      </li>
+    </li>
     {{ end }}
   </ul>
 </article>

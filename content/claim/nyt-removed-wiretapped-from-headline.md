@@ -1,3 +1,24 @@
-{
-  "title": "Democrats Blocking Miners' Healthcare"
-}
+---
+title: The New York Times Removed The Word “Wiretapped” From a Headline
+summary: There were two different headlines on the online and print versions, neither of which were altered.
+checks:
+  - name: The New York Times
+    quote:
+      Mr. Trump was referring to an article published online on
+      Jan. 19 and in print on Jan. 20 that disclosed that American law
+      enforcement and intelligence agencies were examining intercepted
+      communications and financial transactions as part of a broad
+      investigation into possible links between Russian officials and
+      associates of Mr. Trump.
+
+      There were in fact two different headlines on the online and
+      print versions of the article, which is typical. At no point was
+      either headline altered.
+
+      Times headlines often differ in print and online, in part
+      because of variations in presentation and in part because of
+      space. This disparity is always noted at the end of the web
+      version and has been noted since the story was first published
+      in print on Jan. 20.
+    url: https://www.nytimes.com/2017/03/23/us/politics/fact-check-trump-misleads-surveillance-wiretapping.html
+---

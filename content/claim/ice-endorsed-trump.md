@@ -1,3 +1,8 @@
-{
-  "title": "I.C.E. Endorsed Trump"
-}
+---
+title: I.C.E. Endorsed Trump
+summary: Only its union did.
+checks:
+  - name: The New York Times
+    shortQuote: Only its union did.
+    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+---

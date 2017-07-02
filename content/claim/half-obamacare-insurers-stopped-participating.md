@@ -1,3 +1,8 @@
-{
-  "title": "Half of Insurers Have Stopped Participating In Obamacare Exchanges"
-}
+---
+title: Half of Insurers Have Stopped Participating In Obamacare Exchanges
+summary: Many fewer pulled out.
+checks:
+  - name: The New York Times
+    shortQuote: Many fewer pulled out.
+    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+---

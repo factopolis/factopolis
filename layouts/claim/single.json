@@ -1,10 +1,9 @@
 {{ $claimID := .File.BaseFileName }}
-{{ $data := index .Site.Data.claim $claimID }}
 {
-    {{ if $data.summary }}"summary": "{{ replace (replace $data.summary "\n" "\\n") "\"" "\\\"" }}",{{ end }}
+    {{ if .Params.summary }}"summary": "{{ replace (replace .Params.summary "\n" "\\n") "\"" "\\\"" }}",{{ end }}
     "checks": [
-	{{ $checks := $data.checks }}
-        {{ range $idx, $check := $data.checks }}
+	{{ $checks := .Params.checks }}
+        {{ range $idx, $check := .Params.checks }}
         {{ if $idx }}, {{ end }}
         {
 	    {{ if $check.shortQuote }}"shortQuote": "{{ replace (replace $check.shortQuote "\n" "\\n") "\"" "\\\"" }}", {{ end }}
@@ -13,15 +12,13 @@
             "name": "{{if $check.name }}{{ replace (replace $check.name "\n" "\\n") "\"" "\\\"" }}{{ end }}"
         }
 	{{ end }}
-
     ],
-    {{ if $data.title }}"title": "{{ replace (replace $data.title "\n" "\\n") "\"" "\\\"" }}",{{ end }}
+    {{ if .Params.title }}"title": "{{ replace (replace .Params.title "\n" "\\n") "\"" "\\\"" }}",{{ end }}
     "claimants": [
-	{{ range $personID, $person := .Site.Data.person }}
-	{{ $claims := where $person.claims "id" "==" $claimID }}
-	{{ range $idx, $claim := $claims }}
+	{{ range $xxx, $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
+	{{ range $idx, $claim := where $person.Params.claims "id" $claimID }}
 	{{ if $idx }},{{ end }}
-	"{{ $person.name }}"
+	"{{ substr $person.URL 8 -1 }}"
 	{{ end }}
 	{{ end }}
     ]

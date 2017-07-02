@@ -1,9 +1,8 @@
-{{ $data := index .Site.Data.person .File.BaseFileName }}
 {
-    "name": "{{ replace (replace $data.name "\n" "\\n") "\"" "\\\"" }}",
+    "name": "{{ replace (replace .Title "\n" "\\n") "\"" "\\\"" }}",
     "offices": [
-        {{ $offices := $data.offices }}
-        {{ range $idx, $office := $data.offices }}
+        {{ $offices := .Params.offices }}
+        {{ range $idx, $office := .Params.offices }}
         {{ if $idx }}, {{ end }}
         {
 	    {{ if $office.from }}"from": "{{ $office.from }}",{{ end }}
@@ -13,8 +12,8 @@
 	{{ end }}
     ],
     "claims": [
-        {{ $claims := $data.claims }}
-        {{ range $idx, $claim := $data.claims }}
+        {{ $claims := .Params.claims }}
+        {{ range $idx, $claim := .Params.claims }}
         {{ if $idx }}, {{ end }}
 	{
 	    "id": "{{ $claim.id }}",

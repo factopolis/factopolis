@@ -2,7 +2,7 @@
 {{ partial "nav.html" . }}
 
 {{ $claimID := .File.BaseFileName }}
-{{ $claim := index .Site.Data.claim $claimID }}
+{{ $claim := .Params }}
 
 <main>
   <header>
@@ -26,24 +26,24 @@
       <section>
 	<h3>Sources</h3>
 
-	{{ range $check := $claim.checks }}
+	{{ range .Params.checks }}
 	<blockquote>
 	  <p>
-	    {{ if $check.quote }}
-	    {{ $check.quote | markdownify }}
-	    {{ else }}
-	    {{ $check.shortQuote | markdownify }}
+	    {{ if .quote }}
+	    {{ .quote | markdownify }}
+	    {{ else if .shortQuote }}
+	    {{ .shortQuote | markdownify }}
 	    {{ end }}
 	  </p>
 
 	  <footer>
 	    <cite>
-	      {{ if $check.url }}<a href="{{ $check.url }}">{{ end }}
-	      {{ $check.name }}
-  	      {{ if $check.date }}
-  	        on {{ $check.date }}
+	      {{ if .url }}<a href="{{ .url }}">{{ end }}
+	      {{ if .name }}{{ .name }}{{ end }}
+  	      {{ if .date }}
+  	        on {{ .date }}
 	      {{ end }}
-	      {{ if $check.url }}</a>{{ end }}
+	      {{ if .url }}</a>{{ end }}
 	    </cite>
 	  </footer>
 	</blockquote>
@@ -55,18 +55,18 @@
       <h2>Claimants</h2>
 
       <ul>
-	{{ range $personID, $person := .Site.Data.person }}
-  	  {{ range $claim := where $person.claims "id" "==" $claimID }}
+	{{ range $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
+	{{ range where $person.Params.claims "id" $claimID }}
+	<li>
+	  <a href="{{ $person.URL }}#claim-{{ $claimID | htmlEscape }}">
+	    {{ $person.Title }}
 	    {{ $claimCount := .instances | len }}
-	    <li>
-	      <a href="/person/{{ $personID | htmlEscape }}#claim-{{ $claimID | htmlEscape }}">
-		{{ $person.name }}
-		{{ if (sub $claimCount 1) }}
-	          on {{ $claimCount }} occasions
-		{{ end }}
-	      </a>
-	    </li>
-	  {{ end }}
+	    {{ if (sub $claimCount 1) }}
+	      on {{ $claimCount }} occasions
+	    {{ end }}
+	  </a>
+	</li>
+	{{ end }}
 	{{ end }}
       </ul>
 
