@@ -1,0 +1,19 @@
+title: Waters of the United States Rule Costing Hundreds of Thousands of Jobs
+summary: There's no evidence that the Waters of the United States rule caused severe job losses.
+checks:
+  - name: The New York Times
+    shortQuote: There's no evidence that the Waters of the United States rule caused severe job losses.
+    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+  - name: The Washington Post
+    shortQuote: … there is no evidence to support that.
+    quote:
+      The focus of our fact-check is whether the rule cost “hundreds
+      of thousands of jobs,” and there is no evidence to support
+      that. After the rule was issued in 2015, the U.S. Court of
+      Appeals for the 6th Circuit issued a nationwide stay blocking it
+      from taking effect. We checked with key industry groups that
+      opposed the rule, but did not find research into the impact of
+      the rule on jobs after it was halted in 2015. The rule has been
+      in limbo since, so it is not credible that any jobs have been
+      lost.
+    url: https://www.washingtonpost.com/news/fact-checker/wp/2017/03/02/trumps-claim-that-waters-of-the-united-states-rule-cost-hundreds-of-thousands-of-jobs/
