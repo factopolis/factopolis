@@ -9,7 +9,7 @@ page = [ "HTML", "JSON" ]
 analytics = "UA-101930305-1"
 
 [[params.navlinks]]
-name = "Home"
+name = "LieDB"
 url = ""
 
 [[params.navlinks]]

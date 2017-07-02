@@ -1,4 +1,10 @@
 <div id="menu" class="hidden-xs col-sm-4 col-md-3">
+  <div id="links" class="text-center">
+    {{ $url := .Site.BaseURL }}
+    {{ range .Site.Params.navlinks }}
+    <a href="{{ $url }}{{ .url }}">{{ .name }}</a>
+    {{ end }}
+  </div>
   <div id="menu-content" class="vertical-align">
     {{ if eq .Type "person" }}
       <h1 class="text-center"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
@@ -24,12 +30,6 @@
       {{ else }}
         <h1 class="text-center"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
       {{ end }}
-      <div id="links" class="text-center">
-        {{ $url := .Site.BaseURL }}
-        {{ range .Site.Params.navlinks }}
-        <a href="{{ $url }}{{ .url }}">{{ .name }}</a>
-        {{ end }}
-      </div>
     {{ end }}
   </div>
 </div>
