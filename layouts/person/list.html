@@ -1,0 +1,19 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+
+<article>
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  <ul class="content-list person-list">
+    {{ range $personID, $person := .Site.Data.person }}
+      <li>
+	<div class="content-name"><a href="{{ .Site.BaseURL }}/person/{{ $personID }}/">{{ $person.name }}</a></div>
+	<div class="content-claim-count">{{ $person.claims | len }} false claims on file.</div>
+      </li>
+    {{ end }}
+  </ul>
+</article>
+
+{{ partial "footer.html" . }}

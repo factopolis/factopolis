@@ -1,0 +1,23 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+
+<article>
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  <ul class="claim-list">
+    {{ range $claimID, $claim := .Site.Data.claim }}
+      <li>
+	<div class="claim">
+	  <a href="{{ .Site.BaseURL }}/claim/{{ $claimID }}/">{{ $claim.title }}</a>
+	</div>
+	<div class="truth">
+	  Reality: {{ $claim.summary }}
+	</div>
+      </li>
+    {{ end }}
+  </ul>
+</article>
+
+{{ partial "footer.html" . }}

@@ -35,3 +35,41 @@ dl.claims > dd blockquote {
     text-transform: none;
     font-variant: small-caps;
 }
+
+.content-list,
+.claim-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content-list .content-name,
+.claim-list .claim {
+    font-family: 'Oswald',sans-serif;
+}
+
+.person-list .content-name {
+    font-size: 175%;
+    display: inline;
+}
+
+.content-list > li {
+    margin-top: 1em;
+    font-weight: 500;
+}
+
+.person-list .content-claim-count {
+    font-size: 133%;
+    display: inline;
+}
+
+.content-list .content-claim-count:before {
+    content: " — ";
+}
+
+.claim-list > li {
+    margin-bottom: 1em;
+}
+
+.claim-list .claim {
+    font-size: 133%;
+}
