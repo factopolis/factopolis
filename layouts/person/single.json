@@ -1,0 +1,35 @@
+{{ $data := index .Site.Data.person .File.BaseFileName }}
+{
+    "name": "{{ replace (replace $data.name "\n" "\\n") "\"" "\\\"" }}",
+    "offices": [
+        {{ $offices := $data.offices }}
+        {{ range $idx, $office := $data.offices }}
+        {{ if $idx }}, {{ end }}
+        {
+	    {{ if $office.from }}"from": "{{ $office.from }}",{{ end }}
+	    {{ if $office.thru }}"thru": "{{ $office.thru }}",{{ end }}
+            "title": "{{ $office.title }}"
+        }
+	{{ end }}
+    ],
+    "claims": [
+        {{ $claims := $data.claims }}
+        {{ range $idx, $claim := $data.claims }}
+        {{ if $idx }}, {{ end }}
+	{
+	    "id": "{{ $claim.id }}",
+	    "instances": [
+		{{ $instances := $claim.instances }}
+		{{ range $idx, $instance := $claim.instances }}
+		{{ if $idx }}, {{ end }}
+		{
+		    {{ if $instance.date }}"date": "{{ replace (replace $instance.date "\n" "\\n") "\"" "\\\"" }}",{{ end }}
+		    {{ if $instance.source }}"source": "{{ replace (replace $instance.source "\n" "\\n") "\"" "\\\"" }}",{{ end }}
+		    "quote": "{{ replace (replace $instance.quote "\n" "\\n") "\"" "\\\"" }}"
+		}
+		{{ end }}
+	    ]
+	}
+	{{ end }}
+    ]
+}

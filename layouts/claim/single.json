@@ -1,0 +1,28 @@
+{{ $claimID := .File.BaseFileName }}
+{{ $data := index .Site.Data.claim $claimID }}
+{
+    {{ if $data.summary }}"summary": "{{ replace (replace $data.summary "\n" "\\n") "\"" "\\\"" }}",{{ end }}
+    "checks": [
+	{{ $checks := $data.checks }}
+        {{ range $idx, $check := $data.checks }}
+        {{ if $idx }}, {{ end }}
+        {
+	    {{ if $check.shortQuote }}"shortQuote": "{{ replace (replace $check.shortQuote "\n" "\\n") "\"" "\\\"" }}", {{ end }}
+	    {{ if $check.quote }}"quote": "{{ replace (replace $check.quote "\n" "\\n") "\"" "\\\"" }}", {{ end }}
+	    {{ if $check.url }}"url": "{{ replace (replace $check.url "\n" "\\n") "\"" "\\\"" }}", {{ end }}
+            "name": "{{if $check.name }}{{ replace (replace $check.name "\n" "\\n") "\"" "\\\"" }}{{ end }}"
+        }
+	{{ end }}
+
+    ],
+    {{ if $data.title }}"title": "{{ replace (replace $data.title "\n" "\\n") "\"" "\\\"" }}",{{ end }}
+    "claimants": [
+	{{ range $personID, $person := .Site.Data.person }}
+	{{ $claims := where $person.claims "id" "==" $claimID }}
+	{{ range $idx, $claim := $claims }}
+	{{ if $idx }},{{ end }}
+	"{{ $person.name }}"
+	{{ end }}
+	{{ end }}
+    ]
+}

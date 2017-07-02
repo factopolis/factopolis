@@ -73,6 +73,7 @@
 	  {{ end }}
 	</div>
 
+	{{ if $claimInfo.summary }}
 	<div>
 	  <h4>The Truth</h4>
 
@@ -80,6 +81,7 @@
 	    {{ $claimInfo.summary | markdownify }}
 	  </p>
 	</div>
+	{{ end }}
       </dd>
       {{ end }}
     </dl>
