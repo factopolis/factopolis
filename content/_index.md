@@ -2,29 +2,17 @@
 title: LieDB
 ---
 
-LieDB is a non-partisan, collaboratively edited site to track
-politician's lies.  We don't do any fact-checking ourselves, but
-instead provide links to trusted third-parties who have verified
-claims to be false.
+LieDB is a collaboratively edited database of the lies politicians
+tell and the fact checking that catches them.
 
-While anyone is free to submit new material, but this site is not a
-wiki.  Contributions are checked before they are posted, and all
-sources must be credible.
+We don't currently do any fact checking ourselves, instead linking to
+analysis from [trusted fact checkers](/checker).  While most fact
+checkers will publish an article then mostly forget about it, LieDB is
+focused on creating rich, evolving pages which are updated to reflect
+new information as it becomes available.
 
-Political party doesn't matter, and there are no geographical or
-notability restrictions.  The only restriction is that the person must
-be political figure.  Examples of political figures include:
-
- * Politicians
- * Political staffers in public-facing roles such as press secretaries
- * Pundits & talking heads
-
-### What Makes LieDB Different
-
-#### Focus on Linking Data
-
-Most fact-checking sites will publish an article, then forget about
-it.  If a politician makes the same claim again, or a different
+Most fact-checking sites will publish an article then largely forget
+about it.  If a politician makes the same claim again, or a different
 politician repeats the claim, they may or may not publish a new
 article.
 
@@ -33,22 +21,11 @@ becomes available.  When a claim is repeated (by anyone), that
 information is added to the database, and there are bi-directional
 links between the false claims and those who make them.
 
-#### Collaboratively Edited
+More than just being a good reference, the data behind LieDB is freely
+available in machine-readable formats, meaning anyone can download the
+data and make something new.
 
-LieDB attempts to actively engage with the community wherever
-possible.  People are encouraged to submit new information and help
-with maintenance.
-
-#### Open Data
-
-The machine-readable data behind LieDB is publicly available under a
-permissive license ([CC BY-SA
-4.0](https://creativecommons.org/licenses/by-sa/4.0/)), meaning anyone
-is free to develop their own tools to visualize, analyze, and
-transform the data.  Adding information to LieDB benefits anyone using
-the data, not just LieDB itself.
-
-### Want to Help?
+## Want to Help?
 
 If you're interested in helping improve LieDB (there is a *lot* to
 do!), head over to the [GitHub
