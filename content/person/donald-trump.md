@@ -801,6 +801,15 @@ claims:
           And they all say it's non-binding. Like hell it's non-binding.
         source: http://www.washingtonexaminer.com/trump-on-paris-climate-agreement-like-hell-its-non-binding/article/2626729
 
+  - id: cnn-ratings-way-down
+    instances:
+      - date: 2017-06-27
+        quote:
+          Fake News CNN is looking at big management changes now that
+          they got caught falsely pushing their phony Russian stories.
+          Ratings way down!
+        source: https://twitter.com/realDonaldTrump/status/879678356450676736
+
   - id: half-of-ms-13-deported
     instances:
       - date: 2017-06-28
