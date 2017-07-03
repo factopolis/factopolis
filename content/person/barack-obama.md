@@ -7,6 +7,7 @@ web: https://barackobama.com/
 factcheckorg: barack-obama
 politifact: barack-obama
 snopes: barack-obama
+washingtonPost: barack-obama
 offices:
   - title: President of the United States of America
     from: 2009-01-20
