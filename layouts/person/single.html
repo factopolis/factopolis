@@ -35,8 +35,10 @@
 
     <div class="lie-counter">
       <p>
-	We currently have {{ .Params.claims | len }} distict false claims made
-	by {{ .Params.Title }} in our database (not counting repeats).
+        {{ $claimCount := .Params.claims | len }}
+	      We currently have {{ $claimCount }} distict false
+        claim{{ if sub $claimCount 1 }}s{{ end }} made
+	      by {{ .Params.Title }} in our database (not counting repeats).
       </p>
     </div>
 

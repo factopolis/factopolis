@@ -1,6 +1,5 @@
 ol.offices-held {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: disc;
 }
 
 ul.fact-check-links {
@@ -27,7 +26,8 @@ dl.claims > dd {
     margin-left: 1em;
 }
 
-dl.claims > dd blockquote {
+dl.claims > dd blockquote,
+blockquote {
     font-size: 100%;
 }
 

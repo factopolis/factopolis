@@ -6,6 +6,7 @@ summary:
   is no evidence of a payment to Clinton.
 checks:
   - checker: washington-post
+    rating: 4-pinocchios
     quote:
       There is no evidence Clinton herself got involved in the deal
       personally, and it is highly questionable that this deal even
