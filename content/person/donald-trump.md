@@ -1,5 +1,12 @@
 ---
 title: Donald Trump
+picture: /person/donald-trump.jpg
+wikipedia: Donald_Trump
+twitter: realDonaldTrump
+web: https://whitehouse.gov/administration/president-trump
+factcheckorg: donald-trump
+politifact: donald-trump
+snopes: donald-trump
 offices:
   - title: President of the United States of America
     from: 2017-01-21
