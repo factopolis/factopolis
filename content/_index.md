@@ -27,18 +27,5 @@ data and make something new.
 
 ## Want to Help?
 
-If you're interested in helping improve LieDB (there is a *lot* to
-do!), head over to the [GitHub
-project](https://github.com/liedb/liedb).
-
-We need objective people to find false claims, sources, and relevant
-fact-checking articles.  This may be difficult to believe, but it
-turns out politicians lie quite a bit, and there is a lot of data to
-go through.  If you don't know how to add the data yourself you can
-just file an issue with the relevant information and we'll add it as
-soon as possible.
-
-On the technical side of things, as you can probably tell by looking
-at the site, we could really use a good designer, and maybe a good
-front-end developer to work with them.  A data visualization expert
-could also find plenty of opportunities as well.
+If you're interested in helping improve LieDB, take a look at the
+[Contributing](/contributing/) page.
