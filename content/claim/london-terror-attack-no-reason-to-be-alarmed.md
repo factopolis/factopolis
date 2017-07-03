@@ -4,7 +4,7 @@ summary:
   The mayor was specifically talking about the enlarged police
   presence on the streets.
 checks:
-  - name: PolitiFact
+  - checker: politifact
     quote:
       Trump portrayed Khan as an official with his head in the sand
       about the attacks that disrupted his city. The reality is the
@@ -23,7 +23,7 @@ checks:
       was not indicating that another attack was imminent or that
       citizens should “not be alarmed” by what had occurred.
     url: http://www.snopes.com/2017/06/04/london-mayor-sadiq-khan-no-reason-to-be-alarmed-trump/
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote:
       The mayor was specifically talking about the enlarged police
       presence on the streets.

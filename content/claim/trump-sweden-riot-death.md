@@ -4,7 +4,7 @@ title:
   There Had Been a Terrorist Attack
 summary: Riots in Sweden broke out two days later and there were no deaths.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: Riots in Sweden broke out two days later and there were no deaths.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - name: The Toronto Star

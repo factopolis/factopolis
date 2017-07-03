@@ -9,7 +9,7 @@ checks:
       last few years, China has been propping up the yuan, not
       depressing it.
     url: http://www.businessinsider.com/trump-china-currency-manipulation-north-korea-2017-4
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote:
       While labeling China a currency manipulator now would look
       ridiculous, the United States should have done it a long time

@@ -2,7 +2,7 @@
 title: Trump Inauguration Crowd Biggest Ever
 summary: Official aerial photos show Obama's 2009 inauguration was much more heavily attended.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: Official aerial photos show Obama's 2009 inauguration was much more heavily attended.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - name: Fox News

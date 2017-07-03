@@ -4,7 +4,7 @@ summary:
   The agreement never uses the word coal, much less spells out how
   many coal-fired plants any country can build.
 checks:
-  - name: PolitiFact
+  - checker: politifact
     shortQuote:
       The agreement never uses the word coal, much less spells out how
       many coal-fired plants any country can build.
@@ -16,7 +16,7 @@ checks:
       agreement never mentions the word coal, and in Trump’s own
       words, it is nonbinding.
     url: http://www.politifact.com/truth-o-meter/statements/2017/jun/05/donald-trump/donald-trump-wrong-paris-accord-china-and-coal-pla/
-  - name: The Washington Post
+  - checker: washington-post
     quote:
       This is false. The agreement is nonbinding and each nation sets
       its own targets. There is nothing in the agreement that stops

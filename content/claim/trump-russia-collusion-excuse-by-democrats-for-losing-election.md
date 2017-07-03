@@ -2,7 +2,7 @@
 title: Trump/Russia Collusion Story Made Up By Democrats As Excuse For Losing 2016 Election
 summary: The F.B.I. was investigating before the election.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: The F.B.I. was investigating before the election.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
 ---

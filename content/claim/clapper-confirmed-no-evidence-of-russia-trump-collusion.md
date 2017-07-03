@@ -2,13 +2,13 @@
 title: James Clapper Confirmed There is No Evidence of Russia/Trump Collusion
 summary: Clapper only said he wasn't aware of an investigation.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: Clapper only said he wasn't aware of an investigation.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: Clapper said he wouldn't have been told of an investigation into collusion.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: PolitiFact
+  - checker: politifact
     shortQuote:
       Clapper’s comments have not been as definitive as Trump
       said. Later that day, Clapper directly contradicted Trump’s

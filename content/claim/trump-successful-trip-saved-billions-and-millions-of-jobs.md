@@ -5,12 +5,12 @@ summary:
   succeeds in reorienting U.S. trade policy, jobs gains are still
   likely to be illusionary.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote:
       He's referencing an arms deal that's not enacted and other
       apparent deals that weren't announced on the trip.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: PolitiFact
+  - checker: politifact
     quote:
       We can’t know for sure how many jobs will be created or saved --
       nor, despite the certainty of his language, does Trump -- but
@@ -18,7 +18,7 @@ checks:
       little more than puffery or wishful thinking. We rate the
       statement False.
     url: http://www.politifact.com/truth-o-meter/statements/2017/may/26/donald-trump/did-donald-trumps-trip-create-or-save-millions-job/
-  - name: The Washington Post
+  - checker: washington-post
     shortQuote:
       Trump is counting his chickens before they hatch. Even if he
       succeeds in reorienting U.S. trade policy, jobs gains are still

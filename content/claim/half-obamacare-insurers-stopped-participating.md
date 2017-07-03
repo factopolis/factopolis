@@ -2,7 +2,7 @@
 title: Half of Insurers Have Stopped Participating In Obamacare Exchanges
 summary: Many fewer pulled out.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: Many fewer pulled out.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
 ---

@@ -5,7 +5,7 @@ summary:
   the deal, it's unlikely Clinton was personally involved, and there
   is no evidence of a payment to Clinton.
 checks:
-  - name: The Washington Post
+  - checker: washington-post
     quote:
       There is no evidence Clinton herself got involved in the deal
       personally, and it is highly questionable that this deal even

@@ -2,7 +2,7 @@
 title: Half of MS-13 Deported
 summary: The real number is in the hundreds, of approximately 10,000 members.
 checks:
-  - name: FactCheck.org
+  - checker: factcheck-org
     shortQuote:
       Actually, the number is in the hundreds.
     quote:

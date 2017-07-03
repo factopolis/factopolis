@@ -2,10 +2,10 @@
 title: Only 109 People Affected by Travel Ban
 summary: At least 746 people were detained and processed…
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: At least 746 people were detained and processed…
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: PolitiFact
+  - checker: politifact
     quote:
       This refers to the number of people who were in transit when the
       ban was announced. It doesn’t account for people who tried to

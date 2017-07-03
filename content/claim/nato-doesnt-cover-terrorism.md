@@ -2,7 +2,7 @@
 title: N.A.T.O. Doesn't Cover Terrorism
 summary: It has fought terrorism since the 1980s.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: It has fought terrorism since the 1980s.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - name: The Toronto Star

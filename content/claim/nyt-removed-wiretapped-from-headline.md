@@ -2,7 +2,7 @@
 title: The New York Times Removed The Word “Wiretapped” From a Headline
 summary: There were two different headlines on the online and print versions, neither of which were altered.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     quote:
       Mr. Trump was referring to an article published online on
       Jan. 19 and in print on Jan. 20 that disclosed that American law

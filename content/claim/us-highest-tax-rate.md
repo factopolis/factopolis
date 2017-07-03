@@ -2,10 +2,10 @@
 title: U.S. Has Highest Tax Rate
 summary: It doesn't.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: We're not.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: Politifact
+  - checker: politifact
     shortQuote:
       By all metrics we looked at, the United States is far from the
       most taxed nation overall and for businesses.

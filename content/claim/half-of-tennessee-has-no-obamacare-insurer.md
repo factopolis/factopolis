@@ -2,10 +2,10 @@
 title: Half of Tennessee Has No Obamacare Insurer
 summary: There's at least one insurer in every Tennessee county.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: There's at least one insurer in every Tennessee county.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: FactCheck.org
+  - checker: factcheck-org
     quote:
       Tennessee divides the state into eight rating areas. Three of
       the eight — the East, Greater Nashville and Greater Memphis

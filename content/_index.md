@@ -39,12 +39,14 @@ LieDB attempts to actively engage with the community wherever
 possible.  People are encouraged to submit new information and help
 with maintenance.
 
-#### Machine-Readable Data
+#### Open Data
 
-The data behind LieDB is all machine-readable and publicly available,
-meaning anyone is free to develop their own tools to visualize,
-analyze, and transform the data.  Adding information to LieDB benefits
-anyone using the data, not just LieDB itself.
+The machine-readable data behind LieDB is publicly available under a
+permissive license ([CC BY-SA
+4.0](https://creativecommons.org/licenses/by-sa/4.0/)), meaning anyone
+is free to develop their own tools to visualize, analyze, and
+transform the data.  Adding information to LieDB benefits anyone using
+the data, not just LieDB itself.
 
 ### Want to Help?
 

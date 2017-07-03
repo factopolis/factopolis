@@ -2,7 +2,7 @@
 title: Democrats Not Approving Trump Cabinet
 summary: It’s hard to overstate what nonsense this is.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: Paperwork for the last two candidates was still not submitted to the Senate.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - name: Fox News
@@ -12,7 +12,7 @@ checks:
       nomination of former Georgia Gov. Sonny Perdue to lead the
       Agriculture Department.
     url: http://www.foxnews.com/politics/2017/03/03/trump-pathetic-that-dems-have-not-approved-full-cabinet.html
-  - name: The Washington Post
+  - checker: washington-post
     shortQuote: It’s hard to overstate what nonsense this is.
     quote:
       It’s hard to overstate what nonsense this is.

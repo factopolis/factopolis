@@ -24,30 +24,39 @@
       <p>{{ $claim.summary | markdownify }}</p>
 
       <section>
-	<h3>Sources</h3>
+  <h3>Sources</h3>
 
-	{{ range .Params.checks }}
-	<blockquote>
-	  <p>
-	    {{ if .quote }}
-	    {{ .quote | markdownify }}
-	    {{ else if .shortQuote }}
-	    {{ .shortQuote | markdownify }}
-	    {{ end }}
-	  </p>
+  {{ range .Params.checks }}
+  <blockquote>
+    <p>
+      {{ if .quote }}
+      {{ .quote | markdownify }}
+      {{ else if .shortQuote }}
+      {{ .shortQuote | markdownify }}
+      {{ end }}
+    </p>
 
-	  <footer>
-	    <cite>
-	      {{ if .url }}<a href="{{ .url }}">{{ end }}
-	      {{ if .name }}{{ .name }}{{ end }}
-  	      {{ if .date }}
-  	        on {{ .date }}
-	      {{ end }}
-	      {{ if .url }}</a>{{ end }}
-	    </cite>
-	  </footer>
-	</blockquote>
-	{{ end }}
+		<footer>
+			<cite>
+        {{ if .url }}<a href="{{ .url }}">{{ end }}
+        {{ if .checker }}
+
+        {{ range where $.Site.Pages "URL" (printf "/checker/%s/" .checker) }}
+          {{ .Title }}
+        {{ end }}
+
+        {{ else }}
+          {{ if .name }}{{ .name }}{{ end }}
+        {{ end }}
+
+        {{ if .date }}
+           on {{ .date }}
+        {{ end }}
+        {{ if .url }}</a>{{ end }}
+      </cite>
+		</footer>
+		</blockquote>
+  {{ end }}
       </section>
     </section>
 
@@ -55,19 +64,20 @@
       <h2>Claimants</h2>
 
       <ul>
-	{{ range $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
-	{{ range where $person.Params.claims "id" $claimID }}
-	<li>
-	  <a href="{{ $person.URL }}#claim-{{ $claimID | htmlEscape }}">
-	    {{ $person.Title }}
-	    {{ $claimCount := .instances | len }}
-	    {{ if (sub $claimCount 1) }}
-	      on {{ $claimCount }} occasions
-	    {{ end }}
-	  </a>
-	</li>
-	{{ end }}
-	{{ end }}
+
+      {{ range $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
+       {{ range where $person.Params.claims "id" $claimID }}
+        <li>
+          <a href="{{ $person.URL }}#claim-{{ $claimID | htmlEscape }}">
+            {{ $person.Title }}
+            {{ $claimCount := .instances | len }}
+            {{ if (sub $claimCount 1) }}
+              on {{ $claimCount }} occasions
+            {{ end }}
+          </a>
+        </li>
+        {{ end }}
+      {{ end }}
       </ul>
 
     </section>

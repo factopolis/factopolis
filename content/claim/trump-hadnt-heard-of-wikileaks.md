@@ -2,7 +2,7 @@
 title: Trump Hadn't Heard of Wikileaks Before 2016 Campaign
 summary: He criticized it as early as 2010.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: He criticized it as early as 2010.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - name: Gizmodo

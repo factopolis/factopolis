@@ -2,7 +2,7 @@
 title: Obama Policies Created ISIS
 summary: The group’s origins date to 2004.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: The group’s origins date to 2004.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
 ---

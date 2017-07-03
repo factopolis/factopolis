@@ -2,7 +2,7 @@
 title: Paris Climate Agreement Binding
 summary: The Paris climate agreement is nonbinding
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote:
       The Paris climate agreement is nonbinding — and Trump said so in
       his speech announcing the withdrawal.

@@ -2,7 +2,7 @@
 title: Democrats Obstructing Trump Nominees
 summary: Mr. Trump had yet to nominate anyone for 478 out of more than 533 crucial appointments…
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: Mr. Trump had yet to nominate anyone for 478 out of more than 533 crucial appointments…
     quote:
       As of Wednesday, Mr. Trump had yet to nominate anyone for 478

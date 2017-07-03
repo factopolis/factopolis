@@ -2,10 +2,10 @@
 title: Travel Ban Rollout Was Smooth
 summary: The rollout was chaotic.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: The rollout was chaotic.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: The Washington Post
+  - checker: washington-post
     quote:
       Trump appears to have forgotten that imprecise wording in the
       executive order led to confusion over whether U.S. permanent

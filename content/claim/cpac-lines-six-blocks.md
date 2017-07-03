@@ -2,7 +2,7 @@
 title: 6 Block Lines for Trump's 2016 CPAC Speech
 summary: There was no evidence of long lines.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: There was no evidence of long lines.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - name: Mediaite

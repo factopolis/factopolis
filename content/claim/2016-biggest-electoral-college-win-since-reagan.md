@@ -2,7 +2,7 @@
 title: 2016 Election Biggest Electoral College Victory Since Reagan
 summary: George H.W. Bush, Bill Clinton and Barack Obama all won bigger margins in the Electoral College.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: George H.W. Bush, Bill Clinton and Barack Obama all won bigger margins in the Electoral College.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - name: Time

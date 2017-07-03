@@ -2,10 +2,10 @@
 title: New York Times Apologized to Trump for Negative Coverage
 summary: It never apologized.
 checks:
-  - name: The New York Times
+  - checker: new-york-times
     shortQuote: It never apologized.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: The Washington Post
+  - checker: washington-post
     shortQuote:
       There was no apology in the letter, but the president is trying
       hard to convince voters that there was.
