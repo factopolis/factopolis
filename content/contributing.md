@@ -42,6 +42,12 @@ directory, and add an entry to the file of whover made the claim in the
 [content/person](https://github.com/liedb/liedb/tree/master/content/person)
 directory.  Once that's done you can submit a pull request.
 
+## Naming
+
+"LieDB" isn't a great name.  Ideas for a better name are most welcome.
+Note that the domain name needs to be available, and preferably the
+Twitter and Facebook names as well.
+
 ## Front-end Designers / Developers
 
 If you're reading this, you can probably already tell that LieDB isn't
