@@ -1,11 +1,6 @@
 {{ partial "head.html" . }}
 {{ partial "nav.html" . }}
 
-  {{ range $x := where .Site.Pages "Type" "claim" }}
-  {{/* {{ $x.Params }} */}}
-  {{ end }}
-
-
 <main class="person">
   <header>
     <ul class="fact-check-links">
@@ -38,7 +33,7 @@
         {{ $claimCount := .Params.claims | len }}
 	      We currently have {{ $claimCount }} distict false
         claim{{ if sub $claimCount 1 }}s{{ end }} made
-	      by {{ .Params.Title }} in our database (not counting repeats).
+	by {{ .Params.Title }} in our database (not counting repeats).
       </p>
     </div>
 
@@ -70,18 +65,18 @@
 
       <dd>
 	<div class="claim-quotes">
-	  {{ range $instance := $claim.instances }}
+	  {{ range $assertion := $claim.assertions }}
 	  <blockquote>
-	    <p>{{ $instance.quote | markdownify }}</p>
+	    <p>{{ $assertion.quote | markdownify }}</p>
 
 	    <footer>
 	      <cite>
-		{{ if $instance.source }}<a href="{{ $instance.source }}">{{ end }}
+		{{ if $assertion.source }}<a href="{{ $assertion.source }}">{{ end }}
 		{{ $.Title }}
-  		{{ if $instance.date }}
-  		  on {{ $instance.date }}
+  		{{ if $assertion.date }}
+  		  on {{ $assertion.date }}
 		{{ end }}
-		{{ if $instance.source }}</a>{{ end }}
+		{{ if $assertion.source }}</a>{{ end }}
 	      </cite>
 	    </footer>
 	  </blockquote>

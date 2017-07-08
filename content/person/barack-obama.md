@@ -20,11 +20,11 @@ offices:
     thru: 2004-11-04
 claims:
   - id: us-steel-industry-size
-    instances:
+    assertions:
       - date: 2016-06-30
         quote:
           I mean, the steel industry is producing as much steel in the
           United States as it ever was.  It’s just it needs one-tenth
-          of the workers that it used to. 
+          of the workers that it used to.
         source: https://obamawhitehouse.archives.gov/the-press-office/2016/06/30/remarks-president-obama-prime-minister-trudeau-canada-and-president-pe%C3%B1a
 ---

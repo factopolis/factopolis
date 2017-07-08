@@ -13,7 +13,7 @@ offices:
     from: 2017-01-21
 claims:
   - id: trump-opposed-iraq
-    instances:
+    assertions:
       - date: 2017-01-21
         quote:
           I wasn't a fan of Iraq. I didn't want to go into Iraq.
@@ -27,7 +27,7 @@ claims:
         source: http://transcripts.factcheck.org/remarks-president-trump-vice-president-pence-cia-headquarters/
 
   - id: trump-time-cover-frequency
-    instances:
+    assertions:
       - date: 2017-01-21
         quote:
           A reporter for Time magazine — and I have been on their
@@ -36,7 +36,7 @@ claims:
         source: http://transcripts.factcheck.org/remarks-president-trump-vice-president-pence-cia-headquarters/
 
   - id: 2016-election-voter-fraud
-    instances:
+    assertions:
       - date: 2017-01-23
         quote:
           Between 3 million and 5 million illegal votes caused me to
@@ -51,26 +51,26 @@ claims:
         source: http://time.com/4710456/donald-trump-time-interview-truth-falsehood/
 
   - id: trump-inauguration-crowd-size
-    instances:
+    assertions:
       - date: 2017-01-25
         quote:
           Now, the audience was the biggest ever. But this crowd was
           massive. Look how far back it goes. This crowd was massive.
 
   - id: pew-report-showed-2016-voter-fraud
-    instances:
+    assertions:
       - date: 2017-01-25
         quote:
           Take a look at the Pew reports (which show voter fraud.)
 
   - id: aca-caused-millions-to-lose-insurance
-    instances:
+    assertions:
       - date: 2017-01-25
         quote:
           You had millions of people that now aren't insured anymore.
 
   - id: two-people-killed-during-obama-speech
-    instances:
+    assertions:
       - date: 2017-01-25
         quote:
           So, look, when President Obama was there two weeks ago
@@ -78,7 +78,7 @@ claims:
           killed during his speech. You can't have that.
 
   - id: unvettable
-    instances:
+    assertions:
       - date: 2017-01-26
         quote:
           We've taken in tens of thousands of people. We know nothing
@@ -92,7 +92,7 @@ claims:
           documentation. There was no nothing.
 
   - id: trump-saved-millions-on-f-35
-    instances:
+    assertions:
       - date: 2017-01-26
         quote:
           I cut off hundreds of millions of dollars off one particular
@@ -177,7 +177,7 @@ claims:
           I'm cutting the price of airplanes with Lockheed.
 
   - id: nyt-apologized-to-trump-for-negative-coverage
-    instances:
+    assertions:
       - date: 2017-01-28
         quote:
           Thr [sic] coverage about me in the @nytimes and the
@@ -210,13 +210,13 @@ claims:
           to apologize because their predictions were so bad.
 
   - id: trump-84-percent-cuban-american-vote-2016
-    instances:
+    assertions:
       - date: 2017-01-29
         quote:
           The Cuban-Americans, I got 84 percent of that vote.
 
   - id: delays-caused-by-delta-not-travel-ban
-    instances:
+    assertions:
       - date: 2017-01-30
         quote:
           Big problems at airports were caused by Delta computer
@@ -228,7 +228,7 @@ claims:
           computer system at the airports.
 
   - id: only-109-affected-by-travel-ban
-    instances:
+    assertions:
       - date: 2017-01-30
         quote:
           Only 109 people out of 325,000 were detained and held for
@@ -240,7 +240,7 @@ claims:
           and all we did was vet those people very, very carefully.
 
   - id: trump-protesters-paid
-    instances:
+    assertions:
       - date: 2017-02-03
         quote:
           Professional anarchists, thugs and paid protesters are
@@ -254,7 +254,7 @@ claims:
         source: https://twitter.com/realdonaldtrump/status/853597199619543041
 
   - id: terrorism-not-reported-on
-    instances:
+    assertions:
       - date: 2017-02-06
         quote:
           Radical Islamic terrorists are determined to strike our
@@ -267,7 +267,7 @@ claims:
           understand that.
 
   - id: obama-policies-created-isis
-    instances:
+    assertions:
       - date: 2017-02-06
         quote:
           And the previous administration allowed it to happen because
@@ -276,7 +276,7 @@ claims:
           formed.
 
   - id: highest-murder-rate-in-47-years
-    instances:
+    assertions:
       - date: 2017-02-07
         quote:
           And yet the murder rate in our country is the highest it’s
@@ -284,7 +284,7 @@ claims:
           years.
 
   - id: cuomo-didnt-ask-blumenthal-about-vietnam
-    instances:
+    assertions:
       - date: 2017-02-09
         quote:
           Chris Cuomo, in his interview with Sen. Blumenthal, never
@@ -293,7 +293,7 @@ claims:
         source: https://twitter.com/realDonaldTrump/status/829681034564341760
 
   - id: blumenthal-misrepresented-gorsuch
-    instances:
+    assertions:
       - date: 2017-02-09
         quote:
           Sen. Richard Blumenthal… now misrepresents what Judge
@@ -301,14 +301,14 @@ claims:
         source: https://twitter.com/realDonaldTrump/status/829681034564341760
 
   - id: trump-didnt-know-about-flynn
-    instances:
+    assertions:
       - date: 2017-02-10
         quote:
           I don’t know about it. I haven’t seen it. What report is
           that?
 
   - id: media-didnt-cover-trump-florida-crowds
-    instances:
+    assertions:
       - date: 2017-02-12
         quote:
           Just leaving Florida. Big crowds of enthusiastic supporters
@@ -317,7 +317,7 @@ claims:
         source: https://twitter.com/realDonaldTrump/status/830904083519242241
 
   - id: 2016-biggest-electoral-college-win-since-reagan
-    instances:
+    assertions:
       - date: 2017-02-16
         quote:
           We got 306 because people came out and voted like they've
@@ -326,7 +326,7 @@ claims:
         source: http://time.com/4673993/donald-trump-campaign-electoral-college-win/
 
   - id: trump-responsible-for-10k-walmart-jobs
-    instances:
+    assertions:
       - date: 2017-02-16
         quote:
           Walmart announced it will create 10,000 jobs in the United
@@ -335,7 +335,7 @@ claims:
         source: https://www.whitehouse.gov/the-press-office/2017/02/16/remarks-president-trump-press-conference
 
   - id: wikiliks-info-unclassified
-    instances:
+    assertions:
       - date: 2017-02-16
         quote:
           When WikiLeaks, which I had nothing to do with, comes out
@@ -343,7 +343,7 @@ claims:
           information.
 
   - id: travel-ban-rollout-smooth
-    instances:
+    assertions:
       - date: 2017-02-16
         quote:
           Let me tell you about the travel ban.  We had a very smooth
@@ -352,7 +352,7 @@ claims:
         source: https://www.whitehouse.gov/the-press-office/2017/02/16/remarks-president-trump-press-conference
 
   - id: clinton-gave-20-percent-of-americas-uranium-to-russia
-    instances:
+    assertions:
       - date: 2016-10-24
         quote:
           Hillary Clinton gave them 20 percent of our uranium — gave
@@ -373,7 +373,7 @@ claims:
         source: https://www.whitehouse.gov/the-press-office/2017/02/16/remarks-president-trump-press-conference
 
   - id: nobody-mentioned-clinton-receiving-debate-questions
-    instances:
+    assertions:
       - date: 2017-02-16
         quote:
           They’re giving stuff — what was said at an office about
@@ -383,7 +383,7 @@ claims:
         source: https://www.whitehouse.gov/the-press-office/2017/02/16/remarks-president-trump-press-conference
 
   - id: terror-attack-in-sweden
-    instances:
+    assertions:
       - date: 2017-02-18
         quote:
           We’ve got to keep our country safe. You look at what’s
@@ -395,7 +395,7 @@ claims:
           the world. Take a look at Nice. Take a look at Paris.
 
   - id: cpac-lines-six-blocks
-    instances:
+    assertions:
       - date: 2017-02-24
         quote:
           By the way, you folks are in here, the place is packed —
@@ -407,7 +407,7 @@ claims:
         source: https://www.whitehouse.gov/the-press-office/2017/02/24/remarks-president-trump-conservative-political-action-conference
 
   - id: ice-endorsed-trump
-    instances:
+    assertions:
       - date: 2017-02-24
         quote:
           They came and endorsed me, ICE came and endorsed me.  They
@@ -417,7 +417,7 @@ claims:
         source: https://www.whitehouse.gov/the-press-office/2017/02/24/remarks-president-trump-conservative-political-action-conference
 
   - id: obamacare-increased-coverage-by-very-few-people
-    instances:
+    assertions:
       - date: 2017-02-24
         quote:
           Obamacare covers very few people.
@@ -432,7 +432,7 @@ claims:
         source: https://www.nytimes.com/2017/03/13/us/politics/fact-check-trump-obamacare-health-care.html
 
   - id: half-obamacare-insurers-stopped-participating
-    instances:
+    assertions:
       - date: 2017-02-27
         quote:
           Since Obamacare went into effect, nearly half of the
@@ -441,7 +441,7 @@ claims:
         source: https://www.whitehouse.gov/the-press-office/2017/02/27/remarks-president-trump-listening-session-health-insurance-company-ceos
 
   - id: trump-nato-partners-increased-spending
-    instances:
+    assertions:
       - date: 2017-02-28
         quote:
           We strongly support NATO, an alliance forged through the
@@ -469,7 +469,7 @@ claims:
         source: http://time.com/4775040/donald-trump-time-interview-being-president/
 
   - id: waters-of-us-costing-hundreds-of-thousands-of-jobs
-    instances:
+    assertions:
       - date: 2017-02-28
         quote:
           But a few years ago, the EPA decided that navigable waters
@@ -483,7 +483,7 @@ claims:
         source: https://www.whitehouse.gov/the-press-office/2017/02/28/remarks-president-trump-signing-waters-united-states-wotus-executive
 
   - id: 5-year-lobbying-ban-on-executive-branch
-    instances:
+    assertions:
       - date: 2017-02-28
         quote:
           We have begun to drain the swamp of government corruption by
@@ -493,7 +493,7 @@ claims:
         source: https://www.whitehouse.gov/the-press-office/2017/02/28/remarks-president-trump-signing-waters-united-states-wotus-executive
 
   - id: democrats-not-approving-trump-cabinet
-    instances:
+    assertions:
       - date: 2017-03-03
         quote:
           It is so pathetic that the Dems have still not approved my
@@ -501,7 +501,7 @@ claims:
         source: https://twitter.com/realDonaldTrump/status/837638488656920576
 
   - id: obama-tapped-trumps-wires
-    instances:
+    assertions:
       - date: 2017-03-04
         quote:
           Terrible! Just found out that Obama had my “wires tapped” in
@@ -529,7 +529,7 @@ claims:
         source: http://www.cbsnews.com/news/president-trump-oval-office-interview-cbs-this-morning-full-transcript/
 
   - id: 122-prisoners-obama-released-from-gitmo-returned-to-battlefield
-    instances:
+    assertions:
       - date: 2017-03-07
         quote:
           122 vicious prisoners, released by the Obama Administration
@@ -538,7 +538,7 @@ claims:
         source: https://twitter.com/realDonaldTrump/status/839084268991229952
 
   - id: half-of-tennessee-has-no-obamacare-insurer
-    instances:
+    assertions:
       - date: 2017-03-17
         quote:
           I was in Tennessee — I was just telling the folks — and half
@@ -554,7 +554,7 @@ claims:
         source: https://www.nytimes.com/2017/04/05/us/politics/donald-trump-interview-new-york-times-transcript.html
 
   - id: trump-sweden-riot-death
-    instances:
+    assertions:
       - date: 2017-03-22
         quote:
           Sweden. I make the statement, everyone goes crazy. The next
@@ -562,7 +562,7 @@ claims:
         source: http://time.com/4710456/donald-trump-time-interview-truth-falsehood/
 
   - id: nato-doesnt-cover-terrorism
-    instances:
+    assertions:
       - date: 2017-03-22
         quote:
           NATO, obsolete, because it doesn’t cover terrorism.
@@ -576,7 +576,7 @@ claims:
         source: https://www.whitehouse.gov/the-press-office/2017/04/12/joint-press-conference-president-trump-and-nato-secretary-general
 
   - id: nyt-removed-wiretapped-from-headline
-    instances:
+    assertions:
       - date: 2017-03-22
         quote:
           Here, headline, for the front page of the New York Times,
@@ -590,7 +590,7 @@ claims:
         source: http://time.com/4710456/donald-trump-time-interview-truth-falsehood/
 
   - id: trump-michigan-plants
-    instances:
+    assertions:
       - date: 2017-03-31
         quote:
           We have a lot of plants going up now in Michigan that were
@@ -600,7 +600,7 @@ claims:
         source: https://www.whitehouse.gov/the-press-office/2017/03/31/remarks-president-trump-listening-session-national-association
 
   - id: trump-didnt-know-steve-bannon
-    instances:
+    assertions:
       - date: 2017-04-11
         quote:
           I like Steve, but you have to remember he was not involved
@@ -609,7 +609,7 @@ claims:
         source: https://nypost.com/2017/04/11/trump-wont-definitively-say-he-still-backs-bannon/
 
   - id: democrats-obstructing-trump-nominees
-    instances:
+    assertions:
       - date: 2017-04-12
         quote:
           You can't do it faster, because they're obstructing. They're
@@ -619,7 +619,7 @@ claims:
         source: https://www.washingtonpost.com/news/the-fix/wp/2017/04/12/president-trumps-throughly-confusing-fox-business-interview-annotated/
 
   - id: mosul-campaign-expected-to-take-one-week
-    instances:
+    assertions:
       - date: 2017-04-12
         quote:
           Mosul was supposed to last for a week and now they've been
@@ -627,7 +627,7 @@ claims:
         source: https://www.washingtonpost.com/news/the-fix/wp/2017/04/12/president-trumps-throughly-confusing-fox-business-interview-annotated/
 
   - id: trump-didnt-change-stance-on-china
-    instances:
+    assertions:
       - date: 2017-04-18
         quote:
           The fake media goes, “Donald Trump has changed his stance on
@@ -640,7 +640,7 @@ claims:
         source: http://www.cnn.com/2017/04/18/politics/president-donald-trump-chinese-president-xi-friendly/index.html
 
   - id: trump-hadnt-heard-of-wikileaks
-    instances:
+    assertions:
       - date: 2017-04-23
         quote:
           When Wikileaks came out ... never heard of Wikileaks, never
@@ -648,7 +648,7 @@ claims:
         source: https://apnews.com/c810d7de280a47e88848b0ac74690c83
 
   - id: democrats-blocking-miners-healthcare
-    instances:
+    assertions:
       - date: 2017-04-27
         quote:
           I want to help our miners while the Democrats are blocking
@@ -656,7 +656,7 @@ claims:
         source: https://twitter.com/realdonaldtrump/status/857604537003200512
 
   - id: us-canada-trade-deficit
-    instances:
+    assertions:
       - date: 2017-04-28
         quote:
           The trade deficit with Mexico is close to $70 billion, even
@@ -664,7 +664,7 @@ claims:
         source: http://www.factcheck.org/2017/05/trumps-100-day-boasts/
 
   - id: trump-got-china-to-stop-manipulating-their-currency
-    instances:
+    assertions:
       - date: 2017-04-29
         quote:
           As you know, I've been a big critic of China, and I've been
@@ -697,7 +697,7 @@ claims:
         source: http://www.economist.com/Trumptranscript
 
   - id: house-healtcare-bill-would-protect-pre-existing-conditions
-    instances:
+    assertions:
       - date: 2017-05-01
         quote:
           Well, we are protecting pre-existing conditions. And it’ll
@@ -706,7 +706,7 @@ claims:
         source: https://www.bloomberg.com/news/articles/2017-05-01/president-donald-trump-interviewed-by-bloomberg-news-transcript
 
   - id: us-highest-tax-rate
-    instances:
+    assertions:
       - date: 2017-05-04
         quote:
           Because right now, we are one of the highest-taxed nations
@@ -714,7 +714,7 @@ claims:
         source: https://www.dailyherald.com/article/20170624/news/306249964
 
   - id: only-reporters-care-about-trumps-tax-returns
-    instances:
+    assertions:
       - date: 2017-01-11
         quote:
           You know, the only one that cares about my tax returns are
@@ -726,7 +726,7 @@ claims:
         source: http://www.economist.com/Trumptranscript
 
   - id: trump-colbert-highest-rated
-    instances:
+    assertions:
       - date: 2017-05-08
         quote:
           But when I did his show, which by the way was very highly
@@ -735,7 +735,7 @@ claims:
         source: https://www.independent.co.uk/arts-entertainment/trump-stephen-colbert-attack-video-interviw-lester-holt-a7731246.html
 
   - id: clapper-confirmed-no-evidence-of-russia-trump-collusion
-    instances:
+    assertions:
       - date: 2017-05-08
         quote:
           Director Clapper reiterated what everybody, including the
@@ -750,7 +750,7 @@ claims:
         source: https://twitter.com/realdonaldtrump/status/863014620516233216
 
   - id: trump-russia-collusion-excuse-by-democrats-for-losing-election
-    instances:
+    assertions:
       - date: 2017-05-12
         quote:
           Again, the story that there was collusion between the
@@ -759,7 +759,7 @@ claims:
         source: https://twitter.com/realdonaldtrump/status/862998775731818496
 
   - id: trump-successful-trip-saved-billions-and-millions-of-jobs
-    instances:
+    assertions:
       - date: 2017-05-26
         quote:
           Just arrived in Italy for the G7. Trip has been very
@@ -768,7 +768,7 @@ claims:
         source: https://twitter.com/realdonaldtrump/status/868047480847568896
 
   - id: paris-agreement-didnt-allow-us-to-build-coal-plants
-    instances:
+    assertions:
       - date: 2017-06-01
         quote:
           China will be allowed to build hundreds of additional coal
@@ -778,7 +778,7 @@ claims:
         source: http://transcripts.factcheck.org/president-trump-paris-climate-accord/
 
   - id: london-terror-attack-no-reason-to-be-alarmed
-    instances:
+    assertions:
       - date: 2017-06-04
         quote:
           At least 7 dead and 48 wounded in terror attack and Mayor of
@@ -786,7 +786,7 @@ claims:
         source: https://twitter.com/realdonaldtrump/status/871328428963901440
 
   - id: doj-submitted-watered-down-travel-ban-to-sc
-    instances:
+    assertions:
       - date: 2017-06-05
         quote:
           The Justice Dept. should have stayed with the original
@@ -795,14 +795,14 @@ claims:
         source: https://twitter.com/realdonaldtrump/status/871675245043888128
 
   - id: paris-agreement-binding
-    instances:
+    assertions:
       - date: 2017-06-21
         quote:
           And they all say it's non-binding. Like hell it's non-binding.
         source: http://www.washingtonexaminer.com/trump-on-paris-climate-agreement-like-hell-its-non-binding/article/2626729
 
   - id: cnn-ratings-way-down
-    instances:
+    assertions:
       - date: 2017-06-27
         quote:
           Fake News CNN is looking at big management changes now that
@@ -811,11 +811,23 @@ claims:
         source: https://twitter.com/realDonaldTrump/status/879678356450676736
 
   - id: half-of-ms-13-deported
-    instances:
+    assertions:
       - date: 2017-06-28
         quote:
           MS-13 is a prime target. They are bad people. And we’ve
           gotten many of them out already.  You know, we’re pretty
           much at the 50 percent mark.
         source: https://www.whitehouse.gov/the-press-office/2017/06/28/remarks-president-trump-during-meeting-immigration-crime-victims
+
+  - id: bcra-increases-medicaid-spending
+    assertions:
+      - date: 2017-06-28
+        quote:
+          "Democrats purposely misstated Medicaid under new Senate bill
+          - actually goes up."
+        source: https://twitter.com/realDonaldTrump/status/880175585418465284
+        checks:
+          - checker: washington-post
+            rating: 3-pinnochios
+            source: https://www.washingtonpost.com/news/fact-checker/wp/2017/06/30/president-trumps-claim-medicaid-spending-in-senate-health-bill-actually-goes-up/
 ---

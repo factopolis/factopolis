@@ -2,9 +2,6 @@
 title: LieDB
 ---
 
-LieDB is a collaboratively edited database of the lies politicians
-tell and the fact checking that catches them.
-
 **LieDB is not ready for public use yet**.  The software is still
 under heavy development, the data is woefully incomplete, and even
 this page is haphazardly structured and written.  However, it should
@@ -12,32 +9,81 @@ give you a decent understanding of the direction we are taking, and we
 would very much welcome any feedback, especially constructive
 criticism.
 
-Most fact checking sites will publish an article then largely forget
-about it.  If a politician makes the same claim again, or a different
-politician repeats the claim, they may or may not publish a new
-article.
+The name "LieDB" will go away as soon as we find something better, if
+only because "LieDB" limits us to false claims.
+
+## About LieDB
+
+LieDB is a collaboratively edited database of the lies politicians
+tell and the fact checks which test them.  While LieDB is a fact
+checking site, but it takes a different approach than other fact
+checking sites we're aware of such as
+[FactCheck.org](https://www.factcheck.org/) and
+[PolitiFact](http://www.politifact.com/).
+
+LieDB doesn't really compete with traditional fact-checking sites,
+instead it provides a service built on top of those sites.  A good
+analogy is Wikipedia and Google; Wikipedia creates lots of great
+content, and Google provides a way for people to make sense of it all.
+Similarly, LieDB provides a way to navigate the work done by
+traditional fact checking organizations.
+
+### LieDB is a Database
+
+Perhaps the most significant difference between LieDB and most other
+fact checking sites is that LieDB is much more structured.  While most
+sites post walls of text detailing their work LieDB extracts a few
+select pieces of information, providing links to the original source
+for those who want more information.
+
+The data behind LieDB is freely available in machine-readable formats,
+for both commercial and non-commercial use.  This allows anyone to
+download the data and make something new.
+
+### Living Data
+
+Most fact checking sites will publish article about a claim made by a
+politician, pundit, or other political figure, then leave it as-is.
+If the same person makes the same claim again, or someone else does,
+the fact checker *may* choose to publish a new article (often citing
+the old article), but will not generally update the old article.
 
 LieDB, on the other hand, is focused on creating rich, evolving data
 which is kept up-to-date to reflect new information as it becomes
-available, including subsequent re-statements of the same claims.
+available, including subsequent re-statements of the same claims, with
+links to any credible fact checks we can find.
 
-More than just being a good reference, the data behind LieDB is freely
-available in machine-readable formats, for both commercial and
-non-commercial use.  This allows anyone to download the data and make
-something new.
+### Clarifications
 
-We don't currently do any fact checking ourselves, instead linking to
-analysis from [trusted fact checkers](/checker).
+This isn't done yet.
 
-## Current Work
+Perhaps as a result of our "living data" approach, we also want to
+provide a way to indicate when a politician has publicly retracted a
+false claim, as well as link to any "clarifications".
 
-### Gray Areas
+That said, we believe it is important to distinguish between truly
+owning up to a mistake and the sort of non-apology equivocations which
+are all too common, particularly those issued quietly by someone else
+(*e.g.*, by a press secretary or lawyer).
 
-Things are complicated the fact that politicians tend to make a lot
-of statements targeted at gray areas, where careful word choice can
-mean the difference between an outright lie and a statement which is
-technically true, though deceptive.  This means that each statement
-must be analyzed individually.
+While it is best not to make any deceptive statements in the first
+place, we have healthy respect for those who can publicly own up to a
+mistake.
+
+### Linking Similar Claims Together
+
+The structured nature of LieDB is designed to facilitate linking
+related information together, and one of the most important ways we do
+this is by grouping similar statements together, even if they are
+worded slightly differently.
+
+People don't usually come up with claims in a vacuum.  Sometimes many
+people operate off of the same "talking points", other times they will
+repeat claims they've heard others make.  Fact checking sites
+typically analyze each claim separately, in large part because subtle
+differences in language can easily mean the difference between a
+statement being technically true (though deceptive) and flat-out
+false.
 
 For example, consider the claims that the BCRA (the Senate health care
 bill) [increases Medicaid
@@ -68,34 +114,18 @@ the veracity of her statement rests on a questionable definition of
 the term "cut", I think anyone would agree that Conway's version is
 much less deceptive than Trump's.
 
-Our current plan to resolve this is to classify talking points (i.e.,
-similar claims made by one or more politician) as either generally
-truthful or deceptive.  Individual statements can be classified more
-specifically as true, mostly true, mostly false, or false; this
-corresponds to the scales already used by both
-[PolitiFact](http://www.politifact.com/truth-o-meter/article/2013/nov/01/principles-politifact-punditfact-and-truth-o-meter/)
-and [The Washington
-Post](https://www.washingtonpost.com/news/fact-checker/about-the-fact-checker/).
+LieDB's structure provides a solution to this issue.  While individual
+claims can be (and preferably are) rated separately, the fact that
+LieDB links them together means we have a good way to provide an
+overview of similar claims and information dug up by fact checkers.
+This can then be used to help classify a group of assertions (*i.e.*,
+a talking point) as either generally true or disingenuous.
 
 This separation of general claims from specific statements will, we
 hope, allow LieDB to focus on the heart of the issue instead of
 quibbling over semantics and grammar, making LieDB less hospitable to
-deception such as [weasel
+deceptions such as [weasel
 words](https://en.wikipedia.org/wiki/Weasel_word) and vaugery.
-
-### Clarifications
-
-We also want to provide a way to indicate when a politician has
-publicly retracted a false claim, as well as link to any
-"clarifications" (which is generally a euphemism for an equivocation).
-While it is best not to make any deceptive statements in the first
-place, we have healthy respect for those who can publicly own up to a
-mistake.
-
-With that being said, we believe it is important to distinguish
-between truly owning up to a mistake and the sort of non-apology
-equivocations which are all too common, particularly those issued
-quietly by someone else (*e.g.*, by a press secretary or lawyer).
 
 ## Focus on Trump
 

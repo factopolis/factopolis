@@ -36,8 +36,8 @@
       {{ end }}
     </p>
 
-		<footer>
-			<cite>
+    <footer>
+      <cite>
         {{ if .url }}<a href="{{ .url }}">{{ end }}
         {{ if .checker }}
 
@@ -54,8 +54,8 @@
         {{ end }}
         {{ if .url }}</a>{{ end }}
       </cite>
-		</footer>
-		</blockquote>
+    </footer>
+  </blockquote>
   {{ end }}
       </section>
     </section>
@@ -70,7 +70,7 @@
         <li>
           <a href="{{ $person.URL }}#claim-{{ $claimID | htmlEscape }}">
             {{ $person.Title }}
-            {{ $claimCount := .instances | len }}
+            {{ $claimCount := .assertions | len }}
             {{ if (sub $claimCount 1) }}
               on {{ $claimCount }} occasions
             {{ end }}

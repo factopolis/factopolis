@@ -2,15 +2,24 @@
 title: "Contributing"
 ---
 
-LieDB is a community-driven project, and a fairly large undertaking, so we need all the help we can get.  All community activity is managed through [our GitHub project](https://github.com/liedb/liedb), most notably through [our issue tracker](https://github.com/liedb/liedb/issues); if you have an ideas, please [submit an issue](https://github.com/liedb/liedb/issues/new).
+LieDB is a community-driven project, and a fairly large undertaking,
+so we need all the help we can get.  All community activity is managed
+through [our GitHub project](https://github.com/liedb/liedb), most
+notably through [our issue
+tracker](https://github.com/liedb/liedb/issues); if you have an ideas,
+please [submit an issue](https://github.com/liedb/liedb/issues/new).
 
 If you're not sure how to help, here are a few things we know we need:
 
 ## Adding Entries
 
-Adding entries doesn't require an special expertise, so it's a great way to get started.  Also, it turns out that politicians lie *a lot*, and we want to document as many of them as we can, so there is plenty to do!
+Adding entries doesn't require an special expertise, so it's a great
+way to get started.  Also, it turns out that politicians lie *a lot*,
+and we want to document as many of them as we can, so there is plenty
+to do!
 
-The first step, and the most difficult, is gathering information.  To create a new claim, we need the following information:
+The first step, and the most difficult, is gathering information.  To
+create a new claim, we need the following information:
 
  * Title — A short, to the point description of the claim.
  * Summary — A short sentence or two to summarize the truth, phrased in
