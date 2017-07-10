@@ -16,15 +16,15 @@
         {{ range $idx, $claim := .Params.claims }}
         {{ if $idx }}, {{ end }}
 	{
-	    "id": "{{ $claim.id }}",
-	    "instances": [
-		{{ $instances := $claim.instances }}
-		{{ range $idx, $instance := $claim.instances }}
+	    "claim": "{{ $claim.id }}",
+	    "assertions": [
+		{{ $assertions := $claim.assertions }}
+		{{ range $idx, $assertion := $claim.assertions }}
 		{{ if $idx }}, {{ end }}
 		{
-		    {{ if $instance.date }}"date": "{{ replace (replace $instance.date "\n" "\\n") "\"" "\\\"" }}",{{ end }}
-		    {{ if $instance.source }}"source": "{{ replace (replace $instance.source "\n" "\\n") "\"" "\\\"" }}",{{ end }}
-		    "quote": "{{ replace (replace $instance.quote "\n" "\\n") "\"" "\\\"" }}"
+		    {{ if $assertion.date }}"date": "{{ replace (replace $assertion.date "\n" "\\n") "\"" "\\\"" }}",{{ end }}
+		    {{ if $assertion.source }}"source": "{{ replace (replace $assertion.source "\n" "\\n") "\"" "\\\"" }}",{{ end }}
+		    "quote": "{{ replace (replace $assertion.quote "\n" "\\n") "\"" "\\\"" }}"
 		}
 		{{ end }}
 	    ]

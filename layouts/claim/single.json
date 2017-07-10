@@ -6,14 +6,14 @@
         {{ range $idx, $check := .Params.checks }}
         {{ if $idx }}, {{ end }}
         {
-            {{ if $check.short }}"shortQuote": "{{ replace (replace $check.shortQuote "\n" "\\n") "\"" "\\\"" }}", {{ end }}
+            {{ if $check.short }}"short": "{{ replace (replace $check.short "\n" "\\n") "\"" "\\\"" }}", {{ end }}
             {{ if $check.quote }}"quote": "{{ replace (replace $check.quote "\n" "\\n") "\"" "\\\"" }}", {{ end }}
             {{ if $check.url }}"url": "{{ replace (replace $check.url "\n" "\\n") "\"" "\\\"" }}", {{ end }}
             {{ if $check.name }}
                 "name": "{{ replace (replace $check.name "\n" "\\n") "\"" "\\\"" }}"
             {{ else }}
                 {{ range where $.Site.Pages "URL" (printf "/checker/%s/" .checker) }}
-                    "name": "{{ replace (replace .Title "\n" "\\n") "\"" "\\\"" }}""
+                    "name": "{{ replace (replace .Title "\n" "\\n") "\"" "\\\"" }}"
                 {{ end }}
             {{ end }}
         }
