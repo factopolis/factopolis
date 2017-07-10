@@ -828,6 +828,6 @@ claims:
         source: https://twitter.com/realDonaldTrump/status/880175585418465284
         checks:
           - checker: washington-post
-            rating: 3-pinnochios
+            rating: 3-pinocchios
             source: https://www.washingtonpost.com/news/fact-checker/wp/2017/06/30/president-trumps-claim-medicaid-spending-in-senate-health-bill-actually-goes-up/
 ---

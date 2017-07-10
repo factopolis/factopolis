@@ -3,7 +3,7 @@ title: Trump Didn't Change His Stance on China
 summary: He did.
 checks:
   - checker: new-york-times
-    shortQuote: He did.
+    short: He did.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - name: Politico
     quote:

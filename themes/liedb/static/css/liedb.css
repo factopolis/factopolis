@@ -73,3 +73,12 @@ blockquote {
 .claim-list .claim {
     font-size: 133%;
 }
+
+.claim-quotes {
+    border-left: 5px solid #eee;
+    padding-left: 1em;
+}
+
+.claim-quotes blockquote {
+    border: none;
+}

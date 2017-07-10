@@ -3,10 +3,10 @@ title: Pew Report Showed 2016 Voter Fraud
 summary: The report never mentioned voter fraud.
 checks:
   - checker: new-york-times
-    shortQuote: The report never mentioned voter fraud.
+    short: The report never mentioned voter fraud.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: factcheck-org
-    shortQuote: … they did not claim it was evidence of actual fraud
+    short: … they did not claim it was evidence of actual fraud
     quote:
       "As we have written before, the 2012 report, “Inaccurate, Costly
       and Inefficient: Evidence That America’s Voter Registration

@@ -3,10 +3,10 @@ title: 122 Prisoners Released By Obama Administration from Guantanamo Returned t
 summary: 113 of them were released by President George W. Bush.
 checks:
   - checker: new-york-times
-    shortQuote: 113 of them were released by President George W. Bush.
+    short: 113 of them were released by President George W. Bush.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - name: CBS News
-    shortQuote:
+    short:
       Under Obama, 161 detainees were transferred from Guantanamo Bay
       and only 9 have been confirmed to have reengaged and returned to
       the battlefield.
@@ -24,18 +24,18 @@ checks:
       transferred since 2009.
     url: http://www.cbsnews.com/news/trump-incorrectly-claims-122-gitmo-detainees-released-under-obama-returned-to-battlefield/
   - name: The Independent
-    shortQuote:
+    short:
       113 of ‘122 vicious prisoners’ mentioned by President were
       released by Bush administration
     url: https://www.independent.co.uk/news/world/americas/donald-trump-guantanamo-barack-obama-vicious-prisoners-122-terrorists-released-bush-administration-a7616096.html
   - name: Snopes
-    shortQuote:
+    short:
       The majority of those detainees (113) were released under the
       administration of President George W. Bush, only 9 were
       transferred during the Obama administration.
     url: http://www.snopes.com/obama-prisoner-release/
   - checker: factcheck-org
-    shortQuote:
+    short:
       According to the government’s latest “Summary of Reengagement of
       Detainees Formerly Held at Guantanamo Bay, Cuba,” the vast
       majority of the released Gitmo detainees who were “confirmed of

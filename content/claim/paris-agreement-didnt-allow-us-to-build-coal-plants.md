@@ -5,7 +5,7 @@ summary:
   many coal-fired plants any country can build.
 checks:
   - checker: politifact
-    shortQuote:
+    short:
       The agreement never uses the word coal, much less spells out how
       many coal-fired plants any country can build.
     quote:
@@ -28,6 +28,6 @@ checks:
       plants.
     url: https://www.washingtonpost.com/news/fact-checker/wp/2017/06/01/fact-checking-president-trumps-claims-on-the-paris-climate-change-deal/
   - name: New York Times
-    shortQuote: The agreement doesn’t allow or disallow building coal plants.
+    short: The agreement doesn’t allow or disallow building coal plants.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
 ---

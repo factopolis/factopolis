@@ -4,9 +4,10 @@ rating: false
 summary: He supported the invasion until after it began.
 checks:
   - checker: new-york-times
-    shortQuote: He was for an invasion before he was against it.
+    short: He was for an invasion before he was against it.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: factcheck-org
+    rating: no-evidence
     quote:
       There is no evidence that we could find, however, that he spoke
       against the war *before* it started, although we did find he
@@ -14,6 +15,7 @@ checks:
       a few months after it started.
     url: http://www.factcheck.org/2016/02/donald-trump-and-the-iraq-war/
   - checker: politifact
+    rating: "false"
     quote:
       We could only find one example of Trump commenting on the Iraq
       War before the invasion where he seemed apprehensive but not

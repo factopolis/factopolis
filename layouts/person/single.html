@@ -80,6 +80,27 @@
 	      </cite>
 	    </footer>
 	  </blockquote>
+
+	  {{ if $assertion.checks }}
+            <dl class="dl-horizontal assertion-check-list">
+              {{ range $check := $assertion.checks }}
+                {{ range $checker := where $.Site.Pages "URL" (printf "/checker/%s/" $check.checker) }}
+                  <dt>
+                    <a href="{{ $check.source }}">
+                      {{ if isset $checker.Params "abbr" }}
+                        <abbr title="{{ $checker.Title }}">{{ $checker.Params.abbr }}</abbr>
+                      {{ else }}
+                        {{ $checker.Title }}
+                      {{ end }}
+                    </a>
+                  </dt>
+                  <dd>
+                    {{ humanize $check.rating }}
+                  </dd>
+                {{ end }}
+              {{ end }}
+	    </dl>
+	  {{ end }}
 	  {{ end }}
 	</div>
 

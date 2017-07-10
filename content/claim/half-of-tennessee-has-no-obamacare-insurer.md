@@ -3,7 +3,7 @@ title: Half of Tennessee Has No Obamacare Insurer
 summary: There's at least one insurer in every Tennessee county.
 checks:
   - checker: new-york-times
-    shortQuote: There's at least one insurer in every Tennessee county.
+    short: There's at least one insurer in every Tennessee county.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: factcheck-org
     quote:

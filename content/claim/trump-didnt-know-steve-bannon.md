@@ -3,7 +3,7 @@ title: Trump Didn't Know Steve Bannon Until Late in His Campaign
 summary: They Met in 2011
 checks:
   - checker: new-york-times
-    shortQuote: They Met in 2011
+    short: They Met in 2011
     quote:
       David Bossie, a conservative activist who worked with Mr. Bannon
       on a series of films, made the introduction. “They definitely

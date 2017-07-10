@@ -3,10 +3,10 @@ title: Voter Fraud in 2016 Election
 summary: There's no evidence of illegal voting.
 checks:
   - checker: new-york-times
-    shortQuote: There's no evidence of illegal voting.
+    short: There's no evidence of illegal voting.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: factcheck-org
-    shortQuote:
+    short:
       … numerous studies that have found such in-person voter fraud —
       the type of fraud Trump is alleging — is virtually nonexistent.
     quote:

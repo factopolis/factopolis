@@ -3,7 +3,7 @@ title: Trump Instituted a 5-year Ban on Lobbying the Executive Branch
 summary: They can't lobby their former agency but can still become lobbyists.
 checks:
   - checker: new-york-times
-    shortQuote: They can't lobby their former agency but can still become lobbyists.
+    short: They can't lobby their former agency but can still become lobbyists.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: washington-post
     quote:

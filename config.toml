@@ -1,6 +1,8 @@
 languageCode = "en-us"
 title = "LieDB"
-baseurl = "https://liedb.github.io/"
+baseurl = "https://liedb.github.io"
+
+theme = "liedb"
 
 [outputs]
 page = [ "HTML", "JSON" ]

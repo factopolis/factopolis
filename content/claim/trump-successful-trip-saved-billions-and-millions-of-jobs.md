@@ -6,7 +6,7 @@ summary:
   likely to be illusionary.
 checks:
   - checker: new-york-times
-    shortQuote:
+    short:
       He's referencing an arms deal that's not enacted and other
       apparent deals that weren't announced on the trip.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
@@ -19,7 +19,7 @@ checks:
       statement False.
     url: http://www.politifact.com/truth-o-meter/statements/2017/may/26/donald-trump/did-donald-trumps-trip-create-or-save-millions-job/
   - checker: washington-post
-    shortQuote:
+    short:
       Trump is counting his chickens before they hatch. Even if he
       succeeds in reorienting U.S. trade policy, jobs gains are still
       likely to be illusionary.

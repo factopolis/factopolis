@@ -11,11 +11,11 @@
 
   <article>
     {{ if .Content }}
-    <section>
-      <h2>Details</h2>
+      <section>
+        <h2>Details</h2>
 
-      {{ .Content }}
-    </section>
+        {{ .Content }}
+      </section>
     {{ end }}
 
     <section>
@@ -24,39 +24,43 @@
       <p>{{ $claim.summary | markdownify }}</p>
 
       <section>
-  <h3>Sources</h3>
+	<h3>Sources</h3>
 
-  {{ range .Params.checks }}
-  <blockquote>
-    <p>
-      {{ if .quote }}
-      {{ .quote | markdownify }}
-      {{ else if .shortQuote }}
-      {{ .shortQuote | markdownify }}
-      {{ end }}
-    </p>
+	{{ range $check := .Params.checks }}
+	  <blockquote>
+	    <p>
+              {{ if $check.quote }}
+                {{ $check.quote | markdownify }}
+              {{ else if $check.short }}
+                {{ $check.short | markdownify }}
+              {{ end }}
+            </p>
 
-    <footer>
-      <cite>
-        {{ if .url }}<a href="{{ .url }}">{{ end }}
-        {{ if .checker }}
+            <footer>
+              <cite>
+                {{ if $check.url }}<a href="{{ $check.url }}">{{ end }}
+                {{ if $check.checker }}
+                  {{ range where $.Site.Pages "URL" (printf "/checker/%s/" $check.checker) }}
+                    {{ .Title }}
+                  {{ end }}
+                {{ else }}
+                  {{ $check.name }}
+                {{ end }}
 
-        {{ range where $.Site.Pages "URL" (printf "/checker/%s/" .checker) }}
-          {{ .Title }}
+                {{ if $check.date }}
+                  on {{ $check.date }}
+                {{ end }}
+
+                {{ if $check.url }}</a>{{ end }}
+              </cite>
+              {{ if $check.rating }}
+                <div class="rating" style="margin-left: 1.2em">
+                  Rating: {{ humanize $check.rating }}
+                </div>
+              {{ end }}
+            </footer>
+	  </blockquote>
         {{ end }}
-
-        {{ else }}
-          {{ if .name }}{{ .name }}{{ end }}
-        {{ end }}
-
-        {{ if .date }}
-           on {{ .date }}
-        {{ end }}
-        {{ if .url }}</a>{{ end }}
-      </cite>
-    </footer>
-  </blockquote>
-  {{ end }}
       </section>
     </section>
 
@@ -65,19 +69,19 @@
 
       <ul>
 
-      {{ range $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
-       {{ range where $person.Params.claims "id" $claimID }}
+        {{ range $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
+        {{ range where $person.Params.claims "id" $claimID }}
         <li>
           <a href="{{ $person.URL }}#claim-{{ $claimID | htmlEscape }}">
             {{ $person.Title }}
             {{ $claimCount := .assertions | len }}
             {{ if (sub $claimCount 1) }}
-              on {{ $claimCount }} occasions
+            on {{ $claimCount }} occasions
             {{ end }}
           </a>
         </li>
         {{ end }}
-      {{ end }}
+        {{ end }}
       </ul>
 
     </section>

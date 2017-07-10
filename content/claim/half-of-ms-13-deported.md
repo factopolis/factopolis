@@ -3,7 +3,7 @@ title: Half of MS-13 Deported
 summary: The real number is in the hundreds, of approximately 10,000 members.
 checks:
   - checker: factcheck-org
-    shortQuote:
+    short:
       Actually, the number is in the hundreds.
     quote:
       "For Trump to claim that half of the Ms-13 gang members have been

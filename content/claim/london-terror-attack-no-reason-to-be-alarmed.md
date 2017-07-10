@@ -24,7 +24,7 @@ checks:
       citizens should “not be alarmed” by what had occurred.
     url: http://www.snopes.com/2017/06/04/london-mayor-sadiq-khan-no-reason-to-be-alarmed-trump/
   - checker: new-york-times
-    shortQuote:
+    short:
       The mayor was specifically talking about the enlarged police
       presence on the streets.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html

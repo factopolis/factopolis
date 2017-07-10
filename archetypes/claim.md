@@ -3,7 +3,7 @@ title:
 summary: 
 checks:
   - name: 
-    shortQuote: 
+    short: 
     quote: 
     url: 
 ---

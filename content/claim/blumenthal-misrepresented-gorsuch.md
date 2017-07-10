@@ -3,10 +3,10 @@ title: Sen. Blumenthal Misrepresented Niel Gorsuch
 summary: The Gorsuch comments were later corroborated.
 checks:
   - checker: new-york-times
-    shortQuote: The Gorsuch comments were later corroborated.
+    short: The Gorsuch comments were later corroborated.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - name: The Hill
-    shortQuote:
+    short:
       A spokesman for Gorsuch later confirmed to CNN that the judge
       used the terms “disheartening” and “demoralizing” to describe
       Trump's tweets during his meeting with the Blumenthal.

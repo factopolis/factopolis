@@ -3,7 +3,7 @@ title: Obamacare Covers Very Few People
 summary: About 20 million have gained insurance under the act.
 checks:
   - checker: new-york-times
-    shortQuote: About 20 million have gained insurance under the act.
+    short: About 20 million have gained insurance under the act.
     quote:
       About 20 million have gained insurance under the act. The
       uninsured rate fell to 10.9 percent at the end of last year,

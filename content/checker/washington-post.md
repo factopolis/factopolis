@@ -1,7 +1,8 @@
 ---
 title: The Washington Post
+abbr: WaPo
 website: https://www.washingtonpost.com/news/fact-checker/
-logo-48: /img/WashingtonPost.png
+logo48: /img/WashingtonPost.png
 ratings:
  - id: 1-pinocchio
    name: 1 Pinocchio

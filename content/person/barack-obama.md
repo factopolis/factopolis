@@ -27,4 +27,8 @@ claims:
           United States as it ever was.  It’s just it needs one-tenth
           of the workers that it used to.
         source: https://obamawhitehouse.archives.gov/the-press-office/2016/06/30/remarks-president-obama-prime-minister-trudeau-canada-and-president-pe%C3%B1a
+        checks:
+          - checker: politifact
+            rating: false
+            source: http://www.politifact.com/truth-o-meter/statements/2016/jul/05/barack-obama/barack-obama-wrong-about-size-us-steel-production-/
 ---

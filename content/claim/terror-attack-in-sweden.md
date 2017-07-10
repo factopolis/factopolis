@@ -3,12 +3,12 @@ title: Terror Attack in Sweden
 summary: Trump implied there was a terror attack in Sweden, but there was no such attack.
 checks:
   - checker: new-york-times
-    shortQuote:
+    short:
       Trump implied there was a terror attack in Sweden, but there was
       no such attack.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: washington-post
-    shortQuote:
+    short:
       This was a very strange comment. Nothing had happened the night
       before in Sweden, as Swedes (including former prime minister
       Carl Bildt) quickly noted.
