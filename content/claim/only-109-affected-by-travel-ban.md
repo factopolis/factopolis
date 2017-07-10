@@ -6,6 +6,7 @@ checks:
     short: At least 746 people were detained and processed…
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: politifact
+    rating: "false"
     quote:
       This refers to the number of people who were in transit when the
       ban was announced. It doesn’t account for people who tried to

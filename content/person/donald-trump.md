@@ -56,18 +56,21 @@ claims:
         quote:
           Now, the audience was the biggest ever. But this crowd was
           massive. Look how far back it goes. This crowd was massive.
+        source: https://www.washingtonpost.com/news/post-politics/wp/2017/01/26/in-his-first-major-tv-interview-as-president-trump-is-endlessly-obsessed-about-his-popularity/
 
   - id: pew-report-showed-2016-voter-fraud
     assertions:
       - date: 2017-01-25
         quote:
           Take a look at the Pew reports (which show voter fraud.)
+        source: http://abcnews.go.com/Politics/transcript-abc-news-anchor-david-muir-interviews-president/story?id=45047602
 
   - id: aca-caused-millions-to-lose-insurance
     assertions:
       - date: 2017-01-25
         quote:
           You had millions of people that now aren't insured anymore.
+        source: http://abcnews.go.com/Politics/transcript-abc-news-anchor-david-muir-interviews-president/story?id=45047602
 
   - id: two-people-killed-during-obama-speech
     assertions:
@@ -76,6 +79,7 @@ claims:
           So, look, when President Obama was there two weeks ago
           making a speech, very nice speech. Two people were shot and
           killed during his speech. You can't have that.
+        source: http://abcnews.go.com/Politics/transcript-abc-news-anchor-david-muir-interviews-president/story?id=45047602
 
   - id: unvettable
     assertions:
@@ -83,13 +87,16 @@ claims:
         quote:
           We've taken in tens of thousands of people. We know nothing
           about them. They can say they vet them. They didn't vet
-          them. They have no papers. How can you vet somebody when you
-          don't know anything about them and you have no papers? How
-          do you vet them? You can't.
+          them.  They have no papers. How can you vet somebody when
+          you don't know anything about them and you have no papers?
+          How do you vet them? You can't.
+        source: http://www.foxnews.com/transcript/2017/01/26/cable-exclusive-president-trump-sits-down-with-sean-hannity-at-white-house.html
       - date: 2017-02-18
         quote:
-          And there was no way to vet those people. There was no
-          documentation. There was no nothing.
+          We’ve allowed thousands and thousands of people into our
+          country. And there was no way to vet those people. There was
+          no documentation. There was no nothing.
+        source: https://www.washingtonpost.com/news/fact-checker/wp/2017/02/19/fact-checking-president-trumps-rally-in-florida/
 
   - id: trump-saved-millions-on-f-35
     assertions:
@@ -100,38 +107,61 @@ claims:
           time. It wasn't like I spent, like, weeks, hours, less than
           hours, and many, many hundreds of millions of dollars. And
           the plane's going to be better.
+        source: http://www.foxnews.com/transcript/2017/01/26/cable-exclusive-president-trump-sits-down-with-sean-hannity-at-white-house.html
+      - date: 2017-01-30
+        quote:
+          But we cut approximately $600 million off the F-35 fighter,
+          and that only amounts to 90 planes out of close to 3,000
+          planes. And when you think about $600 million, it was
+          announced by Marillyn, who’s very talented, the head of
+          Lockheed Martin. I got involved in that about a month ago. A
+          lot was put out, and when they say a lot, a lot meant about
+          90 planes. They were having a lot of difficulty. There was
+          no movement and I was able to get $600 million approximately
+          off those planes.
+        source: https://www.washingtonpost.com/news/fact-checker/wp/2017/01/31/trumps-claim-taking-credit-for-cutting-600-million-from-the-f-35-program/
+        checks:
+          - checker: washington-post
+            rating: 4-pinocchios
+            source: https://www.washingtonpost.com/news/fact-checker/wp/2017/01/31/trumps-claim-taking-credit-for-cutting-600-million-from-the-f-35-program/
       - date: 2017-02-06
         quote:
           I have already saved more than $700 million when I got
           involved in the negotiation on the F-35.
+        source: http://time.com/4661658/donald-trump-terror-attacks-speech-macdill-air-force-base/
       - date: 2017-02-07
         quote:
           I saved more than $600 million. I got involved in
           negotiation on a fighter jet, the F-35.
+        source: http://www.foxnews.com/transcript/2017/02/08/exclusive-interview-with-president-trump-part-3.html
       - date: 2017-02-27
         quote:
           On one plane, on a small order of one plane, I saved $725
-          million. And I would say I devoted about, if I added it up,
-          all those calls, probably about an hour. So I think that
-          might be my highest and best use.
+          million.  And I would say I devoted about, if I added it up,
+          all those calls, probably about an hour.
+        source: https://www.whitehouse.gov/the-press-office/2017/02/27/remarks-president-trump-meeting-national-governors-association
       - date: 2017-03-13
         quote:
           I saved a lot of money on those jets, didn't I? Did I do a
           good job? More than $725 million on them.
+        source: https://www.whitehouse.gov/the-press-office/2017/03/13/remarks-president-trump-first-cabinet-meeting
       - date: 2017-03-15
         quote:
           On the airplanes, I saved $725 million. Probably took me a
           half an hour if you added up all of the times.
+        source: http://www.nbcnews.com/politics/white-house/fact-checking-president-trump-s-interview-n734426
       - date: 2017-03-20
         quote:
           With just one negotiation on one set of airplanes, I saved
           the taxpayers of our country over $700 million.
+        source: https://youtu.be/oC3ZqeCyvTs?t=718
       - date: 2017-03-21
         quote:
           To save taxpayer dollars, I’ve already begun negotiating
           better contracts for the federal government — saving over
           $700 million on just one set of airplanes of which there are
           many sets.
+        source: http://transcripts.factcheck.org/remarks-president-nrcc-dinner/
       - date: 2017-04-06
         quote:
           If you look at the kind of cost-cutting we’ve been able to
@@ -140,29 +170,35 @@ claims:
           on airplanes, and really billions, because if you take that
           out over a period of years it’s many billions of dollars — I
           think we’ve had a tremendous success.
+        source: https://www.whitehouse.gov/the-press-office/2017/04/06/remarks-president-trump-press-aboard-air-force-one-en-route-west-palm
       - date: 2017-04-21
         quote:
           On 90 planes I saved $725 million. It's actually a little
           bit more than that, but it's $725 million.
+        source: https://www.apnews.com/c810d7de280a47e88848b0ac74690c83
       - date: 2017-04-28
         quote:
           The F-35 fighter jet program — it was way over budget. I’ve
           saved $725 million plus, just by getting involved in the
           negotiation.
+        source: https://www.gpo.gov/fdsys/pkg/DCPD-201700285/html/DCPD-201700285.htm
       - date: 2017-04-29
         quote:
           I've already saved more than $725 million on a simple order
           of F-35 planes. I got involved in the negotiation.
+        source: http://transcripts.cnn.com/TRANSCRIPTS/1704/29/se.02.html
       - date: 2017-04-29
         quote:
           I was negotiating to reduce the price of the big fighter jet
           contract, the F-35, which was totally out of control. I will
           save billions and billions and billions of dollars.
+        source: http://www.cbsnews.com/news/president-trump-oval-office-interview-cbs-this-morning-full-transcript/
       - date: 2017-05-01
         quote:
           The F-35 fighter jet — I saved — I got involved in the
           negotiation. It's 2,500 jets. I negotiated for 90 planes,
           lot 10. I got $725 million off the price.
+        source: https://www.bloomberg.com/news/articles/2017-05-01/president-donald-trump-interviewed-by-bloomberg-news-transcript
       - date: 2017-05-02
         quote:
           I love the Air Force.  I love those planes.  I love buying
@@ -172,9 +208,11 @@ claims:
           dollars off plane contracts sitting here.  Do they give me
           credit?  No, but that’s okay.
         source: https://www.whitehouse.gov/the-press-office/2017/05/02/remarks-president-trump-presentation-commander-chief-trophy-united
-      - date: 2017-05-13
-        quote:
-          I'm cutting the price of airplanes with Lockheed.
+      # I can't find a source for this one (other than the NYT
+      # article, or people citing it).  Help wanted.
+      # - date: 2017-05-13
+      #   quote:
+      #     I'm cutting the price of airplanes with Lockheed.
 
   - id: nyt-apologized-to-trump-for-negative-coverage
     assertions:
@@ -191,41 +229,47 @@ claims:
           After being forced to apologize for its bad and inaccurate
           coverage of me after winning the election, the FAKE NEWS
           @nytimes is still lost!
+        source: https://twitter.com/realdonaldtrump/status/827874208021639168
       - date: 2017-02-06
         quote:
           The failing @nytimes was forced to apologize to its
           subscribers for the poor reporting it did on my election
           win. Now they are worse!
+        source: https://twitter.com/realDonaldTrump/status/828793887275761665
       - date: 2017-03-29
         quote:
           Remember when the failing @nytimes apologized to its
           subscribers, right after the election, because their
-
           coverage was so wrong. Now worse!
+        source: https://twitter.com/realdonaldtrump/status/847056211006631936
       - date: 2017-04-29
         quote:
           They're incompetent, dishonest people who after an election
           had to apologize because they covered it, us, me, but all of
           us, they covered it so badly that they felt they were forced
           to apologize because their predictions were so bad.
+        source: https://youtu.be/CLPU_5g1m3Y?t=620
 
   - id: trump-84-percent-cuban-american-vote-2016
     assertions:
       - date: 2017-01-29
         quote:
           The Cuban-Americans, I got 84 percent of that vote.
+        source: http://www.cbn.com/tv/5308116561001
 
   - id: delays-caused-by-delta-not-travel-ban
     assertions:
       - date: 2017-01-30
         quote:
-          Big problems at airports were caused by Delta computer
-          outage.
+          … Big problems at airports were caused by Delta
+          computer outage,.....
+        source: https://twitter.com/realDonaldTrump/status/826041397232943104
       - date: 2017-02-16
         quote:
           That’s the other thing that was wrong with the travel
           ban. You had Delta with a massive problem with their
           computer system at the airports.
+        source: https://www.nytimes.com/2017/02/16/us/politics/donald-trump-press-conference-transcript.html
 
   - id: only-109-affected-by-travel-ban
     assertions:
@@ -234,10 +278,12 @@ claims:
           Only 109 people out of 325,000 were detained and held for
           questioning. Big problems at airports were caused by Delta
           computer outage.
+        source: https://twitter.com/realDonaldTrump/status/826041397232943104
       - date: 2017-02-05
         quote:
           We had 109 people out of hundreds of thousands of travelers
           and all we did was vet those people very, very carefully.
+        source: http://insider.foxnews.com/2017/02/05/bill-oreilly-super-bowl-interview-presses-trump-travel-ban-vladimir-putin
 
   - id: trump-protesters-paid
     assertions:
@@ -258,13 +304,16 @@ claims:
       - date: 2017-02-06
         quote:
           Radical Islamic terrorists are determined to strike our
-          homeland as they did on 9 / 11, as they did from Boston to
-          Orlando to San Bernardino, and all across Europe. You've
-          seen what happened in Paris and Nice. All over Europe it's
-          happening. It's gotten to a point where it's not even being
-          reported. And in many cases the very, very dishonest press
-          doesn't want to report it. They have their reasons and you
-          understand that.
+          homeland, as they did on 9/11, as they did from Boston to
+          Orlando to San Bernardino and all across Europe.
+
+
+          You've seen what happened in Paris and Nice. All over Europe
+          it's happening. It's gotten to a point where it's not even
+          being reported. And in many cases, the very, very dishonest
+          press doesn't want to report it. They have their reasons and
+          you understand that.
+        source: http://time.com/4661658/donald-trump-terror-attacks-speech-macdill-air-force-base/
 
   - id: obama-policies-created-isis
     assertions:
@@ -274,6 +323,7 @@ claims:
           we shouldn't have been in Iraq, but we shouldn't have gotten
           out the way we got out. It created a vacuum, ISIS was
           formed.
+        source: http://www.foxnews.com/transcript/2017/02/07/bill-oreilly-exclusive-interview-with-president-trump.html
 
   - id: highest-murder-rate-in-47-years
     assertions:
@@ -282,6 +332,7 @@ claims:
           And yet the murder rate in our country is the highest it’s
           been in 47 years, right? Did you know that? Forty-seven
           years.
+        source: https://www.whitehouse.gov/the-press-office/2017/02/07/remarks-president-trump-roundtable-county-sheriffs
 
   - id: cuomo-didnt-ask-blumenthal-about-vietnam
     assertions:
@@ -306,6 +357,7 @@ claims:
         quote:
           I don’t know about it. I haven’t seen it. What report is
           that?
+        source: https://www.c-span.org/video/?423925-1/president-trump-remarks-air-force-one
 
   - id: media-didnt-cover-trump-florida-crowds
     assertions:
@@ -338,9 +390,10 @@ claims:
     assertions:
       - date: 2017-02-16
         quote:
-          When WikiLeaks, which I had nothing to do with, comes out
-          and happens to give, they’re not giving classified
+          Now, when WikiLeaks, which I had nothing to do with, comes
+          out and happens to give — they’re not giving classified
           information.
+        source: https://www.whitehouse.gov/the-press-office/2017/02/16/remarks-president-trump-press-conference
 
   - id: travel-ban-rollout-smooth
     assertions:
@@ -393,6 +446,7 @@ claims:
           like they never thought possible. You look at what’s
           happening in Brussels. You look at what’s happening all over
           the world. Take a look at Nice. Take a look at Paris.
+        source: https://www.theguardian.com/us-news/2017/feb/19/sweden-trump-cites-non-existent-terror-attack
 
   - id: cpac-lines-six-blocks
     assertions:
