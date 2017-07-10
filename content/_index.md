@@ -1,42 +1,39 @@
 ---
-title: LieDB
+title: Factopolis
 ---
 
-**LieDB is not ready for public use yet**.  The software is still
+**Factopolis is not ready for public use yet**.  The software is still
 under heavy development, the data is woefully incomplete, and even
 this page is haphazardly structured and written.  However, it should
 give you a decent understanding of the direction we are taking, and we
 would very much welcome any feedback, especially constructive
 criticism.
 
-The name "LieDB" will go away as soon as we find something better, if
-only because "LieDB" limits us to false claims.
+## About Factopolis
 
-## About LieDB
-
-LieDB is a collaboratively edited database of the lies politicians
-tell and the fact checks which test them.  While LieDB is a fact
+Factopolis is a collaboratively edited database of the lies politicians
+tell and the fact checks which test them.  While Factopolis is a fact
 checking site, but it takes a different approach than other fact
 checking sites we're aware of such as
 [FactCheck.org](https://www.factcheck.org/) and
 [PolitiFact](http://www.politifact.com/).
 
-LieDB doesn't really compete with traditional fact-checking sites,
+Factopolis doesn't really compete with traditional fact-checking sites,
 instead it provides a service built on top of those sites.  A good
 analogy is Wikipedia and Google; Wikipedia creates lots of great
 content, and Google provides a way for people to make sense of it all.
-Similarly, LieDB provides a way to navigate the work done by
+Similarly, Factopolis provides a way to navigate the work done by
 traditional fact checking organizations.
 
-### LieDB is a Database
+### Factopolis is a Database
 
-Perhaps the most significant difference between LieDB and most other
-fact checking sites is that LieDB is much more structured.  While most
-sites post walls of text detailing their work LieDB extracts a few
+Perhaps the most significant difference between Factopolis and most other
+fact checking sites is that Factopolis is much more structured.  While most
+sites post walls of text detailing their work Factopolis extracts a few
 select pieces of information, providing links to the original source
 for those who want more information.
 
-The data behind LieDB is freely available in machine-readable formats,
+The data behind Factopolis is freely available in machine-readable formats,
 for both commercial and non-commercial use.  This allows anyone to
 download the data and make something new.
 
@@ -48,7 +45,7 @@ If the same person makes the same claim again, or someone else does,
 the fact checker *may* choose to publish a new article (often citing
 the old article), but will not generally update the old article.
 
-LieDB, on the other hand, is focused on creating rich, evolving data
+Factopolis, on the other hand, is focused on creating rich, evolving data
 which is kept up-to-date to reflect new information as it becomes
 available, including subsequent re-statements of the same claims, with
 links to any credible fact checks we can find.
@@ -72,7 +69,7 @@ mistake.
 
 ### Linking Similar Claims Together
 
-The structured nature of LieDB is designed to facilitate linking
+The structured nature of Factopolis is designed to facilitate linking
 related information together, and one of the most important ways we do
 this is by grouping similar statements together, even if they are
 worded slightly differently.
@@ -114,16 +111,16 @@ the veracity of her statement rests on a questionable definition of
 the term "cut", I think anyone would agree that Conway's version is
 much less deceptive than Trump's.
 
-LieDB's structure provides a solution to this issue.  While individual
+Factopolis's structure provides a solution to this issue.  While individual
 claims can be (and preferably are) rated separately, the fact that
-LieDB links them together means we have a good way to provide an
+Factopolis links them together means we have a good way to provide an
 overview of similar claims and information dug up by fact checkers.
 This can then be used to help classify a group of assertions (*i.e.*,
 a talking point) as either generally true or disingenuous.
 
 This separation of general claims from specific statements will, we
-hope, allow LieDB to focus on the heart of the issue instead of
-quibbling over semantics and grammar, making LieDB less hospitable to
+hope, allow Factopolis to focus on the heart of the issue instead of
+quibbling over semantics and grammar, making Factopolis less hospitable to
 deceptions such as [weasel
 words](https://en.wikipedia.org/wiki/Weasel_word) and vaugery.
 
@@ -149,5 +146,5 @@ regardless of their political affiliation.
 
 ## Want to Help?
 
-If you're interested in helping improve LieDB, take a look at the
+If you're interested in helping improve Factopolis, take a look at the
 [Contributing](/contributing/) page.

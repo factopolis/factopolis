@@ -1,4 +1,4 @@
-LieDB is a non-partisan site to track when politicians lie.  We
+Factopolis is a non-partisan site to track when politicians lie.  We
 don't do any fact-checking ourselves, but instead provide links to
 trusted third-parties who have verified claims to be false.
 
@@ -12,7 +12,7 @@ out—just look in the `content/` folder.
 
 To view the site locally, first [install
 Hugo](https://gohugo.io/overview/installing/), then run
-`hugo server --theme=liedb`.
+`hugo server --theme=factopolis`.
 
 Any help would be greatly appreciated—it turns out politicians tell a
 **lot** of lies, and it takes time to import them into our database.

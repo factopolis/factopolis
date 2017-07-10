@@ -1,8 +1,8 @@
 languageCode = "en-us"
-title = "LieDB"
-baseurl = "https://liedb.github.io/"
+title = "Factopolis"
+baseurl = "https://factopolis.github.io/"
 
-theme = "liedb"
+theme = "factopolis"
 
 [outputs]
 page = [ "HTML", "JSON" ]
@@ -11,7 +11,7 @@ page = [ "HTML", "JSON" ]
 analytics = "UA-101930305-1"
 
 [[params.navlinks]]
-name = "LieDB"
+name = "Factopolis"
 url = ""
 
 [[params.navlinks]]

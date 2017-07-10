@@ -2,12 +2,12 @@
 title: "Contributing"
 ---
 
-LieDB is a community-driven project, and a fairly large undertaking,
+Factopolis is a community-driven project, and a fairly large undertaking,
 so we need all the help we can get.  All community activity is managed
-through [our GitHub project](https://github.com/liedb/liedb), most
+through [our GitHub project](https://github.com/factopolis/factopolis), most
 notably through [our issue
-tracker](https://github.com/liedb/liedb/issues); if you have an ideas,
-please [submit an issue](https://github.com/liedb/liedb/issues/new).
+tracker](https://github.com/factopolis/factopolis/issues); if you have an ideas,
+please [submit an issue](https://github.com/factopolis/factopolis/issues/new).
 
 If you're not sure how to help, here are a few things we know we need:
 
@@ -39,34 +39,28 @@ The more fact checks you can find the better, so long as they come from
 credible sources.
 
 Once you have that information, you can
-[submit it to our issue tracker](https://github.com/liedb/liedb/issues/new)
+[submit it to our issue tracker](https://github.com/factopolis/factopolis/issues/new)
 and we'll try to add it to our database as soon as possible.
 
 If you'd like to take it a bit further, you can add the claim to the
 database yourself and submit a pull request.  We'll try to write
 documentation for this process soon, but the basic idea is that you
 need to add a claim to the
-[content/claim](https://github.com/liedb/liedb/tree/master/content/claim)
+[content/claim](https://github.com/factopolis/factopolis/tree/master/content/claim)
 directory, and add an entry to the file of whover made the claim in the
-[content/person](https://github.com/liedb/liedb/tree/master/content/person)
+[content/person](https://github.com/factopolis/factopolis/tree/master/content/person)
 directory.  Once that's done you can submit a pull request.
-
-## Naming
-
-"LieDB" isn't a great name.  Ideas for a better name are most welcome.
-Note that the domain name needs to be available, and preferably the
-Twitter and Facebook names as well.
 
 ## Front-end Designers / Developers
 
-If you're reading this, you can probably already tell that LieDB isn't
+If you're reading this, you can probably already tell that Factopolis isn't
 exactly aesthetically pleasing.  If you're good at design and/or
 front-end development, we'd love to hear from you!
 
 ## Data Visualization
 
 There are lots of opportunities to create interesting visualizations
-using LieDB's data.  While you are free (and encouraged) to copy the
+using Factopolis's data.  While you are free (and encouraged) to copy the
 data and publish visualizations yourself, if you create something
-useful we would certainly be interested in merging it into LieDB's
+useful we would certainly be interested in merging it into Factopolis's
 web site.

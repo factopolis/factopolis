@@ -10,7 +10,7 @@ install:
   - govendor get -v github.com/gohugoio/hugo
 
 script:
-  - "$GOPATH/bin/hugo --theme=liedb --verbose"
+  - "$GOPATH/bin/hugo --verbose"
 
 notifications:
   email:
@@ -20,7 +20,7 @@ notifications:
 deploy:
   provider: pages
   local_dir: public
-  repo: liedb/liedb.github.io
+  repo: factopolis/factopolis.github.io
   target_branch: master
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
