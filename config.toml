@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "Factopolis"
-baseurl = "http://www.factopolis.com/"
+baseurl = "/"
 
 theme = "factopolis"
 

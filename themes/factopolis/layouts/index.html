@@ -1,10 +1,11 @@
 {{ partial "head.html" . }}
-{{ partial "nav.html" . }}
 
 <header>
-	<h1>{{ .Title }}</h1>
+  <h1>{{ .Title }}</h1>
 </header>
 
-{{ .Content }}
+<article>
+  {{ .Content }}
+</article>
 
 {{ partial "footer.html" . }}
