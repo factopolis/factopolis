@@ -803,6 +803,24 @@ claims:
           when does it end?
         source: https://twitter.com/realdonaldtrump/status/863014620516233216
 
+  - id: young-people-pay-almost-nothing-for-health-insurance
+    assertions:
+      - date: 2017-05-11
+        quote:
+          Insurance is, you’re 20 years old, you just graduated from
+          college, and you start paying $15 a month for the rest of
+          your life and by the time you’re 70, and you really need it,
+          you’re still paying the same amount and that’s really
+          insurance.
+        source: https://www.economist.com/Trumptranscript
+      - date: 2017-07-19
+        quote:
+          So pre-existing conditions are a tough deal. Because you are
+          basically saying from the moment the insurance, you’re 21
+          years old, you start working and you’re paying $12 a year for
+          insurance, and by the time you’re 70, you get a nice plan.
+        source: https://www.nytimes.com/2017/07/19/us/politics/trump-interview-transcript.html
+
   - id: trump-russia-collusion-excuse-by-democrats-for-losing-election
     assertions:
       - date: 2017-05-12
