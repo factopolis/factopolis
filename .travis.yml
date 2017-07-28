@@ -21,6 +21,7 @@ deploy:
   provider: pages
   local_dir: public
   repo: factopolis/factopolis.github.io
+  fqdn: www.factopolis.com
   target_branch: master
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
