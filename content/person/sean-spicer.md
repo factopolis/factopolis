@@ -6,6 +6,8 @@ twitter: seanspicer
 factcheckorg: sean-spicer
 politifact: sean-spicer
 snopes: sean-spicer
+affiliations:
+  - gop
 offices:
   - title: White House Press Secretary
     from: 2017-01-20
