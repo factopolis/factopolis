@@ -1,25 +1,25 @@
 {{ $claimID := .File.BaseFileName }}
 {
-    {{ if .Params.summary }}"summary": "{{ replace (replace .Params.summary "\n" "\\n") "\"" "\\\"" }}",{{ end }}
+    {{ if .Params.summary }}"summary": {{ .Params.summary | jsonify }},{{ end }}
     "checks": [
 	{{ $checks := .Params.checks }}
         {{ range $idx, $check := .Params.checks }}
         {{ if $idx }}, {{ end }}
         {
-            {{ if $check.short }}"short": "{{ replace (replace $check.short "\n" "\\n") "\"" "\\\"" }}", {{ end }}
-            {{ if $check.quote }}"quote": "{{ replace (replace $check.quote "\n" "\\n") "\"" "\\\"" }}", {{ end }}
-            {{ if $check.url }}"url": "{{ replace (replace $check.url "\n" "\\n") "\"" "\\\"" }}", {{ end }}
+            {{ if $check.short }}"short": {{ $check.short | jsonify }}, {{ end }}
+            {{ if $check.quote }}"quote": {{ $check.quote | jsonify }}, {{ end }}
+            {{ if $check.url }}"url": {{ $check.url | jsonify }}, {{ end }}
             {{ if $check.name }}
-                "name": "{{ replace (replace $check.name "\n" "\\n") "\"" "\\\"" }}"
+                "name": {{ $check.name | jsonify }}
             {{ else }}
                 {{ range where $.Site.Pages "URL" (printf "/checker/%s/" .checker) }}
-                    "name": "{{ replace (replace .Title "\n" "\\n") "\"" "\\\"" }}"
+                    "name": {{ .Title | jsonify }}
                 {{ end }}
             {{ end }}
         }
     {{ end }}
     ],
-    {{ if .Params.title }}"title": "{{ replace (replace .Params.title "\n" "\\n") "\"" "\\\"" }}",{{ end }}
+    {{ if .Params.title }}"title": {{ .Params.title | jsonify }},{{ end }}
     "claimants": [
     {{ range $xxx, $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
     {{ range $idx, $claim := where $person.Params.claims "id" $claimID }}
