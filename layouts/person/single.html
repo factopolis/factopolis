@@ -5,22 +5,22 @@
     <ul class="fact-check-links">
       {{ if .Params.politifact }}
         <li>
-	  <a href="http://www.politifact.com/personalities/{{ .Params.politifact }}/"><img src="{{ .Site.BaseURL }}/img/PolitiFact.png" alt="PolitiFact" /></a>
+	  <a href="http://www.politifact.com/personalities/{{ .Params.politifact }}/"><img src="{{ .Site.BaseURL }}img/PolitiFact.png" alt="PolitiFact" /></a>
 	</li>
       {{ end }}
       {{ if .Params.factcheckorg }}
         <li>
-	  <a href="http://www.factcheck.org/person/{{ .Params.factcheckorg }}/"><img src="{{ .Site.BaseURL }}/img/FactCheck.org.png" alt="FactCheck.org" /></a>
+	  <a href="http://www.factcheck.org/person/{{ .Params.factcheckorg }}/"><img src="{{ .Site.BaseURL }}img/FactCheck.org.png" alt="FactCheck.org" /></a>
 	</li>
       {{ end }}
       {{ if .Params.snopes }}
         <li>
-	  <a href="http://www.snopes.com/tag/{{ .Params.factcheckorg }}/"><img src="{{ .Site.BaseURL }}/img/Snopes.png" alt="Snopes" /></a>
+	  <a href="http://www.snopes.com/tag/{{ .Params.factcheckorg }}/"><img src="{{ .Site.BaseURL }}img/Snopes.png" alt="Snopes" /></a>
 	</li>
       {{ end }}
       {{ if .Params.washingtonPost }}
         <li>
-	  <a href="https://www.washingtonpost.com/news/fact-checker/wp/category/{{ .Params.washingtonPost }}/"><img src="{{ .Site.BaseURL }}/img/WashingtonPost.png" alt="WashingtonPost" /></a>
+	  <a href="https://www.washingtonpost.com/news/fact-checker/wp/category/{{ .Params.washingtonPost }}/"><img src="{{ .Site.BaseURL }}img/WashingtonPost.png" alt="WashingtonPost" /></a>
 	</li>
       {{ end }}
     </ul>
