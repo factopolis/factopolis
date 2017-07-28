@@ -45,6 +45,19 @@
       </li>
     {{ end }}
     </ol>
+
+    {{ if .Params.affiliations }}
+      <h4>Affiliations</h4>
+
+      <ul class="affiliations">
+        {{ range $affiliation := .Params.affiliations }}
+          {{ $group := $.Site.GetPage "page" "group" (printf "%s.md" $affiliation) }}
+          <li>
+            <a href="{{ $group.Permalink }}">{{ $group.Title }}</a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
   </header>
 
   <article>

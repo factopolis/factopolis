@@ -9,9 +9,14 @@ factcheckorg: donald-trump
 politifact: donald-trump
 snopes: donald-trump
 washingtonPost: donald-trump
+
+affiliations:
+  - gop
+
 offices:
   - title: President of the United States of America
     from: 2017-01-21
+
 claims:
   - id: trump-opposed-iraq
     assertions:

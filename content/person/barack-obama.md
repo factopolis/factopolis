@@ -9,6 +9,10 @@ factcheckorg: barack-obama
 politifact: barack-obama
 snopes: barack-obama
 washingtonPost: barack-obama
+
+affiliations:
+  - democratic-party
+
 offices:
   - title: President of the United States of America
     from: 2009-01-20
@@ -19,6 +23,7 @@ offices:
   - title: Illinois State Senator from the 13th District
     from: 1997-01-08
     thru: 2004-11-04
+
 claims:
   - id: us-steel-industry-size
     assertions:
