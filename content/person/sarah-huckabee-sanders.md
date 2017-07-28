@@ -12,6 +12,9 @@ offices:
   - title: White House Deputy Press Secretary
     from: 2017-01-20
 
+affiliations:
+  - gop
+
 claims:
   - id: trump-has-never-encouraged-violence
     assertions:

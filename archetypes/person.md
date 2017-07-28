@@ -8,7 +8,6 @@ instagram:
 snapchat: 
 youtube: 
 medium: 
-instagram: 
 flickr: 
 web: 
 

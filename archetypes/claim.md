@@ -2,7 +2,7 @@
 title: 
 summary: 
 checks:
-  - name: 
+  - checker: 
     short: 
     quote: 
     url: 
