@@ -1,20 +1,20 @@
 ---
-title: 
-picture: 
-wikipedia: 
-twitter: 
-web: 
-factcheckorg: 
-politifact: 
-snopes: 
+title:
+picture:
+wikipedia:
+twitter:
+web:
+factcheckorg:
+politifact:
+snopes:
 offices:
-  - title: 
-    from: 
-    thru: 
+  - title:
+    from:
+    thru:
 claims:
-  - id: 
-    instances:
-      - date: 
-        quote: 
-        source: 
+  - id:
+    assertions:
+      - date:
+        quote:
+        source:
 ---
