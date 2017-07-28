@@ -902,4 +902,13 @@ claims:
           - checker: washington-post
             rating: 3-pinocchios
             source: https://www.washingtonpost.com/news/fact-checker/wp/2017/06/30/president-trumps-claim-medicaid-spending-in-senate-health-bill-actually-goes-up/
+
+  - id: trump-signed-more-bills-than-any-other-recent-president
+    assertions:
+      - date: 2017-06-17
+        quote:
+          We’ve signed more bills -- and I’m talking about through the
+          legislature -- than any President ever.  For a while, Harry
+          Truman had us, and now I think we have everybody, Mike.
+        source: https://www.whitehouse.gov/the-press-office/2017/07/17/remarks-president-trump-made-america-product-showcase
 ---
