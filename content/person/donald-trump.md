@@ -224,27 +224,29 @@ claims:
     assertions:
       - date: 2017-01-28
         quote:
-          Thr [sic] coverage about me in the @nytimes and the
-          @washingtonpost gas [sic] been so false and angry that the
-          times actually apologized to its….. …dwindling subscribers
-          and readers.They got me wrong right from the beginning and
-          still have not changed course, and never will. DISHONEST
+          Thr [sic] coverage about me in the
+          [@nytimes](https://twitter.com/nytimes) and the
+          [@washingtonpost](https://twitter.com/washingtonpost) gas
+          [sic] been so false and angry that the times actually
+          apologized to its….. …dwindling subscribers and readers.They
+          got me wrong right from the beginning and still have not
+          changed course, and never will. DISHONEST
         source: https://nypost.com/2017/01/28/trump-slams-new-york-times-washington-post-in-tweets/
       - date: 2017-02-04
         quote:
           After being forced to apologize for its bad and inaccurate
           coverage of me after winning the election, the FAKE NEWS
-          @nytimes is still lost!
+          [@nytimes](https://twitter.com/nytimes) is still lost!
         source: https://twitter.com/realdonaldtrump/status/827874208021639168
       - date: 2017-02-06
         quote:
-          The failing @nytimes was forced to apologize to its
-          subscribers for the poor reporting it did on my election
-          win. Now they are worse!
+          The failing [@nytimes](https://twitter.com/nytimes) was
+          forced to apologize to its subscribers for the poor
+          reporting it did on my election win. Now they are worse!
         source: https://twitter.com/realDonaldTrump/status/828793887275761665
       - date: 2017-03-29
         quote:
-          Remember when the failing @nytimes apologized to its
+          Remember when the failing [@nytimes](https://twitter.com/nytimes) apologized to its
           subscribers, right after the election, because their
           coverage was so wrong. Now worse!
         source: https://twitter.com/realdonaldtrump/status/847056211006631936
