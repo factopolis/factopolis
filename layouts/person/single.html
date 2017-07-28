@@ -83,12 +83,44 @@
 
 	    <footer>
 	      <cite>
+		{{ if $assertion.retraction }}<del>{{ end }}
 		{{ if $assertion.source }}<a href="{{ $assertion.source }}">{{ end }}
 		{{ $.Title }}
   		{{ if $assertion.date }}
   		  on {{ $assertion.date }}
 		{{ end }}
 		{{ if $assertion.source }}</a>{{ end }}
+		{{ if $assertion.retraction }}
+		  </del>
+                  <div>
+		    (<a href="{{ $assertion.retraction.source }}">
+                      {{ if eq $assertion.retraction.type "clarification" }}
+                        “Clarified”
+                      {{ else }}
+                        Retracted
+                      {{ end }}
+                    </a>
+                    {{ if $assertion.retraction.date }}
+                      on {{ $assertion.retraction.date }}
+                    {{ end }}
+                    {{ if $assertion.retraction.issuer }}
+                      by
+                      {{ if $assertion.retraction.issuer.position }}
+                        {{ $assertion.retraction.issuer.position | htmlEscape }}
+                      {{ end }}
+                      {{ if $assertion.retraction.issuer.id }}
+                        {{ $retractor := $.Site.GetPage "page" (printf "person/%s.md" $assertion.retraction.issuer.id) }}
+                        {{ if $retractor }}
+                          <a href="{{ $retractor.Permalink }}">{{ $retractor.Title | htmlEscape }}</a>
+                        {{ else }}
+                          {{ $assertion.retraction.issuer.id | htmlEscape }}
+                        {{ end }}
+                      {{ else if $assertion.retraction.issuer.name }}
+                        {{ $assertion.retraction.issuer.name | htmlEscape }})
+                      {{ end }}
+                    {{ end }}
+                  </div>
+		{{ end }}
 	      </cite>
 	    </footer>
 	  </blockquote>
