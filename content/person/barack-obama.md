@@ -3,6 +3,7 @@ title: Barack Obama
 picture: /person/barack-obama.jpg
 wikipedia: Barack_Obama
 twitter: BarackObama
+facebook: barackobama
 web: https://barackobama.com/
 factcheckorg: barack-obama
 politifact: barack-obama

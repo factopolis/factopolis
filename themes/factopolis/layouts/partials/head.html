@@ -78,6 +78,9 @@
             {{ if .Params.twitter }}
               <a href="https://twitter.com/{{ .Params.twitter }}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
             {{ end }}
+            {{ if .Params.facebook }}
+              <a href="https://facebook.com/{{ .Params.facebook }}"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+            {{ end }}
             {{ if .Params.web }}
               <a href="{{ .Params.web }}"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></a>
             {{ end }}
