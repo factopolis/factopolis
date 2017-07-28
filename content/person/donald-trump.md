@@ -4,6 +4,7 @@ picture: /person/donald-trump.jpg
 wikipedia: Donald_Trump
 twitter: realDonaldTrump
 facebook: DonaldTrump
+instagram: realdonaldtrump
 web: https://whitehouse.gov/administration/president-trump
 factcheckorg: donald-trump
 politifact: donald-trump

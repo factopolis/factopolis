@@ -75,14 +75,26 @@
             {{ if .Params.wikipedia }}
               <a href="https://en.wikipedia.org/wiki/{{ .Params.wikipedia }}"><i class="fa fa-wikipedia-w fa-2x" aria-hidden="true"></i></a>
             {{ end }}
+            {{ if .Params.web }}
+              <a href="{{ .Params.web }}"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></a>
+            {{ end }}
             {{ if .Params.twitter }}
               <a href="https://twitter.com/{{ .Params.twitter }}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
             {{ end }}
             {{ if .Params.facebook }}
               <a href="https://facebook.com/{{ .Params.facebook }}"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
             {{ end }}
-            {{ if .Params.web }}
-              <a href="{{ .Params.web }}"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></a>
+            {{ if .Params.instagram }}
+              <a href="https://www.instagram.com/{{ .Params.instagram }}"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+            {{ end }}
+            {{ if .Params.snapchat }}
+              <a href="https://www.snapchat.com/add/{{ .Params.snapchat }}"><i class="fa fa-snapchat fa-2x" aria-hidden="true"></i></a>
+            {{ end }}
+            {{ if .Params.youtube }}
+              <a href="https://www.youtube.com/user/{{ .Params.youtube }}"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+            {{ end }}
+            {{ if .Params.medium }}
+              <a href="https://medium.com/{{ .Params.medium }}"><i class="fa fa-medium fa-2x" aria-hidden="true"></i></a>
             {{ end }}
           </div>
         </div>
