@@ -920,4 +920,35 @@ claims:
           legislature -- than any President ever.  For a while, Harry
           Truman had us, and now I think we have everybody, Mike.
         source: https://www.whitehouse.gov/the-press-office/2017/07/17/remarks-president-trump-made-america-product-showcase
+
+  - id: hrc-gave-almost-700k-to-wife-of-fbi-agent-investigating-her
+    assertions:
+      - date: 2016-10-24
+        quote:
+          It was just learned that one of the closest people to
+          Hillary Clinton, with long-standing ties to her husband and
+          herself gave more — this just came out — gave more than
+          $675,000 to the campaign of the spouse — the wife — of the
+          top FBI official who helped oversee the investigation into
+          Mrs. Clinton's illegal email server. So the man that was
+          investigating her from the FBI, his wife runs for office and
+          they give her more than $675,000 to run.
+        source: https://www.youtube.com/watch?v=RCVGsJJ6I_0&t=455
+        checks:
+          - checker: washington-post
+            rating: 4-pinocchios
+            source: https://www.washingtonpost.com/news/fact-checker/wp/2016/10/25/trumps-mixed-up-version-of-the-latest-hillary-clinton-controversy/
+      - date: 2017-07-25
+        quote:
+          Problem is that the acting head of the FBI & the person in
+          charge of the Hillary investigation, Andrew McCabe, got
+          $700,000 from H for wife!
+        source: https://twitter.com/realDonaldTrump/status/889792764363276288
+        checks:
+          - checker: politifact
+            rating: mostly-false
+            source: http://www.politifact.com/truth-o-meter/statements/2017/jul/25/donald-trump/tweet-donald-trump-revives-charge-improper-ties-be/
+          - checker: factcheck-org
+            rating: false
+            source: http://www.factcheck.org/2017/07/trump-wrong-campaign-donations/
 ---
