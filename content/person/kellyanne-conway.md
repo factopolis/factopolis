@@ -27,11 +27,7 @@ claims:
            back here, and were the masterminds behind the Bowling
            Green massacre of taking innocent soldiers' lives away.
         source: http://www.cosmopolitan.com/politics/a8674035/kellyanne-conway-bowling-green-massacre-repeat/
-        checks:
-          - checker:
-            rating:
-            source:
-      - date: 2017-01-29
+      - date: 2017-02-02
         quote:
           I bet, there was very little coverage — I bet it's brand new
           information to people that President Obama had a six-month
