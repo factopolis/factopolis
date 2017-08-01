@@ -13,7 +13,8 @@ affiliations:
 
 offices:
   - title: White House Director of Communications
-    from: 2017-07-21
+    from: 2017-07-25
+    thru: 2017-07-31
 
 claims:
   - id: leaking-a-financial-disclosure-form-is-a-felony
