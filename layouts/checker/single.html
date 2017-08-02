@@ -1,25 +1,21 @@
 {{ partial "head.html" . }}
 
-<main>
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
+{{ if .Content }}
+  {{ .Content }}
+{{ end }}
 
-  <article>
-    <section>
-      <h3>Claims Checked</h3>
+<section>
+  <h3>Claims Checked</h3>
 
-      <ul>
-        {{ range $claim := where .Site.Pages "Type" "claim" }}
-          {{ range $claim.Params.checks }}
-            {{ if eq .checker $.File.BaseFileName }}
-              <li><a href="{{ $claim.URL }}">{{ $claim.Title }}</a></li>
-            {{ end }}
-          {{ end }}
-        {{ end }}
-      </ul>
-    </section>
-  </article>
-</main>
+  <ul>
+    {{ range $claim := where .Site.Pages "Type" "claim" }}
+      {{ range $claim.Params.checks }}
+        {{ if eq .checker $.File.BaseFileName }}
+          <li><a href="{{ $claim.URL }}">{{ $claim.Title }}</a></li>
+	{{ end }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</section>
 
 {{ partial "footer.html" . }}

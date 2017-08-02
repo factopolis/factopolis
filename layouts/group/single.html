@@ -3,36 +3,28 @@
 {{ $claimID := .File.BaseFileName }}
 {{ $claim := .Params }}
 
-<main>
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
+{{ if .Content }}
+  <section>
+    {{ .Content }}
+  </section>
+{{ end }}
 
-  <article>
-    {{ if .Content }}
-      <section>
-        {{ .Content }}
-      </section>
-    {{ end }}
+<section>
+  <h2>People</h2>
 
-    <section>
-      <h2>People</h2>
-
-      <ul>
-        {{ range $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
-          {{ if $person.Params.affiliations }}
-            {{ range $affiliation := $person.Params.affiliations }}
-              {{ if eq $affiliation $.File.BaseFileName }}
-              <li>
-                <a href="{{ $person.Permalink }}">{{ $person.Title }}</a>
-              </li>
-              {{ end }}
-            {{ end }}
+  <ul>
+    {{ range $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
+      {{ if $person.Params.affiliations }}
+        {{ range $affiliation := $person.Params.affiliations }}
+          {{ if eq $affiliation $.File.BaseFileName }}
+            <li>
+              <a href="{{ $person.Permalink }}">{{ $person.Title }}</a>
+            </li>
           {{ end }}
         {{ end }}
-      </ul>
-    </section>
-  </article>
-</main>
+      {{ end }}
+    {{ end }}
+  </ul>
+</section>
 
 {{ partial "footer.html" . }}

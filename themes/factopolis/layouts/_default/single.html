@@ -1,15 +1,7 @@
 {{ partial "head.html" . }}
 
-<header>
-  <h1>{{ .Title }}</h1>
-</header>
-
-<article>
+{{ if .Content }}
   {{ .Content }}
-</article>
-
-<div id="bottom-nav" class="text-center center-block">
-  <a href=" {{ .Site.BaseURL }}" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
-</div>
+{{ end }}
 
 {{ partial "footer.html" . }}

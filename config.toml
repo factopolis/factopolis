@@ -11,13 +11,13 @@ page = [ "HTML", "JSON" ]
 analytics = "UA-101930305-1"
 
 [[params.navlinks]]
-name = "Factopolis"
-url = ""
-
-[[params.navlinks]]
 name = "Claims"
 url = "claim/"
 
 [[params.navlinks]]
 name = "People"
 url = "person/"
+
+[[params.navlinks]]
+name = "Groups"
+url = "group/"

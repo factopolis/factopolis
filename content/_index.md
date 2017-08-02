@@ -50,23 +50,6 @@ which is kept up-to-date to reflect new information as it becomes
 available, including subsequent re-statements of the same claims, with
 links to any credible fact checks we can find.
 
-### Clarifications
-
-This isn't done yet.
-
-Perhaps as a result of our "living data" approach, we also want to
-provide a way to indicate when a politician has publicly retracted a
-false claim, as well as link to any "clarifications".
-
-That said, we believe it is important to distinguish between truly
-owning up to a mistake and the sort of non-apology equivocations which
-are all too common, particularly those issued quietly by someone else
-(*e.g.*, by a press secretary or lawyer).
-
-While it is best not to make any deceptive statements in the first
-place, we have healthy respect for those who can publicly own up to a
-mistake.
-
 ### Linking Similar Claims Together
 
 The structured nature of Factopolis is designed to facilitate linking
@@ -126,11 +109,10 @@ words](https://en.wikipedia.org/wiki/Weasel_word) and vaugery.
 
 ## Focus on Trump
 
-Right now the database focuses on Donald Trump almost exclusively (at
-time of writing, there are 65 Trump claims in the database, 1 Barack
-Obama claim, and nothing else).  This is not out of malice toward
-Donald Trump, but rather a consequence of the fact that our initial
-data source was The New York Times' [Trump's
+Right now the database focuses on Donald Trump to a large extent.
+This is not out of malice toward Donald Trump, but rather a
+consequence of the fact that our initial data source was The New York
+Times' [Trump's
 Lies](https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html)
 article.
 

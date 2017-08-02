@@ -1,22 +1,21 @@
 {{ partial "head.html" . }}
 
-<article>
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
-
-  <ul class="claim-list">
-    {{ range .Data.Pages }}
-    <li>
-      <div class="claim">
+<ul class="claims">
+  {{ range .Data.Pages }}
+    <li class="claim">
+      <h4>
 	<a href="{{ .Permalink }}">{{ .Title }}</a>
-	</div>
-	<div class="truth">
-	  Reality: {{ .Params.summary }}
-	</div>
+      </h4>
+
+      <section class="truth">
+	<h5>The Truth:</h5>
+
+	<p>
+          {{ .Params.summary | markdownify }}
+	</p>
+      </section>
     </li>
-    {{ end }}
-  </ul>
-</article>
+  {{ end }}
+</ul>
 
 {{ partial "footer.html" . }}

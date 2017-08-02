@@ -1,173 +1,158 @@
 {{ partial "head.html" . }}
 
-<main class="person">
-  <header>
-    <ul class="fact-check-links">
-      {{ if .Params.politifact }}
-        <li>
-	  <a href="http://www.politifact.com/personalities/{{ .Params.politifact }}/"><img src="{{ .Site.BaseURL }}img/PolitiFact.png" alt="PolitiFact" /></a>
-	</li>
-      {{ end }}
-      {{ if .Params.factcheckorg }}
-        <li>
-	  <a href="http://www.factcheck.org/person/{{ .Params.factcheckorg }}/"><img src="{{ .Site.BaseURL }}img/FactCheck.org.png" alt="FactCheck.org" /></a>
-	</li>
-      {{ end }}
-      {{ if .Params.snopes }}
-        <li>
-	  <a href="http://www.snopes.com/tag/{{ .Params.factcheckorg }}/"><img src="{{ .Site.BaseURL }}img/Snopes.png" alt="Snopes" /></a>
-	</li>
-      {{ end }}
-      {{ if .Params.washingtonPost }}
-        <li>
-	  <a href="https://www.washingtonpost.com/news/fact-checker/wp/category/{{ .Params.washingtonPost }}/"><img src="{{ .Site.BaseURL }}img/WashingtonPost.png" alt="WashingtonPost" /></a>
-	</li>
-      {{ end }}
-    </ul>
+<ul class="fact-checking-bio-links">
+  {{ if .Params.politifact }}
+    <li>
+      <a href="http://www.politifact.com/personalities/donald-trump/">
+        <img alt="PolitiFact" src="http://localhost:1313/img/PolitiFact.png" />
+      </a>
+    </li>
+  {{ end }}
+  {{ if .Params.factcheckorg }}
+    <li>
+      <a href="http://www.factcheck.org/person/donald-trump/">
+        <img alt="FactCheck.org" src="{{ .Site.BaseURL }}img/FactCheck.org.png" />
+      </a>
+    </li>
+  {{ end }}
+  {{ if .Params.snopes }}
+    <li>
+      <a href="http://www.snopes.com/tag/donald-trump/">
+        <img alt="Snopes" src="{{ .Site.BaseURL }}img/Snopes.png" />
+      </a>
+    </li>
+  {{ end }}
+  {{ if .Params.washingtonPost }}
+    <li>
+      <a href="https://www.washingtonpost.com/news/fact-checker/wp/category/{{ .Params.washingtonPost }}/">
+        <img alt="Washington Post" src="{{ .Site.BaseURL }}img/WashingtonPost.png" />
+      </a>
+    </li>
+  {{ end }}
+</ul>
 
-    <h1>{{ .Params.Title }}</h1>
 
-    <div class="lie-counter">
-      <p>
-        {{ $claimCount := .Params.claims | len }}
-	      We currently have {{ $claimCount }} distict false
-        claim{{ if sub $claimCount 1 }}s{{ end }} made
-	by {{ .Params.Title }} in our database (not counting repeats).
-      </p>
-    </div>
+<section id="counter">
+  <p>
+    {{ $claimCount := .Params.claims | len }}
+	  We currently have {{ $claimCount }} distict false
+    claim{{ if sub $claimCount 1 }}s{{ end }} made
+	  by {{ .Params.Title }} in our database (not counting repeats).
+  </p>
+</section>
 
-    <h4>Offices Held</h4>
+<section id="offices-held">
+  <h3>Offices Held</h3>
 
-    <ol class="offices-held">
+  <ol class="offices-held">
     {{ range $office := .Params.offices }}
       <li>
-	{{ $office.title }} {{ if $office.from }}({{ dateFormat "2006" $office.from }}-{{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }}){{ end }}
+        {{ $office.title }}
+        {{ if $office.from }}
+          ({{ dateFormat "2006" $office.from }}-{{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }})
+        {{ end }}
       </li>
     {{ end }}
-    </ol>
+  </ol>
+</section>
 
-    {{ if .Params.affiliations }}
-      <h4>Affiliations</h4>
+<section id="claims">
+  <h3>Claims</h3>
 
-      <ul class="affiliations">
-        {{ range $affiliation := .Params.affiliations }}
-          {{ $group := $.Site.GetPage "page" "group" (printf "%s.md" $affiliation) }}
-          <li>
-            <a href="{{ $group.Permalink }}">{{ $group.Title }}</a>
-          </li>
-        {{ end }}
-      {{ end }}
-    </ul>
-  </header>
+  <ol class="claims">
+    {{ range $claim := .Params.claims }}
+      {{ $claimPage := $.Site.GetPage "page" "claim" (printf "%s.md" $claim.id) }}
+      <li class="claim">
+        <h4>
+          <a href="{{ $claimPage.Permalink }}">
+            {{ $claimPage.Title }}
+          </a>
+        </h4>
 
-  <article>
-    <h2>False Claims</h2>
+        <section class="truth">
+          <h5>The Truth:</h5>
 
-    <dl>
-      {{ $pages := .Site.Pages }}
-      {{ range $claim := .Params.claims }}
-      {{ $claimURL := printf "/claim/%s/" $claim.id }}
+          <p>
+            {{ $claimPage.Params.summary | markdownify }}
+          </p>
+        </section>
 
-      {{ range $claimPage := where $pages "Type" "claim" }}
-      {{ if eq $claimPage.URL $claimURL }}
+        <ol class="quote-list">
+          {{ range $assertion := $claim.assertions }}
+            <li>
+              <blockquote>
+                <div class="quote-contents{{ if $assertion.retraction }} retracted{{end}}">
+                  <p>
+                    {{ $assertion.quote | markdownify }}
+                  </p>
+                </div>
 
-      <dt id="claim-{{ $claim.id }}">
-	<h3><a href="/claim/{{ $claim.id }}">{{ $claimPage.Title }}</a></h3>
-      </dt>
-
-      <dd>
-	<div class="claim-quotes">
-	  {{ range $assertion := $claim.assertions }}
-	  <blockquote>
-	    <p>{{ $assertion.quote | markdownify }}</p>
-
-	    <footer>
-	      <cite>
-		{{ if $assertion.retraction }}<del>{{ end }}
-		{{ if $assertion.source }}<a href="{{ $assertion.source }}">{{ end }}
-		{{ $.Title }}
-  		{{ if $assertion.date }}
-  		  on {{ $assertion.date }}
-		{{ end }}
-		{{ if $assertion.source }}</a>{{ end }}
-		{{ if $assertion.retraction }}
-		  </del>
-                  <div>
-		    (<a href="{{ $assertion.retraction.source }}">
-                      {{ if eq $assertion.retraction.type "clarification" }}
-                        Clarified
-                      {{ else }}
-                        Retracted
-                      {{ end }}
-                    </a>
-                    {{ if $assertion.retraction.date }}
-                      on {{ $assertion.retraction.date }}
-                    {{ end }}
-                    {{ if $assertion.retraction.issuer }}
-                      by
-                      {{ if $assertion.retraction.issuer.position }}
-                        {{ $assertion.retraction.issuer.position | htmlEscape }}
-                      {{ end }}
-                      {{ if $assertion.retraction.issuer.id }}
-                        {{ $retractor := $.Site.GetPage "page" (printf "person/%s.md" $assertion.retraction.issuer.id) }}
-                        {{ if $retractor }}
-                          <a href="{{ $retractor.Permalink }}">{{ $retractor.Title | htmlEscape }}</a>
+                <footer>
+                  <cite>
+                    <div>
+                      {{ $.Title }} on
+                      <a href="{{ $assertion.source }}">
+                        <time datetime="{{ $assertion.date }}">
+                          {{ $assertion.date | dateFormat "Jan 2, 2006" }}
+                        </time>
+                      </a>
+                    </div>
+                    {{ if $assertion.retraction }}
+                      <div class="retraction">
+                        {{ if eq $assertion.retraction.type "clarification" }}
+                          Clarified
                         {{ else }}
-                          {{ $assertion.retraction.issuer.id | htmlEscape }}
+                          Retracted
                         {{ end }}
-                      {{ else if $assertion.retraction.issuer.name }}
-                        {{ $assertion.retraction.issuer.name | htmlEscape }})
-                      {{ end }}
+                        {{ if $assertion.retraction.issuer }}
+                          by
+                          {{ if $assertion.retraction.issuer.position }}
+                            {{ $assertion.retraction.issuer.position }}
+                          {{ end }}
+                          {{ if $assertion.retraction.issuer.id }}
+                            {{ $retractor := $.Site.GetPage "page" "person" (printf "%s.md" $assertion.retraction.issuer.id) }}
+                            <a href="{{ $retractor.Permalink }}">{{ $retractor.Title }}</a>
+                          {{ else }}
+                            {{ $assertion.retraction.issuer.name }}
+                          {{ end }}
+                        {{ end }}
+                        on
+                        <a href="{{ $assertion.retraction.source }}">
+                          <time datetime="{{ $assertion.retraction.date }}">
+                            {{ $assertion.retraction.date | dateFormat "Jan 2, 2006" }}
+                          </time>
+                        </a>
+                      </div>
                     {{ end }}
-                  </div>
-		{{ end }}
-	      </cite>
-	    </footer>
-	  </blockquote>
+                  </cite>
 
-	  {{ if $assertion.checks }}
-            <dl class="dl-horizontal assertion-check-list">
-              {{ range $check := $assertion.checks }}
-                {{ range $checker := where $.Site.Pages "URL" (printf "/checker/%s/" $check.checker) }}
-                  <dt>
-                    <a href="{{ $check.source }}">
-                      {{ if isset $checker.Params "abbr" }}
-                        <abbr title="{{ $checker.Title }}">{{ $checker.Params.abbr }}</abbr>
-                      {{ else }}
-                        {{ $checker.Title }}
-                      {{ end }}
-                    </a>
-                  </dt>
-                  <dd>
-                    {{ humanize $check.rating }}
-                  </dd>
-                {{ end }}
-              {{ end }}
-	    </dl>
-	  {{ end }}
-	  {{ end }}
-	</div>
-
-	{{ if $claimPage.Params.summary }}
-	<div>
-	  <h4>The Truth</h4>
-
-	  <p>
-	    {{ $claimPage.Params.summary | markdownify }}
-	  </p>
-	</div>
-	{{ end }}
-      </dd>
-
-      {{ end }}
-      {{ end }}
-      {{ end }}
-    </dl>
-  </article>
-</main>
-
-<div id="bottom-nav" class="text-center center-block">
-  <a href=" {{ .Site.BaseURL }}" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
-</div>
+                  {{ if $assertion.checks }}
+                    <dl class="fact-checks">
+                      {{ range $check := $assertion.checks }}
+                        {{ $checker := $.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
+                        <dt>
+                          <a href="{{ $check.source }}">
+                            {{ if isset $checker.Params "abbr" }}
+                              <abbr title="{{ $checker.Title }}">{{ $checker.Params.abbr }}</abbr>
+                            {{ else }}
+                              {{ $checker.Title }}
+                            {{ end }}
+                          </a>
+                        </dt>
+                        <dd>
+                          {{ humanize $check.rating }}
+                        </dd>
+                        {{ end }}
+                    </dl>
+                  {{ end }}
+                </footer>
+              </blockquote>
+            </li>
+          {{ end }}
+        </ol>
+      </li>
+    {{ end }}
+  </ol>
+</section>
 
 {{ partial "footer.html" . }}

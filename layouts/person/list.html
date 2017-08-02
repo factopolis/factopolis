@@ -1,21 +1,15 @@
 {{ partial "head.html" . }}
 
-<article>
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
-
-  <ul class="content-list person-list">
-    {{ range .Data.Pages }}
-      <li>
-        <div class="content-name"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
-        <div class="content-claim-count">
-          {{ $claimCount := .Params.claims | len }}
-          {{ $claimCount }} false claim{{ if sub $claimCount 1 }}s{{ end }} on file.
-        </div>
-      </li>
-    {{ end }}
-  </ul>
-</article>
+<ul class="content-list person-list">
+  {{ range .Data.Pages }}
+    <li>
+      <div class="content-name"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+      <div class="content-claim-count">
+        {{ $claimCount := .Params.claims | len }}
+        {{ $claimCount }} false claim{{ if sub $claimCount 1 }}s{{ end }} on file.
+      </div>
+    </li>
+  {{ end }}
+</ul>
 
 {{ partial "footer.html" . }}

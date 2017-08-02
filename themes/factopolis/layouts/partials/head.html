@@ -1,110 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>
-    {{ if not (eq .Page.Kind "home") }}
-      {{ .Title }} ·
-    {{ end }}
-    {{ .Site.Title }}
-  </title>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  {{ range .Params.css }}
-  <link rel="stylesheet" href="{{ . }}"> {{ end }}
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> {{ if .Params.highlight }}
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css"> {{ end }}
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/factopolis.css"> {{ if .Site.RSSLink }}
-  <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> {{ end }} {{ if isset .Site.Params "favicon" }}
-  <link rel="icon" href="{{ .Site.BaseURL }}{{ .Site.Params.favicon }}" /> {{ end }}
+    <title>
+      {{ if not (eq .Page.Kind "home") }}
+        {{ .Title }} ·
+      {{ end }}
+      {{ .Site.Title }}
+    </title>
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <noscript>
+      <style type="text/css">
+        .yesscript { display: none }
+      </style>
+    </noscript>
 
-  <base href="{{ .Site.BaseURL }}" />
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}css/style.css">
 
-<body>
-  <nav class="navbar navbar-default navbar-fixed-top visible-xs">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	      <span class="sr-only">Toggle navigation</span>
-	      <span class="icon-bar"></span>
-	      <span class="icon-bar"></span>
-	      <span class="icon-bar"></span>
-       </button>
+    <base href="{{ .Site.BaseURL }}" />
+  </head>
+  <body>
+    <header class="container">
+      <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
 
-        <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
+      <nav>
+        <ul>
           {{ range .Site.Params.navlinks }}
-            <li><a href="{{ .Site.BaseURL }}{{ .url }}">{{ .name }}</a></li>
+            <li>
+              <a {{ if hasPrefix .url $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}{{ .url }}">{{ .name }}</a>
+            </li>
           {{ end }}
         </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="container-fluid">
-    <div class="row">
-      <div id="menu" class="hidden-xs col-sm-4 col-md-3">
-        <div id="links" class="text-center">
-          {{ range .Site.Params.navlinks }}
-            <a href="{{ $.Site.BaseURL }}{{ .url }}">{{ .name }}</a>
-          {{ end }}
-        </div>
-        <div id="menu-content" class="vertical-align">
-          <h1 class="text-center">
-            <a href="{{ .Permalink }}">
-              {{ if and (eq .Page.Type "claim") (eq .Page.Kind "page") }}
-                Claim:
-              {{ end }}
-              {{ .Title }}
-            </a>
-          </h1>
-          {{ if isset .Params "picture" }}
-            <img id="profile-pic" src="{{ .Params.picture }}" alt="{{ .Title }}" class="img-circle center-block">
-          {{ end }}
+      </nav>
+    </header>
 
-          <div id="social" class="text-center">
+    <main>
+      <header>
+	<div>
+        <div class="sticky-middle">
+          <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h2>
+          {{ if and (eq .Page.Type "person") (eq .Page.Kind "page") }}
+            <img class="profile-pic" src="{{ .Page.Type }}/{{ .File.BaseFileName }}.jpg" />
+          {{ end }}
+          <ul class="links">
             {{ if .Params.wikipedia }}
-              <a href="https://en.wikipedia.org/wiki/{{ .Params.wikipedia }}"><i class="fa fa-wikipedia-w fa-2x" aria-hidden="true"></i></a>
+              <li>
+                <a href="https://en.wikipedia.org/wiki/{{ .Params.wikipedia }}">
+                  <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+                  <span class="sr-only">Wikipedia</span>
+                </a>
+              </li>
             {{ end }}
             {{ if .Params.web }}
-              <a href="{{ .Params.web }}"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></a>
+              <li>
+                <a href="{{ .Params.web }}">
+                  <i class="fa fa-globe" aria-hidden="true"></i>
+                  <span class="sr-only">Web Site</span>
+                </a>
+              </li>
             {{ end }}
             {{ if .Params.twitter }}
-              <a href="https://twitter.com/{{ .Params.twitter }}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+              <li>
+                <a href="https://twitter.com/{{ .Params.twitter }}">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </li>
             {{ end }}
             {{ if .Params.facebook }}
-              <a href="https://facebook.com/{{ .Params.facebook }}"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+              <li>
+                <a href="https://facebook.com/{{ .Params.facebook }}">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                  <span class="sr-only">Facebook</span>
+                </a>
+              </li>
             {{ end }}
-            {{ if .Params.instagram }}
-              <a href="https://www.instagram.com/{{ .Params.instagram }}"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+            {{ if .Params.intsagram }}
+              <li>
+                <a href="https://facebook.com/{{ .Params.intsagram }}">
+                  <i class="fa fa-intsagram" aria-hidden="true"></i>
+                  <span class="sr-only">Instagram</span>
+                </a>
+              </li>
             {{ end }}
             {{ if .Params.snapchat }}
-              <a href="https://www.snapchat.com/add/{{ .Params.snapchat }}"><i class="fa fa-snapchat fa-2x" aria-hidden="true"></i></a>
+            <li>
+              <a href="https://www.snapchat.com/add/{{ .Params.snapchat }}">
+                <i class="fa fa-snapchat" aria-hidden="true"></i>
+                <span class="sr-only">Snapchat</span>
+              </a>
+            </li>
             {{ end }}
             {{ if .Params.youtube }}
-              <a href="https://www.youtube.com/user/{{ .Params.youtube }}"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+              <li>
+                <a href="https://www.youtube.com/user/{{ .Params.youtube }}">
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                  <span class="sr-only">Youtube</span>
+                </a>
+              </li>
             {{ end }}
             {{ if .Params.medium }}
-              <a href="https://medium.com/{{ .Params.medium }}"><i class="fa fa-medium fa-2x" aria-hidden="true"></i></a>
+              <li>
+                <a href="https://medium.com/{{ .Params.medium }}">
+                  <i class="fa fa-medium" aria-hidden="true"></i>
+                  <span class="sr-only">Flickr</span>
+                </a>
+              </li>
             {{ end }}
             {{ if .Params.flickr }}
-              <a href="https://www.flickr.com/photos/{{ .Params.flickr }}/"><i class="fa fa-flickr fa-2x" aria-hidden="true"></i></a>
+             <li>
+                <a href="https://www.flickr.com/photos/{{ .Params.snapchat }}">
+                  <i class="fa fa-flickr" aria-hidden="true"></i>
+                  <span class="sr-only">Flickr</span>
+                </a>
+              </li>
             {{ end }}
-          </div>
+          </ul>
         </div>
-      </div>
+	</div>
+      </header>
 
-      <div id="content" class="col-xs-12 col-sm-8 col-md-9">
-        <div class="row">
-          <main id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-8">
-            {{ if or (eq .Page.Type "claim") (eq .Page.Type "person") }}
-            {{ end }}
+      <article>
