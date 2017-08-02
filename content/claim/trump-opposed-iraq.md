@@ -22,4 +22,14 @@ checks:
       vehemently opposed to the operation. In another interview, Trump
       said he supported the invasion.
     url: http://www.politifact.com/truth-o-meter/statements/2016/jun/22/donald-trump/trump-still-wrong-his-claim-opposed-iraq-war-ahead/
+  - checker: snopes
+    rating: "false"
+    quote:
+      The record shows that Donald Trump’s public stand against the
+      Iraq War did not occur until August 2004, long after the war was
+      underway, and only after he had on multiple previous occasions
+      expressed either support for the war or non-committal opinions
+      about its merits. The record does not support his contention
+      that he was against the Iraq War “from the beginning.”
+    url: http://www.snopes.com/donald-trump-iraq-war/
 ---

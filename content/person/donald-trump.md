@@ -21,6 +21,11 @@ offices:
 claims:
   - id: trump-opposed-iraq
     assertions:
+      - date: 2016-06-22
+        quote:
+          I was among the earliest to criticize the rush to war (in
+          Iraq), and yes, even before the war ever started.
+        source: http://www.politifact.com/truth-o-meter/statements/2016/jun/22/donald-trump/trump-still-wrong-his-claim-opposed-iraq-war-ahead/
       - date: 2017-01-21
         quote:
           I wasn't a fan of Iraq. I didn't want to go into Iraq.
@@ -951,4 +956,36 @@ claims:
           - checker: factcheck-org
             rating: false
             source: http://www.factcheck.org/2017/07/trump-wrong-campaign-donations/
+  - id: trump-admin-achieved-historic-increase-in-defense-spending
+    assertions:
+      - date: 2017-07-25
+        quote:
+          We've achieved a historic increase in defense spending to
+          get our troops the support they so richly deserve.
+        source: http://time.com/4874161/donald-trump-transcript-youngstown-ohio/
+        checks:
+          - checker: politifact
+            rating: false
+            source: http://www.politifact.com/truth-o-meter/statements/2017/jul/27/donald-trump/its-false-trump-achieved-historic-increase-defense/
+  - id: amazon-has-no-tax-monopoly
+    assertions:
+      - date: 2017-07-24
+        quote:
+          Is Fake News Washington Post being used as a lobbyist weapon
+          against Congress to keep Politicians from looking into
+          Amazon no-tax monopoly?
+        source: https://twitter.com/realDonaldTrump/status/889675644396867584
+        checks:
+          - checker: politifact
+            rating: pants-on-fire
+            source: http://www.politifact.com/truth-o-meter/statements/2017/jul/26/donald-trump/amazon-no-tax-monopoly-donald-trump-said/
+  - id: border-apprehensions-increased-in-admins-before-trump
+    assertions:
+      - date: 2017-07-28
+        quote: You know, the border is down 78 percent.  Under past administrations, the border didn’t go down — it went up.
+        source: https://www.whitehouse.gov/the-press-office/2017/07/28/remarks-president-trump-law-enforcement-officials-ms-13\
+        checks:
+          - checker: factcheck-org
+            rating: false
+            source: http://www.factcheck.org/2017/07/trumps-border-boast/
 ---
