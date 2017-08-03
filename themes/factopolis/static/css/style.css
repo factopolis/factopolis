@@ -252,6 +252,14 @@ article {
   display: table-row;
 }
 
+.quote-contents del {
+  color: gray;
+}
+
+.quote-contents del > * {
+  color: black;
+}
+
 .quote-contents:before,
 .quote-contents:after {
   /* font: normal normal normal 14px/1 FontAwesome; */

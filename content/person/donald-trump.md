@@ -1035,6 +1035,25 @@ claims:
             rating: pants-on-fire
             source: http://www.politifact.com/truth-o-meter/statements/2017/jul/26/donald-trump/amazon-no-tax-monopoly-donald-trump-said/
 
+  - id: boy-scout-leader-called-trump-to-call-speech-greatest-ever-made-to-them
+    assertions:
+    - date: 2017-07-25
+      quote:
+        And I got a call from the head of the Boy Scouts saying it was
+        the greatest speech that was ever made to them, and they were
+        very thankful. So there was — there was no mix.
+      source: http://www.politico.com/story/2017/08/01/trump-wall-street-journal-interview-full-transcript-241214
+      retraction:
+        type: clarification
+        issuer:
+          id: sarah-huckabee-sanders
+          position: Press Secretary
+        date: 2017-08-02
+        source: https://www.whitehouse.gov/the-press-office/2017/08/02/press-briefing-press-secretary-sarah-sanders-and-senior-policy-advisor
+      checks:
+        - checker: politifact
+          source: http://www.politifact.com/truth-o-meter/article/2017/aug/02/president-and-boy-scouts-was-there-really-phone-ca/
+
   - id: border-apprehensions-increased-in-admins-before-trump
     assertions:
       - date: 2017-07-28
@@ -1047,5 +1066,7 @@ claims:
           - checker: washington-post
             rating: 4-pinocchios
             source: https://www.washingtonpost.com/news/fact-checker/wp/2017/08/01/president-trumps-claim-that-illegal-immigration-went-up-under-past-administrations/
-
+          - checker: politifact
+            rating: false
+            source: http://www.politifact.com/truth-o-meter/statements/2017/aug/03/donald-trump/false-trumps-claim-about-illegal-immigration-under/
 ---

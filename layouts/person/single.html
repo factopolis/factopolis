@@ -81,10 +81,12 @@
           {{ range $assertion := $claim.assertions }}
             <li>
               <blockquote>
-                <div class="quote-contents{{ if $assertion.retraction }} retracted{{end}}">
+                <div class="quote-contents">
+                  {{ if $assertion.retraction }}<del>{{end}}
                   <p>
                     {{ $assertion.quote | markdownify }}
                   </p>
+                  {{ if $assertion.retraction }}</del>{{end}}
                 </div>
 
                 <footer>

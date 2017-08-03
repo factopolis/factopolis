@@ -23,4 +23,10 @@ checks:
       declined since their peak in 2000, with temporary upticks here
       and there. Trump earns Four Pinocchios.
     url: https://www.washingtonpost.com/news/fact-checker/wp/2017/08/01/president-trumps-claim-that-illegal-immigration-went-up-under-past-administrations/
+  - checker: politifact
+    quote:
+      Though there have been fluctuations over the years in the number
+      of apprehensions, they certainly have gone down under past
+      administrations.
+    url: http://www.politifact.com/truth-o-meter/statements/2017/aug/03/donald-trump/false-trumps-claim-about-illegal-immigration-under/
 ---
