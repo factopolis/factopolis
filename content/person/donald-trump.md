@@ -988,4 +988,8 @@ claims:
           - checker: factcheck-org
             rating: false
             source: http://www.factcheck.org/2017/07/trumps-border-boast/
+          - checker: washington-post
+            rating: 4-pinocchios
+            source: https://www.washingtonpost.com/news/fact-checker/wp/2017/08/01/president-trumps-claim-that-illegal-immigration-went-up-under-past-administrations/
+
 ---

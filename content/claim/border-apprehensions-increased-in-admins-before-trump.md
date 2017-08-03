@@ -14,4 +14,13 @@ checks:
       say apprehensions have not gone down during other
       administrations.
     url: http://www.factcheck.org/2017/07/trumps-border-boast/
+  - checker: washington-post
+    quote:
+      Then this talking point spins out of control when Trump falsely
+      says border activity actually went up, not down, before his
+      administration. In reality, illegal border crossings are back
+      down to early-1970s levels, and apprehensions have steadily
+      declined since their peak in 2000, with temporary upticks here
+      and there. Trump earns Four Pinocchios.
+    url: https://www.washingtonpost.com/news/fact-checker/wp/2017/08/01/president-trumps-claim-that-illegal-immigration-went-up-under-past-administrations/
 ---
