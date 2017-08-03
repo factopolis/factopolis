@@ -27,4 +27,18 @@ claims:
           - checker: politifact
             rating: false
             source: http://www.politifact.com/truth-o-meter/statements/2017/jul/05/sarah-huckabee-sanders/has-donald-trump-never-promoted-or-encouraged-viol/
+  - id: trump-fired-comey-only-at-request-of-doj
+    assertions:
+      - date: 2017-05-10
+        quote:
+          I think he’s heard from the rank and file of the FBI, but
+          particularly someone who had done a thorough review and
+          someone who has the respect and reputation that the deputy
+          attorney general has, he took that seriously. He took the
+          recommendation seriously. And he made a decision based on
+          that.
+        source: https://archive.org/details/MSNBCW_20170510_100000_Morning_Joe/start/2554.6/end/2577.3
+        checks:
+          - checker: factcheck-org
+            source: http://www.factcheck.org/2017/05/trump-fire-comey/
 ---

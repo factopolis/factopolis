@@ -28,4 +28,9 @@ claims:
          - checker: washington-post
            rating: 4-pinocchios
            source: https://www.washingtonpost.com/news/fact-checker/wp/2017/01/22/spicer-earns-four-pinocchios-for-a-series-of-false-claims-on-inauguration-crowd-size/
+  - id: trump-fired-comey-only-at-request-of-doj
+    assertions:
+      - date: 2017-05-09
+        quote: No one from the White House. That was a DOJ decision.
+        source: https://www.washingtonpost.com/news/the-fix/wp/2017/05/11/president-trump-just-decimated-the-white-houses-entire-comey-narrative/
 ---

@@ -64,4 +64,14 @@ claims:
           "Here's the fact: The No. 1 source of income into Mexico are
           Mexicans working here and sending the money back."
         source: http://www.politifact.com/truth-o-meter/statements/2017/jan/30/kellyanne-conway/kellyanne-conway-incorrect-worker-remittances-mexi/
+  - id: trump-fired-comey-only-at-request-of-doj
+    assertions:
+      - date: 2017-05-10
+        quote:
+          He acted decisively today, he took the recommendation of his
+          Deputy Attorney General… I would really ask everyone tonight
+          to read Mr. Rosenstein's memo. This is what he presented to
+          the Attorney General, he presented to the President and the
+          President took decisive action.
+        source: http://www.cnn.com/2017/05/12/politics/donald-trump-lester-holt/index.html
 ---

@@ -41,20 +41,22 @@
   </p>
 </section>
 
-<section id="offices-held">
-  <h3>Offices Held</h3>
+{{ if .Params.offices }}
+  <section id="offices-held">
+    <h3>Offices Held</h3>
 
-  <ol class="offices-held">
-    {{ range $office := .Params.offices }}
-      <li>
-        {{ $office.title }}
-        {{ if $office.from }}
-          ({{ dateFormat "2006" $office.from }}-{{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }})
-        {{ end }}
-      </li>
-    {{ end }}
-  </ol>
-</section>
+    <ol class="offices-held">
+      {{ range $office := .Params.offices }}
+        <li>
+          {{ $office.title }}
+          {{ if $office.from }}
+            ({{ dateFormat "2006" $office.from }}-{{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }})
+          {{ end }}
+        </li>
+      {{ end }}
+    </ol>
+  </section>
+{{ end }}
 
 <section id="claims">
   <h3>Claims</h3>
