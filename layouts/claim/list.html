@@ -1,21 +1,39 @@
 {{ partial "head.html" . }}
 
+<p>
+  We currently have {{ .Data.Pages | len }} claims in our database.
+</p>
+
+{{ template "_internal/pagination.html" . }}
+
 <ul class="claims">
-  {{ range .Data.Pages }}
+  {{ range .Paginator.Pages }}
     <li class="claim">
       <h4>
 	<a href="{{ .Permalink }}">{{ .Title }}</a>
       </h4>
 
-      <section class="truth">
-	<h5>The Truth:</h5>
+      <ul class="quick-claimants-list">
+        {{ $claimID := .File.BaseFileName }}
+        {{ range $person := (shuffle (where (where .Site.Pages "Type" "person") "Kind" "page")) }}
+          {{ range where $person.Params.claims "id" $claimID }}
+            {{ $count := .assertions | len }}
+            <li><a href="{{ $person.Permalink }}#claim-{{ $claimID }}">{{ $person.Title }}</a>{{ if sub $count 1 }} ({{ $count }} times){{ end }}</li>
+          {{ end }}
+        {{ end }}
+      </ul>
 
-	<p>
+      <section class="truth">
+        <h5>The Truth:</h5>
+
+        <p>
           {{ .Params.summary | markdownify }}
-	</p>
+        </p>
       </section>
     </li>
   {{ end }}
 </ul>
+
+{{ template "_internal/pagination.html" . }}
 
 {{ partial "footer.html" . }}

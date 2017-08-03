@@ -64,7 +64,7 @@
   <ol class="claims">
     {{ range $claim := .Params.claims }}
       {{ $claimPage := $.Site.GetPage "page" "claim" (printf "%s.md" $claim.id) }}
-      <li class="claim">
+      <li class="claim" id="claim-{{ $claim.id }}">
         <h4>
           <a href="{{ $claimPage.Permalink }}">
             {{ $claimPage.Title }}

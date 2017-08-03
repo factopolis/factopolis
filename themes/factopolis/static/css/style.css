@@ -190,6 +190,59 @@ article {
   border-bottom: 5px #b0c26e solid;
 }
 
+/* Pagination */
+
+ul.pagination {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+ul.pagination > li {
+  margin: 0 0.25em;
+}
+
+ul.pagination > li > a {
+  background-color: #a8b2b7;
+  padding: 0.25em 0;
+  display: block;
+  min-width: 1.75em;
+  text-align: center;
+  border-radius: 0.25em;
+  text-decoration: none;
+}
+
+ul.pagination > li.disabled > a {
+  pointer-events: none;
+  cursor: defualt;
+  color: inherit;
+  background-color: inherit;
+}
+
+/* Claimants list */
+
+.quick-claimants-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.25em 0;
+}
+
+.quick-claimants-list:before {
+  content: "Claimed by: ";
+}
+
+.quick-claimants-list > li {
+  display: inline;
+}
+
+.quick-claimants-list > li:after {
+  content: ", ";
+}
+
+.quick-claimants-list > li:last-child:after {
+  content: "";
+}
+
 /* Quotes */
 
 .quote-list > li > blockquote > p {
