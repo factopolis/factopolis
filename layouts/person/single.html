@@ -127,8 +127,8 @@
                   </cite>
 
                   {{ if $assertion.checks }}
-                    <ul class="fact-checks">
-                      {{ range $check := $assertion.checks }}
+                    <ul class="fact-checks shuffle">
+                      {{ range $check := (shuffle $assertion.checks) }}
                         {{ $checker := $.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
                         <li>
                           <a class="check-source" href="{{ $check.source }}">

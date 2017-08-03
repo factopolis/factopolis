@@ -20,8 +20,8 @@
 <section id="claimants">
   <h2>Claimants</h2>
 
-  <ul>
-    {{ range $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
+  <ul class="shuffle">
+    {{ range $person := (shuffle (where (where .Site.Pages "Type" "person") "Kind" "page")) }}
       {{ range where $person.Params.claims "id" $claimID }}
         <li>
           <a href="{{ $person.URL }}#claim-{{ $claimID | htmlEscape }}">
@@ -40,8 +40,8 @@
 <section id="sources">
   <h2>Sources</h3>
 
-  <ul class="quote-list">
-    {{ range $check := .Params.checks }}
+  <ul class="quote-list shuffle">
+    {{ range $check := (shuffle .Params.checks) }}
       <li>
         <blockquote>
           <div class="quote-contents">
