@@ -35,9 +35,9 @@
 <section id="counter">
   <p>
     {{ $claimCount := .Params.claims | len }}
-	  We currently have {{ $claimCount }} distict false
+    We currently have {{ $claimCount }} distinct false
     claim{{ if sub $claimCount 1 }}s{{ end }} made
-	  by {{ .Params.Title }} in our database (not counting repeats).
+    by {{ .Params.Title }} in our database (not counting repeats).
   </p>
 </section>
 
