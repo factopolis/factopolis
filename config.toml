@@ -1,6 +1,7 @@
 languageCode = "en-us"
 title = "Factopolis"
 baseurl = "/"
+GoogleAnalytics = "UA-101930305-1"
 
 paginate = 25
 
@@ -8,9 +9,6 @@ theme = "factopolis"
 
 [outputs]
 page = [ "HTML", "JSON" ]
-
-[params]
-analytics = "UA-101930305-1"
 
 [[params.navlinks]]
 name = "Claims"
