@@ -3,11 +3,15 @@ title: "Contributing"
 ---
 
 Factopolis is a community-driven project, and a fairly large undertaking,
-so we need all the help we can get.  All community activity is managed
-through [our GitHub project](https://github.com/factopolis/factopolis), most
-notably through [our issue
-tracker](https://github.com/factopolis/factopolis/issues); if you have an ideas,
-please [submit an issue](https://github.com/factopolis/factopolis/issues/new).
+so we need all the help we can get.
+
+For new content and/or raising issues with existing information,
+please use [the issue
+tracker](https://github.com/factopolis/factopolis/issues) on [our
+GitHub project](https://github.com/factopolis/factopolis).
+
+If you'd like to discuss something, you can join [our chat
+room](https://gitter.im/factopolis/).
 
 If you're not sure how to help, here are a few things we know we need:
 
