@@ -730,6 +730,10 @@ claims:
           The trade deficit with Mexico is close to $70 billion, even
           with Canada it’s $17 billion trade deficit with Canada.
         source: http://www.factcheck.org/2017/05/trumps-100-day-boasts/
+        checks:
+          - checker: factcheck-org
+            rating: false
+            source: http://www.factcheck.org/2017/05/trumps-100-day-boasts/
 
   - id: trump-got-china-to-stop-manipulating-their-currency
     assertions:
@@ -773,6 +777,7 @@ claims:
           Obamacare.
         source: https://www.bloomberg.com/news/articles/2017-05-01/president-donald-trump-interviewed-by-bloomberg-news-transcript
 
+
   - id: us-highest-tax-rate
     assertions:
       - date: 2017-05-04
@@ -792,6 +797,10 @@ claims:
         quote:
           …nobody cares about my tax return except for the reporters.
         source: http://www.economist.com/Trumptranscript
+        checks:
+          - checker: politifact
+            rating: false
+            source: http://www.politifact.com/truth-o-meter/statements/2017/jan/11/donald-trump/trump-wrong-reporters-are-only-ones-who-care-about/
 
   - id: trump-colbert-highest-rated
     assertions:
@@ -816,6 +825,10 @@ claims:
           knowledge of the witch hunt, says there is no collusion,
           when does it end?
         source: https://twitter.com/realdonaldtrump/status/863014620516233216
+        checks:
+          - checker: politifact
+            rating: mostly-false
+            source: http://www.politifact.com/truth-o-meter/statements/2017/may/12/donald-trump/trumps-mostly-false-claim-clapper-said-no-collusio/
 
   - id: young-people-pay-almost-nothing-for-health-insurance
     assertions:
@@ -852,6 +865,13 @@ claims:
           successful. We made and saved the USA many billions of
           dollars and millions of jobs.
         source: https://twitter.com/realdonaldtrump/status/868047480847568896
+        checks:
+          - checker: politifact
+            rating: false
+            source: http://www.politifact.com/truth-o-meter/statements/2017/may/26/donald-trump/did-donald-trumps-trip-create-or-save-millions-job/
+          - checker: washington-post
+            rating: 4-pinocchios
+            source: https://www.washingtonpost.com/news/fact-checker/wp/2017/05/26/president-trumps-claim-that-hes-already-saved-millions-of-jobs-on-his-foreign-trip/
 
   - id: paris-agreement-didnt-allow-us-to-build-coal-plants
     assertions:
@@ -862,6 +882,10 @@ claims:
           according to this agreement. India will be allowed to double
           its coal production by 2020.
         source: http://transcripts.factcheck.org/president-trump-paris-climate-accord/
+        checks:
+          - checker: politifact
+            rating: false
+            source: http://www.politifact.com/truth-o-meter/statements/2017/jun/05/donald-trump/donald-trump-wrong-paris-accord-china-and-coal-pla/
 
   - id: london-terror-attack-no-reason-to-be-alarmed
     assertions:
@@ -870,6 +894,14 @@ claims:
           At least 7 dead and 48 wounded in terror attack and Mayor of
           London says there is "no reason to be alarmed!"
         source: https://twitter.com/realdonaldtrump/status/871328428963901440
+        checks:
+          - checker: politifact
+            rating: false
+            source: http://www.politifact.com/truth-o-meter/statements/2017/jun/04/donald-trump/donald-trumps-tweet-misleads-about-london-mayors-r/
+          - checker: snopes
+            source: http://www.snopes.com/2017/06/04/london-mayor-sadiq-khan-no-reason-to-be-alarmed-trump/
+          - checker: new-york-times
+            source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
 
   - id: doj-submitted-watered-down-travel-ban-to-sc
     assertions:
@@ -879,6 +911,9 @@ claims:
           Travel Ban, not the watered down, politically correct
           version they submitted to S.C.
         source: https://twitter.com/realdonaldtrump/status/871675245043888128
+        checks:
+          - checker: new-york-times
+            source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
 
   - id: paris-agreement-binding
     assertions:
@@ -886,6 +921,9 @@ claims:
         quote:
           And they all say it's non-binding. Like hell it's non-binding.
         source: http://www.washingtonexaminer.com/trump-on-paris-climate-agreement-like-hell-its-non-binding/article/2626729
+        checks:
+          - checker: new-york-times
+            source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
 
   - id: cnn-ratings-way-down
     assertions:
@@ -895,6 +933,10 @@ claims:
           they got caught falsely pushing their phony Russian stories.
           Ratings way down!
         source: https://twitter.com/realDonaldTrump/status/879678356450676736
+        checks:
+          - checker: politifact
+            rating: pants-on-fire
+            source: http://www.politifact.com/truth-o-meter/statements/2017/jul/03/donald-trump/trumps-pants-fire-claim-cnn-ratings-are-way-down/
 
   - id: half-of-ms-13-deported
     assertions:
@@ -904,6 +946,10 @@ claims:
           gotten many of them out already.  You know, we’re pretty
           much at the 50 percent mark.
         source: https://www.whitehouse.gov/the-press-office/2017/06/28/remarks-president-trump-during-meeting-immigration-crime-victims
+        checks:
+          - checker: factcheck-org
+            rating: false
+            source: http://www.factcheck.org/2017/06/ms-13-gang-nonsense/
 
   - id: bcra-increases-medicaid-spending
     assertions:
@@ -925,6 +971,11 @@ claims:
           legislature -- than any President ever.  For a while, Harry
           Truman had us, and now I think we have everybody, Mike.
         source: https://www.whitehouse.gov/the-press-office/2017/07/17/remarks-president-trump-made-america-product-showcase
+        checks:
+          - checker: new-york-times
+            source: https://www.nytimes.com/2017/07/17/us/politics/trump-laws-bills.html
+          - checker: washington-post
+            source: https://www.washingtonpost.com/news/fact-checker/wp/2017/07/17/no-president-trump-youve-havent-signed-more-bills-than-any-president/
 
   - id: hrc-gave-almost-700k-to-wife-of-fbi-agent-investigating-her
     assertions:
@@ -943,6 +994,8 @@ claims:
           - checker: washington-post
             rating: 4-pinocchios
             source: https://www.washingtonpost.com/news/fact-checker/wp/2016/10/25/trumps-mixed-up-version-of-the-latest-hillary-clinton-controversy/
+          - checker: cnn
+            source: http://www.cnn.com/2016/10/25/politics/reality-check-hillary-clinton-fbi-investigation/index.html
       - date: 2017-07-25
         quote:
           Problem is that the acting head of the FBI & the person in
@@ -956,6 +1009,7 @@ claims:
           - checker: factcheck-org
             rating: false
             source: http://www.factcheck.org/2017/07/trump-wrong-campaign-donations/
+
   - id: trump-admin-achieved-historic-increase-in-defense-spending
     assertions:
       - date: 2017-07-25
@@ -967,6 +1021,7 @@ claims:
           - checker: politifact
             rating: false
             source: http://www.politifact.com/truth-o-meter/statements/2017/jul/27/donald-trump/its-false-trump-achieved-historic-increase-defense/
+
   - id: amazon-has-no-tax-monopoly
     assertions:
       - date: 2017-07-24
@@ -979,6 +1034,7 @@ claims:
           - checker: politifact
             rating: pants-on-fire
             source: http://www.politifact.com/truth-o-meter/statements/2017/jul/26/donald-trump/amazon-no-tax-monopoly-donald-trump-said/
+
   - id: border-apprehensions-increased-in-admins-before-trump
     assertions:
       - date: 2017-07-28

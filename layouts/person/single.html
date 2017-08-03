@@ -127,23 +127,23 @@
                   </cite>
 
                   {{ if $assertion.checks }}
-                    <dl class="fact-checks">
+                    <ul class="fact-checks">
                       {{ range $check := $assertion.checks }}
                         {{ $checker := $.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
-                        <dt>
-                          <a href="{{ $check.source }}">
+                        <li>
+                          <a class="check-source" href="{{ $check.source }}">
                             {{ if isset $checker.Params "abbr" }}
                               <abbr title="{{ $checker.Title }}">{{ $checker.Params.abbr }}</abbr>
                             {{ else }}
                               {{ $checker.Title }}
                             {{ end }}
                           </a>
-                        </dt>
-                        <dd>
-                          {{ humanize $check.rating }}
-                        </dd>
-                        {{ end }}
-                    </dl>
+                          {{ if $check.rating }}
+                            <span class="check-rating">{{ humanize $check.rating }}</span>
+                          {{ end }}
+                        </li>
+                      {{ end }}
+                    </ul>
                   {{ end }}
                 </footer>
               </blockquote>

@@ -67,7 +67,7 @@ checks:
       on his own, for state-level political goals -- not to influence
       an investigation that Andrew McCabe wasn’t even involved in yet.
     url: http://www.politifact.com/truth-o-meter/statements/2017/jul/25/donald-trump/tweet-donald-trump-revives-charge-improper-ties-be/
-  - checker: politifact
+  - checker: factcheck-org
     quote:
       But the contributions didn’t come from Clinton or her campaign,
       and Andrew McCabe wasn’t “in charge” of the FBI’s investigation

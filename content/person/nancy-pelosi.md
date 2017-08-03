@@ -53,5 +53,9 @@ claims:
             position: Spokesman
           date: 2016-01-13
           source: http://www.politifact.com/truth-o-meter/statements/2016/jan/13/nancy-pelosi/nancy-pelosi-until-iran-deal-russian-and-china-had/
+        checks:
+          - checker: politifact
+            rating: pants-on-fire
+            source: http://www.politifact.com/truth-o-meter/statements/2016/jan/13/nancy-pelosi/nancy-pelosi-until-iran-deal-russian-and-china-had/
 
 ---
