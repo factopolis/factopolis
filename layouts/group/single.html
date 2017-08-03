@@ -19,6 +19,15 @@
           {{ if eq $affiliation $.File.BaseFileName }}
             <li>
               <a href="{{ $person.Permalink }}">{{ $person.Title }}</a>
+              {{ if $person.Params.offices }}
+                —
+                {{ range $office := first 1 $person.Params.offices }}
+                  {{ $office.title }}
+                  {{ if $office.thru }}
+                    ({{ dateFormat "2006" $office.from }}{{ if sub (int (dateFormat "2006" $office.thru)) (int (dateFormat "2006" $office.from)) }} - {{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }}{{ end }})
+                  {{ end }}
+                {{ end }}
+              {{ end }}
             </li>
           {{ end }}
         {{ end }}

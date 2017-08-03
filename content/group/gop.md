@@ -1,5 +1,5 @@
 ---
-title: Grand Old Party
+title: Republican Party
 wikipedia: Republican_Party_(United_States)
 twitter: GOP
 instagram: gop
