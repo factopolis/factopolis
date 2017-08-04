@@ -26,6 +26,10 @@ claims:
           I was among the earliest to criticize the rush to war (in
           Iraq), and yes, even before the war ever started.
         source: http://www.politifact.com/truth-o-meter/statements/2016/jun/22/donald-trump/trump-still-wrong-his-claim-opposed-iraq-war-ahead/
+        checks:
+        - checker: politifact
+          rating: "false"
+          source: http://www.politifact.com/truth-o-meter/statements/2016/jun/22/donald-trump/trump-still-wrong-his-claim-opposed-iraq-war-ahead/
       - date: 2017-01-21
         quote:
           I wasn't a fan of Iraq. I didn't want to go into Iraq.
@@ -37,6 +41,122 @@ claims:
           hard to say I wasn’t but you’ve seen that it is now
           improving.
         source: http://transcripts.factcheck.org/remarks-president-trump-vice-president-pence-cia-headquarters/
+
+  - id: immigrants-voting-illegaly-responsible-for-obama-2008-nc-victory
+    assertions:
+    - date: 2016-10-09
+      quote:
+        It’s possible that non-citizen voters were responsible for
+        Obama’s 2008 victory in North Carolina.
+      source: http://www.politifact.com/north-carolina/statements/2016/oct/19/donald-trump/trump-wrongfully-says-immigrants-voting-illegally-/
+      checks:
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/north-carolina/statements/2016/oct/19/donald-trump/trump-wrongfully-says-immigrants-voting-illegally-/
+
+  - id: 6-billion-usd-went-missing-from-state-department-during-clintons-tenure
+    assertions:
+    - date: 2016-10-20
+      quote:
+        The problem is, you talk, but you don't get anything done,
+        Hillary. You don't. Just like when you ran the State
+        Department, $6 billion was missing. How do you miss $6 billion?
+        You ran the State Department, $6 billion was either stolen —
+        they don't know. It's gone, $6 billion. If you become
+        president, this country is going to be in some mess. Believe
+        me.
+      source: https://www.washingtonpost.com/news/the-fix/wp/2016/10/19/the-final-trump-clinton-debate-transcript-annotated/?utm_term=.59b005452ca7
+      checks:
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/truth-o-meter/statements/2016/oct/20/donald-trump/trump-wrongly-says-6-billion-went-missing-state-de/
+
+  - id: wikileaks-data-shows-podesta-rigged-polls
+    assertions:
+    - date: 2016-10-25
+      quote:
+        WikiLeaks also shows how John Podesta rigged the polls by
+        oversampling Democrats, a voter suppression technique.
+      source: http://thehill.com/homenews/campaign/302565-trump-links-wikileaks-to-media-voter-suppression
+      checks:
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/truth-o-meter/statements/2016/oct/25/donald-trump/trump-absurd-claims-podesta-rigged-polls/
+
+  - id: hrc-favors-allowing-hundreds-of-millions-of-immigrants
+    assertions:
+    - date: 2016-10-30
+      quote:
+        She wants to let people just pour in. You could have 650
+        million people pour in and we do nothing about it. Think of it.
+        That’s what could happen. You triple the size of our country in
+        one week.
+      source: http://www.cbsnews.com/news/donald-trump-says-hillary-clinton-could-let-650-million-new-immigrants-into-u-s/
+      checks:
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/truth-o-meter/statements/2016/oct/31/donald-trump/trump-says-clinton-would-bring-650-million-people-/
+
+  - id: obama-screamed-at-protester-during-clinton-rally
+    assertions:
+    - date: 2016-11-04
+      quote:
+        And yet, Obama today spoke in front of a much smaller crowd
+        than this, by the way, and there was a protester and a
+        protester that likes us. And what happened is they wouldn't put
+        the cameras on them. They kept the cameras on Obama, and I
+        said, "That's strange." You saw it today on television, right?
+        He was talking to the protester, screaming at him, really
+        screaming at him.
+      source: https://youtu.be/qpl_D637fgA?t=10547
+      checks:
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/truth-o-meter/statements/2016/nov/06/donald-trump/donald-trumps-pants-fire-claim-obama-screamed-prot/
+
+  - id: serious-voter-fraud-in-va-nh-ca
+    assertions:
+    - date: 2016-11-27
+      quote:
+        Serious voter fraud in Virginia, New Hampshire and California -
+        so why isn't the media reporting on this? Serious bias - big
+        problem!
+      source: https://twitter.com/realdonaldtrump/status/803033642545115140
+      checks:
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/virginia/statements/2016/nov/29/donald-trump/trumps-pants-fire-serious-voter-fraud-claim-virgin/
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/new-hampshire/statements/2016/nov/28/donald-trump/trump-claims-serious-voter-fraud-new-hampshire/
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/california/statements/2016/nov/28/donald-trump/pants-fire-trumps-claim-about-california-voter-fra/
+
+  - id: trump-won-popular-vote-in-2016-if-you-discount-those-who-voted-illegally
+    assertions:
+    - date: 2016-11-27
+      quote:
+        In addition to winning the Electoral College in a landslide, I
+        won the popular vote if you deduct the millions of people who
+        voted illegally
+      source: https://twitter.com/realDonaldTrump/status/802972944532209664
+      checks:
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/truth-o-meter/statements/2016/nov/28/donald-trump/donald-trumps-pants-fire-claim-millions-illegal-vo/
+
+  - id: obama-admin-did-nothing-about-russian-hacking-until-after-election
+    assertions:
+    - date: 2016-12-15
+      quote:
+        If Russia, or some other entity, was hacking, why did the White
+        House wait so long to act? Why did they only complain after
+        Hillary lost?
+      source: https://twitter.com/realDonaldTrump/status/809403760099422208
+      checks:
+      - checker: politifact
+        source: http://www.politifact.com/truth-o-meter/statements/2016/dec/15/donald-trump/pants-fire-trump-tweet-about-russian-hacking-probe/
 
   - id: trump-time-cover-frequency
     assertions:
@@ -328,6 +448,10 @@ claims:
           press doesn't want to report it. They have their reasons and
           you understand that.
         source: http://time.com/4661658/donald-trump-terror-attacks-speech-macdill-air-force-base/
+        checks:
+        - checker: politifact
+          rating: pants-on-fire
+          source: http://www.politifact.com/truth-o-meter/statements/2017/feb/06/donald-trump/donald-trump-wrong-media-not-reporting-terrorism-a/
 
   - id: obama-policies-created-isis
     assertions:
@@ -675,6 +799,10 @@ claims:
           in my campaign until very late. I had already beaten all the
           senators and all the governors, and I didn’t know Steve.
         source: https://nypost.com/2017/04/11/trump-wont-definitively-say-he-still-backs-bannon/
+        checks:
+        - checker: politifact
+          rating: pants-on-fire
+          source: http://www.politifact.com/truth-o-meter/statements/2017/apr/12/donald-trump/did-he-or-didnt-he-trump-contradicts-himself-wheth/
 
   - id: democrats-obstructing-trump-nominees
     assertions:
@@ -850,6 +978,16 @@ claims:
 
   - id: trump-russia-collusion-excuse-by-democrats-for-losing-election
     assertions:
+      - date: 2017-05-11
+        quote:
+          This Russia thing with Trump and Russia is a made-up story.
+          It's an excuse by the Democrats for having lost an election
+          that they should've won.
+        source: https://youtu.be/5Wvuw_Zmubg?t=66
+        checks:
+        - checker: politifact
+          rating: pants-on-fire
+          source: http://www.politifact.com/truth-o-meter/statements/2017/may/12/donald-trump/trump-calls-trump-russia-story-made-/
       - date: 2017-05-12
         quote:
           Again, the story that there was collusion between the

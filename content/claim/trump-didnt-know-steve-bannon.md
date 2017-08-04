@@ -20,4 +20,7 @@ checks:
       campaign manager. “They are extremely capable, highly qualified
       people who love to win and know how to win.”
     url: https://www.nytimes.com/2017/04/12/us/politics/trump-steven-bannon-fox-business-news-interview.html
+  - checker: politifact
+    short: That’s contradicted by Trump’s own words and independent reporting.
+    source: http://www.politifact.com/truth-o-meter/statements/2017/apr/12/donald-trump/did-he-or-didnt-he-trump-contradicts-himself-wheth/
 ---
