@@ -9,6 +9,7 @@ theme = "factopolis"
 
 [outputs]
 page = [ "HTML", "JSON" ]
+section = [ "HTML", "JSON" ]
 
 [[params.navlinks]]
 name = "Claims"

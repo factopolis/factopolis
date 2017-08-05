@@ -1,0 +1,5 @@
+{
+  "name": {{ .Page.Title | jsonify }},
+  "slug": {{ .Page.BaseFileName | jsonify }},
+  "markdown": {{ .Page.RawContent | jsonify }}
+}

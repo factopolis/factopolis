@@ -1,5 +1,5 @@
 {
-    "name": {{ .Title | jsonify }},
+    {{ partial "head.json" . }}
     "offices": [
         {{ $offices := .Params.offices }}
         {{ range $idx, $office := .Params.offices }}

@@ -1,0 +1,15 @@
+{
+  {{ partial "head.json" . }}
+  "count": {{ .Data.Pages | len }},
+  "people": [
+	  {{ $people := .Data.Pages }}
+    {{ range $idx, $person := .Data.Pages }}
+      {{ if $idx }}, {{ end }}
+      {
+        "id": {{ $person.BaseFileName | jsonify }},
+        "name": {{ $person.Title | jsonify }},
+        "count": {{ $person.Params.claims | len }}
+      }
+    {{ end }}
+  ]
+}
