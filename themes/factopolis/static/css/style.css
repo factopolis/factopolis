@@ -2,27 +2,30 @@
 
 body {
   background-image: radial-gradient(circle, rgb(54, 142, 193), rgb(43, 113, 153));
+  margin: 0;
+}
+
+factopolis-app {
   display: flex;
   flex-direction: column;
-  margin: 0;
   min-height: 100vh;
 }
 
-body > header,
-body > footer {
+factopolis-app > header,
+factopolis-app > footer {
   color: #81bbdc;
   font-variant: small-caps;
 }
 
-body > header a,
+factopolis-app > header a,
 main > header a,
-body > footer a {
+factopolis-app > footer a {
   color: inherit;
   text-decoration: none;
 }
 
-body > header a:hover,
-body > footer a:hover {
+factopolis-app > header a:hover,
+factopolis-app > footer a:hover {
   color: #bddbed;
   background: radial-gradient(ellipse at center, rgba(54,142,193,1) 0%,rgba(54,142,193,0) 66%);
 }
@@ -50,7 +53,7 @@ body > footer a:hover {
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  body > header > :first-child,
+  factopolis-app > header > :first-child,
   main > header > :first-child {
     width: 225px;
   }
@@ -70,8 +73,8 @@ body > footer a:hover {
     background: radial-gradient(ellipse at center, rgba(54,142,193,1) 0%,rgba(54,142,193,0) 66%);
   }
 
-  body > header,
-  body > main {
+  factopolis-app > header,
+  factopolis-app > main {
     display: flex;
   }
 
@@ -80,7 +83,7 @@ body > footer a:hover {
     transform: translate(0, -50%) translate(0, -1em);
   }
 
-  body > footer > ul {
+  factopolis-app > footer > ul {
     display: flex;
   }
 
@@ -90,7 +93,7 @@ body > footer a:hover {
 }
 
 @media screen and (min-width: 992px) {
-  body > header > :first-child,
+  factopolis-app > header > :first-child,
   main > header > :first-child {
     width: 325px;
   }
@@ -100,11 +103,11 @@ main > header .sticky-middle {
   text-align: center;
 }
 
-body > main {
+factopolis-app > main {
   flex-grow: 1;
 }
 
-body > header > :first-child,
+factopolis-app > header > :first-child,
 main > header > :first-child {
   margin: 0;
 }
@@ -131,52 +134,52 @@ main > header ul.links > li {
   margin: 0 0.15em;
 }
 
-body > header > h1 {
+factopolis-app > header > h1 {
   font-size: 1.25em;
   line-height: 2rem;
 }
 
-body > header a {
+factopolis-app > header a {
   display: block;
   text-align: center;
   line-height: 2rem;
   font-weight: bold;
 }
 
-body > header > nav {
+factopolis-app > header > nav {
   flex-grow: 1;
 }
 
-body > header > nav a {
+factopolis-app > header > nav a {
   border-bottom: 5px #b0c26e solid;
 }
 
-body > header > nav a.active {
+factopolis-app > header > nav a.active {
   border-bottom: 5px #ef4e57 solid;
 }
 
-body > header ul {
+factopolis-app > header ul {
   display: flex;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-body > header ul > li {
+factopolis-app > header ul > li {
   flex-grow: 1;
 }
 
-body > footer > ul {
+factopolis-app > footer > ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-body > footer > ul > li {
+factopolis-app > footer > ul > li {
   flex-grow: 1;
 }
 
-body > footer a {
+factopolis-app > footer a {
   display: block;
   text-align: center;
   line-height: 2rem;
@@ -397,4 +400,12 @@ ul.pagination > li.disabled > a {
   .fact-checking-bio-links > li {
     margin: 0.25em 0;
   }
+}
+
+.loading-screen {
+  background-color: white;
+  height: 100vh;
+  text-align: center;
+  padding-top: 50vh;
+  transform: translate(0, -1.5em);
 }

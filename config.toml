@@ -2,6 +2,7 @@ languageCode = "en-us"
 title = "Factopolis"
 baseurl = "/"
 GoogleAnalytics = "UA-101930305-1"
+publishDir = "web"
 
 paginate = 25
 
@@ -11,14 +12,7 @@ theme = "factopolis"
 page = [ "HTML", "JSON" ]
 section = [ "HTML", "JSON" ]
 
-[[params.navlinks]]
-name = "Claims"
-url = "claim/"
-
-[[params.navlinks]]
-name = "People"
-url = "person/"
-
-[[params.navlinks]]
-name = "Groups"
-url = "group/"
+[params]
+# Whether to enable Dart front-end (unfinished). This will become the
+# default once the Dart front-end reaches parity.
+Dart = false

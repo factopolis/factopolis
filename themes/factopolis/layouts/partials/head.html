@@ -9,119 +9,135 @@
       {{ .Site.Title }}
     </title>
 
+    <style type="text/css"> .noscript { display: none; } </style>
     <noscript>
       <style type="text/css">
-        .yesscript { display: none }
+        .noscript { display: initial; }
+        .yesscript { display: none; }
       </style>
     </noscript>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link rel="stylesheet" href="{{ $.Site.BaseURL }}css/style.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="{{ .Site.BaseURL }}js/site.js"></script>
+    {{ if $.Site.Params.Dart }}
+      <script defer type="application/dart" src="{{ .Site.BaseURL }}main.dart"></script>
+      <script defer src="{{ .Site.BaseURL }}packages/browser/dart.js"></script>
+    {{ end }}
 
     <base href="{{ .Site.BaseURL }}" />
   </head>
   <body>
-    <header class="container">
-      <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
-
-      <nav>
-        <ul>
-          {{ range .Site.Params.navlinks }}
-            <li>
-              <a {{ if hasPrefix .url $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}{{ .url }}">{{ .name }}</a>
-            </li>
-          {{ end }}
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <header>
-	<div>
-        <div class="sticky-middle">
-          <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h2>
-          {{ if and (eq .Page.Type "person") (eq .Page.Kind "page") }}
-            <img class="profile-pic" src="{{ .Page.Type }}/{{ .File.BaseFileName }}.jpg" />
-          {{ end }}
-          <ul class="links">
-            {{ if .Params.wikipedia }}
-              <li>
-                <a href="https://en.wikipedia.org/wiki/{{ .Params.wikipedia }}">
-                  <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
-                  <span class="sr-only">Wikipedia</span>
-                </a>
-              </li>
-            {{ end }}
-            {{ if .Params.web }}
-              <li>
-                <a href="{{ .Params.web }}">
-                  <i class="fa fa-globe" aria-hidden="true"></i>
-                  <span class="sr-only">Web Site</span>
-                </a>
-              </li>
-            {{ end }}
-            {{ if .Params.twitter }}
-              <li>
-                <a href="https://twitter.com/{{ .Params.twitter }}">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                  <span class="sr-only">Twitter</span>
-                </a>
-              </li>
-            {{ end }}
-            {{ if .Params.facebook }}
-              <li>
-                <a href="https://facebook.com/{{ .Params.facebook }}">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                  <span class="sr-only">Facebook</span>
-                </a>
-              </li>
-            {{ end }}
-            {{ if .Params.instagram }}
-              <li>
-                <a href="https://www.instagram.com/{{ .Params.instagram }}">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                  <span class="sr-only">Instagram</span>
-                </a>
-              </li>
-            {{ end }}
-            {{ if .Params.snapchat }}
-            <li>
-              <a href="https://www.snapchat.com/add/{{ .Params.snapchat }}">
-                <i class="fa fa-snapchat" aria-hidden="true"></i>
-                <span class="sr-only">Snapchat</span>
-              </a>
-            </li>
-            {{ end }}
-            {{ if .Params.youtube }}
-              <li>
-                <a href="https://www.youtube.com/user/{{ .Params.youtube }}">
-                  <i class="fa fa-youtube" aria-hidden="true"></i>
-                  <span class="sr-only">Youtube</span>
-                </a>
-              </li>
-            {{ end }}
-            {{ if .Params.medium }}
-              <li>
-                <a href="https://medium.com/{{ .Params.medium }}">
-                  <i class="fa fa-medium" aria-hidden="true"></i>
-                  <span class="sr-only">Flickr</span>
-                </a>
-              </li>
-            {{ end }}
-            {{ if .Params.flickr }}
-             <li>
-                <a href="https://www.flickr.com/photos/{{ .Params.flickr }}">
-                  <i class="fa fa-flickr" aria-hidden="true"></i>
-                  <span class="sr-only">Flickr</span>
-                </a>
-              </li>
-            {{ end }}
-          </ul>
+    <factopolis-app>
+      {{ if $.Site.Params.Dart }}
+        <div class="yesscript text-center loading-screen">
+          <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+          <div class="sr-only">Loading…</div>
         </div>
-	</div>
+      {{ end }}
+
+      <header class="container{{ if $.Site.Params.Dart }} noscript{{ end }}">
+        <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+
+        <nav>
+          <ul>
+            <li>
+              <a {{ if hasPrefix "person/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}person">People</a>
+            </li>
+            <li>
+              <a {{ if hasPrefix "claim/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}claim">Claims</a>
+            </li>
+            <li>
+              <a {{ if hasPrefix "group/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}group">Groups</a>
+            </li>
+          </ul>
+        </nav>
       </header>
 
-      <article>
+      <main{{ if $.Site.Params.Dart }} class="noscript"{{ end }}>
+        <header>
+          <div>
+            <div class="sticky-middle">
+              <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h2>
+              {{ if and (eq .Page.Type "person") (eq .Page.Kind "page") }}
+                <img class="profile-pic" src="{{ .Page.Type }}/{{ .File.BaseFileName }}.jpg" />
+              {{ end }}
+              <ul class="links">
+                {{ if .Params.wikipedia }}
+                  <li>
+                    <a href="https://en.wikipedia.org/wiki/{{ .Params.wikipedia }}">
+                      <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+                      <span class="sr-only">Wikipedia</span>
+                    </a>
+                  </li>
+                {{ end }}
+                {{ if .Params.web }}
+                  <li>
+                    <a href="{{ .Params.web }}">
+                      <i class="fa fa-globe" aria-hidden="true"></i>
+                      <span class="sr-only">Web Site</span>
+                    </a>
+                  </li>
+                {{ end }}
+                {{ if .Params.twitter }}
+                  <li>
+                    <a href="https://twitter.com/{{ .Params.twitter }}">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <span class="sr-only">Twitter</span>
+                    </a>
+                  </li>
+                {{ end }}
+                {{ if .Params.facebook }}
+                  <li>
+                    <a href="https://facebook.com/{{ .Params.facebook }}">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                      <span class="sr-only">Facebook</span>
+                  </a>
+                  </li>
+                {{ end }}
+                {{ if .Params.instagram }}
+                  <li>
+                    <a href="https://www.instagram.com/{{ .Params.instagram }}">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                      <span class="sr-only">Instagram</span>
+                    </a>
+                  </li>
+                {{ end }}
+                {{ if .Params.snapchat }}
+                  <li>
+                    <a href="https://www.snapchat.com/add/{{ .Params.snapchat }}">
+                      <i class="fa fa-snapchat" aria-hidden="true"></i>
+                      <span class="sr-only">Snapchat</span>
+                    </a>
+                  </li>
+                {{ end }}
+                {{ if .Params.youtube }}
+                  <li>
+                    <a href="https://www.youtube.com/user/{{ .Params.youtube }}">
+                      <i class="fa fa-youtube" aria-hidden="true"></i>
+                      <span class="sr-only">Youtube</span>
+                    </a>
+                  </li>
+                {{ end }}
+                {{ if .Params.medium }}
+                  <li>
+                    <a href="https://medium.com/{{ .Params.medium }}">
+                      <i class="fa fa-medium" aria-hidden="true"></i>
+                      <span class="sr-only">Flickr</span>
+                    </a>
+                  </li>
+                {{ end }}
+                {{ if .Params.flickr }}
+                  <li>
+                    <a href="https://www.flickr.com/photos/{{ .Params.flickr }}">
+                      <i class="fa fa-flickr" aria-hidden="true"></i>
+                      <span class="sr-only">Flickr</span>
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <article{{ if $.Site.Params.Dart }} class="noscript"{{ end }}>

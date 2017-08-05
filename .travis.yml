@@ -19,7 +19,7 @@ notifications:
 
 deploy:
   provider: pages
-  local_dir: public
+  local_dir: web
   repo: factopolis/factopolis.github.io
   fqdn: www.factopolis.com
   target_branch: master

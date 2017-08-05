@@ -2,17 +2,16 @@ Factopolis is a non-partisan site to track when politicians lie.  We
 don't do any fact-checking ourselves, but instead provide links to
 trusted third-parties who have verified claims to be false.
 
-The site uses [Hugo](https://gohugo.io/) to generate content, mostly
-from JSON files, which are intentionally usable by other sites.
-
 The main data sources right now are in `content/claim` and
 `content/person`.  I'll add documentation for how to work with these
 when I have time, but until then it shouldn't be too hard to figure
 out—just look in the `content/` folder.
 
-To view the site locally, first [install
-Hugo](https://gohugo.io/overview/installing/), then run
-`hugo server --theme=factopolis`.
+To view the site locally, you'll need to install
+[Hugo](https://gohugo.io/overview/installing/) and
+[Dart](https://www.dartlang.org/install).  Once those are intalled you
+can bring up a local server by running `hugo -w` in one tab, and `pub
+get && pub serve` in another, then view the site in Dartium.
 
 Any help would be greatly appreciated—it turns out politicians tell a
 **lot** of lies, and it takes time to import them into our database.
