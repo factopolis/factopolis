@@ -1,0 +1,130 @@
+{
+  "people": [
+    {{ range $idx, $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
+      {{ if $idx }},{{ end }}
+      {
+        {{ if $person.Params.politifact }}"politifact": {{ $person.Params.politifact | jsonify }},{{ end }}
+        {{ if $person.Params.factcheckorg }}"factcheckorg": {{ $person.Params.factcheckorg | jsonify }},{{ end }}
+        {{ if $person.Params.snopes }}"snopes": {{ $person.Params.snopes | jsonify }},{{ end }}
+        {{ if $person.Params.washingtonpost }}"washingtonpost": {{ $person.Params.washingtonpost | jsonify }},{{ end }}
+
+        {{ if $person.Params.web }}"web": {{ $person.Params.web | jsonify }},{{ end }}
+        {{ if $person.Params.wikipedia }}"wikipedia": {{ $person.Params.wikipedia | jsonify }},{{ end }}
+        {{ if $person.Params.twitter }}"twitter": {{ $person.Params.twitter | jsonify }},{{ end }}
+        {{ if $person.Params.facebook }}"facebook": {{ $person.Params.facebook | jsonify }},{{ end }}
+        {{ if $person.Params.instagram }}"instagram": {{ $person.Params.instagram | jsonify }},{{ end }}
+        {{ if $person.Params.snapchat }}"snapchat": {{ $person.Params.snapchat | jsonify }},{{ end }}
+        {{ if $person.Params.youtube }}"youtube": {{ $person.Params.youtube | jsonify }},{{ end }}
+        {{ if $person.Params.medium }}"medium": {{ $person.Params.medium | jsonify }},{{ end }}
+        {{ if $person.Params.flickr }}"flickr": {{ $person.Params.flickr | jsonify }},{{ end }}
+
+        {{ if $person.Params.offices }}
+          "offices": [
+            {{ range $idx, $office := $person.Params.offices }}
+              {{ if $idx }},{{ end }}
+              {
+                "title": {{ $office.title | jsonify }},
+                "from": {{ $office.from | jsonify }}
+                {{ if $office.thru }}, "thru": {{ $office.thru | jsonify }}{{ end }}
+              }
+            {{ end }}
+          ],
+        {{ end }}
+
+        {{ if $person.Params.claims }}
+          "claims": [
+            {{ range $idx, $claim := $person.Params.claims }}
+              {{ if $idx }},{{ end }}
+              {
+                "assertions": [
+                  {{ range $idx, $assertion := $claim.assertions }}
+                    {{ if $idx }},{{ end }}
+                    {
+                      "date": {{ $assertion.date | jsonify }},
+                      "quote": {{ $assertion.quote | jsonify }},
+                      {{ if $assertion.checks }}
+                        "checks": [
+                          {{ range $idx, $check := $assertion.checks }}
+                            {{ if $idx }},{{ end }}
+                            {
+                              {{ if $check.checker }}
+                                "checker": {{ $check.checker | jsonify }},
+                              {{ else }}
+                                "name": {{ $check.name | jsonify }},
+                              {{ end }}
+                              {{ if $check.rating }}"rating": {{ $check.rating | jsonify }},{{ end }}
+                              "source": {{ $check.source | jsonify }}
+                            }
+                          {{ end }}
+                        ],
+                      {{ end }}
+                      "source": {{ $assertion.source | jsonify }}
+                    }
+                  {{ end }}
+                ],
+                "id": {{ $claim.id | jsonify }}
+              }
+            {{ end }}
+          ],
+        {{ end }}
+
+        {{ if $person.Params.affiliations }}"affiliations": {{ $person.Params.affiliations | jsonify }},{{ end }}
+
+        "name": {{ $person.Title | jsonify }},
+        "id": {{ $person.BaseFileName | jsonify }}
+      }
+    {{ end }}
+  ],
+
+  "claims": [
+    {{ range $idx, $claim := where (where .Site.Pages "Type" "claim") "Kind" "page" }}
+      {{ if $idx }},{{ end }}
+      {
+        "checks": [
+          {{ range $idx, $check := $claim.Params.checks }}
+            {{ if $idx }},{{ end }}
+            {
+              {{ if $check.quote }}"quote": {{ $check.quote | jsonify }},{{ end }}
+              {{ if $check.short }}"short": {{ $check.short | jsonify }},{{ end }}
+              {{ if $check.url }}"source": {{ $check.url | jsonify }}{{ end }}
+            }
+          {{ end }}
+        ],
+        "summary": {{ $claim.Params.summary | jsonify }},
+        "name": {{ $claim.Title | jsonify }},
+        "id": {{ $claim.BaseFileName | jsonify }}
+      }
+    {{ end }}
+  ],
+
+  "groups": [
+    {{ range $idx, $group := where (where .Site.Pages "Type" "group") "Kind" "page" }}
+      {{ if $idx }},{{ end }}
+      {
+        {{ if $group.Params.web }}"web": {{ $group.Params.web | jsonify }},{{ end }}
+        {{ if $group.Params.wikipedia }}"wikipedia": {{ $group.Params.wikipedia | jsonify }},{{ end }}
+        {{ if $group.Params.twitter }}"twitter": {{ $group.Params.twitter | jsonify }},{{ end }}
+        {{ if $group.Params.facebook }}"facebook": {{ $group.Params.facebook | jsonify }},{{ end }}
+        {{ if $group.Params.instagram }}"instagram": {{ $group.Params.instagram | jsonify }},{{ end }}
+        {{ if $group.Params.snapchat }}"snapchat": {{ $group.Params.snapchat | jsonify }},{{ end }}
+        {{ if $group.Params.youtube }}"youtube": {{ $group.Params.youtube | jsonify }},{{ end }}
+        {{ if $group.Params.medium }}"medium": {{ $group.Params.medium | jsonify }},{{ end }}
+        {{ if $group.Params.flickr }}"flickr": {{ $group.Params.flickr | jsonify }},{{ end }}
+
+        "name": {{ $group.Title | jsonify }},
+        "id": {{ $group.BaseFileName | jsonify }}
+      }
+    {{ end }}
+  ],
+
+  "checkers": [
+    {{ range $idx, $checker := where (where .Site.Pages "Type" "checker") "Kind" "page" }}
+      {{ if $idx }},{{ end }}
+      {
+        {{ if $checker.Params.website }}"web": {{ $checker.Params.website | jsonify }},{{ end }}
+        "name": {{ $checker.Title | jsonify }},
+        "id": {{ $checker.BaseFileName | jsonify }}
+      }
+    {{ end }}
+  ]
+}

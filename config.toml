@@ -11,6 +11,7 @@ theme = "factopolis"
 [outputs]
 page = [ "HTML", "JSON" ]
 section = [ "HTML", "JSON" ]
+home = [ "HTML", "JSON" ]
 
 [params]
 # Whether to enable Dart front-end (unfinished). This will become the

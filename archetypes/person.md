@@ -1,6 +1,5 @@
 ---
 title: 
-picture: 
 wikipedia: 
 twitter: 
 facebook: 
@@ -14,24 +13,24 @@ web:
 factcheckorg: 
 politifact: 
 snopes: 
-washington-post: 
+washingtonpost: 
 
 affiliations:
-  - 
+- 
 
 offices:
-  - title: 
-    from: 
-    thru: 
+- title: 
+  from: 
+  thru: 
 
 claims:
-  - id: 
-    assertions: 
-      - date: 
-        quote: 
-        source: 
-        checks:
-          - checker: 
-            rating: 
-            source: 
+- id: 
+  assertions:
+  - date: 
+    quote: 
+    source: 
+    checks:
+    - checker: 
+      rating: 
+      source: 
 ---

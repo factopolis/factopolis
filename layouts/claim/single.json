@@ -3,7 +3,7 @@
     {{ partial "head.json" . }}
     {{ if .Params.summary }}"summary": {{ .Params.summary | jsonify }},{{ end }}
     "checks": [
-	{{ $checks := .Params.checks }}
+        {{ $checks := .Params.checks }}
         {{ range $idx, $check := .Params.checks }}
         {{ if $idx }}, {{ end }}
         {
