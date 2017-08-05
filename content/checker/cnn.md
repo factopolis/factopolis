@@ -1,4 +1,4 @@
 ---
 title: CNN
-website: http://www.cnn.com/
+web: http://www.cnn.com/
 ---

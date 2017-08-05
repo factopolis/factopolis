@@ -1,4 +1,4 @@
 ---
 title: Snopes
-website: http://www.snopes.com/
+web: http://www.snopes.com/
 ---

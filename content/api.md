@@ -2,13 +2,39 @@
 title: Dataset
 ---
 
-Factopolis is open-source, and you can access all of our data from [our GitHub repository](https://github.com/factopolis/factopolis).
+**WARNING**: The API isn't stable yet; use it at your own risk!
 
-While the markdown data is convenient for editing, it's not very convenient for acessing programatically, which is why we also provide HTTP-accessible JSON files which are build from the markdown.
+Factopolis is open-source, and you can access all of our data from
+[our GitHub repository](https://github.com/factopolis/factopolis).
 
- * [person/index.json](person/index.json) — Provides a list of all
-   people in the database, plus some additional data about each person.
+While the markdown data is convenient for editing, it's not very
+convenient for acessing programatically, which is why we also provide
+HTTP-accessible JSON files which are built from the markdown:
 
-We're in the process of adding more JSON data to support our client-side front-end, but if you don't want to wait feel free to [contact us](https://github.com/factopolis/factopolis/issues) about making the data you need available.
+ * [/person/index.json](/person/index.json) — Provides a list of all
+   people in the database, plus some additional data about each
+   person.
+ * `person/*/index.json` — Information about the person, including a
+   list of claims.  Example:
+   [/person/donald-trump/index.json](/person/donald-trump/index.json)
+ * [/group/index.json](/group/index.json) — List of all groups.
+ * `/group/*/index.json` — Information about the group, including a
+   membership list.  Example:
+   [/group/democratic-party/index.json](/group/democratic-party/index.json)
+ * [/claim/index.json](/claim/index.json) — List of all claims.
+ * `/claim/*/index.json` — Information about the claim. Example:
+   [/claim/half-of-ms-13-deported/index.json](/claim/half-of-ms-13-deported/index.json)
+ * [/checker/index.json](/checker/index.json) — List of all fact
+   checkers.
+ * `/checker/*/index.json` — Information about the fact
+   checker. Example:
+   [/group/democratic-party/index.json](/group/democratic-party/index.json)
 
-If you want a copy of the entire database, you can use [/index.json](/index.json) (*warning: large file*). Please download this file sparingly to be nice to our web host.
+We're in the filling out the JSON data to support our client-side
+front-end, but if you don't want to wait feel free to [contact
+us](https://github.com/factopolis/factopolis/issues) about making the
+data you need available.
+
+If you want a copy of the entire database, you can use
+[/index.json](/index.json) (*warning: large file*). Please download
+this file sparingly to be nice to our web host.

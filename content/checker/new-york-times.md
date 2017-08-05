@@ -1,4 +1,4 @@
 ---
 title: The New York Times
-website: https://www.nytimes.com/
+web: https://www.nytimes.com/
 ---

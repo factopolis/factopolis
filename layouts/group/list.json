@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {{ range $idx, $group := where (where .Site.Pages "Type" "group") "Kind" "page" }}
+      {{ if $idx }},{{ end }}
+      {
+        "name": {{ $group.Title | jsonify }},
+        "id": {{ $group.BaseFileName | jsonify }}
+      }
+    {{ end }}
+  ]
+}

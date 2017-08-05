@@ -1,7 +1,7 @@
 ---
 title: The Washington Post
 abbr: WaPo
-website: https://www.washingtonpost.com/news/fact-checker/
+web: https://www.washingtonpost.com/news/fact-checker/
 logo48: /img/WashingtonPost.png
 ratings:
  - id: 1-pinocchio

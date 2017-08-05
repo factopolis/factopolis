@@ -1,6 +1,6 @@
 ---
 title: PolitiFact
-website: http://www.politifact.com/
+web: http://www.politifact.com/
 ratings:
  - id: true
    name: True

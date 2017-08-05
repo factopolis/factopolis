@@ -1,0 +1,23 @@
+{
+  "claims": [
+    {{ range $idx, $claim := where (where .Site.Pages "Type" "claim") "Kind" "page" }}
+      {{ if $idx }},{{ end }}
+      {
+        "claimants": [
+          {{ range $idx, $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
+            {{ range $currentClaim := where $person.Params.claims "id" $claim.BaseFileName }}
+              {
+                "count": {{ $currentClaim.assertions | len }},
+                "name": {{ $person.Title | jsonify }},
+                "id" : {{ $person.BaseFileName | jsonify }}
+              },
+            {{ end }}
+          {{ end }}
+          null
+        ],
+        "name": {{ $claim.Title | jsonify }},
+        "id": {{ $claim.BaseFileName | jsonify }}
+      }
+    {{ end }}
+  ]
+}

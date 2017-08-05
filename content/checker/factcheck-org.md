@@ -1,6 +1,6 @@
 ---
 title: FactCheck.org
-website: https://www.factcheck.org/
+web: https://www.factcheck.org/
 ratings:
   - id: misleading
     name: Misleading

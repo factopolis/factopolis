@@ -1,0 +1,11 @@
+{
+  "checkers": [
+    {{ range $idx, $checker := where (where .Site.Pages "Type" "checker") "Kind" "page" }}
+      {{ if $idx }},{{ end }}
+      {
+        "name": {{ $checker.Title | jsonify }},
+        "id": {{ $checker.BaseFileName | jsonify }}
+      }
+    {{ end }}
+  ]
+}

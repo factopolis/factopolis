@@ -111,6 +111,19 @@
         {{ if $group.Params.medium }}"medium": {{ $group.Params.medium | jsonify }},{{ end }}
         {{ if $group.Params.flickr }}"flickr": {{ $group.Params.flickr | jsonify }},{{ end }}
 
+        "members": [
+          {{ range $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
+            {{ if $person.Params.affiliations }}
+              {{ range $affiliation := $person.Params.affiliations }}
+                {{ if eq $affiliation $group.BaseFileName }}
+                  {{ $person.BaseFileName | jsonify }},
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          null
+        ],
+
         "name": {{ $group.Title | jsonify }},
         "id": {{ $group.BaseFileName | jsonify }}
       }
@@ -121,7 +134,7 @@
     {{ range $idx, $checker := where (where .Site.Pages "Type" "checker") "Kind" "page" }}
       {{ if $idx }},{{ end }}
       {
-        {{ if $checker.Params.website }}"web": {{ $checker.Params.website | jsonify }},{{ end }}
+        {{ if $checker.Params.web }}"web": {{ $checker.Params.web | jsonify }},{{ end }}
         "name": {{ $checker.Title | jsonify }},
         "id": {{ $checker.BaseFileName | jsonify }}
       }
