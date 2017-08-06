@@ -4,6 +4,10 @@ dist: trusty
 language: go
 go: 1.8
 
+addons:
+  apt:
+    packages: yajl-tools
+
 install:
   - go version
   - go get github.com/kardianos/govendor
@@ -11,6 +15,7 @@ install:
 
 script:
   - "$GOPATH/bin/hugo --verbose"
+  - find web/ -name '*.json' | while read json; do json_reformat -m < "$json" > "$json.min" && mv "$json.min" "$json"; done
 
 notifications:
   email:
