@@ -1,6 +1,9 @@
 ---
 title: Donald Trump
 picture: /person/donald-trump.jpg
+pictureCopyright:
+  U.S. Air Force Staff Sgt. Jette Carr (Public domain),
+  [via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Donald_Trump_Pentagon_2017.jpg)
 wikipedia: Donald_Trump
 twitter: realDonaldTrump
 facebook: DonaldTrump

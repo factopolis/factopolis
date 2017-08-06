@@ -1,6 +1,9 @@
 ---
 title: Nancy Pelosi
 picture: /person/nancy-pelosi.jpg
+pictureCopyright:
+  Official U.S. Government Portrait (public domain),
+  [via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Nancy_Pelosi_2012.jpg)
 wikipedia: Nancy_Pelosi
 twitter: NancyPelosi
 flickr: speakerpelosi

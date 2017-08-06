@@ -1,5 +1,8 @@
 ---
 title: Bruce Rauner
+pictureCopyright:
+  182nd Airlift Wing (Public domain),
+  [via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bruce_Rauner_2016_cropped.jpg)
 wikipedia: Bruce_Rauner
 twitter: brucerauner
 facebook: BruceRauner

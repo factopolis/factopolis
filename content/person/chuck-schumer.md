@@ -1,5 +1,8 @@
 ---
 title: Chuck Schumer
+pictureCopyright:
+  U.S. Senate Photographic Studio/Jeff McEvoy
+  (public domain)
 wikipedia: Chuck_Schumer
 twitter: senschumer
 facebook: senschumer

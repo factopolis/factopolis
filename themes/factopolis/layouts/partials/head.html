@@ -65,7 +65,12 @@
             <div class="sticky-middle">
               <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h2>
               {{ if and (eq .Page.Type "person") (eq .Page.Kind "page") }}
-                <img class="profile-pic" src="{{ .Page.Type }}/{{ .File.BaseFileName }}.jpg" />
+                <img class="profile-pic" alt="{{ .Page.Title }}" src="{{ .Page.Type }}/{{ .File.BaseFileName }}.jpg" />
+              {{ end }}
+              {{ if .Page.Params.pictureCopyright }}
+                <div class="profile-pic-copyright">
+                  Photo by {{ .Page.Params.pictureCopyright | markdownify }}
+                </div>
               {{ end }}
               <ul class="links">
                 {{ if .Params.web }}
