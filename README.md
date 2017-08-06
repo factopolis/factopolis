@@ -7,10 +7,12 @@ The main data sources right now are in `content/claim` and
 when I have time, but until then it shouldn't be too hard to figure
 out—just look in the `content/` folder.
 
-To view the site locally, you'll need to install
-[Hugo](https://gohugo.io/overview/installing/).  Once that's done,
-simply run `hugo server` in the root directory, then browse to
-[localhost:1313](http://localhost:1313/).
+ To view the site locally, you'll need to install
+[Hugo](https://gohugo.io/overview/installing/) and
+[Dart](https://www.dartlang.org/install).  Once those are intalled you
+can bring up a local server by running `hugo -w` in one tab, and `pub
+get && pub serve` in another, then view the site in Dartium on
+[localhost:8080](http://localhost:8080/).
 
 Any help would be greatly appreciated—it turns out politicians tell a
 **lot** of lies, and it takes time to import them into our database.
