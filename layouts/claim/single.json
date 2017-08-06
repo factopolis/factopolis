@@ -1,32 +1,36 @@
 {{ $claimID := .File.BaseFileName }}
 {
-    {{ partial "head.json" . }}
-    {{ if .Params.summary }}"summary": {{ .Params.summary | jsonify }},{{ end }}
-    "checks": [
-        {{ $checks := .Params.checks }}
-        {{ range $idx, $check := .Params.checks }}
-        {{ if $idx }}, {{ end }}
+  {{ partial "head.json" . }}
+  {{ if .Params.summary }}"summary": {{ .Params.summary | jsonify }},{{ end }}
+  "checks": [
+    {{ range $idx, $check := .Params.checks }}
+      {{ if $idx }}, {{ end }}
+      {
+        {{ if $check.short }}"short": {{ $check.short | jsonify }}, {{ end }}
+        {{ if $check.quote }}"quote": {{ $check.quote | jsonify }}, {{ end }}
+        {{ if $check.url }}"url": {{ $check.url | jsonify }}, {{ end }}
+        {{ if $check.name }}
+          "name": {{ $check.name | jsonify }}
+        {{ else }}
+          {{ range where $.Site.Pages "URL" (printf "/checker/%s/" .checker) }}
+            "name": {{ .Title | jsonify }}
+          {{ end }}
+        {{ end }}
+      }
+    {{ end }}
+  ],
+  {{ if .Params.title }}"title": {{ .Params.title | jsonify }},{{ end }}
+  "claimants": [
+    {{ range $idx, $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
+      {{ range $currentClaim := where $person.Params.claims "id" $.Page.BaseFileName }}
         {
-            {{ if $check.short }}"short": {{ $check.short | jsonify }}, {{ end }}
-            {{ if $check.quote }}"quote": {{ $check.quote | jsonify }}, {{ end }}
-            {{ if $check.url }}"url": {{ $check.url | jsonify }}, {{ end }}
-            {{ if $check.name }}
-                "name": {{ $check.name | jsonify }}
-            {{ else }}
-                {{ range where $.Site.Pages "URL" (printf "/checker/%s/" .checker) }}
-                    "name": {{ .Title | jsonify }}
-                {{ end }}
-            {{ end }}
-        }
+          "count": {{ $currentClaim.assertions | len }},
+          "name": {{ $person.Title | jsonify }},
+          "id" : {{ $person.BaseFileName | jsonify }}
+        },
+      {{ end }}
     {{ end }}
-    ],
-    {{ if .Params.title }}"title": {{ .Params.title | jsonify }},{{ end }}
-    "claimants": [
-    {{ range $xxx, $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
-    {{ range $idx, $claim := where $person.Params.claims "id" $claimID }}
-    {{ if $idx }},{{ end }}
-    "{{ substr $person.URL 8 -1 }}"
-    {{ end }}
-    {{ end }}
-    ]
+    null
+  ],
+  "id": {{ .Page.BaseFileName | jsonify }}
 }
