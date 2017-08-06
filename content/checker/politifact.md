@@ -1,6 +1,16 @@
 ---
 title: PolitiFact
 web: http://www.politifact.com/
+feed: http://www.politifact.com/feeds/statements/truth-o-meter/
+
+wikipedia: PolitiFact
+twitter: Politifact
+facebook: politifact
+instagram: politifact
+youtube: PolitiFact
+medium: "@PolitiFact"
+googleplus: politifact
+
 ratings:
  - id: true
    name: True

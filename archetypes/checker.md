@@ -1,5 +1,7 @@
 ---
 title: 
+web: 
+feed: 
 
 wikipedia: 
 twitter: 
@@ -8,6 +10,7 @@ instagram:
 snapchat: 
 youtube: 
 medium: 
+tumblr: 
 flickr: 
-web: 
+googleplus: 
 ---

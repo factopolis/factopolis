@@ -63,19 +63,27 @@
                 <img class="profile-pic" src="{{ .Page.Type }}/{{ .File.BaseFileName }}.jpg" />
               {{ end }}
               <ul class="links">
-                {{ if .Params.wikipedia }}
-                  <li>
-                    <a href="https://en.wikipedia.org/wiki/{{ .Params.wikipedia }}">
-                      <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
-                      <span class="sr-only">Wikipedia</span>
-                    </a>
-                  </li>
-                {{ end }}
                 {{ if .Params.web }}
                   <li>
                     <a href="{{ .Params.web }}">
                       <i class="fa fa-globe" aria-hidden="true"></i>
                       <span class="sr-only">Web Site</span>
+                    </a>
+                  </li>
+                {{ end }}
+                {{ if .Params.feed }}
+                  <li>
+                    <a href="{{ .Params.feed }}">
+                      <i class="fa fa-rss" aria-hidden="true"></i>
+                      <span class="sr-only">Feed</span>
+                    </a>
+                  </li>
+                {{ end }}
+                {{ if .Params.wikipedia }}
+                  <li>
+                    <a href="https://en.wikipedia.org/wiki/{{ .Params.wikipedia }}">
+                      <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+                      <span class="sr-only">Wikipedia</span>
                     </a>
                   </li>
                 {{ end }}
@@ -132,6 +140,22 @@
                     <a href="https://www.flickr.com/photos/{{ .Params.flickr }}">
                       <i class="fa fa-flickr" aria-hidden="true"></i>
                       <span class="sr-only">Flickr</span>
+                    </a>
+                  </li>
+                {{ end }}
+                {{ if .Params.tumblr }}
+                  <li>
+                    <a href="https://{{ .Params.tumblr }}.tumblr.com">
+                      <i class="fa fa-tumblr" aria-hidden="true"></i>
+                      <span class="sr-only">Tumblr</span>
+                    </a>
+                  </li>
+                {{ end }}
+                {{ if .Params.googleplus }}
+                  <li>
+                    <a href="https://plus.google.com/+{{ .Params.googleplus }}">
+                      <i class="fa fa-google-plus" aria-hidden="true"></i>
+                      <span class="sr-only">Google+</span>
                     </a>
                   </li>
                 {{ end }}
