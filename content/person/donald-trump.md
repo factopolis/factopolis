@@ -42,6 +42,18 @@ claims:
           improving.
         source: http://transcripts.factcheck.org/remarks-president-trump-vice-president-pence-cia-headquarters/
 
+  - id: us-african-american-communities-in-worst-shape-ever
+    assertions:
+    - date: 2016-09-20
+      quote:
+        … our African-American communities are absolutely in the worst
+        shape they've ever been in before. Ever, ever, ever.
+      source:  https://www.realclearpolitics.com/video/2016/09/21/trump_black_communities_are_in_the_worst_shape_theyve_ever_been_in_ever_ever_ever.html
+      checks:
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/truth-o-meter/statements/2016/sep/22/donald-trump/trumps-pants-fire-claim-blacks-are-absolutely-wors/
+
   - id: immigrants-voting-illegaly-responsible-for-obama-2008-nc-victory
     assertions:
     - date: 2016-10-09
@@ -53,6 +65,44 @@ claims:
       - checker: politifact
         rating: pants-on-fire
         source: http://www.politifact.com/north-carolina/statements/2016/oct/19/donald-trump/trump-wrongfully-says-immigrants-voting-illegally-/
+
+  - id: us-has-no-chess-grandmasters
+    assertions:
+    - date: 2016-10-10
+      quote:
+        You have to be like a grand chessmaster, and we don't have any
+        of them.
+      source: https://youtu.be/ilis0e27hbY?t=1238
+      checks:
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/truth-o-meter/statements/2016/oct/14/donald-trump/donald-trump-wrongly-maligns-us-chess-prowess/
+
+  - id: trump-never-told-people-to-check-out-a-sex-tape
+    assertions:
+    - date: 2017-10-10
+      quote:
+        No, there wasn’t "check out a sex tape". It was just take a
+        look at the person that she built up to be this wonderful Girl
+        Scout who was no Girl Scout.
+      source: https://youtu.be/h-gkBUbU_F4?t=4966
+      checks:
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/truth-o-meter/statements/2016/oct/09/donald-trump/trump-early-morning-sex-tape-tweet/
+
+  - id: trump-won-2nd-2016-debate-by-landslide-in-every-poll
+    assertions:
+    - date: 2016-10-12
+      quote:
+        Despite winning the second debate in a landslide (every
+        poll), it is hard to do well when Paul Ryan and others
+        give zero support!
+      source: https://twitter.com/realDonaldTrump/status/785816454042124288
+      checks:
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/wisconsin/statements/2016/oct/12/donald-trump/donald-trumps-ridiculous-claim-all-polls-show-he-w/
 
   - id: 6-billion-usd-went-missing-from-state-department-during-clintons-tenure
     assertions:
@@ -145,6 +195,11 @@ claims:
       - checker: politifact
         rating: pants-on-fire
         source: http://www.politifact.com/truth-o-meter/statements/2016/nov/28/donald-trump/donald-trumps-pants-fire-claim-millions-illegal-vo/
+    - date: 2017-01-23
+      quote:
+        Between 3 million and 5 million illegal votes caused me to
+        lose the popular vote.
+      source: https://www.washingtonpost.com/news/post-politics/wp/2017/01/23/at-white-house-trump-tells-congressional-leaders-3-5-million-illegal-ballots-cost-him-the-popular-vote/
 
   - id: obama-admin-did-nothing-about-russian-hacking-until-after-election
     assertions:
@@ -169,11 +224,16 @@ claims:
 
   - id: 2016-election-voter-fraud
     assertions:
-      - date: 2017-01-23
+      - date: 2016-10-17
         quote:
-          Between 3 million and 5 million illegal votes caused me to
-          lose the popular vote.
-        source: https://www.washingtonpost.com/news/post-politics/wp/2017/01/23/at-white-house-trump-tells-congressional-leaders-3-5-million-illegal-ballots-cost-him-the-popular-vote/
+          Of course there is large scale voter fraud happening on and
+          before election day. Why do Republican leaders deny what is
+          going on? So naive!
+        source: https://twitter.com/realDonaldTrump/status/787995025527410688
+        checks:
+        - checker: politifact
+          rating: pants-on-fire
+          source: http://www.politifact.com/truth-o-meter/statements/2016/oct/17/donald-trump/donald-trumps-pants-fire-claim-large-scale-voter-f/
       - date: 2017-03-22
         quote:
           Well now if you take a look at the votes, when I say that, I
