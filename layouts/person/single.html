@@ -4,7 +4,7 @@
   {{ if .Params.politifact }}
     <li>
       <a href="http://www.politifact.com/personalities/donald-trump/">
-        <img alt="PolitiFact" src="http://localhost:1313/img/PolitiFact.png" />
+        <img alt="PolitiFact" src="{{ .Site.BaseURL }}img/PolitiFact.png" />
       </a>
     </li>
   {{ end }}
