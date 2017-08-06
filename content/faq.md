@@ -2,6 +2,20 @@
 title: Frequently Asked Questions
 ---
 
+### What is the relationship between themes, claims, and assertions?
+
+Assertions are specific instances of a person making a claim (i.e., a
+single quote). Claims are what assertions state. Themes are collections
+of claims which form a broader narrative.
+
+For example, let's consider the "birther" movement. The theme is that
+Barack Obama was not born in the United States (and therefore not
+eligable to be President). There are several claims which contribute to
+this theme, such as that Obama's grandmother said he was born in Kenya,
+or his birth certificate is a forgery, or his college transcript says
+he is an Indonesian citizen. Each time one of those claims was made is
+an assertion.
+
 ### Who is eligible to be on Factopolis?
 
 Any political figure, at any level.  Anyone from a local school board

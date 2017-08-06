@@ -50,6 +50,9 @@
               <a {{ if hasPrefix "claim/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}claim">Claims</a>
             </li>
             <li>
+              <a {{ if hasPrefix "theme/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}theme">Themes</a>
+            </li>
+            <li>
               <a {{ if hasPrefix "group/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}group">Groups</a>
             </li>
           </ul>
