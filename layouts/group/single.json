@@ -1,14 +1,4 @@
 {
-  {{ if .Params.web }}"web": {{ .Params.web | jsonify }},{{ end }}
-  {{ if .Params.wikipedia }}"wikipedia": {{ .Params.wikipedia | jsonify }},{{ end }}
-  {{ if .Params.twitter }}"twitter": {{ .Params.twitter | jsonify }},{{ end }}
-  {{ if .Params.facebook }}"facebook": {{ .Params.facebook | jsonify }},{{ end }}
-  {{ if .Params.instagram }}"instagram": {{ .Params.instagram | jsonify }},{{ end }}
-  {{ if .Params.snapchat }}"snapchat": {{ .Params.snapchat | jsonify }},{{ end }}
-  {{ if .Params.youtube }}"youtube": {{ .Params.youtube | jsonify }},{{ end }}
-  {{ if .Params.medium }}"medium": {{ .Params.medium | jsonify }},{{ end }}
-  {{ if .Params.flickr }}"flickr": {{ .Params.flickr | jsonify }},{{ end }}
-
   "members": [
     {{ range $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
       {{ if $person.Params.affiliations }}
@@ -21,7 +11,5 @@
     {{ end }}
     null
   ],
-
-  "name": {{ .Title | jsonify }},
-  "id": {{ .BaseFileName | jsonify }}
+  {{ partial "page.json" . }}
 }

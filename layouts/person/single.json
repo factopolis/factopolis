@@ -1,34 +1,34 @@
 {
-    {{ partial "head.json" . }}
-    "offices": [
-        {{ $offices := .Params.offices }}
-        {{ range $idx, $office := .Params.offices }}
-        {{ if $idx }}, {{ end }}
-        {
-	    {{ if $office.from }}"from": {{ $office.from | jsonify }},{{ end }}
-	    {{ if $office.thru }}"thru": {{ $office.thru | jsonify }},{{ end }}
-            "title": {{ $office.title | jsonify }}
-        }
+  "offices": [
+    {{ $offices := .Params.offices }}
+    {{ range $idx, $office := .Params.offices }}
+    {{ if $idx }}, {{ end }}
+    {
+	  {{ if $office.from }}"from": {{ $office.from | jsonify }},{{ end }}
+	  {{ if $office.thru }}"thru": {{ $office.thru | jsonify }},{{ end }}
+      "title": {{ $office.title | jsonify }}
+    }
 	{{ end }}
-    ],
-    "claims": [
-        {{ $claims := .Params.claims }}
-        {{ range $idx, $claim := .Params.claims }}
-        {{ if $idx }}, {{ end }}
+  ],
+  "claims": [
+    {{ $claims := .Params.claims }}
+    {{ range $idx, $claim := .Params.claims }}
+    {{ if $idx }}, {{ end }}
 	{
-	    "claim": {{ $claim.id | jsonify}},
-	    "assertions": [
+	  "claim": {{ $claim.id | jsonify}},
+	  "assertions": [
 		{{ $assertions := $claim.assertions }}
 		{{ range $idx, $assertion := $claim.assertions }}
 		{{ if $idx }}, {{ end }}
 		{
-		    {{ if $assertion.date }}"date": {{ $assertion.date | jsonify }},{{ end }}
-		    {{ if $assertion.source }}"source": {{ $assertion.source | jsonify }},{{ end }}
-		    "quote": {{ $assertion.quote | jsonify }}
+		  {{ if $assertion.date }}"date": {{ $assertion.date | jsonify }},{{ end }}
+		  {{ if $assertion.source }}"source": {{ $assertion.source | jsonify }},{{ end }}
+		  "quote": {{ $assertion.quote | jsonify }}
 		}
 		{{ end }}
-	    ]
+	  ]
 	}
-	{{ end }}
-    ]
+  {{ end }}
+  ],
+  {{ partial "page.json" . }}
 }

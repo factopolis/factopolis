@@ -1,6 +1,5 @@
 {{ $claimID := .File.BaseFileName }}
 {
-  {{ partial "head.json" . }}
   {{ if .Params.summary }}"summary": {{ .Params.summary | jsonify }},{{ end }}
   "checks": [
     {{ range $idx, $check := .Params.checks }}
@@ -32,5 +31,5 @@
     {{ end }}
     null
   ],
-  "id": {{ .Page.BaseFileName | jsonify }}
+  {{ partial "page.json" . }}
 }

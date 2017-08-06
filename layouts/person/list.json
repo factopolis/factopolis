@@ -1,5 +1,4 @@
 {
-  {{ partial "head.json" . }}
   "count": {{ .Data.Pages | len }},
   "people": [
 	  {{ $people := .Data.Pages }}
