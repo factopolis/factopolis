@@ -1,5 +1,8 @@
 ---
 title: Mike Pence
+pictureCopyright:
+  Gage Skidmore [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0),
+  [via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mike_Pence_by_Gage_Skidmore_6.jpg)
 wikipedia: Mike_Pence
 twitter: mike_pence
 facebook: mikepence
