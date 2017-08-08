@@ -1,0 +1,25 @@
+{{ partial "head.html" . }}
+
+<p>
+  We currently have {{ .Data.Pages | len }} themes in our database.
+</p>
+
+{{ template "_internal/pagination.html" . }}
+
+<ul class="claims">
+  {{ range .Paginator.Pages }}
+    <li class="claim">
+      <h4>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h4>
+
+      <section class="summary">
+        {{ .Content  }}
+      </section>
+    </li>
+  {{ end }}
+</ul>
+
+{{ template "_internal/pagination.html" . }}
+
+{{ partial "footer.html" . }}

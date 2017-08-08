@@ -74,6 +74,24 @@ the
 [content/person](https://github.com/factopolis/factopolis/tree/master/content/person)
 directory.  Once that's done you can submit a pull request.
 
+## Writers
+
+Several pages on the site are in need of some prose to help explain the
+issues.  This is especially true for [themes](/theme), which should
+each have simple explanations of:
+
+ * Where the claims are coming from (*i.e.*, Republicans or Democrats,
+   or specific groups within those parties such as alt-right or BLM).
+ * If applicable, historical information.
+ * Links to more in-depth **credible** material.
+
+Claims can also benefit from summaries, but for the most part links to
+fact checkers fulfill those. In general, Factopolis shouldn't be doing
+any fact checking, merely linking to sites which do.
+
+We could also benefit from new text on pages about Factopolis, such as
+this page, the [contributing](/contributing) page, the home page, etc.
+
 ## Designers & Front-end Developers
 
 If you're a skilled designer you can probably already tell that we

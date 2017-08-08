@@ -1,5 +1,11 @@
 {{ partial "head.html" . }}
 
+{{ if .Params.Data.summary }}
+  <section id="summary">
+    {{ .Params.Data.summary | markdownify }}
+  </section>
+{{ end }}
+
 {{ if .Content }}
   <section id="description">
     <h3>Description</h3>

@@ -16,13 +16,23 @@ or his birth certificate is a forgery, or his college transcript says
 he is an Indonesian citizen. Each time one of those claims was made is
 an assertion.
 
+While all claims which make it onto Factopolis are currently, at least
+to some degree, false, no judgements are about themes. It's entirely
+possible to offer false evidence in support of something which is true.
+
 ### Who is eligible to be on Factopolis?
 
-Any political figure, at any level.  Anyone from a local school board
-representative's spokesperson to the President.
+Any political figure, at any level. Anyone from a local school board
+representative's spokesperson to the President. Pundits are alse fair
+game.
 
-Note that this isn't restricted to the United States, though
-Factopolis itself is currently English-only.
+Celebrities are acceptable as long as the content is political in
+nature.
+
+Note that this isn't restricted to the United States, though Factopolis
+itself is currently English-only. If you're interested in helping
+launch a version of the site in another language, possibly focused on
+another country, please contact us.
 
 ### Why does Factopolis contain a disproportionate quantity of Donald Trump's claims?
 
