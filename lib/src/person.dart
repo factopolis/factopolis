@@ -8,7 +8,7 @@ class Person extends Page {
   final List<Office> offices;
 
   Person.fromJson(Map<String, dynamic> data, [String id])
-    : claimCount = data['count'],
+    : claimCount = (data['claims'] != null) ? data['claims'].length : data['count'],
       offices = (data['offices'] == null) ? null : data['offices'].map((o) {
         return new Office.fromJson(o);
       }).toList(),

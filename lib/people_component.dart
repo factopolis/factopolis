@@ -15,13 +15,18 @@ class PeopleComponent implements OnInit {
   List<Person> people;
 
   final FactopolisService _factopolisService;
-  PeopleComponent(this._factopolisService);
+  final ChangeDetectorRef _changeDetectorRef;
+
+  PeopleComponent(this._factopolisService, this._changeDetectorRef);
 
   Future<Null> getPeople() async {
     people = await _factopolisService.getPeople();
+    // this._factopolisService.currentPage = people;
   }
 
-  void ngOnInit() {
-    getPeople();
+  Future<Null> ngOnInit() async {
+    await getPeople();
+    this._changeDetectorRef.detectChanges();
+    return null;
   }
 }

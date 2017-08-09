@@ -12,6 +12,14 @@
   <h4>Offices Held</h4>
 
   <ol class="offices-held">
-    <li *ngFor="let claim of person.claims">X</li>
+    <li *ngFor="let office of person.offices">
+      {{ office.name }}
+      <span *ngIf="office.thru != null">
+        <span [ngSwitch]="((office.thru.year - office.from.year) > 0).toString()">
+          <template ngSwitchCase="true">({{ office.from.year }} - {{ office.thru.year }})</template>
+          <template ngSwitchDefault>({{ office.from.year }})</template>
+        </span>
+      </span>
+    </li>
   </ol>
 </div>

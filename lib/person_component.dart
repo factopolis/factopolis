@@ -17,12 +17,15 @@ class PersonComponent implements OnInit {
 
   final FactopolisService _factopolisService;
   final RouteParams _routeParams;
+  final ChangeDetectorRef _changeDetectorRef;
 
-  PersonComponent(this._factopolisService, this._routeParams);
+  PersonComponent(this._factopolisService, this._routeParams, this._changeDetectorRef);
 
   Future<Null> ngOnInit() async {
     var _id = _routeParams.get('id');
-    person = await _factopolisService.getPerson(_id);
+    this.person = await _factopolisService.getPerson(_id);
+    this._factopolisService.currentPage = this.person;
+    this._changeDetectorRef.detectChanges();
     return null;
   }
 }

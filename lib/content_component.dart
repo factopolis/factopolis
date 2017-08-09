@@ -2,10 +2,11 @@ import 'dart:async';
 
 import 'package:angular2/angular2.dart';
 import 'package:angular2/router.dart';
+import 'package:angular2/security.dart';
 
 import 'package:markdown/markdown.dart' as md;
 
-import 'src/content.dart';
+import 'src/page.dart';
 import 'src/factopolis_service.dart';
 
 @Component(
@@ -16,15 +17,20 @@ import 'src/factopolis_service.dart';
 class ContentComponent implements OnInit {
   final FactopolisService _factopolisService;
   final RouteParams _routeParams;
+  final ChangeDetectorRef _changeDetectorRef;
+  final DomSanitizationService _domSanitizationService;
 
-  String content;
+  SafeHtml contentHtml;
 
-  ContentComponent(this._factopolisService, this._routeParams);
+  ContentComponent(this._factopolisService, this._routeParams, this._changeDetectorRef,
+      this._domSanitizationService);
 
   Future<Null> ngOnInit() async {
-    var data = await this._factopolisService.getContent(this._routeParams.get('id'));
-    content = data.contentHtml;
-
+    Page data = await this._factopolisService.getContent(this._routeParams.get('id'));
     this._factopolisService.currentPage = data;
+
+    contentHtml = this._domSanitizationService.bypassSecurityTrustHtml(data.contentHtml);
+
+    this._changeDetectorRef.detectChanges();
   }
 }

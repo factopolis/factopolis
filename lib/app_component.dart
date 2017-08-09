@@ -25,6 +25,7 @@ class AppComponent extends ComponentState implements OnInit {
 
   AppComponent(this.factopolis);
 
-  void ngOnInit() {
+  Future<Null> ngOnInit() async {
+    return null;
   }
 }

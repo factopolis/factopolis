@@ -11,13 +11,19 @@ import 'person.dart';
 @Injectable()
 class FactopolisService {
   Client _http;
+  ChangeDetectorRef _changeDetectorRef;
 
   // For communicating current status with AppComponent
-  Page currentPage = null;
+  Page _currentPage = null;
+  set currentPage (Page value) {
+    this._currentPage = value;
+    this._changeDetectorRef.detectChanges();
+  }
+  Page get currentPage {
+    return this._currentPage;
+  }
 
-  FactopolisService(this._http);
-
-  FactopolisService._internal(this._http);
+  FactopolisService(this._http, this._changeDetectorRef);
 
   Future<Response> _request (String url) {
     return _http.get(url);

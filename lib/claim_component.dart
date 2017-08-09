@@ -15,10 +15,12 @@ import 'src/person.dart';
 class ClaimComponent implements OnInit {
   final FactopolisService _factopolisService;
   final RouteParams _routeParams;
+  final ChangeDetectorRef _changeDetectorRef;
 
-  ClaimComponent(this._factopolisService, this._routeParams);
+  ClaimComponent(this._factopolisService, this._routeParams, this._changeDetectorRef);
 
   Future<Null> ngOnInit() async {
     var _id = _routeParams.get('id');
+    this._changeDetectorRef.detectChanges();
   }
 }
