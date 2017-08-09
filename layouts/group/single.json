@@ -4,7 +4,9 @@
       {{ if $person.Params.affiliations }}
         {{ range $affiliation := $person.Params.affiliations }}
           {{ if eq $affiliation $.Page.BaseFileName }}
-             {{ $person.BaseFileName | jsonify }},
+            {
+              {{ partial "person_summary.json" $person }}
+            },
           {{ end }}
         {{ end }}
       {{ end }}

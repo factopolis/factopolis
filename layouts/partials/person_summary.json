@@ -1,0 +1,16 @@
+"id": {{ .BaseFileName | jsonify }},
+"name": {{ .Title | jsonify }},
+{{ if .Params.offices }}
+  {{ range $office := first 1 .Params.offices }}
+    {{ if $office.thru }}
+      {{ if sub (int (dateFormat "2006" $office.thru)) (int (dateFormat "2006" $office.from)) }}
+        "position": {{ (printf "%s (%s-%s)" $office.title (dateFormat "2006" $office.from) (dateFormat "2006" $office.thru)) | jsonify }},
+      {{ else }}
+        "position": {{ (printf "%s (%s)" $office.title (dateFormat "2006" $office.from)) | jsonify }},
+      {{ end }}
+    {{ else }}
+      "position": {{ $office.title | jsonify }},
+    {{ end }}
+  {{ end }}
+{{ end }}
+"count": {{ .Params.claims | len }}

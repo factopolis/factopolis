@@ -5,9 +5,7 @@
     {{ range $idx, $person := .Data.Pages }}
       {{ if $idx }}, {{ end }}
       {
-        "id": {{ $person.BaseFileName | jsonify }},
-        "name": {{ $person.Title | jsonify }},
-        "count": {{ $person.Params.claims | len }}
+        {{ partial "person_summary.json" $person }}
       }
     {{ end }}
   ]
