@@ -32,7 +32,7 @@ class FactopolisService {
 
   Future<Content> getContent(String id) async {
     final Response response = await this._request("/$id/index.json");
-    return new Content.fromJson(id, JSON.decode(response.body));
+    return new Content.fromJson(JSON.decode(response.body), id);
   }
 
   Future<List<Person>> getPeople() async {
@@ -44,6 +44,6 @@ class FactopolisService {
 
   Future<Person> getPerson(String id) async {
     final response = await this._request("/person/$id/index.json");
-    return new Person.fromDetailedJson(id, JSON.decode(response.body));
+    return new Person.fromJson(JSON.decode(response.body), id);
   }
 }

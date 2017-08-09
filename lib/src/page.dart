@@ -1,67 +1,68 @@
+import 'package:markdown/markdown.dart' as md;
+
 /// Base class for Factopolis pages
 ///
 /// Contains common members necessary for populating the sidebar, such
 /// as title, social links, etc.
 abstract class Page {
   /// Slug
-  String slug;
+  final String slug;
   /// Page title
-  String name;
+  final String name;
 
   /// Page content in Markdown, if available
-  String content = null;
+  final String _markdown;
 
   /// URL of profile picture, if available
-  String profilePic = null;
+  final String profilePic;
   /// Wikipedia identifier, if available
-  String wikipedia = null;
+  final String wikipedia;
   /// Twitter username, if available
-  String twitter = null;
+  final String twitter;
   /// Facebook username, if available
-  String facebook = null;
+  final String facebook;
   /// Instagram username, if available
-  String instagram = null;
+  final String instagram;
   /// Snapchat username, if available
-  String snapchat = null;
+  final String snapchat;
   /// Youtube username, if available
-  String youtube = null;
+  final String youtube;
   /// Medium username, if available
-  String medium = null;
+  final String medium;
   /// Flickr username, if available
-  String flickr = null;
+  final String flickr;
+  /// Tumblr username, if available
+  final String tumblr;
+  /// Google+ username, if available
+  final String googleplus;
   /// Official web site, if available
-  String web = null;
+  final String web;
+  /// News feed, if available
+  final String feed;
 
-  Page(this.slug);
+  String _contentHtml = null;
+  String get contentHtml {
+    if (this._contentHtml == null && this._markdown != null)
+      this._contentHtml = md.markdownToHtml(this._markdown);
 
-  /// Extract as much information as possible from the supplied JSON
-  void parseJson(dynamic data) {
-    if (data['name'] != null)
-      this.name = data['name'];
-
-    if (data['markdown'] != null)
-      this.content = data['markdown'];
-
-    if (data['profilePic'] != null)
-      this.profilePic = data['profilePic'];
-
-    if (data['wikipedia'] != null)
-      this.wikipedia = data['wikipedia'];
-    if (data['twitter'] != null)
-      this.twitter = data['twitter'];
-    if (data['facebook'] != null)
-      this.facebook = data['facebook'];
-    if (data['instagram'] != null)
-      this.instagram = data['instagram'];
-    if (data['snapchat'] != null)
-      this.snapchat = data['snapchat'];
-    if (data['youtube'] != null)
-      this.youtube = data['youtube'];
-    if (data['medium'] != null)
-      this.medium = data['medium'];
-    if (data['flickr'] != null)
-      this.flickr = data['flickr'];
-    if (data['web'] != null)
-      this.web = data['web'];
+    return this._contentHtml;
   }
+
+  Page.fromJson(Map<String, dynamic> data, [String id])
+    : slug = (id == null) ? data['id'] : id,
+      name = data['name'],
+      _markdown = data['markdown'],
+      profilePic = data['profilePic'],
+      web = data['web'],
+      feed = data['feed'],
+      wikipedia = data['wikipedia'],
+      twitter = data['twitter'],
+      facebook = data['facebook'],
+      instagram = data['instagram'],
+      snapchat = data['snapchat'],
+      youtube = data['youtube'],
+      medium = data['medium'],
+      flickr = data['flickr'],
+      tumblr = data['tumblr'],
+      googleplus = data['googleplus'];
 }

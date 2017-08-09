@@ -24,7 +24,7 @@ class ContentComponent implements OnInit {
 
   Future<Null> ngOnInit() async {
     var data = await this._factopolisService.getContent(this._routeParams.get('id'));
-    content = md.markdownToHtml(data.content);
+    content = data.contentHtml;
 
     this._factopolisService.currentPage = data;
   }

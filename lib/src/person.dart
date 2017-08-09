@@ -1,23 +1,19 @@
+import 'page.dart';
+import 'office.dart';
 import 'person_claim.dart';
 
-class Person {
-  final String id;
-  final String name;
+class Person extends Page {
   final int claimCount;
-  List<PersonClaim> claims;
+  final List<PersonClaim> claims;
+  final List<Office> offices;
 
-  Person(this.id, this.name, this.claimCount);
-
-  factory Person.fromJson(Map<String, dynamic> person) {
-    var res = new Person(person['id'], person['name'], person['count']);
-    return res;
-  }
-
-  factory Person.fromDetailedJson(String id, Map<String, dynamic> person) {
-    var res = new Person(id, person['name'], person['claims'].length);
-    res.claims = person['claims'].map((claim) {
-      return new PersonClaim.fromJson(claim['claim'], claim['assertions']);
-    }).toList();
-    return res;
-  }
+  Person.fromJson(Map<String, dynamic> data, [String id])
+    : claimCount = data['count'],
+      offices = (data['offices'] == null) ? null : data['offices'].map((o) {
+        return new Office.fromJson(o);
+      }).toList(),
+      claims = (data['claims'] == null) ? null : data['claims'].map((o) {
+        return new PersonClaim.fromJson(o);
+      }).toList(),
+      super.fromJson(data, id);
 }
