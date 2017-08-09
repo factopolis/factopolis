@@ -10,8 +10,7 @@ import 'src/person.dart';
 @Component(
   selector: 'factopolis-person',
   templateUrl: 'person_component.html',
-  directives: const [COMMON_DIRECTIVES],
-  providers: const [FactopolisService],
+  directives: const [COMMON_DIRECTIVES]
 )
 class PersonComponent implements OnInit {
   Person person;

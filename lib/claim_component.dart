@@ -10,8 +10,7 @@ import 'src/person.dart';
 @Component(
   selector: 'factopolis-claims',
   templateUrl: 'claim_component.html',
-  directives: const [COMMON_DIRECTIVES],
-  providers: const [FactopolisService],
+  directives: const [COMMON_DIRECTIVES]
 )
 class ClaimComponent implements OnInit {
   final FactopolisService _factopolisService;

@@ -11,8 +11,7 @@ import 'src/factopolis_service.dart';
 @Component(
   selector: 'factopolis-content',
   templateUrl: 'content_component.html',
-  directives: const [CORE_DIRECTIVES, ROUTER_DIRECTIVES],
-  providers: const [FactopolisService],
+  directives: const [CORE_DIRECTIVES, ROUTER_DIRECTIVES]
 )
 class ContentComponent implements OnInit {
   final FactopolisService _factopolisService;

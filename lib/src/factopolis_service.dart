@@ -15,14 +15,7 @@ class FactopolisService {
   // For communicating current status with AppComponent
   Page currentPage = null;
 
-  static FactopolisService _instance = null;
-
-  factory FactopolisService(Client http) {
-    if (_instance == null) {
-      _instance = new FactopolisService._internal(http);
-    }
-    return _instance;
-  }
+  FactopolisService(this._http);
 
   FactopolisService._internal(this._http);
 

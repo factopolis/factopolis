@@ -9,8 +9,7 @@ import 'src/person.dart';
 @Component(
   selector: 'factopolis-people',
   templateUrl: 'people_component.html',
-  directives: const [CORE_DIRECTIVES, ROUTER_DIRECTIVES],
-  providers: const [FactopolisService],
+  directives: const [CORE_DIRECTIVES, ROUTER_DIRECTIVES]
 )
 class PeopleComponent implements OnInit {
   List<Person> people;
