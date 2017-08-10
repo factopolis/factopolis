@@ -3,7 +3,7 @@ title: James Comey's Firing Unrelated To Russia
 summary:
   President Trump confirmed the connection.
 checks:
-  - name: NBC News
+  - checker: nbc
     quote:
       The White House also initially said it was Comey’s handling of
       the Hillary Clinton investigation — not Russia — as the reason

@@ -5,7 +5,7 @@ checks:
   - checker: new-york-times
     short: It was higher in the 1980s and '90s.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: ABC News
+  - checker: abc
     quote:
        2015 is the most recent year the FBI released its annual report
        compiled by its Uniform Crime Reporting Program. FBI data for

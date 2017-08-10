@@ -7,6 +7,7 @@ wikipedia: FactCheck.org
 twitter: factcheckdotorg
 facebook: factcheck.org
 tumblr: factcheckdotorg
+linkedin: company/factcheck.org
 
 ratings:
   - id: misleading

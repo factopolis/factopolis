@@ -5,7 +5,7 @@ checks:
   - checker: new-york-times
     short: He criticized it as early as 2010.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: Gizmodo
+  - checker: gizmodo
     quote:
       However, back in 2010, he told Fox News anchor Brian Kilmeade
       that WikiLeaks was “disgraceful” and suggested that “there

@@ -5,7 +5,7 @@ checks:
   - checker: new-york-times
     short: George H.W. Bush, Bill Clinton and Barack Obama all won bigger margins in the Electoral College.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: Time
+  - checker: time
     short: Except, it wasn’t.
     quote:
       In 2016, Trump won 306 Electoral College votes, 36 votes over

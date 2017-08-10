@@ -2,7 +2,7 @@
 title: Trump Got China to Stop Manipulating Their Currency
 summary: China stopped years ago.
 checks:
-  - name: Business Insider
+  - checker: business-insider
     quote:
       While China has a history of pushing down its currency to drive
       up its exports, it hasn't done so in years. In fact, over the

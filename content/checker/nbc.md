@@ -10,4 +10,6 @@ instagram: nbcnews
 youtube: NBCNews
 tumblr: nbcnews
 googleplus: NBCNews
+pinterest: nbcnews
+linkedin: company/nbc-news
 ---

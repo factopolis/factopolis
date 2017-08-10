@@ -12,7 +12,7 @@ checks:
       confirmed; 29 other appointments have been announced but not
       formally submitted.
     url: https://www.nytimes.com/2017/04/12/us/politics/trump-steven-bannon-fox-business-news-interview.html
-  - name: Politico
+  - checker: politico
     quote:
       Contrary to Trump’s claim that he has “hundreds and hundreds of
       people” awaiting confirmation, the White House had, as of April

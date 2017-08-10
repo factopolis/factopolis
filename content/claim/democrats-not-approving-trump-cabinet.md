@@ -5,7 +5,7 @@ checks:
   - checker: new-york-times
     short: Paperwork for the last two candidates was still not submitted to the Senate.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: Fox News
+  - checker: fox
     short:
       Part of the blame may lie with the administration, which still
       hasn’t formally sent the paperwork to the Senate for the

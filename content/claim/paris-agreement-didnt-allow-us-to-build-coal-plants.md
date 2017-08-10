@@ -27,7 +27,7 @@ checks:
       that it would cancel plans to build more than 100 coal-fired
       plants.
     url: https://www.washingtonpost.com/news/fact-checker/wp/2017/06/01/fact-checking-president-trumps-claims-on-the-paris-climate-change-deal/
-  - name: New York Times
+  - checker: new-york-times
     short: The agreement doesn’t allow or disallow building coal plants.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
 ---

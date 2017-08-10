@@ -15,7 +15,7 @@ checks:
       the attack -- he was pre-empting concerns about what law
       enforcement presence might mean in the days to come.
     url: http://www.politifact.com/truth-o-meter/statements/2017/jun/04/donald-trump/donald-trumps-tweet-misleads-about-london-mayors-r/
-  - name: Snopes
+  - checker: snopes
     quote:
       Mayor Sadiq Khan was attempting to reassure the people of London
       that a greater police presence they might see in the aftermath

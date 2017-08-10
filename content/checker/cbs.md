@@ -9,4 +9,5 @@ facebook: CBSNews
 instagram: cbsnews
 youtube: CBSNewsOnline
 googleplus: CBSNews
+linkedin: company/cbs-news
 ---

@@ -5,7 +5,7 @@ checks:
   - checker: new-york-times
     short: He did.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: Politico
+  - checker: politico
     quote:
       As a candidate, Trump pitched himself as the antidote to what he
       said had become a one-sided relationship with China. He promised

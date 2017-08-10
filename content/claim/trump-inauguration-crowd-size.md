@@ -5,7 +5,7 @@ checks:
   - checker: new-york-times
     short: Official aerial photos show Obama's 2009 inauguration was much more heavily attended.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: Fox News
+  - checker: fox
     short: Trump is wrong.
     url: http://www.foxnews.com/us/2017/01/21/fact-check-trump-overstates-crowd-size-at-inaugural.html
 ---

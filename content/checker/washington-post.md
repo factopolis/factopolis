@@ -1,8 +1,20 @@
 ---
 title: The Washington Post
 abbr: WaPo
-web: https://www.washingtonpost.com/news/fact-checker/
 logo48: /img/WashingtonPost.png
+web: https://www.washingtonpost.com/
+feed: http://feeds.washingtonpost.com/rss/politics
+
+wikipedia: The_Washington_Post
+twitter: washingtonpost
+facebook: washingtonpost
+instagram: washingtonpost
+youtube: WashingtonPost
+tumblr: washingtonpost
+googleplus: WashingtonPost
+pinterest: washingtonpost
+linkedin: company/the-washington-post
+
 ratings:
  - id: 1-pinocchio
    name: 1 Pinocchio

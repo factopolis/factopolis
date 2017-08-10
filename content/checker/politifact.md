@@ -10,6 +10,7 @@ instagram: politifact
 youtube: PolitiFact
 medium: "@PolitiFact"
 googleplus: politifact
+linkedin: company/politifact
 
 ratings:
  - id: true

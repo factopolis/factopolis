@@ -2,7 +2,7 @@
 title: Young People Pay Almost Nothing For Health Insurance
 summary: The real number varies by state, but starts at well over $100/month.
 checks:
-  - name: CNBC
+  - checker: cnbc
     short:
       Even in the most affordable states, most 21-year-olds pay much
       more than $12 a month simply for their premiums.

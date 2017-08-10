@@ -7,7 +7,7 @@ checks:
   - checker: new-york-times
     short: Riots in Sweden broke out two days later and there were no deaths.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: The Toronto Star
+  - checker: toronto-star
     short:
       Nobody died in the Sweden riot that occurred two days after
       Trump falsely suggested that a terrorist incident had occurred

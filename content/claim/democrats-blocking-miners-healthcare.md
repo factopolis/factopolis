@@ -10,7 +10,7 @@ checks:
       introduced by a Democrat and was co-sponsored by mostly
       Democrats.
     url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - name: MSNBC
+  - checker: msnbc
     quote:
       Whether the president was lying or ignorant was unclear, but
       either way, the claim was largely the opposite of the
