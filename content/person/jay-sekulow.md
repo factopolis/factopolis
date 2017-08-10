@@ -10,6 +10,7 @@ facebook: JaySekulow
 youtube: JaySekulow
 medium: "@jaysekulowny"
 flickr: jay-sekulow
+linkedin: in/jaysekulow
 
 factcheckorg: jay-sekulow
 politifact: jay-sekulow

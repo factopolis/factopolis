@@ -7,10 +7,12 @@ wikipedia: Barack_Obama
 twitter: BarackObama
 facebook: barackobama
 web: https://barackobama.com/
+linkedin: in/barackobama
+
 factcheckorg: barack-obama
 politifact: barack-obama
-snopes: barack-obama
 washingtonPost: barack-obama
+snopes: barack-obama
 
 affiliations:
   - democratic-party

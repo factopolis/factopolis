@@ -8,6 +8,7 @@ wikipedia: Pete_Olson
 twitter: reppeteolson
 facebook: PeteOlsonTX
 instagram: reppeteolson
+linkedin: in/olsonforcongress
 
 politifact: pete-olson
 

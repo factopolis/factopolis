@@ -9,12 +9,16 @@ twitter: seanspicer
 factcheckorg: sean-spicer
 politifact: sean-spicer
 snopes: sean-spicer
+linkedin: in/spicersean
+
 affiliations:
   - gop
+
 offices:
   - title: White House Press Secretary
     from: 2017-01-20
     thru: 2017-07-21
+
 claims:
   - id: trump-inauguration-crowd-size
     assertions:

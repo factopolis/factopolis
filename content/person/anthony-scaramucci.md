@@ -10,6 +10,7 @@ facebook: ascaramucci
 factcheckorg: anthony-scaramucci
 politifact: anthony-scaramucci
 snopes: anthony-scaramucci
+linkedin: in/anscaramucci
 
 affiliations:
   - gop
