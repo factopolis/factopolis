@@ -21,9 +21,11 @@ import 'src/factopolis_service.dart';
   const Route(path: '/:id/', name: 'Content', component: ContentComponent)
 ])
 class AppComponent extends ComponentState implements OnInit {
-  FactopolisService factopolis;
+  FactopolisService _factopolis;
 
-  AppComponent(this.factopolis);
+  String title = null;
+
+  AppComponent(this._factopolis);
 
   Future<Null> ngOnInit() async {
     return null;
