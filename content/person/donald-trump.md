@@ -1270,4 +1270,27 @@ claims:
           - checker: politifact
             rating: false
             source: http://www.politifact.com/truth-o-meter/statements/2017/aug/03/donald-trump/false-trumps-claim-about-illegal-immigration-under/
+
+  - id: trump-modernized-us-nuclear-arsenal
+    assertions:
+    - date: 2017-08-09
+      quote:
+        My first order as President was to renovate and modernize our
+        nuclear arsenal. It is now far stronger and more powerful than
+        ever before…
+      source: https://twitter.com/realDonaldTrump/status/895252459152711680
+      checks:
+      - checker: washington-post
+        rating: 4-pinocchios
+        source: https://www.washingtonpost.com/news/fact-checker/wp/2017/08/09/trumps-claim-that-u-s-nuclear-arsenal-is-now-far-stronger-and-more-powerful/
+      - checker: nbc
+        source: http://www.nbcnews.com/politics/donald-trump/fact-check-no-trump-did-not-modernize-u-s-nukes-n791286
+      - checker: cbs
+        source: http://www.cbsnews.com/news/trump-takes-credit-for-nuclear-arsenal-that-was-largely-modernized-by-obama-administration/
+      - checker: factcheck-org
+        rating: distorts-the-facts
+        source: http://www.factcheck.org/2017/08/trump-misfires-nuclear-weapons-boast/
+      - checker: politifact
+        rating: "false"
+        source: http://www.politifact.com/truth-o-meter/statements/2017/aug/09/donald-trump/under-donald-trump-us-nuclear-arsenal-far-stronger/
 ---
