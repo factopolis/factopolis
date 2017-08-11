@@ -358,12 +358,14 @@ ul.pagination > li.disabled > a {
   border-radius: 3px;
 }
 
-.truth > h5 {
+.truth:before {
+  content: "The Truth: ";
   font-variant: small-caps;
+  font-weight: bold;
+  font-size: 0.85em;
 }
 
-.truth > h5,
-.truth > p {
+.truth > * {
   display: inline;
 }
 

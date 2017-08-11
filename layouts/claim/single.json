@@ -18,7 +18,6 @@
       }
     {{ end }}
   ],
-  {{ if .Params.title }}"title": {{ .Params.title | jsonify }},{{ end }}
   "claimants": [
     {{ range $idx, $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
       {{ range $currentClaim := where $person.Params.claims "id" $.Page.BaseFileName }}

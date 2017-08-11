@@ -1,5 +1,6 @@
 ---
 title: Pete Olson
+picture: /person/pete-olson.jpg
 pictureCopyright: Official U.S. Congress Photo (public domain,
   [via Wikimedia Commons](https://en.wikipedia.org/wiki/File:Pete_Olson_official_congressional_photo.jpg)
 web: http://www.olsonforcongress.com/

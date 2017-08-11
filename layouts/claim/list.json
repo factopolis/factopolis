@@ -15,9 +15,11 @@
           {{ end }}
           null
         ],
+        "summary": {{ $claim.Params.summary | jsonify }},
         "name": {{ $claim.Title | jsonify }},
         "id": {{ $claim.BaseFileName | jsonify }}
       }
     {{ end }}
-  ]
+  ],
+  {{ partial "page.json" . }}
 }

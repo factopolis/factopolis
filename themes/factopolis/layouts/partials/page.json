@@ -1,4 +1,6 @@
 {{ if .Page.RawContent }}"markdown": {{ .Page.RawContent | jsonify }},{{ end }}
+{{ if .Params.picture }}"picture": {{ .Params.picture | jsonify }},{{ end }}
+{{ if .Params.pictureCopyright }}"pictureCopyright": {{ .Params.pictureCopyright | jsonify }},{{ end }}
 {{ if .Params.web }}"web": {{ .Params.web | jsonify }},{{ end }}
 {{ if .Params.feed }}"feed": {{ .Params.feed | jsonify }},{{ end }}
 {{ if .Params.wikipedia }}"wikipedia": {{ .Params.wikipedia | jsonify }},{{ end }}
@@ -14,6 +16,10 @@
 {{ if .Params.vimeo }}"vimeo": {{ .Params.vimeo | jsonify }},{{ end }}
 {{ if .Params.pinterest }}"pinterest": {{ .Params.pinterest | jsonify }},{{ end }}
 {{ if .Params.linkedin }}"linkedin": {{ .Params.linkedin | jsonify }},{{ end }}
+{{ if .Params.politifact }}"politifact": {{ .Params.politifact | jsonify }},{{ end }}
+{{ if .Params.factcheckorg }}"factcheckorg": {{ .Params.factcheckorg | jsonify }},{{ end }}
+{{ if .Params.snopes }}"snopes": {{ .Params.snopes | jsonify }},{{ end }}
+{{ if .Params.washingtonpost }}"washingtonpost": {{ .Params.washingtonpost | jsonify }},{{ end }}
 {{ if eq .Page.Kind "page" }}
   "id": {{ .Page.BaseFileName | jsonify }},
 {{ end }}

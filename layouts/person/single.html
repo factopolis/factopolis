@@ -3,21 +3,21 @@
 <ul class="fact-checking-bio-links">
   {{ if .Params.politifact }}
     <li>
-      <a href="http://www.politifact.com/personalities/donald-trump/">
+      <a href="http://www.politifact.com/personalities/{{ .Params.politifact }}/">
         <img alt="PolitiFact" src="{{ .Site.BaseURL }}img/PolitiFact.png" />
       </a>
     </li>
   {{ end }}
   {{ if .Params.factcheckorg }}
     <li>
-      <a href="http://www.factcheck.org/person/donald-trump/">
+      <a href="http://www.factcheck.org/person/{{ .Params.factcheckorg }}/">
         <img alt="FactCheck.org" src="{{ .Site.BaseURL }}img/FactCheck.org.png" />
       </a>
     </li>
   {{ end }}
   {{ if .Params.snopes }}
     <li>
-      <a href="http://www.snopes.com/tag/donald-trump/">
+      <a href="http://www.snopes.com/tag/{{ .Params.snopes }}/">
         <img alt="Snopes" src="{{ .Site.BaseURL }}img/Snopes.png" />
       </a>
     </li>

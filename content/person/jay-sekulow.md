@@ -1,5 +1,6 @@
 ---
 title: Jay Sekulow
+picture: /person/jay-sekulow.jpg
 pictureCopyright:
   Mark Taylor
   [CC BY 2.0](http://creativecommons.org/licenses/by/2.0),

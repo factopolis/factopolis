@@ -2,33 +2,36 @@
   "offices": [
     {{ $offices := .Params.offices }}
     {{ range $idx, $office := .Params.offices }}
-    {{ if $idx }}, {{ end }}
-    {
-	  {{ if $office.from }}"from": {{ $office.from | jsonify }},{{ end }}
-	  {{ if $office.thru }}"thru": {{ $office.thru | jsonify }},{{ end }}
-      "title": {{ $office.title | jsonify }}
-    }
-	{{ end }}
+	    {{ if $idx }}, {{ end }}
+	    {
+		  	{{ if $office.from }}"from": {{ $office.from | jsonify }},{{ end }}
+	  		{{ if $office.thru }}"thru": {{ $office.thru | jsonify }},{{ end }}
+	      "title": {{ $office.title | jsonify }}
+  	  }
+		{{ end }}
   ],
   "claims": [
     {{ $claims := .Params.claims }}
-    {{ range $idx, $claim := .Params.claims }}
-    {{ if $idx }}, {{ end }}
-	{
-	  "claim": {{ $claim.id | jsonify}},
-	  "assertions": [
-		{{ $assertions := $claim.assertions }}
-		{{ range $idx, $assertion := $claim.assertions }}
-		{{ if $idx }}, {{ end }}
-		{
-		  {{ if $assertion.date }}"date": {{ $assertion.date | jsonify }},{{ end }}
-		  {{ if $assertion.source }}"source": {{ $assertion.source | jsonify }},{{ end }}
-		  "quote": {{ $assertion.quote | jsonify }}
-		}
-		{{ end }}
-	  ]
-	}
-  {{ end }}
+		{{ range $idx, $claim := .Params.claims }}
+			{{ $claimInfo := $.Site.GetPage "page" "claim" (printf "%s.md" $claim.id) }}
+	    {{ if $idx }}, {{ end }}
+			{
+				"claim": {{ $claim.id | jsonify}},
+				"claimName": {{ $claimInfo.Title | jsonify }},
+				"summary": {{ $claimInfo.Params.summary | jsonify }},
+	  		"assertions": [
+					{{ $assertions := $claim.assertions }}
+					{{ range $idx, $assertion := $claim.assertions }}
+						{{ if $idx }}, {{ end }}
+						{
+						  {{ if $assertion.date }}"date": {{ $assertion.date | jsonify }},{{ end }}
+						  {{ if $assertion.source }}"source": {{ $assertion.source | jsonify }},{{ end }}
+			  			"quote": {{ $assertion.quote | jsonify }}
+						}
+					{{ end }}
+	  		]
+			}
+	  {{ end }}
   ],
   {{ partial "page.json" . }}
 }

@@ -1,5 +1,6 @@
 ---
 title: Chuck Schumer
+picture: /person/chuck-schumer.jpg
 pictureCopyright:
   U.S. Senate Photographic Studio/Jeff McEvoy
   (public domain)
