@@ -1,0 +1,10 @@
+<ul *ngIf="people != null">
+  <li *ngFor="let person of people.people">
+    <div class="content-name">
+      <a [innerHtml]="person.name" [routerLink]="['Person',{id: person.slug}]"></a>
+    </div>
+    <div class="content-claim-count">
+      {{ person.count }} false claim<span *ngIf="person.count > 1">s</span> on file.
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,172 @@
+<div *ngIf="person != null">
+  <ul class="fact-checking-bio-links">
+    <li *ngIf="person.politifact != null">
+      <a href="http://www.politifact.com/personalities/{{ person.politifact }}/">
+        <img alt="Politifact" src="/img/PolitiFact.png" />
+      </a>
+    </li>
+    <li *ngIf="person.factcheckOrg != null">
+      <a href="http://www.factcheck.org/person/{{ person.factcheckOrg }}/">
+        <img alt="Politifact" src="/img/FactCheck.org.png" />
+      </a>
+    </li>
+    <li *ngIf="person.snopes != null">
+      <a href="http://www.snopes.com/tag/{{ person.snopes }}/">
+        <img alt="Politifact" src="/img/Snopes.png" />
+      </a>
+    </li>
+    <li *ngIf="person.washingtonPost != null">
+      <a href="https://www.washingtonpost.com/news/fact-checker/wp/category/{{ person.washingtonPost }}/">
+        <img alt="Politifact" src="/img/WashingtonPost.png" />
+      </a>
+    </li>
+  </ul>
+
+  <section id="counter">
+    <p>
+      We currently have {{ person.claims.length }} distict false
+      claim<span *ngIf="person.claims.length > 1">s</span> in our
+      database which have been made by {{ person.name }} on
+      {{ person.quotes.length }}
+      occasion<span *ngIf="person.quotes.length > 1">s</span>.
+    </p>
+  </section>
+
+  <section id="claims">
+    <h3>Claims</h3>
+
+    <ol class="claims">
+      <li *ngFor="let claim of person.claims" class="claim">
+        <h4><a [routerLink]="['Claim',{id: claim.claimId}]">{{ claim.claimId }}</a></h4>
+      </li>
+    </ol>
+  </section>
+</div>
+
+<!--
+<section id="counter">
+  <p>
+    {{ $claimCount := .Params.claims | len }}
+    We currently have {{ $claimCount }} distinct false
+    claim{{ if sub $claimCount 1 }}s{{ end }} made
+    by {{ .Params.Title }} in our database (not counting repeats).
+  </p>
+</section>
+
+{{ if .Params.offices }}
+  <section id="offices-held">
+    <h3>Offices Held</h3>
+
+    <ol class="offices-held">
+      {{ range $office := .Params.offices }}
+        <li>
+          {{ $office.title }}
+          {{ if $office.from }}
+            ({{ dateFormat "2006" $office.from }}-{{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }})
+          {{ end }}
+        </li>
+      {{ end }}
+    </ol>
+  </section>
+{{ end }}
+
+<section id="claims">
+  <h3>Claims</h3>
+
+  <ol class="claims">
+    {{ range $claim := .Params.claims }}
+      {{ $claimPage := $.Site.GetPage "page" "claim" (printf "%s.md" $claim.id) }}
+      <li class="claim" id="claim-{{ $claim.id }}">
+        <h4>
+          <a href="{{ $claimPage.Permalink }}">
+            {{ $claimPage.Title }}
+          </a>
+        </h4>
+
+        <section class="truth">
+          <h5>The Truth:</h5>
+
+          <p>
+            {{ $claimPage.Params.summary | markdownify }}
+          </p>
+        </section>
+
+        <ol class="quote-list">
+          {{ range $assertion := $claim.assertions }}
+            <li>
+              <blockquote>
+                <div class="quote-contents">
+                  {{ if $assertion.retraction }}<del>{{end}}
+                  <p>
+                    {{ $assertion.quote | markdownify }}
+                  </p>
+                  {{ if $assertion.retraction }}</del>{{end}}
+                </div>
+
+                <footer>
+                  <cite>
+                    <div>
+                      {{ $.Title }} on
+                      <a href="{{ $assertion.source }}">
+                        <time datetime="{{ $assertion.date }}">
+                          {{ $assertion.date | dateFormat "Jan 2, 2006" }}
+                        </time>
+                      </a>
+                    </div>
+                    {{ if $assertion.retraction }}
+                      <div class="retraction">
+                        {{ if eq $assertion.retraction.type "clarification" }}
+                          Clarified
+                        {{ else }}
+                          Retracted
+                        {{ end }}
+                        {{ if $assertion.retraction.issuer }}
+                          by
+                          {{ if $assertion.retraction.issuer.position }}
+                            {{ $assertion.retraction.issuer.position }}
+                          {{ end }}
+                          {{ if $assertion.retraction.issuer.id }}
+                            {{ $retractor := $.Site.GetPage "page" "person" (printf "%s.md" $assertion.retraction.issuer.id) }}
+                            <a href="{{ $retractor.Permalink }}">{{ $retractor.Title }}</a>
+                          {{ else }}
+                            {{ $assertion.retraction.issuer.name }}
+                          {{ end }}
+                        {{ end }}
+                        on
+                        <a href="{{ $assertion.retraction.source }}">
+                          <time datetime="{{ $assertion.retraction.date }}">
+                            {{ $assertion.retraction.date | dateFormat "Jan 2, 2006" }}
+                          </time>
+                        </a>
+                      </div>
+                    {{ end }}
+                  </cite>
+
+                  {{ if $assertion.checks }}
+                    <ul class="fact-checks shuffle">
+                      {{ range $check := (shuffle $assertion.checks) }}
+                        {{ $checker := $.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
+                        <li>
+                          <a class="check-source" href="{{ $check.source }}">
+                            {{ if isset $checker.Params "abbr" }}
+                              <abbr title="{{ $checker.Title }}">{{ $checker.Params.abbr }}</abbr>
+                            {{ else }}
+                              {{ $checker.Title }}
+                            {{ end }}
+                          </a>
+                          {{ if $check.rating }}
+                            <span class="check-rating">{{ humanize $check.rating }}</span>
+                          {{ end }}
+                        </li>
+                      {{ end }}
+                    </ul>
+                  {{ end }}
+                </footer>
+              </blockquote>
+            </li>
+          {{ end }}
+        </ol>
+      </li>
+    {{ end }}
+  </ol>
+</section> -->

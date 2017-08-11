@@ -3,15 +3,18 @@
 
   <nav>
     <ul>
-      <li>
+        <li>
         <a [routerLink]="['People']">People</a>
       </li>
       <li>
-        <a [routerLink]="['Claim']">Claims</a>
+        <a [routerLink]="['Claims']">Claims</a>
       </li>
-      <li>
-        <a href="#">Groups</a>
-      </li>
+      <!-- <li>
+        <a [routerLink]="['Theme']">Themes</a>
+      </li> -->
+      <!-- <li>
+        <a [routerLink]="['Group']">Groups</a>
+      </li>  -->
     </ul>
   </nav>
 </header>
@@ -19,8 +22,140 @@
 <main>
   <header>
     <div>
-      <div class="sticky-middle">
-        <h2><a href="#">{{ title }}</a></h2>
+      <div *ngIf="currentPage != null" class="sticky-middle">
+        <h2>{{ currentPage.name }}</h2>
+
+        <img *ngIf="currentPage.picture != null" class="profile-pic" src="{{ currentPage.picture }}" />
+        <div *ngIf="currentPage.pictureCopyright != null" [innerHtml]="currentPage.pictureCopyright" class="profile-pic-copyright"></div>
+
+        <ul class="links">
+          <li *ngIf="currentPage.web != null">
+            <a href="{{ currentPage.web }}">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+              <span class="sr-only">Web</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.feed != null">
+            <a href="{{ currentPage.feed }}">
+              <i class="fa fa-rss" aria-hidden="true"></i>
+              <span class="sr-only">Feed</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.wikipedia != null">
+            <a href="https://en.wikipedia.org/wiki/{{ currentPage.wikipedia }}">
+              <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+              <span class="sr-only">Wikipedia</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.twitter != null">
+            <a href="https://twitter.com/{{ currentPage.twitter }}">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <span class="sr-only">Twitter</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.facebook != null">
+            <a href="https://facebook.com/{{ currentPage.facebook }}">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+              <span class="sr-only">Facebook</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.instagram != null">
+            <a href="https://www.instagram.com/{{ currentPage.instagram }}">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.snapchat != null">
+            <a href="https://www.snapchat.com/add/{{ currentPage.snapchat }}">
+              <i class="fa fa-snapchat" aria-hidden="true"></i>
+              <span class="sr-only">Snapchat</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.youtube != null">
+            <a href="https://www.youtube.com/user/{{ currentPage.youtube }}">
+              <i class="fa fa-youtube" aria-hidden="true"></i>
+              <span class="sr-only">Youtube</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.vimeo != null">
+            <a href="https://vimeo.com/{{ currentPage.vimeo }}">
+              <i class="fa fa-vimeo" aria-hidden="true"></i>
+              <span class="sr-only">Vimeo</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.medium != null">
+            <a href="https://medium.com/{{ currentPage.medium }}">
+              <i class="fa fa-medium" aria-hidden="true"></i>
+              <span class="sr-only">Medium</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.flickr != null">
+            <a href="https://www.flickr.com/photos/{{ currentPage.flickr }}">
+              <i class="fa fa-flickr" aria-hidden="true"></i>
+              <span class="sr-only">Flickr</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.tumblr != null">
+            <a href="https://{{ currentPage.flickr }}.tumblr.com/">
+              <i class="fa fa-tumblr" aria-hidden="true"></i>
+              <span class="sr-only">Tumblr</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.pinterest != null">
+            <a href="https://pinterest.com/{{ currentPage.pinterest }}">
+              <i class="fa fa-pinterest" aria-hidden="true"></i>
+              <span class="sr-only">Pinterest</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.googleplus != null">
+            <a href="https://plus.google.com/+{{ currentPage.googleplus }}">
+              <i class="fa fa-google-plus" aria-hidden="true"></i>
+              <span class="sr-only">Google+</span>
+            </a>
+          </li>
+
+          <li *ngIf="currentPage.linkedin != null">
+            <a href="https://linkedin.com/+{{ currentPage.linkedin }}">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+              <span class="sr-only">LinkedIn+</span>
+            </a>
+          </li>
+        </ul>
+
+            <!-- <div class="sticky-middle">
+              <ul class="links">
+                {{ if .Params.flickr }}
+                {{ if .Params.googleplus }}
+                  <li>
+                    <a href="https://plus.google.com/+{{ .Params.googleplus }}">
+                      <i class="fa fa-google-plus" aria-hidden="true"></i>
+                      <span class="sr-only">Google+</span>
+                    </a>
+                  </li>
+                {{ end }}
+                {{ if .Params.linkedin }}
+                  <li>
+                    <a href="https://linkedin.com/+{{ .Params.linkedin }}">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <span class="sr-only">LinkedIn</span>
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+            </div> -->
       </div>
     </div>
   </header>
@@ -32,12 +167,12 @@
 
 <footer>
   <ul>
-    <li><a [routerLink]="['Content',{id:'faq'}]"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
-    <li><a [routerLink]="['Content',{id:'license'}]"><i class="fa fa-creative-commons" aria-hidden="true"></i> Copyright</a></li>
+    <li><a [routerLink]="['Page',{id:'faq'}]"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
+    <li><a [routerLink]="['Page',{id:'license'}]"><i class="fa fa-creative-commons" aria-hidden="true"></i> Copyright</a></li>
     <li><a href="https://twitter.com/factopolisdb"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
     <li><a href="https://gitter.im/factopolis/"><i class="fa fa-comments" aria-hidden="true"></i> Chat</a></li>
     <li><a href="https://medium.com/@factopolis"><i class="fa fa-medium" aria-hidden="true"></i> Blog</a></li>
-    <li><a [routerLink]="['Content',{id:'contributing'}]"><i class="fa fa-github" aria-hidden="true"></i> Contributing</a></li>
-    <li><a [routerLink]="['Content',{id:'api'}]"><i class="fa fa-code" aria-hidden="true"></i> API</a></li>
+    <li><a [routerLink]="['Page',{id:'contributing'}]"><i class="fa fa-github" aria-hidden="true"></i> Contributing</a></li>
+    <li><a [routerLink]="['Page',{id:'api'}]"><i class="fa fa-code" aria-hidden="true"></i> API</a></li>
   </ul>
 </footer>

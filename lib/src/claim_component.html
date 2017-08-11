@@ -1,0 +1,38 @@
+<div *ngIf="claim != null">
+  <section [innerHtml]="claim.summaryHtml" class="truth" id="truth"></section>
+
+  <section id="claimants">
+    <h2>Claimants</h2>
+
+    <ul>
+      <li *ngFor="let claimant of claim.claimants">
+        <a [routerLink]="['Person', {id: claimant.slug}]"]>
+          {{ claimant.name }}
+        </a>
+        <span *ngIf="claimant.count > 1">
+          on {{ claimant.count }} occasions
+        </span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+
+    <ul class="quote-list">
+      <li *ngFor="let check of claim.checks">
+        <blockquote>
+          <div [innerHtml]="check.quoteHtml" class="quote-contents"></div>
+
+          <footer>
+            <cite>
+              <div>
+                <a [innerHtml]="check.name" href="{{ check.source }}"></a>
+              </div>
+            </cite>
+          </footer>
+        </blockquote>
+      </li>
+    </ul>
+  </section>
+</div>

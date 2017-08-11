@@ -1,0 +1,42 @@
+<div *ngIf="claims != null">
+  <p>
+    We currently have {{ claims.count }} claims in our database.
+  </p>
+
+  <ul class="claims">
+    <li *ngFor="let claim of claims.claims" class="claim">
+      <h4><a [routerLink]="['Claim',{id: claim.slug}]">{{ claim.name }}</a></h4>
+
+      <ul class="quick-claimants-list">
+        <li *ngFor="let claimant of claim.claimants">
+          <a href="#">{{ claimant.name }}</a>
+          <span *ngIf="claimant.count > 1">
+            ({{ claimant.count }} times)
+          </span>
+        </li>
+      </ul>
+
+      <section class="truth" [innerHtml]="claim.summaryHtml">
+      </section>
+    </li>
+  </ul>
+
+<!-- <ul class="claims">
+  {{ range .Paginator.Pages }}
+    <li class="claim">
+      <h4>
+	<a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h4>
+
+
+      <section class="truth">
+        <h5>The Truth:</h5>
+
+        <p>
+          {{ .Params.summary | markdownify }}
+        </p>
+      </section>
+    </li>
+  {{ end }}
+</ul> -->
+</div>

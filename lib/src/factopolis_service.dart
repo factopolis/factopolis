@@ -5,44 +5,43 @@ import 'package:angular2/angular2.dart';
 import 'package:http/http.dart';
 
 import 'page.dart';
-import 'content.dart';
+import 'claim.dart';
+import 'claims.dart';
+import 'people.dart';
 import 'person.dart';
 
 @Injectable()
 class FactopolisService {
   Client _http;
-  ChangeDetectorRef _changeDetectorRef;
 
-  // For communicating current status with AppComponent
-  Page _currentPage = null;
-  set currentPage (Page value) {
-    this._currentPage = value;
-    this._changeDetectorRef.detectChanges();
-  }
-  Page get currentPage {
-    return this._currentPage;
+  FactopolisService(this._http);
+
+  Future<Page> requestContent(String path) async {
+    final Response response = await this._http.get(path);
+    return new Page.fromJson(JSON.decode(response.body));
   }
 
-  FactopolisService(this._http, this._changeDetectorRef);
-
-  Future<Response> _request (String url) {
-    return _http.get(url);
+  Future<Page> requestPage(String id) async {
+    return this.requestContent("/$id/index.json");
   }
 
-  Future<Content> getContent(String id) async {
-    final Response response = await this._request("/$id/index.json");
-    return new Content.fromJson(JSON.decode(response.body), id);
+  Future<Claims> getClaims() async {
+    final Response response = await this._http.get("/claim/index.json");
+    return new Claims.fromJson(JSON.decode(response.body));
   }
 
-  Future<List<Person>> getPeople() async {
-    final response = await this._request("/person/index.json");
-    return JSON.decode(response.body)['people'].map((json) {
-      return new Person.fromJson(json);
-    }).toList();
+  Future<Claims> getClaim(String id) async {
+    final Response response = await this._http.get("/claim/$id/index.json");
+    return new Claim.fromJson(JSON.decode(response.body));
+  }
+
+  Future<People> getPeople() async {
+    final Response response = await this._http.get("/person/index.json");
+    return new People.fromJson(JSON.decode(response.body));
   }
 
   Future<Person> getPerson(String id) async {
-    final response = await this._request("/person/$id/index.json");
-    return new Person.fromJson(JSON.decode(response.body), id);
+    final Response response = await this._http.get("/person/$id/index.json");
+    return new Person.fromJson(JSON.decode(response.body));
   }
 }
