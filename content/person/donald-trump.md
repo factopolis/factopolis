@@ -1293,4 +1293,46 @@ claims:
       - checker: politifact
         rating: "false"
         source: http://www.politifact.com/truth-o-meter/statements/2017/aug/09/donald-trump/under-donald-trump-us-nuclear-arsenal-far-stronger/
+
+  - id: amazon-doesnt-pay-taxes
+    assertions:
+    - date: 2017-08-16
+      quote:
+        Amazon is doing great damage to tax paying retailers. Towns,
+        cities and states throughout the U.S. are being hurt - many
+        jobs being lost!
+      source: https://twitter.com/realDonaldTrump/status/897763049226084352
+      checks:
+      - checker: new-york-times
+        source: https://www.nytimes.com/2017/08/16/us/politics/trump-amazon-taxes.html
+
+  - id: gen-pershing-stopped-islamic-terrorism-for-decades
+    assertions:
+    - date: 2016-02-19
+      quote:
+        "They were having terrorism problems, just like we do, And he
+        caught 50 terrorists who did tremendous damage and killed many
+        people. And he took the 50 terrorists, and he took 50 men and
+        he dipped 50 bullets in pigs’ blood — you heard that, right? He
+        took 50 bullets, and he dipped them in pigs’ blood. And he had
+        his men load his rifles, and he lined up the 50 people, and
+        they shot 49 of those people. And the 50th person, he said: You
+        go back to your people, and you tell them what happened. And
+        for 25 years, there wasn’t a problem. Okay? Twenty-five years,
+        there wasn’t a problem."
+      source: https://youtu.be/cpgu8HFBsuc?t=2023
+      checks:
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/truth-o-meter/statements/2016/feb/23/donald-trump/donald-trump-cites-dubious-legend-about-gen-pershi/
+    - date: 2017-08-17
+      quote:
+        Study what General Pershing of the United States did to
+        terrorists when caught. There was no more Radical Islamic
+        Terror for 35 years!
+      source: https://twitter.com/realDonaldTrump/status/898254409511129088
+      checks:
+      - checker: politifact
+        rating: pants-on-fire
+        source: http://www.politifact.com/truth-o-meter/statements/2017/aug/17/donald-trump/donald-trump-retells-pants-fire-claim-about-gen-pe/
 ---
