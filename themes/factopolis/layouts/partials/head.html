@@ -11,6 +11,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta name="x-hugo-type" content="{{ .Type }}" />
+    <meta name="x-hugo-kind" content="{{ .Kind }}" />
+    <meta name="x-hugo-base-file-name" content="{{ $.Page.BaseFileName }}" />
+
     <style type="text/css"> .noscript { display: none; } </style>
     <noscript>
       <style type="text/css">
@@ -47,13 +51,13 @@
               <a {{ if hasPrefix "person/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}person">People</a>
             </li>
             <li>
-              <a {{ if hasPrefix "claim/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}claim">Claims</a>
+              <a {{ if hasPrefix "claims/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}claims">Claims</a>
             </li>
             <li>
-              <a {{ if hasPrefix "theme/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}theme">Themes</a>
+              <a {{ if hasPrefix "themes/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}themes">Themes</a>
             </li>
             <li>
-              <a {{ if hasPrefix "group/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}group">Groups</a>
+              <a {{ if hasPrefix "groups/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}groups">Groups</a>
             </li>
           </ul>
         </nav>
@@ -64,12 +68,12 @@
           <div>
             <div class="sticky-middle">
               <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h2>
-              {{ if and (eq .Page.Type "person") (eq .Page.Kind "page") }}
-                <img class="profile-pic" alt="{{ .Page.Title }}" src="{{ .Page.Type }}/{{ .File.BaseFileName }}.jpg" />
+              {{ if .Params.picture }}
+                <img class="profile-pic" alt="{{ .Page.Title }}" src="{{ .Params.picture }}" />
               {{ end }}
-              {{ if .Page.Params.pictureCopyright }}
+              {{ if .Params.pictureCopyright }}
                 <div class="profile-pic-copyright">
-                  Photo by {{ .Page.Params.pictureCopyright | markdownify }}
+                  Photo by {{ .Params.pictureCopyright | markdownify }}
                 </div>
               {{ end }}
               <ul class="links">

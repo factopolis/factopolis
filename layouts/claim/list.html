@@ -10,15 +10,23 @@
   {{ range .Paginator.Pages }}
     <li class="claim">
       <h4>
-	<a href="{{ .Permalink }}">{{ .Title }}</a>
+	      <a href="{{ .Permalink }}">{{ .Title }}</a>
       </h4>
 
       <ul class="quick-claimants-list">
         {{ $claimID := .File.BaseFileName }}
-        {{ range $person := (shuffle (where (where .Site.Pages "Type" "person") "Kind" "page")) }}
-          {{ range where $person.Params.claims "id" $claimID }}
-            {{ $count := .assertions | len }}
-            <li><a href="{{ $person.Permalink }}#claim-{{ $claimID }}">{{ $person.Title }}</a>{{ if sub $count 1 }} ({{ $count }} times){{ end }}</li>
+
+        {{ range $assertion := where .Site.Pages "Type" "assertion" }}
+          {{ if in $assertion.Params.claims $claimID }}
+            <li>
+              <a href="{{ $assertion.Parent.Permalink }}">
+                {{ $assertion.Parent.Title }}
+              </a>
+              on
+              <a href="{{ $assertion.Permalink }}">
+                {{ dateFormat "2006-01-02" $assertion.Date }}
+              </a>
+            </li>
           {{ end }}
         {{ end }}
       </ul>

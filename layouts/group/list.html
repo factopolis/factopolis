@@ -3,7 +3,7 @@
 <ul>
   {{ range .Data.Pages }}
     <li>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <a href="#">{{ .Title }}</a>
       <ul>
         {{ $groupID := .File.BaseFileName }}
         {{ range $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
@@ -11,7 +11,7 @@
             {{ range $affiliation := $person.Params.affiliations }}
               {{ if eq $affiliation $groupID }}
                 <li>
-	          <a href="{{ $person.Permalink }}">{{ $person.Title }}</a>
+	                <a href="#">{{ $person.Title }}</a>
                   {{ if $person.Params.offices }}
                     —
                     {{ range $office := first 1 $person.Params.offices }}

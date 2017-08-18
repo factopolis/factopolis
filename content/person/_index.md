@@ -1,3 +1,4 @@
 ---
 title: People
+type: people
 ---

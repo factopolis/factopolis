@@ -1,15 +1,100 @@
 {{ partial "head.html" . }}
 
-<ul class="content-list person-list">
-  {{ range .Data.Pages }}
+{{ if eq .Page.Type "people" }}
+  <ul class="content-list person-list">
+    {{ range $person := where .Site.Pages "Type" "person" }}
+      <li>
+        <div class="content-name"><a href="{{ .Permalink }}">{{ $person.Title }}</a></div>
+        <div class="content-claim-count">
+          {{ $claimCount := (where (where $.Site.Pages "Type" "assertion") ".Parent.UniqueID" $person.UniqueID) | len }}
+          {{ $claimCount }} false statement{{ if ne $claimCount 1 }}s{{ end }} on file.
+        </div>
+      </li>
+    {{ end }}
+  </ul>
+{{ else }}
+<ul class="fact-checking-bio-links">
+  {{ if .Params.politifact }}
     <li>
-      <div class="content-name"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
-      <div class="content-claim-count">
-        {{ $claimCount := .Params.claims | len }}
-        {{ $claimCount }} false claim{{ if sub $claimCount 1 }}s{{ end }} on file.
-      </div>
+      <a href="http://www.politifact.com/personalities/{{ .Params.politifact }}/">
+        <img alt="PolitiFact" src="{{ .Site.BaseURL }}img/PolitiFact.png" />
+      </a>
+    </li>
+  {{ end }}
+  {{ if .Params.factcheckorg }}
+    <li>
+      <a href="http://www.factcheck.org/person/{{ .Params.factcheckorg }}/">
+        <img alt="FactCheck.org" src="{{ .Site.BaseURL }}img/FactCheck.org.png" />
+      </a>
+    </li>
+  {{ end }}
+  {{ if .Params.snopes }}
+    <li>
+      <a href="http://www.snopes.com/tag/{{ .Params.snopes }}/">
+        <img alt="Snopes" src="{{ .Site.BaseURL }}img/Snopes.png" />
+      </a>
+    </li>
+  {{ end }}
+  {{ if .Params.washingtonPost }}
+    <li>
+      <a href="https://www.washingtonpost.com/news/fact-checker/wp/category/{{ .Params.washingtonPost }}/">
+        <img alt="Washington Post" src="{{ .Site.BaseURL }}img/WashingtonPost.png" />
+      </a>
     </li>
   {{ end }}
 </ul>
+
+<section id="counter">
+  <p>
+    {{ $assertionCount := .Data.Pages | len }}
+    {{ $withdrawn := where $.Data.Pages ".Params.retraction" "ne" nil | len }}
+
+    We currently have {{ $assertionCount }} false
+    assertion{{ if ne $assertionCount 1 }}s{{ end }} made
+    by {{ .Params.Title }}{{ if $withdrawn }},
+      {{ $withdrawn }} of which
+      {{ if ge $withdrawn 2 }}
+        have
+      {{ else }}
+        has
+      {{ end }}
+      been retracted or clarified,
+    {{ end }}
+    in our database.
+  </p>
+</section>
+
+{{ if .Params.offices }}
+  <section id="offices-held">
+    <h3>Offices Held</h3>
+
+    <ol class="offices-held">
+      {{ range $office := .Params.offices }}
+        <li>
+          {{ $office.title }}
+          {{ if $office.from }}
+            ({{ dateFormat "2006" $office.from }}-{{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }})
+          {{ end }}
+        </li>
+      {{ end }}
+    </ol>
+  </section>
+{{ end }}
+
+<section id="statements">
+  <h3>Statements</h3>
+
+  <ol class="statements quote-list">
+    {{ range $stmt := .Paginator.Pages }}
+      <li>
+        {{ partial "quote.html" $stmt }}
+      </li>
+    {{ end }}
+  </ol>
+</section>
+
+{{ template "_internal/pagination.html" . }}
+
+{{ end }}
 
 {{ partial "footer.html" . }}

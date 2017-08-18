@@ -1,0 +1,100 @@
+<blockquote>
+  <div class="quote-contents">
+    {{ if $.Params.retraction }}<del>{{end}}
+    {{ if $.Params.quote }}
+      <p>
+        {{ $.Params.quote | markdownify }}
+      </p>
+    {{ end }}
+    {{ if $.Params.retraction }}</del>{{end}}
+  </div>
+
+  <footer>
+    <cite>
+      <div>
+        <a href="{{ $.Parent.Permalink }}">{{ $.Parent.Title }}</a>
+        on
+        <a href="{{ $.Params.source }}">
+          <time datetime="{{ $.Params.date }}">
+            {{ $.Date | dateFormat "Jan 2, 2006" }}
+          </time>
+        </a>
+      </div>
+      {{ if $.Params.retraction }}
+        <div class="retraction">
+          {{ if eq $.Params.retraction.type "clarification" }}
+            Clarified
+          {{ else }}
+            Retracted
+          {{ end }}
+
+          {{ if $.Params.retraction.issuer }}
+            by
+
+            {{ if $.Params.retraction.issuer.position }}
+              {{ $.Params.retraction.issuer.position }}
+            {{ end }}
+
+            {{ if $.Params.retraction.issuer.id }}
+              {{ $retractor := $.Site.GetPage "section" "person" $.Params.retraction.issuer.id }}
+              {{ if $retractor }}
+                <a href="{{ $retractor.Permalink }}">
+                  {{ $retractor.Title }}
+                </a>
+              {{ else }}
+                {{ (replace $.Params.retraction.issuer.id "-" " ") | humanize }}
+              {{ end }}
+            {{ else }}
+              {{ $.Params.retraction.issuer.name }}
+            {{ end }}
+          {{ end }}
+
+          on
+
+          <a href="{{ $.Params.retraction.source }}">
+            <time datetime="{{ $.Params.retraction.date }}">
+              {{ $.Params.retraction.date | dateFormat "Jan 2, 2006" }}
+            </time>
+          </a>
+        </div>
+      {{ end }}
+    </cite>
+
+    {{ if $.Params.checks }}
+      <ul class="fact-checks">
+        {{ range $check := $.Params.checks }}
+        {{ $checker := $.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
+          <li>
+            {{ if $checker }}
+              <a class="check-source" href="{{ $check.source }}">
+                {{ if $checker.Params.abbr }}
+                  <abbr title="{{ $checker.Title }}">{{ $checker.Params.abbr }}</abbr>
+                {{ else }}
+                  {{ $checker.Title }}
+                {{ end }}
+              </a>
+            {{ end }}
+            {{ if $check.rating }}
+              <span class="check-rating">{{ humanize $check.rating }}</span>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+
+    {{ if $.Params.claims }}
+      <dl class="claims">
+        {{ range $claimID := $.Params.claims }}
+          {{ $needle := printf "/claims/%s/" $claimID }}
+          {{/*  TODO: why does't ($.Site.GetPage "taxonomyTerm" "claims" $claimID) work? */}}
+          {{ range $claim := where $.Site.Pages ".URL" $needle }}
+            <dt><a href="{{ $claim.Permalink }}">{{ $claim.Title }}</a></dt>
+            <dd class="truth">
+              {{ $claim.Params.summary | markdownify }}
+            </dd>
+          {{ end }}
+        {{ end }}
+      </dl>
+    {{ end }}
+  </footer>
+</blockquote>

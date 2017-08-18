@@ -1,0 +1,63 @@
+{{ partial "head.html" . }}
+
+<p>
+  {{ $nAssertions := (where $.Site.Pages "Type" "assertion") | len }}
+  {{ $nClaims := .Data.Pages | len }}
+  We currently have {{ $nClaims }} distinct claims in our database,
+  which have been asserted an average of
+  {{ printf "%1.2f" (div (mul $nAssertions 1.0) ($nClaims)) }}
+  times each, for a total of {{ $nAssertions }} different false
+  statements by {{ where $.Site.Pages "Type" "person" | len }}
+  different people.
+</p>
+
+<ul class="claims">
+  {{ range $page := .Paginator.Pages }}
+    <li class="claim">
+      <h4>
+	      <a href="{{ $page.Permalink }}">{{ .Title }}</a>
+      </h4>
+
+      {{ if 0 }}
+        <!-- This version is slow… -->
+        <ul class="quick-claimants-list">
+          <li>
+            {{ range $person := where (where $.Site.Pages "Type" "person") "Kind" "section" }}
+              {{ $personClaims := intersect (where (where $.Site.Pages "Type" "assertion") "Parent.UniqueID" $person.UniqueID) $page.Data.Pages }}
+              {{ if $personClaims | len }}
+                <a href="{{ $person.Permalink }}">{{ $person.Title }}</a>
+                {{ if gt ($personClaims | len) 1 }}
+                  ({{ $personClaims | len }} times)
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          </li>
+        </ul>
+      {{ else }}
+        <div>
+          {{ $nStatements := $page.Data.Pages | len }}
+          {{ if gt $nStatements 1 }}
+            {{ $nStatements }} statements, between
+            {{ range $stmt := last 1 $page.Data.Pages }}
+              {{ $stmt.Date | dateFormat "Jan 2, 2006" }}
+            {{ end }}
+            and
+          {{ end }}
+          {{ range $stmt := first 1 $page.Data.Pages }}
+            {{ $stmt.Date | dateFormat "Jan 2, 2006" }}.
+          {{ end }}
+        </div>
+      {{ end }}
+
+      <section class="truth">
+        <p>
+          {{ $page.Params.summary | markdownify }}
+        </p>
+      </section>
+    </li>
+  {{ end }}
+</ul>
+
+{{ template "_internal/pagination.html" . }}
+
+{{ partial "footer.html" . }}

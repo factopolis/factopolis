@@ -18,8 +18,16 @@
 <section id="claimants">
   <h2>Claimants</h2>
 
+  {{ $assertions := where .Site.Pages "Type" "assertion" }}
+  <pre>{{ $assertions }}
+{{ $.Data.Pages }}</pre>
+
   <ul class="shuffle">
-    {{ range $person := (shuffle (where (where .Site.Pages "Type" "person") "Kind" "page")) }}
+    {{ range $person := (shuffle (where (where .Site.Pages "Type" "person") "Kind" "section")) }}
+      <li>
+        {{ $person.Title }} — {{ $person.Pages }} — {{ $person }}
+      </li>
+      {{/*
       {{ range where $person.Params.claims "id" $claimID }}
         <li>
           <a href="{{ $person.URL }}#claim-{{ $claimID | htmlEscape }}">
@@ -31,6 +39,7 @@
           </a>
         </li>
       {{ end }}
+      */}}
     {{ end }}
   </ul>
 </section>

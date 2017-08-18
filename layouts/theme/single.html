@@ -19,7 +19,8 @@
 
   <ul class="claims">
     {{ range $claimId := .Page.Params.claims }}
-      {{ $claim := $.Site.GetPage "page" "claim" (printf "%s.md" $claimId) }}
+      {{ $claimId }}
+      {{/*
       <li class="claim">
         <h4>
           <a href="{{ $claim.Permalink }}">{{ $claim.Title }}</a>
@@ -42,6 +43,7 @@
           </p>
         </section>
       </li>
+      */}}
     {{ end }}
   </ul>
 </section>

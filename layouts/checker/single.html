@@ -8,11 +8,11 @@
   <h3>Claims Checked</h3>
 
   <ul>
-    {{ range $claim := where .Site.Pages "Type" "claim" }}
+    {{ range $claim := where $.Site.Pages "Type" "claims" }}
       {{ range $claim.Params.checks }}
         {{ if eq .checker $.File.BaseFileName }}
           <li><a href="{{ $claim.URL }}">{{ $claim.Title }}</a></li>
-	{{ end }}
+	      {{ end }}
       {{ end }}
     {{ end }}
   </ul>

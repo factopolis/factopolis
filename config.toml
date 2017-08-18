@@ -3,10 +3,13 @@ title = "Factopolis"
 baseurl = "/"
 GoogleAnalytics = "UA-101930305-1"
 publishDir = "web"
-
 paginate = 25
-
 theme = "factopolis"
+
+[taxonomies]
+    claim = "claims"
+    theme = "themes"
+    group = "groups"
 
 [outputs]
 page = [ "HTML", "JSON" ]

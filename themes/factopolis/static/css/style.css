@@ -265,20 +265,22 @@ ul.pagination > li.disabled > a {
 
 .quote-list > li > blockquote {
   margin: 0;
+  padding-bottom: 1em;
 }
 
 .quote-list > li > blockquote > footer > .fact-checks {
-  padding: 1em;
+  padding: 1em 0 0 1em;
   border-top: 1px #a8b2b7 solid;
   list-style-type: none;
 }
 
 .quote-list > li > blockquote > footer > .fact-checks:before {
   content: "Fact Checks:";
-  text-align: right;
-  width: 11em;
+  font-weight: bold;
   display: block;
   font-variant: small-caps;
+  border-bottom: 2px #b0c26e solid;
+  margin: 0.25em 0;
 }
 
 .quote-list > li > blockquote > footer > .fact-checks > li {
@@ -292,8 +294,51 @@ ul.pagination > li.disabled > a {
 
 .quote-list > li > blockquote > footer > .fact-checks > li > a {
   width: 11em;
-  text-align: right;
+  /* text-align: right; */
   padding-right: 1em;
+}
+
+.quote-list > li > blockquote > footer > .claims {
+  padding: 1em 0 0 1em;
+}
+
+.quote-list > li > blockquote > footer > .claims:before {
+  content: "Claims:";
+  font-weight: bold;
+  display: block;
+  font-variant: small-caps;
+  border-bottom: 2px #b0c26e solid;
+  margin: 0.25em 0;
+}
+
+.quote-list > li > blockquote > footer > .claims > dd:before {
+  content: "The Truth: ";
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+.quote-list > li > blockquote > footer > .claims > dd {
+  margin: 0 0 0.5em 0;
+}
+
+section.truth {
+  display: block;
+  margin: 0.5em 0;
+  border-left: 5px #b0c26e solid;
+  background-color: #f8ffdd;
+  padding: 1em;
+  border-radius: 3px;
+}
+
+section.truth:before {
+  content: "The Truth: ";
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+section.truth > * {
+  display: inline;
 }
 
 .quote-list {
@@ -347,26 +392,6 @@ ul.pagination > li.disabled > a {
 
 .claims .claim {
   clear: right;
-}
-
-.truth {
-  display: block;
-  margin: 0.5em 0;
-  border-left: 5px #b0c26e solid;
-  background-color: #f8ffdd;
-  padding: 1em;
-  border-radius: 3px;
-}
-
-.truth:before {
-  content: "The Truth: ";
-  font-variant: small-caps;
-  font-weight: bold;
-  font-size: 0.85em;
-}
-
-.truth > * {
-  display: inline;
 }
 
 .claim > h4 {

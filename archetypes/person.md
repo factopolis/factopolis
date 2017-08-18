@@ -1,9 +1,11 @@
 ---
-title: 
+title: {{ .TranslationBaseName | humanize | title }}
 web: 
+picture: /person/{{ .TranslationBaseName }}.jpg
+pictureCopyright: 
 feed: 
 
-wikipedia: 
+wikipedia: {{ replace (.TranslationBaseName | humanize | title) " " "_" }}
 twitter: 
 facebook: 
 instagram: 
@@ -17,10 +19,10 @@ pinterest:
 googleplus: 
 linkedin: 
 
-factcheckorg: 
-politifact: 
-snopes: 
-washingtonpost: 
+factcheckorg: {{ .TranslationBaseName }}
+politifact: {{ .TranslationBaseName }}
+snopes: {{ .TranslationBaseName }}
+washingtonpost: {{ .TranslationBaseName }}
 
 affiliations:
 - 
@@ -29,15 +31,4 @@ offices:
 - title: 
   from: 
   thru: 
-
-claims:
-- id: 
-  assertions:
-  - date: 
-    quote: 
-    source: 
-    checks:
-    - checker: 
-      rating: 
-      source: 
 ---

@@ -1,0 +1,29 @@
+{{ partial "head.html" . }}
+
+{{ if .Content }}
+  <section>
+    {{ .Content }}
+  </section>
+{{ end }}
+
+<section>
+  <h3>Claims</h3>
+  <dl>
+    {{ range $claim := $.Paginator.Pages }}
+      <dt><h4><a href="{{ $claim.Permalink }}">{{ $claim.Title }}</a></h4></dt>
+      <dd>
+        <ol class="statements quote-list">
+          {{ range $stmt := $claim.Data.Pages }}
+            <li>
+              {{ partial "quote.html" $stmt }}
+            </li>
+          {{ end }}
+        </ol>
+      </dd>
+    {{ end }}
+  </dl>
+</section>
+
+{{ template "_internal/pagination.html" . }}
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,20 @@
+{{ partial "head.html" . }}
+
+<dl>
+  {{ range $theme := $.Paginator.Pages }}
+    <dt><h4><a href="{{ $theme.Permalink }}">{{ $theme.Title }}</a></h4></dt>
+    <dd>
+      {{ if $theme.Params.summary }}
+        {{ $theme.Params.summary | markdownify }}
+      {{ end }}
+
+      <p>
+        {{ $nClaims := $theme.Data.Pages | len }}
+        There are {{ $nClaims }} claim{{ if ne $nClaims 1 }}s{{ end }}
+        in this theme.
+      </p>
+    </dd>
+  {{ end }}
+</dl>
+
+{{ partial "footer.html" . }}

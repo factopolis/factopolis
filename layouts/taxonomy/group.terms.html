@@ -1,0 +1,31 @@
+{{ partial "head.html" . }}
+
+<section>
+  <ul>
+    {{ range $group := $.Paginator.Pages }}
+      <li>
+        <h3><a href="{{ $group.Permalink }}">{{ $group.Title }}</a></h3>
+        <ol>
+          {{ range $person := $group.Data.Pages }}
+            <li>
+              <a href="{{ $person.Permalink }}">{{ $person.Title }}</a>
+              {{ if $person.Params.offices }}
+                —
+                {{ range $office := first 1 $person.Params.offices }}
+                  {{ $office.title }}
+                  {{ if $office.thru }}
+                    ({{ dateFormat "2006" $office.from }}{{ if sub (int (dateFormat "2006" $office.thru)) (int (dateFormat "2006" $office.from)) }} - {{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }}{{ end }})
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            </li>
+          {{ end }}
+        </ol>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+
+{{ template "_internal/pagination.html" . }}
+
+{{ partial "footer.html" . }}
