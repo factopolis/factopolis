@@ -1,0 +1,52 @@
+{
+  {{ if .Params.summary }}"summary": {{ .Params.summary | jsonify }},{{ end }}
+  "checks": [
+    {{ range $idx, $check := .Params.checks }}
+      {{ if $idx }}, {{ end }}
+      {
+        {{ if $check.short }}"short": {{ $check.short | jsonify }}, {{ end }}
+        {{ if $check.quote }}"quote": {{ $check.quote | jsonify }}, {{ end }}
+        {{ if $check.url }}"source": {{ $check.url | jsonify }}, {{ end }}
+        {{ if $check.name }}
+          "name": {{ $check.name | jsonify }}
+        {{ else }}
+          {{ range where $.Site.Pages "URL" (printf "/checker/%s/" .checker) }}
+            "name": {{ .Title | jsonify }}
+          {{ end }}
+        {{ end }}
+      }
+    {{ end }}
+  ],
+  "statements": [
+    {{ range $idx, $statement := $.Data.Pages }}
+      {{ if $idx }},{{ end }}
+      {
+        "person": {{ (index (split $statement.URL "/") 2) | jsonify }},
+        "id": {{ (index (split $statement.URL "/") 3) | jsonify }},
+        "date": {{ $statement.Date | dateFormat "2006-01-02" | jsonify }},
+        "source": {{ $statement.Params.source | jsonify }},
+        "quote":
+        {{ if $statement.Params.quote }}
+          {{ $statement.Params.quote | jsonify }},
+        {{ else }}
+          {{ $statement.Params.short | jsonify }},
+        {{ end }}
+        {{ if $statement.Params.checks }}
+          "check": [
+            {{ range $idx, $check := $statement.Params.checks }}
+              {{ if $idx }},{{ end }}
+              {
+                {{ if $check.rating }}
+                  "rating": {{ $check.rating | jsonify }},
+                {{ end }}
+                "checker": {{ $check.checker | jsonify }},
+                "source": {{ $check.source | jsonify }}
+              }
+            {{ end }}
+          ]
+        {{ end }}
+      }
+    {{ end }}
+  ],
+  {{ partial "page.json" . }}
+}

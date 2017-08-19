@@ -1,4 +1,4 @@
-{{ if .Page.RawContent }}"markdown": {{ .Page.RawContent | jsonify }},{{ end }}
+{{ if .RawContent }}"markdown": {{ .RawContent | jsonify }},{{ end }}
 {{ if .Params.picture }}"picture": {{ .Params.picture | jsonify }},{{ end }}
 {{ if .Params.pictureCopyright }}"pictureCopyright": {{ .Params.pictureCopyright | jsonify }},{{ end }}
 {{ if .Params.web }}"web": {{ .Params.web | jsonify }},{{ end }}
@@ -20,7 +20,4 @@
 {{ if .Params.factcheckorg }}"factcheckorg": {{ .Params.factcheckorg | jsonify }},{{ end }}
 {{ if .Params.snopes }}"snopes": {{ .Params.snopes | jsonify }},{{ end }}
 {{ if .Params.washingtonpost }}"washingtonpost": {{ .Params.washingtonpost | jsonify }},{{ end }}
-{{ if eq .Page.Kind "page" }}
-  "id": {{ .Page.BaseFileName | jsonify }},
-{{ end }}
-"name": {{ .Page.Title | jsonify }}
+"id": {{ .URL | jsonify }}

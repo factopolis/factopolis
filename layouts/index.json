@@ -1,22 +1,9 @@
 {
   "people": [
-    {{ range $idx, $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
+    {{ range $idx, $person := where (where .Site.Pages "Type" "person") "Kind" "section" }}
       {{ if $idx }},{{ end }}
       {
-        {{ if $person.Params.politifact }}"politifact": {{ $person.Params.politifact | jsonify }},{{ end }}
-        {{ if $person.Params.factcheckorg }}"factcheckorg": {{ $person.Params.factcheckorg | jsonify }},{{ end }}
-        {{ if $person.Params.snopes }}"snopes": {{ $person.Params.snopes | jsonify }},{{ end }}
-        {{ if $person.Params.washingtonpost }}"washingtonpost": {{ $person.Params.washingtonpost | jsonify }},{{ end }}
-
-        {{ if $person.Params.web }}"web": {{ $person.Params.web | jsonify }},{{ end }}
-        {{ if $person.Params.wikipedia }}"wikipedia": {{ $person.Params.wikipedia | jsonify }},{{ end }}
-        {{ if $person.Params.twitter }}"twitter": {{ $person.Params.twitter | jsonify }},{{ end }}
-        {{ if $person.Params.facebook }}"facebook": {{ $person.Params.facebook | jsonify }},{{ end }}
-        {{ if $person.Params.instagram }}"instagram": {{ $person.Params.instagram | jsonify }},{{ end }}
-        {{ if $person.Params.snapchat }}"snapchat": {{ $person.Params.snapchat | jsonify }},{{ end }}
-        {{ if $person.Params.youtube }}"youtube": {{ $person.Params.youtube | jsonify }},{{ end }}
-        {{ if $person.Params.medium }}"medium": {{ $person.Params.medium | jsonify }},{{ end }}
-        {{ if $person.Params.flickr }}"flickr": {{ $person.Params.flickr | jsonify }},{{ end }}
+        {{ partial "page.json" $person }}
 
         {{ if $person.Params.offices }}
           "offices": [
@@ -31,42 +18,27 @@
           ],
         {{ end }}
 
-        {{ if $person.Params.claims }}
-          "claims": [
-            {{ range $idx, $claim := $person.Params.claims }}
-              {{ if $idx }},{{ end }}
-              {
-                "assertions": [
-                  {{ range $idx, $assertion := $claim.assertions }}
-                    {{ if $idx }},{{ end }}
-                    {
-                      "date": {{ $assertion.date | jsonify }},
-                      "quote": {{ $assertion.quote | jsonify }},
-                      {{ if $assertion.checks }}
-                        "checks": [
-                          {{ range $idx, $check := $assertion.checks }}
-                            {{ if $idx }},{{ end }}
-                            {
-                              {{ if $check.checker }}
-                                "checker": {{ $check.checker | jsonify }},
-                              {{ else }}
-                                "name": {{ $check.name | jsonify }},
-                              {{ end }}
-                              {{ if $check.rating }}"rating": {{ $check.rating | jsonify }},{{ end }}
-                              "source": {{ $check.source | jsonify }}
-                            }
-                          {{ end }}
-                        ],
-                      {{ end }}
-                      "source": {{ $assertion.source | jsonify }}
-                    }
-                  {{ end }}
-                ],
-                "id": {{ $claim.id | jsonify }}
-              }
+        "statements": [
+          {{ range $idx, $stmt := where .Site.Pages "Type" "assertion" }}
+            {{ if $idx }},{{ end }}
+            {{ if $stmt.Params.quote }}"quote": {{ $stmt.Params.quote | jsonify }},{{ end }}
+            {{ if $stmt.Params.short }}"short": {{ $stmt.Params.short | jsonify }},{{ end }}
+            {{ if $stmt.Params.checks }}
+              "checks": [
+                {{ range $idx, $check := $stmt.Params.checks }}
+                  {{ if $idx }},{{ end }}
+                  {
+                    {{ if $check.rating }}"rating": {{ $check.rating | jsonify }},{{ end }}
+                    "checker": {{ $check.checker | jsonify }},
+                    "source": {{ $check.source | jsonify }}
+                  }
+                {{ end }}
+              ],
             {{ end }}
-          ],
-        {{ end }}
+            {{ if $stmt.Params.claims }}"claims": {{ $stmt.Params.claims | jsonify }},{{ end }}
+            "source": {{ $stmt.Params.source | jsonify }}
+          {{ end }}
+        ],
 
         {{ if $person.Params.affiliations }}"affiliations": {{ $person.Params.affiliations | jsonify }},{{ end }}
 
@@ -77,7 +49,7 @@
   ],
 
   "claims": [
-    {{ range $idx, $claim := where (where .Site.Pages "Type" "claim") "Kind" "page" }}
+    {{ range $idx, $claim := where (where .Site.Pages "Type" "claims") "Kind" "taxonomy" }}
       {{ if $idx }},{{ end }}
       {
         "checks": [
@@ -92,13 +64,13 @@
         ],
         "summary": {{ $claim.Params.summary | jsonify }},
         "name": {{ $claim.Title | jsonify }},
-        "id": {{ $claim.BaseFileName | jsonify }}
+        "id": {{ $claim.URL | jsonify }}
       }
     {{ end }}
   ],
 
   "groups": [
-    {{ range $idx, $group := where (where .Site.Pages "Type" "group") "Kind" "page" }}
+    {{ range $idx, $group := where (where .Site.Pages "Type" "groups") "Kind" "taxonomy" }}
       {{ if $idx }},{{ end }}
       {
         {{ if $group.Params.web }}"web": {{ $group.Params.web | jsonify }},{{ end }}
@@ -112,20 +84,14 @@
         {{ if $group.Params.flickr }}"flickr": {{ $group.Params.flickr | jsonify }},{{ end }}
 
         "members": [
-          {{ range $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
-            {{ if $person.Params.affiliations }}
-              {{ range $affiliation := $person.Params.affiliations }}
-                {{ if eq $affiliation $group.BaseFileName }}
-                  {{ $person.BaseFileName | jsonify }},
-                {{ end }}
-              {{ end }}
-            {{ end }}
+          {{ range $idx, $person := $group.Data.Pages }}
+            {{ if $idx }},{{ end }}
+            {{ index (split $person.URL "/") 2 | jsonify }}
           {{ end }}
-          null
         ],
 
         "name": {{ $group.Title | jsonify }},
-        "id": {{ $group.BaseFileName | jsonify }}
+        "id": {{ index (split $group.URL "/") 2 | jsonify }}
       }
     {{ end }}
   ],

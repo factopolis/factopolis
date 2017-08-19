@@ -17,18 +17,18 @@ JSON files which are built from the markdown:
  * `person/*/index.json` — Information about the person, including a
    list of claims.  Example:
    [/person/donald-trump/index.json](/person/donald-trump/index.json)
- * [/group/index.json](/group/index.json) — List of all groups.
- * `/group/*/index.json` — Information about the group, including a
+ * [/groups/index.json](/groups/index.json) — List of all groups.
+ * `/groups/*/index.json` — Information about the groups, including a
    membership list.  Example:
-   [/group/democratic-party/index.json](/group/democratic-party/index.json)
- * [/claim/index.json](/claim/index.json) — List of all claims.
- * `/claim/*/index.json` — Information about the claim. Example:
-   [/claim/half-of-ms-13-deported/index.json](/claim/half-of-ms-13-deported/index.json)
+   [/groups/democratic-party/index.json](/groups/democratic-party/index.json)
+ * [/claims/index.json](/claims/index.json) — List of all claims.
+ * `/claims/*/index.json` — Information about the claims. Example:
+   [/claims/half-of-ms-13-deported/index.json](/claims/half-of-ms-13-deported/index.json)
  * [/checker/index.json](/checker/index.json) — List of all fact
    checkers.
  * `/checker/*/index.json` — Information about the fact
    checker. Example:
-   [/group/democratic-party/index.json](/group/democratic-party/index.json)
+   [/groups/democratic-party/index.json](/groups/democratic-party/index.json)
 
 We're in the process of  filling out the JSON data to support our
 client-side front-end, but if you don't want to wait feel free to
