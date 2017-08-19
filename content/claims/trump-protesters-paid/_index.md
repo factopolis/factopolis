@@ -1,5 +1,5 @@
 ---
-title: Trump Protesters Were Paid
+title: Trump protesters were paid
 summary: There is no evidence of paid protesters.
 checks:
   - checker: new-york-times

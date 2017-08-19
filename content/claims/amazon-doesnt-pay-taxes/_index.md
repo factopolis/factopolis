@@ -1,5 +1,5 @@
 ---
-title: Amazon Doesn't Pay Sales Taxes
+title: Amazon doesn't pay sales tax
 summary: It collects sales tax in 45 states.
 checks:
   - checker: new-york-times

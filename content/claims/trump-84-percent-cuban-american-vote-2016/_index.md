@@ -1,5 +1,5 @@
 ---
-title: Trump Received 84% of the Cuban-American Vote in 2016
+title: Trump received 84% of the Cuban-American vote in 2016
 summary: There is no support for this.
 checks:
   - checker: new-york-times

@@ -1,5 +1,5 @@
 ---
-title: Terrorism Not Being Reported On
+title: Terrorism not being reported on
 summary: Terrorism has been reported on, often in detail.
 checks:
   - checker: new-york-times

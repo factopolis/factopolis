@@ -1,5 +1,5 @@
 ---
-title: N.A.T.O. Doesn't Cover Terrorism
+title: N.A.T.O. doesn't cover terrorism
 summary: It has fought terrorism since the 1980s.
 checks:
   - checker: new-york-times

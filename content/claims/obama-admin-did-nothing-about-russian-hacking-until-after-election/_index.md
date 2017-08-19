@@ -1,5 +1,5 @@
 ---
-title: Obama Administration Did Nothing About Russian Hacking Until After Election
+title: Obama administration did nothing about Russian hacking until after election
 summary: Yes they did.
 checks:
   - checker: politifact

@@ -1,5 +1,5 @@
 ---
-title: Serious Voter Fraud in VA, NH, and CA During 2016 Election
+title: Serious voter fraud in VA, NH, and CA during 2016 election
 summary: There is no evidence.
 themes:
 - us-voter-fraud

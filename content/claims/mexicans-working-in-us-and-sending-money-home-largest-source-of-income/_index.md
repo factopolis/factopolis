@@ -1,5 +1,5 @@
 ---
-title: "#1 Source of Income Into Mexico Are Mexicans Working In U.S. and Sending Money Home"
+title: "#1 Source of income into Mexico are Mexicans working in U.S. and sending money home"
 summary: U.S. purchases of Mexican goods are more than an order of magnitude larger.
 checks:
   - checker: politifact

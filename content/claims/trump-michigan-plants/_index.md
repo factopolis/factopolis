@@ -1,5 +1,5 @@
 ---
-title: Trump Responsible for New Michigan Plants
+title: Trump responsible for new Michigan plants
 summary: These investments were already planned.
 checks:
   - checker: new-york-times

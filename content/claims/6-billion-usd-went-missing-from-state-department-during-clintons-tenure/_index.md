@@ -1,5 +1,5 @@
 ---
-title: $6 Billion Went Missing, Possibly Stolen, From State Department
+title: $6 billion went missing, possibly stolen, from State Department
 summary: That figure refers to funds for contracts with insufficent paperwork.
 checks:
   - checker: politifact

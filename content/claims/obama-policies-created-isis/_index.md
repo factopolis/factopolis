@@ -1,5 +1,5 @@
 ---
-title: Obama Policies Created ISIS
+title: Obama policies created ISIS
 summary: The group’s origins date to 2004.
 checks:
   - checker: new-york-times

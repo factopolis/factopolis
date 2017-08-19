@@ -1,9 +1,9 @@
 ---
-title: US Producing As Much Steel as Ever, Just With Fewer Workers
+title: US producing as much steel as ever, just with fewer workers
 summary: Production is down by one third, employment one fifth
 checks:
   - checker: politifact
-    quote: 
+    quote:
       In reality, production is down by more than one-third from its
       historical peak in 1973, and the employment picture -- while
       still severely shrunken -- is down to about one-fifth of its

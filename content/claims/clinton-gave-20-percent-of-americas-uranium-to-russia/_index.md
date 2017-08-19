@@ -1,5 +1,5 @@
 ---
-title: Clinton Gave 20% of America's Uranium to Russia
+title: Clinton gave 20% of America's uranium to Russia
 summary:
   The State Department was one of nine agencies which had to approve
   the deal, it's unlikely Clinton was personally involved, and there

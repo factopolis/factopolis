@@ -1,5 +1,5 @@
 ---
-title: Oil Prices Never Fall
+title: Oil prices never fall
 summary: They do.
 checks:
   - checker: politifact

@@ -1,5 +1,5 @@
 ---
-title: Trump Didn't Change His Stance on China
+title: Trump didn't change his stance on China
 summary: He did.
 checks:
   - checker: new-york-times

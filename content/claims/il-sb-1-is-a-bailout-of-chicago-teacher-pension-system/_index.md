@@ -1,5 +1,5 @@
 ---
-title: IL SB 1 is a Bailout of Chicago's Teacher Pension System
+title: IL SB 1 is a bailout of Chicago's teacher pension system
 summary: Not true.
 checks:
   - checker: politifact

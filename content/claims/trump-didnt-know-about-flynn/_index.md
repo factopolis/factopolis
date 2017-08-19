@@ -1,5 +1,5 @@
 ---
-title: Trump Unaware Flynn Discussed Sanctions With Russia
+title: Trump unaware Flynn discussed sanctions with Russia
 summary: Trump knew about Flynn's actions for weeks.
 checks:
   - checker: new-york-times

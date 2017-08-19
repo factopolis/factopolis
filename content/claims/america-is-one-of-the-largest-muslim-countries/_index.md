@@ -1,5 +1,5 @@
 ---
-title: America Is One Of The Largest Muslim Countries
+title: America is one of the largest Muslim countries
 summary: Estimates are difficult, but somewhere between 58th and 29th place.
 checks:
   - checker: politifact

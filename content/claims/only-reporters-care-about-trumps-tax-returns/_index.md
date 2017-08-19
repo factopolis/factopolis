@@ -1,5 +1,5 @@
 ---
-title: Only Reporters Care About Trump's Tax Returns
+title: Only reporters care about Trump's tax returns
 summary: A majority of Americans do.
 checks:
   - checker: politifact

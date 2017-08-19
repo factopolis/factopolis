@@ -1,5 +1,5 @@
 ---
-title: Nobody Mentioned Clinton Receiving Debate Questions
+title: Nobody mentioned Clinton receiving debate questions
 summary: It was widely covered.
 checks:
   - checker: new-york-times

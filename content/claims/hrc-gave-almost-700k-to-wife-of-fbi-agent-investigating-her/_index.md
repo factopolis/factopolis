@@ -1,5 +1,5 @@
 ---
-title: Hillary Clinton Gave Almost $700,000 to Wife of FBI Agent Investigating Her
+title: Hillary Clinton gave almost $700,000 to wife of FBI agent investigating her
 summary: The timeline is wrong and the connections are exaggerated
 checks:
   - checker: washington-post

@@ -1,5 +1,5 @@
 ---
-title: Leaking a Financial Disclosure Form is a Felony
+title: Leaking a financial disclosure form is a felony
 summary: It isn't.
 checks:
   - checker: politifact

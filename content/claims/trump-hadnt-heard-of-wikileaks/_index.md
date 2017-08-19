@@ -1,5 +1,5 @@
 ---
-title: Trump Hadn't Heard of Wikileaks Before 2016 Campaign
+title: Trump hadn't heard of Wikileaks before 2016 campaign
 summary: He criticized it as early as 2010.
 checks:
   - checker: new-york-times

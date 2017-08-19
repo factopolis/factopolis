@@ -1,5 +1,5 @@
 ---
-title: Trump Saved Hundreds of Millions on F-35
+title: Trump saved hundreds of millions on F-35
 summary: Most of the cuts were already planned.
 checks:
   - checker: new-york-times

@@ -1,5 +1,5 @@
 ---
-title: U.S. African-American Communities In Worst Shape Ever
+title: U.S. African-American communities in worst shape ever
 summary: Slavery? Jim Crow?
 checks:
   - checker: politifact

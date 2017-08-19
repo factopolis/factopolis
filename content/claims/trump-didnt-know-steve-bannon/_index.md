@@ -1,5 +1,5 @@
 ---
-title: Trump Didn't Know Steve Bannon Until Late in His Campaign
+title: Trump didn't know Steve Bannon until late in his campaign
 summary: They Met in 2011
 checks:
   - checker: new-york-times

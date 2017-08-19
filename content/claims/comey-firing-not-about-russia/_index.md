@@ -1,5 +1,5 @@
 ---
-title: James Comey's Firing Unrelated To Russia
+title: James Comey's firing unrelated To Russia Investigation
 summary:
   President Trump confirmed the connection.
 checks:

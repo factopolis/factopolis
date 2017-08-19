@@ -1,5 +1,5 @@
 ---
-title: Leader of Boy Scouts Called Trump To Call Speech Greatest Ever Made to Them
+title: Leader of Boy Scouts called Trump to call speech greatest ever made to them
 summary: Trump's Press Secretary had to walk this one back.
 checks:
   - checker: politifact

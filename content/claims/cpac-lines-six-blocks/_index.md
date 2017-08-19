@@ -1,5 +1,5 @@
 ---
-title: 6 Block Lines for Trump's 2016 CPAC Speech
+title: 6 block lines for Trump's 2016 CPAC speech
 summary: There was no evidence of long lines.
 checks:
   - checker: new-york-times

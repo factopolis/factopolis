@@ -1,5 +1,5 @@
 ---
-title: Trump Signed More Bills Than Any Other President
+title: Trump signed more bills than any other recent President
 summary: He's not even close.
 checks:
   - checker: new-york-times

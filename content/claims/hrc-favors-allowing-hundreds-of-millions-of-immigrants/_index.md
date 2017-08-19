@@ -1,5 +1,5 @@
 ---
-title: Hillary Clinton Wants To Allow Hundreds of Millions of Immigrants Into U.S.
+title: Hillary Clinton wants to allow hundreds of millions of immigrants into U.S.
 summary: Clinton never said anything of the sort.
 checks:
   - checker: politifact

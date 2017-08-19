@@ -1,5 +1,5 @@
 ---
-title: Sen. Blumenthal Misrepresented Niel Gorsuch
+title: Sen. Blumenthal misrepresented Niel Gorsuch
 summary: The Gorsuch comments were later corroborated.
 checks:
   - checker: new-york-times

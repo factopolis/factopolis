@@ -1,5 +1,5 @@
 ---
-title: Pew Report Showed 2016 Voter Fraud
+title: Pew report showed 2016 voter fraud
 summary: The report never mentioned voter fraud.
 themes:
 - us-voter-fraud

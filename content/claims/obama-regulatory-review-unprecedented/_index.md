@@ -1,5 +1,5 @@
 ---
-title: Obama's Regulatory Review is Unprecedented
+title: Obama's regulatory review is unprecedented
 summary: It isn't.
 checks:
   - checker: politifact

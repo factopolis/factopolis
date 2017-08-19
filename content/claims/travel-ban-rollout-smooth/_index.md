@@ -1,5 +1,5 @@
 ---
-title: Travel Ban Rollout Was Smooth
+title: Travel ban rollout was smooth
 summary: The rollout was chaotic.
 checks:
   - checker: new-york-times

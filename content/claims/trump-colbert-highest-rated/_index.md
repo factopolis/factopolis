@@ -1,5 +1,5 @@
 ---
-title: Trump's Appearance on “Late Show” Highest Rating Ever For Colbert
+title: Trump's appearance on “Late Show” highest rating ever for Colbert
 summary: Colbert's “Late Show” debut had nearly two million more viewers.
 checks:
   - checker: new-york-times

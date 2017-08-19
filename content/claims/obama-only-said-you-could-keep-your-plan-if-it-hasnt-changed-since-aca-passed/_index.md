@@ -1,5 +1,5 @@
 ---
-title: Obama Only Said You Can Keep Your Plan If It Hasn't Changed Since the ACA Passed
+title: Obama only said you can keep your plan if it hasn't changed since the ACA passed
 summary: He never qualified it like that.
 checks:
   - checker: politifact

@@ -1,7 +1,7 @@
 ---
 title:
-  Sweden Had Riots and Deaths the Day After Trump Falsely Implied
-  There Had Been a Terrorist Attack
+  Sweden had riots and deaths the day after Trump falsely implied
+  there had been a terrorist attack
 summary: Riots in Sweden broke out two days later and there were no deaths.
 checks:
   - checker: new-york-times

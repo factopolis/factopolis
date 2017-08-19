@@ -1,5 +1,5 @@
 ---
-title: Early 2017 Longest the US Went Without a Secretary of the Treasury
+title: Early 2017 longest the US went without a Secretary of the Treasury
 summary: Not even close.
 checks:
   - checker: politifact

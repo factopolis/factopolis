@@ -1,8 +1,8 @@
 ---
-title: Trump Fired Comey Only At Request of DOJ Officials
+title: Trump Fired Comey Only At request of DoJ officials
 summary:
   Trump later admitted he decided to fire Comey first, then sought
-  justification from DOJ.
+  justification from DoJ.
 checks:
   - checker: factcheck-org
     quote:

@@ -1,5 +1,5 @@
 ---
-title: Bill Clinton Told Loretta Lynch That The Clintons Have Killed
+title: Bill Clinton Told Loretta Lynch that the Clintons have killed
 summary: There is no evidence for this.
 checks:
   - checker: politifact

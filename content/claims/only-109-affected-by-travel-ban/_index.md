@@ -1,5 +1,5 @@
 ---
-title: Only 109 People Affected by Travel Ban
+title: Only 109 people affected by travel ban
 summary: At least 746 people were detained and processed…
 checks:
   - checker: new-york-times

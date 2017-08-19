@@ -1,5 +1,5 @@
 ---
-title: Trump Opposed Invading Iraq
+title: Trump opposed invading Iraq
 summary: He supported the invasion until after it began.
 checks:
   - checker: new-york-times

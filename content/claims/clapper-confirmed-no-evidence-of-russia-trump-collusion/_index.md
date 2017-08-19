@@ -1,5 +1,5 @@
 ---
-title: James Clapper Confirmed There is No Evidence of Russia/Trump Collusion
+title: James Clapper confirmed there is no evidence of Russia/Trump collusion
 summary: Clapper only said he wasn't aware of an investigation.
 checks:
   - checker: new-york-times

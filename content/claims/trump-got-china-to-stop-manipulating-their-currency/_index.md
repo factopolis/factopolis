@@ -1,5 +1,5 @@
 ---
-title: Trump Got China to Stop Manipulating Their Currency
+title: Trump got China to stop manipulating their currency
 summary: China stopped years ago.
 checks:
   - checker: business-insider

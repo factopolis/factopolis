@@ -1,5 +1,5 @@
 ---
-title: Half of Insurers Have Stopped Participating In Obamacare Exchanges
+title: Half of insurers have stopped participating in Obamacare exchanges
 summary: Many fewer pulled out.
 checks:
   - checker: new-york-times

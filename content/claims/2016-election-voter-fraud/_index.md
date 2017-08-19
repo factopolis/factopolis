@@ -1,5 +1,5 @@
 ---
-title: Voter Fraud in 2016 Election
+title: Voter fraud in 2016 election
 summary: There is no credible evidence of illegal voting.
 themes:
 - us-voter-fraud

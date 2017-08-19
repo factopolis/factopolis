@@ -1,5 +1,5 @@
 ---
-title: Democrats Not Approving Trump Cabinet
+title: Democrats not approving Trump cabinet
 summary: It’s hard to overstate what nonsense this is.
 checks:
   - checker: new-york-times

@@ -1,5 +1,5 @@
 ---
-title: Waters of the United States Rule Costing Hundreds of Thousands of Jobs
+title: Waters of the United States rule costing hundreds of thousands of jobs
 summary: There's no evidence that the Waters of the United States rule caused severe job losses.
 checks:
   - checker: new-york-times

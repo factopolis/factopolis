@@ -1,5 +1,5 @@
 ---
-title: Trump/Russia Collusion Story Made Up By Democrats As Excuse For Losing 2016 Election
+title: Trump/Russia collusion story made up by Democrats as excuse for losing 2016 election
 summary: The F.B.I. was investigating before the election.
 checks:
   - checker: new-york-times

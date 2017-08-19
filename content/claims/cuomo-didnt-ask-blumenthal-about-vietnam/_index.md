@@ -1,5 +1,5 @@
 ---
-title: Chris Cuomo Didn't Ask Sen. Blumenthal About Vietnam
+title: Chris Cuomo didn't ask Sen. Blumenthal about Vietnam
 summary: It was part of Cuomo's first question.
 checks:
   - checker: new-york-times

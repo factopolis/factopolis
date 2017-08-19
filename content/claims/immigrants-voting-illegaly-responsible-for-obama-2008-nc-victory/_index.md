@@ -1,5 +1,5 @@
 ---
-title: Immigrants Voting Illegally Responsible For Obama's 2008 Victory in North Carolina
+title: Immigrants voting illegally responsible for Obama's 2008 victory in North Carolina
 summary: There is no evidence, and people have been looking.
 themes:
 - us-voter-fraud

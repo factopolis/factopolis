@@ -1,5 +1,5 @@
 ---
-title: Obama Screamed At Protester During Clinton Rally
+title: Obama screamed at protester during Clinton rally
 summary: Obama calmly defended the man.
 checks:
   - checker: politifact

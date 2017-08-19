@@ -1,5 +1,5 @@
 ---
-title: Two People Were Killed During an Obama Speech
+title: Two people were killed during an Obama speech
 summary: There were no gun homicide victims in Chicago that day.
 checks:
   - checker: new-york-times

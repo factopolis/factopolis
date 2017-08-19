@@ -1,5 +1,5 @@
 ---
-title: U.S. Has Highest Tax Rate
+title: U.S. has highest tax rate
 summary: It doesn't.
 checks:
   - checker: new-york-times

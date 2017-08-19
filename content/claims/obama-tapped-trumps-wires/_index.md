@@ -1,5 +1,5 @@
 ---
-title: Obama Wiretapped Trump During 2016 Campaign
+title: Obama wiretapped Trump during 2016 campaign
 summary: There's no evidence of a wiretap.
 checks:
   - checker: new-york-times

@@ -1,5 +1,5 @@
 ---
-title: Obamacare Covers Very Few People
+title: Obamacare covers very few people
 summary: About 20 million have gained insurance under the act.
 checks:
   - checker: new-york-times

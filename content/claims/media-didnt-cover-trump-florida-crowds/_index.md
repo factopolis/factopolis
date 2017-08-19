@@ -1,5 +1,5 @@
 ---
-title: Media Didn't Cover Large Crowds for Trump in Florida
+title: Media didn't cover large crowds for Trump in Florida
 summary: The media did cover it.
 checks:
   - checker: new-york-times

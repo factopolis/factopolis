@@ -1,5 +1,5 @@
 ---
-title: I.C.E. Endorsed Trump
+title: I.C.E. endorsed Trump
 summary: Only its union did.
 checks:
   - checker: new-york-times

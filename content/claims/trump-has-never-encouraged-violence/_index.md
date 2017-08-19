@@ -1,5 +1,5 @@
 ---
-title: Donald Trump Has Never Encouraged Violence
+title: Donald Trump has never encouraged violence
 summary: He has, on numerous occasions.
 checks:
   - checker: politifact

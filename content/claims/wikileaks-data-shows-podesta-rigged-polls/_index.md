@@ -1,5 +1,5 @@
 ---
-title: Wikileaks Data Shows Podesta Rigged Polls
+title: Wikileaks data shows Podesta rigged polls
 summary: No, it doesn't.
 checks:
   - checker: politifact

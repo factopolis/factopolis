@@ -1,5 +1,5 @@
 ---
-title: Trump Never Told People To Check Out A Sex Tape
+title: Trump never told people to check out a sex tape of Alicia Machado
 summary: He did.
 checks:
   - checker: politifact

@@ -1,5 +1,5 @@
 ---
-title: Russia and China Never Voted With U.S. on Iran Sanctions Until Nuclear Deal
+title: Russia and China Never voted with U.S. on Iran sanctions until nuclear deal
 summary: They did at least 8 times.
 checks:
   - checker: politifact

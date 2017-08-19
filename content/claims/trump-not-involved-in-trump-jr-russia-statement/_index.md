@@ -1,5 +1,5 @@
 ---
-title: Donald Trump Was Not Involved in Donald Trump Jr.'s Statement on Russia
+title: Donald Trump was not involved in Donald Trump Jr.'s statement on Russia
 summary: The White House later admitted he was.
 checks:
   - checker: washington-post

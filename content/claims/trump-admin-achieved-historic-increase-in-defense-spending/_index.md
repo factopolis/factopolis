@@ -1,5 +1,5 @@
 ---
-title: Trump Administration Achieved A Historic Increase in Defense Spending
+title: Trump administration achieved a historic increase in defense spending
 summary:
   He has *proposed* a large, though not unprecedented, increase, which
   congress has not approved.
