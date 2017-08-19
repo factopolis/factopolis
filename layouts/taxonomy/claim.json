@@ -21,7 +21,6 @@
     {{ range $idx, $statement := $.Data.Pages }}
       {{ if $idx }},{{ end }}
       {
-        "person": {{ (index (split $statement.URL "/") 2) | jsonify }},
         "id": {{ (index (split $statement.URL "/") 3) | jsonify }},
         "date": {{ $statement.Date | dateFormat "2006-01-02" | jsonify }},
         "source": {{ $statement.Params.source | jsonify }},
@@ -43,8 +42,9 @@
                 "source": {{ $check.source | jsonify }}
               }
             {{ end }}
-          ]
+          ],
         {{ end }}
+        "person": {{ (index (split $statement.URL "/") 2) | jsonify }}
       }
     {{ end }}
   ],

@@ -3,8 +3,6 @@
     {{ range $idx, $person := where (where .Site.Pages "Type" "person") "Kind" "section" }}
       {{ if $idx }},{{ end }}
       {
-        {{ partial "page.json" $person }}
-
         {{ if $person.Params.offices }}
           "offices": [
             {{ range $idx, $office := $person.Params.offices }}
@@ -21,29 +19,31 @@
         "statements": [
           {{ range $idx, $stmt := where .Site.Pages "Type" "assertion" }}
             {{ if $idx }},{{ end }}
-            {{ if $stmt.Params.quote }}"quote": {{ $stmt.Params.quote | jsonify }},{{ end }}
-            {{ if $stmt.Params.short }}"short": {{ $stmt.Params.short | jsonify }},{{ end }}
-            {{ if $stmt.Params.checks }}
-              "checks": [
-                {{ range $idx, $check := $stmt.Params.checks }}
-                  {{ if $idx }},{{ end }}
-                  {
-                    {{ if $check.rating }}"rating": {{ $check.rating | jsonify }},{{ end }}
-                    "checker": {{ $check.checker | jsonify }},
-                    "source": {{ $check.source | jsonify }}
-                  }
-                {{ end }}
-              ],
-            {{ end }}
-            {{ if $stmt.Params.claims }}"claims": {{ $stmt.Params.claims | jsonify }},{{ end }}
-            "source": {{ $stmt.Params.source | jsonify }}
+            {
+              {{ if $stmt.Params.quote }}"quote": {{ $stmt.Params.quote | jsonify }},{{ end }}
+              {{ if $stmt.Params.short }}"short": {{ $stmt.Params.short | jsonify }},{{ end }}
+              {{ if $stmt.Params.checks }}
+                "checks": [
+                  {{ range $idx, $check := $stmt.Params.checks }}
+                    {{ if $idx }},{{ end }}
+                    {
+                      {{ if $check.rating }}"rating": {{ $check.rating | jsonify }},{{ end }}
+                      "checker": {{ $check.checker | jsonify }},
+                      "source": {{ $check.source | jsonify }}
+                    }
+                  {{ end }}
+                ],
+              {{ end }}
+              {{ if $stmt.Params.claims }}"claims": {{ $stmt.Params.claims | jsonify }},{{ end }}
+              "source": {{ $stmt.Params.source | jsonify }}
+            }
           {{ end }}
         ],
 
         {{ if $person.Params.affiliations }}"affiliations": {{ $person.Params.affiliations | jsonify }},{{ end }}
 
         "name": {{ $person.Title | jsonify }},
-        "id": {{ $person.BaseFileName | jsonify }}
+        {{ partial "page.json" $person }}
       }
     {{ end }}
   ],
