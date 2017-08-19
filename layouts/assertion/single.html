@@ -1,0 +1,15 @@
+{{ partial "head.html" . }}
+
+{{ if .Content }}
+  <section>
+    {{ .Content }}
+  </section>
+{{ end }}
+
+<ul class="quote-list">
+  <li>
+    {{ partial "quote.html" . }}
+  </li>
+</ul>
+
+{{ partial "footer.html" . }}
