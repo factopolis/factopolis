@@ -10,11 +10,13 @@ addons:
 
 install:
   - go version
-  - go get github.com/kardianos/govendor
-  - govendor get -v github.com/gohugoio/hugo
+  - go env
+  - go get -u -v github.com/kardianos/govendor
+  - go get -u -v github.com/gohugoio/hugo
+  - (cd $GOPATH/src/github.com/gohugoio/hugo && govendor sync && go install)
 
 script:
-  - "$GOPATH/bin/hugo --verbose"
+  - $GOPATH/bin/hugo --verbose
   - find web/ -name '*.json' | while read json; do json_reformat -m < "$json" > "$json.min" && mv "$json.min" "$json"; done
 
 notifications:
