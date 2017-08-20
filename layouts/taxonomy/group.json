@@ -1,0 +1,25 @@
+{
+  "members": [
+    {{ range $idx, $person := $.Data.Pages }}
+      {{ if $idx }},{{ end }}
+      {
+        "name": {{ $person.Title | jsonify }},
+        {{ if $person.Params.offices }}
+          "office":
+          {{ range $office := first 1 $person.Params.offices }}
+            {
+              "from": {{ $office.from | jsonify }},
+              {{ if $office.thru }}
+                "thru": {{ $office.thru | jsonify }},
+              {{ end }}
+              "title": {{ $office.title | jsonify }}
+            }
+          {{ end }},
+        {{ end }}
+        "statementCount": {{ $person.Data.Pages | len }},
+        "id": {{ index (split $person.URL "/") 2 | jsonify }}
+      }
+    {{ end }}
+  ],
+  {{ partial "page.json" . }}
+}

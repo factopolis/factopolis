@@ -20,4 +20,5 @@
 {{ if .Params.factcheckorg }}"factcheckorg": {{ .Params.factcheckorg | jsonify }},{{ end }}
 {{ if .Params.snopes }}"snopes": {{ .Params.snopes | jsonify }},{{ end }}
 {{ if .Params.washingtonpost }}"washingtonpost": {{ .Params.washingtonpost | jsonify }},{{ end }}
+{{ if .Title }}"name": {{ .Title | jsonify }},{{ end }}
 "id": {{ .URL | jsonify }}

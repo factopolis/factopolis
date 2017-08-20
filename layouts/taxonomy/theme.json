@@ -1,0 +1,18 @@
+{
+  "type": {{ .Type | jsonify }},
+  "kind": {{ .Kind | jsonify }},
+
+  "claims": [
+    {{ range $idx, $claim := $.Data.Pages }}
+      {{ if $idx }},{{ end }}
+      {
+        "statementCount": {{ $claim.Data.Pages | len }}
+        "name": {{ $claim.Title | jsonify }},
+        "summary": {{ $claim.Params.summary | jsonify }},
+        "id": {{ index (split $claim.URL "/") 2 | jsonify }}
+      }
+    {{ end }}
+  ]
+
+  {{ partial "page.json" . }}
+}
