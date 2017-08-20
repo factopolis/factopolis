@@ -50,5 +50,12 @@ checks:
       have notched achievements in six months sufficient to be
       characterized as "far stronger and more powerful than ever
       before."
-    url: http://www.politifact.com/truth-o-meter/statements/2017/aug/09/donald-trump/under-donald-trump-us-nuclear-arsenal-far-stronger/
+    url: http://www.politifact.com/truth-o-meter/statements/2017/aug/09/donald-trump/under-donald-trump-us-nuclear-arsenal-far-stronger/\
+  - checker: ap
+    quote:
+      Trump did order a new review of the U.S. nuclear posture, in an executive order in January. The order said the review should ensure America’s nuclear deterrent is robust, ready and tailored to address 21st century threats.
+
+
+      But the review isn’t complete. There have been no significant changes in America’s nuclear power as a result.
+    url: https://www.apnews.com/3cf3bb9d934e4e178085d2f2663abab7/AP-FACT-CHECK:-Trump's-unjustified-boast-about-US-nuke-power
 ---
