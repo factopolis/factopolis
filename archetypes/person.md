@@ -24,7 +24,7 @@ politifact: {{ .TranslationBaseName }}
 snopes: {{ .TranslationBaseName }}
 washingtonpost: {{ .TranslationBaseName }}
 
-affiliations:
+groups:
 - 
 
 offices:

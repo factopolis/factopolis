@@ -50,9 +50,9 @@
 
 <ul>
   {{ range $person := where (where .Site.Pages "Type" "person") "Kind" "page" }}
-    {{ if $person.Params.affiliations }}
-      {{ range $affiliation := $person.Params.affiliations }}
-        {{ if eq $affiliation $.File.BaseFileName }}
+    {{ if $person.Params.groups }}
+      {{ range $group := $person.Params.groups }}
+        {{ if eq $group $.File.BaseFileName }}
           <li>
             <a href="{{ $person.Permalink }}">{{ $person.Title }}</a>
             {{ if $person.Params.offices }}
