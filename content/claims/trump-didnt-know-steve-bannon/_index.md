@@ -10,9 +10,11 @@ checks:
       hit it off,” Mr. Bossie told Scott Shane of The New York Times
       in November.
 
+
       Mr. Bannon joked in August 2015 that he was Mr. Trump’s hidden
       “campaign manager,” and he hosted Mr. Trump on his radio show in
       November 2015.
+
 
       “I have known Steve and Kellyanne both for many years,”
       Mr. Trump said in an August 2016 statement announcing Mr. Bannon

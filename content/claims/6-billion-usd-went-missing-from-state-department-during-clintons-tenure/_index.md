@@ -3,7 +3,6 @@ title: $6 billion went missing, possibly stolen, from State Department
 summary: That figure refers to funds for contracts with insufficent paperwork.
 checks:
   - checker: politifact
-    short:
     quote:
       The $6 billion figure comes from a State Department inspector
       general report that found paperwork for various contracts had

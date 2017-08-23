@@ -13,6 +13,7 @@ checks:
       has now said he has no immediate plans to do, and to make more
       even the trade relationship between the two nations.
 
+
       In the interview that aired Tuesday, Trump left open the
       possibility that China might ultimately be unable, or unwilling,
       to apply sufficient pressure on North Korea.

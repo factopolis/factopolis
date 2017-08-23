@@ -15,6 +15,7 @@ checks:
       ultimately would have been Obama’s decision whether to suspend
       or block the deal.
 
+
       We wavered between Three and Four Pinocchios. Trump so often
       uses broad-brushed language that pushes him into Four Pinocchio
       territory, and this is yet another one of those cases. He

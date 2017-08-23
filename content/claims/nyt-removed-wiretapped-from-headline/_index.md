@@ -11,9 +11,11 @@ checks:
       investigation into possible links between Russian officials and
       associates of Mr. Trump.
 
+
       There were in fact two different headlines on the online and
       print versions of the article, which is typical. At no point was
       either headline altered.
+
 
       Times headlines often differ in print and online, in part
       because of variations in presentation and in part because of

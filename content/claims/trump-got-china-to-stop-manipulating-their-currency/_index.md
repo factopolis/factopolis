@@ -22,12 +22,14 @@ checks:
       gain market share in the United States, a designation that could
       eventually lead to retaliation.
 
+
       It would be hard, these days, to find an economist who feels
       China fits the bill. Under a trade law passed in 2015, a country
       must meet three criteria: It would have to have a “material”
       trade surplus with the rest of the world, have a “significant”
       surplus with the United States, and intervene persistently in
       foreign exchange markets to push its currency in one direction.
+
 
       While China’s surplus with the United States is pretty big —
       almost $350 billion — its global surplus is modest, at 2.4

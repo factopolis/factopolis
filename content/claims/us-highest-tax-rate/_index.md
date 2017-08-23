@@ -15,8 +15,10 @@ checks:
       metrics and actually places near the bottom or around the middle
       of the pack.
 
+
       Trump specified this time that he was talking about business
       taxes, but the essential data doesn’t back him there, either.
+
 
       Trump would have been more accurate if he had been more
       specific. The United States does have one of the highest top

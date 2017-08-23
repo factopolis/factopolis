@@ -18,6 +18,7 @@ checks:
       released from the detention facility under Bush, 113 returned to
       the battlefield, or about 21 percent.
 
+
       Under Obama, 161 detainees were transferred from Guantanamo Bay
       and only 9 have been confirmed to have reengaged and returned to
       the battlefield. That’s just under 6 percent of the total

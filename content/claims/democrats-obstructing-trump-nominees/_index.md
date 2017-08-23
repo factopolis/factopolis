@@ -20,6 +20,7 @@ checks:
       require Senate approval. Of those 24 nominees, 22 have been
       confirmed.
 
+
       Former President Barack Obama had 54 nominees confirmed by April
       7, 2009. Former President George W. Bush had 32 by April 7,
       2001, and Bill Clinton had 44 as of the same date in 1993.

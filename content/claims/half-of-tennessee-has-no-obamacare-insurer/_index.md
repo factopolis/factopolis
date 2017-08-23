@@ -14,6 +14,7 @@ checks:
       to the state’s 2017 rating area plans and rates. The other five
       rating areas have only one carrier.
 
+
       It is important that at least one company is selling insurance
       on the marketplace in each rating area, because the federal
       government provides tax credits and subsidies to help pay for

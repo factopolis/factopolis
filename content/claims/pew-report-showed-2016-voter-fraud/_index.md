@@ -17,6 +17,7 @@ checks:
       “approximately 2.75 million people have registrations in more
       than one state.”
 
+
       The report’s authors said it shows that voter rolls are
       “susceptible to fraud,” though they did not claim it was
       evidence of actual fraud. (Indeed, the Guardian reported that

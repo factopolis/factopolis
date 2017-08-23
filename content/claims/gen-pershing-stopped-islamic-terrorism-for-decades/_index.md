@@ -10,6 +10,7 @@ checks:
     that the specific tales of Pershing actually took place, and some
     expressed disbelief even more forcefully than that.
 
+
     But more critically, the historians took issue with Trump’s
     suggestion that the tactic -- if it was even used at all --
     actually worked to end tensions, noting that unrest persisted for

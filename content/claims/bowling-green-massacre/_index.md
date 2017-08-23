@@ -10,6 +10,7 @@ checks:
       Most importantly, there was no "massacre" in or around Bowling
       Green that was either carried out or attempted.
 
+
       In addition, while the two men were charged with serious crimes
       and were sentenced accordingly, it’s important to remember that
       everything that happened was part of a sting operation by the
