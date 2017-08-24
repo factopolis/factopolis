@@ -4,7 +4,7 @@ summary: There is no support for this.
 checks:
   - checker: new-york-times
     short: There is no support for this.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: npr
     quote:
       It's not clear where Trump got this number. It's true that
@@ -28,5 +28,5 @@ checks:
 
       NPR has reached out to the White House for a source on this
       figure but did not receive a response.
-    url: http://www.npr.org/2017/02/04/513348780/fact-checking-this-week-in-the-trump-administration
+    source: http://www.npr.org/2017/02/04/513348780/fact-checking-this-week-in-the-trump-administration
 ---

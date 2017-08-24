@@ -9,7 +9,7 @@ checks:
       The top state election official in Virginia says the charge is
       "unfounded." The former chairman of Trump’s Virginia campaign
       says he’s unaware of any "massive voter fraud on Election Day."
-    url: http://www.politifact.com/virginia/statements/2016/nov/29/donald-trump/trumps-pants-fire-serious-voter-fraud-claim-virgin/
+    source: http://www.politifact.com/virginia/statements/2016/nov/29/donald-trump/trumps-pants-fire-serious-voter-fraud-claim-virgin/
   - checker: politifact
     quote:
       Elections officials and nonpartisan observers in California said
@@ -17,7 +17,7 @@ checks:
       some of the most stringent voter verification laws in the
       country. Allegations of fraud are so rare that Los Angeles
       County, the state’s largest county, does not track them.
-    url: http://www.politifact.com/california/statements/2016/nov/28/donald-trump/pants-fire-trumps-claim-about-california-voter-fra/
+    source: http://www.politifact.com/california/statements/2016/nov/28/donald-trump/pants-fire-trumps-claim-about-california-voter-fra/
   - checker: politifact
     quote:
       Those in charge of overseeing New Hampshire’s elections and
@@ -26,5 +26,5 @@ checks:
       most recent election was no exception, with no complaints of
       voter fraud filed in an election in which more than 728,000
       ballots were cast.
-    url: http://www.politifact.com/new-hampshire/statements/2016/nov/28/donald-trump/trump-claims-serious-voter-fraud-new-hampshire/
+    source: http://www.politifact.com/new-hampshire/statements/2016/nov/28/donald-trump/trump-claims-serious-voter-fraud-new-hampshire/
 ---

@@ -18,5 +18,5 @@ checks:
       members. That includes all gang members, not just MS-13
       members. For perspective, the FBI says there are about 33,000
       street gangs with about 1.4 million members."
-    url: http://www.factcheck.org/2017/06/ms-13-gang-nonsense/
+    source: http://www.factcheck.org/2017/06/ms-13-gang-nonsense/
 ---

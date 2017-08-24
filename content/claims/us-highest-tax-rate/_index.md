@@ -4,7 +4,7 @@ summary: It doesn't.
 checks:
   - checker: new-york-times
     short: We're not.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: politifact
     short:
       By all metrics we looked at, the United States is far from the
@@ -26,5 +26,5 @@ checks:
       pay less in practice because they can take deductions and
       exclusions. When we look at the actual tax burden on
       U.S. companies, it’s far from highest in the world.
-    url: http://www.politifact.com/truth-o-meter/statements/2016/may/08/donald-trump/donald-trump-us-not-highest-taxed-nation-in-world/
+    source: http://www.politifact.com/truth-o-meter/statements/2016/may/08/donald-trump/donald-trump-us-not-highest-taxed-nation-in-world/
 ---

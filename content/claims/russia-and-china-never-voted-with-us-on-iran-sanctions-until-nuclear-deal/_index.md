@@ -8,5 +8,5 @@ checks:
       interests, but they have, in fact, joined the United States in
       endorsing sanctions against Iran at least eight times before the
       2015 nuclear deal.
-    url: http://www.politifact.com/truth-o-meter/statements/2016/jan/13/nancy-pelosi/nancy-pelosi-until-iran-deal-russian-and-china-had/
+    source: http://www.politifact.com/truth-o-meter/statements/2016/jan/13/nancy-pelosi/nancy-pelosi-until-iran-deal-russian-and-china-had/
 ---

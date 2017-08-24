@@ -5,5 +5,5 @@ checks:
   - checker: new-york-times
     short:
       Trump signed this version of the travel ban, not the Justice Department.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
 ---

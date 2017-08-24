@@ -14,7 +14,7 @@ checks:
       was not saying there is "no reason to be alarmed," period, by
       the attack -- he was pre-empting concerns about what law
       enforcement presence might mean in the days to come.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/jun/04/donald-trump/donald-trumps-tweet-misleads-about-london-mayors-r/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/jun/04/donald-trump/donald-trumps-tweet-misleads-about-london-mayors-r/
   - checker: snopes
     quote:
       Mayor Sadiq Khan was attempting to reassure the people of London
@@ -22,10 +22,10 @@ checks:
       of the previous day’s attack was a public safety precaution; he
       was not indicating that another attack was imminent or that
       citizens should “not be alarmed” by what had occurred.
-    url: http://www.snopes.com/2017/06/04/london-mayor-sadiq-khan-no-reason-to-be-alarmed-trump/
+    source: http://www.snopes.com/2017/06/04/london-mayor-sadiq-khan-no-reason-to-be-alarmed-trump/
   - checker: new-york-times
     short:
       The mayor was specifically talking about the enlarged police
       presence on the streets.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
 ---

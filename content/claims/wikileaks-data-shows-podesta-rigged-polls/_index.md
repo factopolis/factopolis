@@ -9,5 +9,5 @@ checks:
       The term refers to a common technique used by pollsters to
       analyze demographics groups more precisely than possible in a
       random sample.
-    url: http://www.politifact.com/truth-o-meter/statements/2016/oct/25/donald-trump/trump-absurd-claims-podesta-rigged-polls/
+    source: http://www.politifact.com/truth-o-meter/statements/2016/oct/25/donald-trump/trump-absurd-claims-podesta-rigged-polls/
 ---

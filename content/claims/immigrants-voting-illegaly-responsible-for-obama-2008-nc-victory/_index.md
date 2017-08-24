@@ -13,5 +13,5 @@ checks:
       concern. Political scientists also disagree with Trump. And even
       if the study Trump was citing is valid – although many say it's
       not – it still doesn’t back up Trump's claim.
-    url: http://www.politifact.com/north-carolina/statements/2016/oct/19/donald-trump/trump-wrongfully-says-immigrants-voting-illegally-/
+    source: http://www.politifact.com/north-carolina/statements/2016/oct/19/donald-trump/trump-wrongfully-says-immigrants-voting-illegally-/
 ---

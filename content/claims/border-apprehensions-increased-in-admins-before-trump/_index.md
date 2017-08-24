@@ -13,7 +13,7 @@ checks:
       border apprehensions on his watch… But the president is wrong to
       say apprehensions have not gone down during other
       administrations.
-    url: http://www.factcheck.org/2017/07/trumps-border-boast/
+    source: http://www.factcheck.org/2017/07/trumps-border-boast/
   - checker: washington-post
     quote:
       Then this talking point spins out of control when Trump falsely
@@ -22,11 +22,11 @@ checks:
       down to early-1970s levels, and apprehensions have steadily
       declined since their peak in 2000, with temporary upticks here
       and there. Trump earns Four Pinocchios.
-    url: https://www.washingtonpost.com/news/fact-checker/wp/2017/08/01/president-trumps-claim-that-illegal-immigration-went-up-under-past-administrations/
+    source: https://www.washingtonpost.com/news/fact-checker/wp/2017/08/01/president-trumps-claim-that-illegal-immigration-went-up-under-past-administrations/
   - checker: politifact
     quote:
       Though there have been fluctuations over the years in the number
       of apprehensions, they certainly have gone down under past
       administrations.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/aug/03/donald-trump/false-trumps-claim-about-illegal-immigration-under/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/aug/03/donald-trump/false-trumps-claim-about-illegal-immigration-under/
 ---

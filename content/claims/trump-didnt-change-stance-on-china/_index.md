@@ -4,7 +4,7 @@ summary: He did.
 checks:
   - checker: new-york-times
     short: He did.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: politico
     quote:
       As a candidate, Trump pitched himself as the antidote to what he
@@ -17,5 +17,5 @@ checks:
       In the interview that aired Tuesday, Trump left open the
       possibility that China might ultimately be unable, or unwilling,
       to apply sufficient pressure on North Korea.
-    url: http://www.politico.com/story/2017/04/trump-china-stance-north-korea-237321
+    source: http://www.politico.com/story/2017/04/trump-china-stance-north-korea-237321
 ---

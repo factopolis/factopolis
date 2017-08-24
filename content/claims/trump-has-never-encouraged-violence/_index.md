@@ -14,5 +14,5 @@ checks:
       examples in which Trump offered public musings that showed a
       tolerance for, and sometimes even a favorable disposition
       toward, physical violence.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/jul/05/sarah-huckabee-sanders/has-donald-trump-never-promoted-or-encouraged-viol/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/jul/05/sarah-huckabee-sanders/has-donald-trump-never-promoted-or-encouraged-viol/
 ---

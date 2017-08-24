@@ -13,5 +13,5 @@ checks:
       years, according to the nonpartisan Congressional Budget Office.
       Moreover, 15 million fewer people would be enrolled in the
       program over 10 years than would be under current law.
-    url: https://www.washingtonpost.com/news/fact-checker/wp/2017/06/30/president-trumps-claim-medicaid-spending-in-senate-health-bill-actually-goes-up/
+    source: https://www.washingtonpost.com/news/fact-checker/wp/2017/06/30/president-trumps-claim-medicaid-spending-in-senate-health-bill-actually-goes-up/
 ---

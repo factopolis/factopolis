@@ -16,12 +16,12 @@ checks:
       Congress with little debate. Among recent presidents, both the
       total number of bills he signed and the legislation’s substance
       make Mr. Trump about average.
-    url: https://www.nytimes.com/2017/07/17/us/politics/trump-laws-bills.html
+    source: https://www.nytimes.com/2017/07/17/us/politics/trump-laws-bills.html
   - checker: washington-post
     quote:
       Trump has signed 42 bills so far in his first term. According to
       [data compiled by GovTrack](https://www.govtrack.us/congress/bills/statistics),
       as of July 17, Jimmy Carter had signed 70 bills, George H.W. Bush
       had signed 55, and Bill Clinton had signed 50.
-    url: https://www.washingtonpost.com/news/fact-checker/wp/2017/07/17/no-president-trump-youve-havent-signed-more-bills-than-any-president/
+    source: https://www.washingtonpost.com/news/fact-checker/wp/2017/07/17/no-president-trump-youve-havent-signed-more-bills-than-any-president/
 ---

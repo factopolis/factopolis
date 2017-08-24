@@ -27,5 +27,5 @@ checks:
       In Alaska, one of the most expensive states, a 21-year-old would
       pay $104, but only because subsidies would cover most of the
       actual cost of $707 per month.
-    url: http://www.cnbc.com/2017/07/20/trump-thinks-young-people-pay-12-for-health-insurance.html
+    source: http://www.cnbc.com/2017/07/20/trump-thinks-young-people-pay-12-for-health-insurance.html
 ---

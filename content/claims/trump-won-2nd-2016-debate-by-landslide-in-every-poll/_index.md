@@ -6,5 +6,5 @@ checks:
     quote:
       So, not only did Trump not win by a landslide in any of the
       polls, he didn’t win any of the polls, period.
-    url: http://www.politifact.com/wisconsin/statements/2016/oct/12/donald-trump/donald-trumps-ridiculous-claim-all-polls-show-he-w/
+    source: http://www.politifact.com/wisconsin/statements/2016/oct/12/donald-trump/donald-trumps-ridiculous-claim-all-polls-show-he-w/
 ---

@@ -6,7 +6,7 @@ themes:
 checks:
   - checker: new-york-times
     short: The report never mentioned voter fraud.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: factcheck-org
     short: … they did not claim it was evidence of actual fraud
     quote:
@@ -24,5 +24,5 @@ checks:
       senior White House adviser Stephen Bannon was registered in two
       states.) Rather, Pew said that it is evidence of the need to
       upgrade voter registration systems."
-    url: http://www.factcheck.org/2017/01/trumps-bogus-voter-fraud-claims-revisited/
+    source: http://www.factcheck.org/2017/01/trumps-bogus-voter-fraud-claims-revisited/
 ---

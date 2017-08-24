@@ -15,7 +15,7 @@ checks:
 
       Neither have any direct effect on the nuclear arsenal that the
       nation has today.
-    url: http://www.nbcnews.com/politics/donald-trump/fact-check-no-trump-did-not-modernize-u-s-nukes-n791286
+    source: http://www.nbcnews.com/politics/donald-trump/fact-check-no-trump-did-not-modernize-u-s-nukes-n791286
   - checker: washington-post
     short: In a word, no.
     quote:
@@ -23,13 +23,13 @@ checks:
       procedure for a new administration. But he’s kidding himself — or
       misleading Americans — that much has changed in the nuclear
       arsenal since he took office in January.
-    url: https://www.washingtonpost.com/news/fact-checker/wp/2017/08/09/trumps-claim-that-u-s-nuclear-arsenal-is-now-far-stronger-and-more-powerful/
+    source: https://www.washingtonpost.com/news/fact-checker/wp/2017/08/09/trumps-claim-that-u-s-nuclear-arsenal-is-now-far-stronger-and-more-powerful/
   - checker: cbs
     quote:
       Mr. Trump did order a review of U.S. nuclear posture and strategy
       early in his presidency, but that's different from modernization
       and bringing old systems up to usable standards.
-    url: http://www.cbsnews.com/news/trump-takes-credit-for-nuclear-arsenal-that-was-largely-modernized-by-obama-administration/
+    source: http://www.cbsnews.com/news/trump-takes-credit-for-nuclear-arsenal-that-was-largely-modernized-by-obama-administration/
   - checker: factcheck-org
     quote:
       It’s true that Trump
@@ -39,7 +39,7 @@ checks:
       and it won’t be done until
       [the end of the year](https://www.defense.gov/News/News-Releases/News-Release-View/Article/1153992/dod-announces-commencement-of-the-nuclear-posture-review/),
       so it has yet to result in any improvements.
-    url: http://www.factcheck.org/2017/08/trump-misfires-nuclear-weapons-boast/
+    source: http://www.factcheck.org/2017/08/trump-misfires-nuclear-weapons-boast/
   - checker: politifact
     quote:
       What Trump did shortly after taking office was neither his first
@@ -50,12 +50,12 @@ checks:
       have notched achievements in six months sufficient to be
       characterized as "far stronger and more powerful than ever
       before."
-    url: http://www.politifact.com/truth-o-meter/statements/2017/aug/09/donald-trump/under-donald-trump-us-nuclear-arsenal-far-stronger/\
+    source: http://www.politifact.com/truth-o-meter/statements/2017/aug/09/donald-trump/under-donald-trump-us-nuclear-arsenal-far-stronger/\
   - checker: ap
     quote:
       Trump did order a new review of the U.S. nuclear posture, in an executive order in January. The order said the review should ensure America’s nuclear deterrent is robust, ready and tailored to address 21st century threats.
 
 
       But the review isn’t complete. There have been no significant changes in America’s nuclear power as a result.
-    url: https://www.apnews.com/3cf3bb9d934e4e178085d2f2663abab7/AP-FACT-CHECK:-Trump's-unjustified-boast-about-US-nuke-power
+    source: https://www.apnews.com/3cf3bb9d934e4e178085d2f2663abab7/AP-FACT-CHECK:-Trump's-unjustified-boast-about-US-nuke-power
 ---

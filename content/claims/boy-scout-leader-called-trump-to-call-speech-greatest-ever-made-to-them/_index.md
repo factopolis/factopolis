@@ -17,5 +17,5 @@ checks:
       conversations were held between Trump and scout leaders to
       communicate their high praise for his speech, but we didn’t hear
       back.
-    url: http://www.politifact.com/truth-o-meter/article/2017/aug/02/president-and-boy-scouts-was-there-really-phone-ca/
+    source: http://www.politifact.com/truth-o-meter/article/2017/aug/02/president-and-boy-scouts-was-there-really-phone-ca/
 ---

@@ -64,7 +64,7 @@
           <footer>
             <cite>
               <div>
-                {{ if $check.url }}<a href="{{ $check.url }}">{{ end }}
+                {{ if $check.source }}<a href="{{ $check.url }}">{{ end }}
                 {{ if $check.checker }}
                   {{ range where $.Site.Pages "URL" (printf "/checker/%s/" $check.checker) }}
                     {{ .Title }}
@@ -77,7 +77,7 @@
                   on {{ $check.date }}
                 {{ end }}
 
-                {{ if $check.url }}</a>{{ end }}
+                {{ if $check.source }}</a>{{ end }}
               </div>
             </cite>
           </footer>

@@ -9,5 +9,5 @@ checks:
       the Hillary Clinton investigation — not Russia — as the reason
       behind the firing. But in the interview with Holt, Trump
       mentioned Russia as a rationale.
-    url: http://www.nbcnews.com/politics/first-read/white-house-s-explanation-firing-comey-crumbles-n758306
+    source: http://www.nbcnews.com/politics/first-read/white-house-s-explanation-firing-comey-crumbles-n758306
 ---

@@ -4,14 +4,14 @@ summary: It’s hard to overstate what nonsense this is.
 checks:
   - checker: new-york-times
     short: Paperwork for the last two candidates was still not submitted to the Senate.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: fox
     short:
       Part of the blame may lie with the administration, which still
       hasn’t formally sent the paperwork to the Senate for the
       nomination of former Georgia Gov. Sonny Perdue to lead the
       Agriculture Department.
-    url: http://www.foxnews.com/politics/2017/03/03/trump-pathetic-that-dems-have-not-approved-full-cabinet.html
+    source: http://www.foxnews.com/politics/2017/03/03/trump-pathetic-that-dems-have-not-approved-full-cabinet.html
   - checker: washington-post
     short: It’s hard to overstate what nonsense this is.
     quote:
@@ -29,5 +29,5 @@ checks:
       had on Mar. 3, 2009. In fact, only three of the last six
       presidents have had their entire Cabinets in place at this
       point.
-    url:  https://www.washingtonpost.com/news/politics/wp/2017/03/03/trump-is-blaming-the-democrats-for-cabinet-delays-that-are-normal-and-his-own-fault/
+    source:  https://www.washingtonpost.com/news/politics/wp/2017/03/03/trump-is-blaming-the-democrats-for-cabinet-delays-that-are-normal-and-his-own-fault/
 ---

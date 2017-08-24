@@ -15,5 +15,5 @@ checks:
       percent of McCain’s ads have been negative, to date. That's far
       short of 100 percent. (It also found 61 percent of Obama’s ads
       have been negative.)
-    url: http://www.politifact.com/truth-o-meter/statements/2008/dec/03/barack-obama/no-mccains-ads-havent-all-been-negative/
+    source: http://www.politifact.com/truth-o-meter/statements/2008/dec/03/barack-obama/no-mccains-ads-havent-all-been-negative/
 ---

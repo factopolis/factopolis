@@ -7,5 +7,5 @@ checks:
     short:
       CNN is at a five-year high in each of the categories we looked
       at, according to data provided by the Nielsen Company.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/jul/03/donald-trump/trumps-pants-fire-claim-cnn-ratings-are-way-down/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/jul/03/donald-trump/trumps-pants-fire-claim-cnn-ratings-are-way-down/
 ---

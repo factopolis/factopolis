@@ -11,5 +11,5 @@ checks:
       2013. Analysis from the Commonwealth Fund concluded that the
       Affordable Care Act was responsible for a majority of the
       decline.
-    url: https://www.nytimes.com/2017/03/13/us/politics/fact-check-trump-obamacare-health-care.html
+    source: https://www.nytimes.com/2017/03/13/us/politics/fact-check-trump-obamacare-health-care.html
 ---

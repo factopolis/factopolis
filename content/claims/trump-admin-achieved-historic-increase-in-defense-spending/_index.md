@@ -14,5 +14,5 @@ checks:
       It’s also not the done deal Trump described. In order to
       actually increase defense spending, Congress will have to
       appropriate the funding and raise the budget cap.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/jul/27/donald-trump/its-false-trump-achieved-historic-increase-defense/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/jul/27/donald-trump/its-false-trump-achieved-historic-increase-defense/
 ---

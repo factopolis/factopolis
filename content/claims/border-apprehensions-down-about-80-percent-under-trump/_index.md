@@ -8,5 +8,5 @@ checks:
 
 
     The [latest figures](https://www.cbp.gov/newsroom/stats/sw-border-migration) from U.S. Customs and Border Protection show that in July there were 18,198 apprehensions at the southwest border, a [46 percent decline](https://www.cbp.gov/newsroom/stats/southwest-border-unaccompanied-children/fy-2016) from July 2016. While apprehension numbers are low under Trump, they began increasing in May.
-  url: http://www.politifact.com/truth-o-meter/article/2017/aug/22/fact-checking-president-donald-trumps-campaign-ral/
+  source: http://www.politifact.com/truth-o-meter/article/2017/aug/22/fact-checking-president-donald-trumps-campaign-ral/
 ---

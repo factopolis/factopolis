@@ -20,5 +20,5 @@ checks:
       are more than 10 times the size of remittances. And remittances
       also trail foreign direct investment as a source of income in
       Mexico. We rate the statement False.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/jan/30/kellyanne-conway/kellyanne-conway-incorrect-worker-remittances-mexi/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/jan/30/kellyanne-conway/kellyanne-conway-incorrect-worker-remittances-mexi/
 ---

@@ -7,5 +7,5 @@ checks:
       Obama defended the protester's right to speak out, and didn’t
       scream at him. In fact, Obama’s remarks were directed at
       Clinton supporters, not the protester.
-    url: http://www.politifact.com/truth-o-meter/statements/2016/nov/06/donald-trump/donald-trumps-pants-fire-claim-obama-screamed-prot/
+    source: http://www.politifact.com/truth-o-meter/statements/2016/nov/06/donald-trump/donald-trumps-pants-fire-claim-obama-screamed-prot/
 ---

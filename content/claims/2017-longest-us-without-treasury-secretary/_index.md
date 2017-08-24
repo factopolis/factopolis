@@ -8,7 +8,7 @@ checks:
       Senate-confirmed secretary of Treasury for 34 days in
       2013. Mnuchin’s confirmation could drag out longer, but Conway
       made this claim on Feb. 2, 14 days after inauguration.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/feb/02/kellyanne-conway/longest-united-states-has-gone-without-secretary-t/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/feb/02/kellyanne-conway/longest-united-states-has-gone-without-secretary-t/
 ---
 
 When Kellyanne Conway made this claim (February 2) it had been 14

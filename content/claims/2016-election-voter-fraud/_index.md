@@ -6,7 +6,7 @@ themes:
 checks:
   - checker: new-york-times
     short: There's no evidence of illegal voting.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: factcheck-org
     short:
       … numerous studies that have found such in-person voter fraud —
@@ -19,5 +19,5 @@ checks:
       “no apparent cases of in-person voter impersonation [were]
       charged by DOJ’s Criminal Division or by U.S. Attorney’s offices
       anywhere in the United States from 2004 through July 3, 2014.”
-    url: http://www.factcheck.org/2017/01/trumps-bogus-voter-fraud-claims-revisited/
+    source: http://www.factcheck.org/2017/01/trumps-bogus-voter-fraud-claims-revisited/
 ---

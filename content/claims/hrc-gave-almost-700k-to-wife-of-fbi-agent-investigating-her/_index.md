@@ -23,7 +23,7 @@ checks:
       that Clinton knew about the payments. It’s almost like he can’t
       help himself. That tips his statement about the Wall Street
       Journal article into Four-Pinocchio territory.
-    url: https://www.washingtonpost.com/news/fact-checker/wp/2016/10/25/trumps-mixed-up-version-of-the-latest-hillary-clinton-controversy/
+    source: https://www.washingtonpost.com/news/fact-checker/wp/2016/10/25/trumps-mixed-up-version-of-the-latest-hillary-clinton-controversy/
   - checker: factcheck-org
     quote:
       But the [*Journal*
@@ -34,7 +34,7 @@ checks:
       And Trump’s phrasing suggests that the donations to McCabe’s
       campaign were made while her husband was investigating Clinton’s
       emails. Not so.
-    url: http://www.factcheck.org/2016/10/clintons-connection-to-fbi-official/
+    source: http://www.factcheck.org/2016/10/clintons-connection-to-fbi-official/
   - checker: cnn
     quote:
       But for Trump's suggestion of a conspiracy to be true, McAuliffe
@@ -53,7 +53,7 @@ checks:
       investigation. And that involvement began after his wife's
       campaign had ended -- not during her candidacy, as Trump
       suggests.
-    url: http://www.cnn.com/2016/10/25/politics/reality-check-hillary-clinton-fbi-investigation/index.html
+    source: http://www.cnn.com/2016/10/25/politics/reality-check-hillary-clinton-fbi-investigation/index.html
   - checker: politifact
     short:
       This tweet distorts key elements of the story, severely
@@ -66,11 +66,11 @@ checks:
       campaign, and it ignores that that McAuliffe made the donations
       on his own, for state-level political goals -- not to influence
       an investigation that Andrew McCabe wasn’t even involved in yet.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/jul/25/donald-trump/tweet-donald-trump-revives-charge-improper-ties-be/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/jul/25/donald-trump/tweet-donald-trump-revives-charge-improper-ties-be/
   - checker: factcheck-org
     quote:
       But the contributions didn’t come from Clinton or her campaign,
       and Andrew McCabe wasn’t “in charge” of the FBI’s investigation
       of Clinton’s emails at the time of the donations, either.
-    url: http://www.factcheck.org/2017/07/trump-wrong-campaign-donations/
+    source: http://www.factcheck.org/2017/07/trump-wrong-campaign-donations/
 ---

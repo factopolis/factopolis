@@ -9,5 +9,5 @@ checks:
       Trump, however, told NBC’s Lester Holt in a May 11 interview
       that he did not base his decision on Rosenstein’s
       recommendation.
-    url: http://www.factcheck.org/2017/05/trump-fire-comey/
+    source: http://www.factcheck.org/2017/05/trump-fire-comey/
 ---

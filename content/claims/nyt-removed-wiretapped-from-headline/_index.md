@@ -22,5 +22,5 @@ checks:
       space. This disparity is always noted at the end of the web
       version and has been noted since the story was first published
       in print on Jan. 20.
-    url: https://www.nytimes.com/2017/03/23/us/politics/fact-check-trump-misleads-surveillance-wiretapping.html
+    source: https://www.nytimes.com/2017/03/23/us/politics/fact-check-trump-misleads-surveillance-wiretapping.html
 ---

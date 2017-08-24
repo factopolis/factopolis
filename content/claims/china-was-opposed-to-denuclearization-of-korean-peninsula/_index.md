@@ -6,5 +6,5 @@ checks:
   short:
     In fact, China has supported “the verifiable denuclearization of
     the Korean Peninsula” since at least 2005.
-  url: http://www.factcheck.org/2017/08/pompeo-distorts-chinas-nuclear-policy/
+  source: http://www.factcheck.org/2017/08/pompeo-distorts-chinas-nuclear-policy/
 ---

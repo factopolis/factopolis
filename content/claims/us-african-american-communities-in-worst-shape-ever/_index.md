@@ -11,5 +11,5 @@ checks:
       whites, have made significant strides in life expectancy,
       educational attainment and other measures, and currently have
       unemployment and poverty rates that are near historical lows.
-    url: http://www.politifact.com/truth-o-meter/statements/2016/sep/22/donald-trump/trumps-pants-fire-claim-blacks-are-absolutely-wors/
+    source: http://www.politifact.com/truth-o-meter/statements/2016/sep/22/donald-trump/trumps-pants-fire-claim-blacks-are-absolutely-wors/
 ---

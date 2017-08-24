@@ -4,5 +4,5 @@ summary: The Delta outage happened two days later.
 checks:
   - checker: new-york-times
     short: …the Delta outage happened two days later.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
 ---

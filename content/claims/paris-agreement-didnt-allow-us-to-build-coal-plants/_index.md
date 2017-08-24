@@ -15,7 +15,7 @@ checks:
       up, and the text of the agreement fails to support it. The Paris
       agreement never mentions the word coal, and in Trump’s own
       words, it is nonbinding.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/jun/05/donald-trump/donald-trump-wrong-paris-accord-china-and-coal-pla/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/jun/05/donald-trump/donald-trump-wrong-paris-accord-china-and-coal-pla/
   - checker: washington-post
     quote:
       This is false. The agreement is nonbinding and each nation sets
@@ -26,8 +26,8 @@ checks:
       forced the closure of coal plants. China announced this year
       that it would cancel plans to build more than 100 coal-fired
       plants.
-    url: https://www.washingtonpost.com/news/fact-checker/wp/2017/06/01/fact-checking-president-trumps-claims-on-the-paris-climate-change-deal/
+    source: https://www.washingtonpost.com/news/fact-checker/wp/2017/06/01/fact-checking-president-trumps-claims-on-the-paris-climate-change-deal/
   - checker: new-york-times
     short: The agreement doesn’t allow or disallow building coal plants.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
 ---

@@ -9,7 +9,7 @@ checks:
     short:
       He's referencing an arms deal that's not enacted and other
       apparent deals that weren't announced on the trip.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: politifact
     quote:
       We can’t know for sure how many jobs will be created or saved --
@@ -17,7 +17,7 @@ checks:
       the evidence at this point is so thin and so premature as to be
       little more than puffery or wishful thinking. We rate the
       statement False.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/may/26/donald-trump/did-donald-trumps-trip-create-or-save-millions-job/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/may/26/donald-trump/did-donald-trumps-trip-create-or-save-millions-job/
   - checker: washington-post
     short:
       Trump is counting his chickens before they hatch. Even if he
@@ -43,5 +43,5 @@ checks:
       Saturday were memorandums of understanding rather than solid
       contracts, and thus still require further negotiation,” he
       added.
-    url: https://www.washingtonpost.com/news/fact-checker/wp/2017/05/26/president-trumps-claim-that-hes-already-saved-millions-of-jobs-on-his-foreign-trip/
+    source: https://www.washingtonpost.com/news/fact-checker/wp/2017/05/26/president-trumps-claim-that-hes-already-saved-millions-of-jobs-on-his-foreign-trip/
 ---

@@ -10,5 +10,5 @@ checks:
       couple of weeks in most cases. Long-term data show long
       stretches since the mid 1970s when the inflation-adjusted price
       of gasoline and crude oil have fallen.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/jul/25/charles-schumer/yes-chuck-schumer-oil-prices-do-fall/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/jul/25/charles-schumer/yes-chuck-schumer-oil-prices-do-fall/
 ---

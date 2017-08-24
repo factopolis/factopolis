@@ -8,5 +8,5 @@ checks:
       does not a large Muslim country make. Indeed, by even the most
       generous estimate we found of 8 million, the United States still
       ranks 29 out of 60.
-    url: http://www.politifact.com/truth-o-meter/statements/2009/jun/04/barack-obama/obama-claims-america-one-largest-muslim-countries/
+    source: http://www.politifact.com/truth-o-meter/statements/2009/jun/04/barack-obama/obama-claims-america-one-largest-muslim-countries/
 ---

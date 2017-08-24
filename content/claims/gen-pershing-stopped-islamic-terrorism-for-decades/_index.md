@@ -15,8 +15,8 @@ checks:
     suggestion that the tactic -- if it was even used at all --
     actually worked to end tensions, noting that unrest persisted for
     years.
-  url: http://www.politifact.com/truth-o-meter/statements/2017/aug/17/donald-trump/donald-trump-retells-pants-fire-claim-about-gen-pe/
+  source: http://www.politifact.com/truth-o-meter/statements/2017/aug/17/donald-trump/donald-trump-retells-pants-fire-claim-about-gen-pe/
 - checker: new-york-times
   quote: This is a repeated myth that has no basis in truth.
-  url: https://www.nytimes.com/2017/08/17/us/politics/trump-tweet-pershing-fact-check.html
+  source: https://www.nytimes.com/2017/08/17/us/politics/trump-tweet-pershing-fact-check.html
 ---

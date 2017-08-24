@@ -9,5 +9,5 @@ checks:
 
 
     Republicans were one vote away from continuing the process; they weren’t “one vote away from repealing” the law, as Trump claimed."
-  url: http://www.factcheck.org/2017/08/trumps-phoenix-fiction/
+  source: http://www.factcheck.org/2017/08/trumps-phoenix-fiction/
 ---

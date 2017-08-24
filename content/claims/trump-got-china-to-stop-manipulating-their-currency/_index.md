@@ -8,7 +8,7 @@ checks:
       up its exports, it hasn't done so in years. In fact, over the
       last few years, China has been propping up the yuan, not
       depressing it.
-    url: http://www.businessinsider.com/trump-china-currency-manipulation-north-korea-2017-4
+    source: http://www.businessinsider.com/trump-china-currency-manipulation-north-korea-2017-4
   - checker: new-york-times
     short:
       While labeling China a currency manipulator now would look
@@ -38,5 +38,5 @@ checks:
       down. Since the middle of 2014 it has sold over $1 trillion from
       its reserves to prop up the renminbi, under pressure from
       capital flight by Chinese companies and savers."
-    url: https://www.nytimes.com/2017/04/11/business/economy/trump-china-currency-manipulation-trade.html
+    source: https://www.nytimes.com/2017/04/11/business/economy/trump-china-currency-manipulation-trade.html
 ---

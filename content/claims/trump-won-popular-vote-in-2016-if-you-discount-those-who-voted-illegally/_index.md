@@ -10,5 +10,5 @@ checks:
 
 
       Indeed, the ability to carry off such a far-reaching conspiracy — potentially involving millions of people over the course of several months and without being noticed by election administration officials, many of them in states controlled by Republicans — is ridiculously illogical.
-    url: http://www.politifact.com/truth-o-meter/statements/2016/nov/28/donald-trump/donald-trumps-pants-fire-claim-millions-illegal-vo/
+    source: http://www.politifact.com/truth-o-meter/statements/2016/nov/28/donald-trump/donald-trumps-pants-fire-claim-millions-illegal-vo/
 ---

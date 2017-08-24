@@ -17,5 +17,5 @@ checks:
       FBI. This means that the people of Bowling Green were not
       endangered at any point, and that the entire incident can be
       viewed as a law-enforcement success.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/feb/03/kellyanne-conway/fact-checking-kellyanne-conways-bowling-green-mass/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/feb/03/kellyanne-conway/fact-checking-kellyanne-conways-bowling-green-mass/
 ---

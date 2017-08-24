@@ -4,7 +4,7 @@ summary: There's no evidence that the Waters of the United States rule caused se
 checks:
   - checker: new-york-times
     short: There's no evidence that the Waters of the United States rule caused severe job losses.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: washington-post
     short: … there is no evidence to support that.
     quote:
@@ -17,5 +17,5 @@ checks:
       the rule on jobs after it was halted in 2015. The rule has been
       in limbo since, so it is not credible that any jobs have been
       lost.
-    url: https://www.washingtonpost.com/news/fact-checker/wp/2017/03/02/trumps-claim-that-waters-of-the-united-states-rule-cost-hundreds-of-thousands-of-jobs/
+    source: https://www.washingtonpost.com/news/fact-checker/wp/2017/03/02/trumps-claim-that-waters-of-the-united-states-rule-cost-hundreds-of-thousands-of-jobs/
 ---

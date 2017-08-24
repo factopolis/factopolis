@@ -4,7 +4,7 @@ summary: 113 of them were released by President George W. Bush.
 checks:
   - checker: new-york-times
     short: 113 of them were released by President George W. Bush.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: cbs
     short:
       Under Obama, 161 detainees were transferred from Guantanamo Bay
@@ -23,18 +23,18 @@ checks:
       and only 9 have been confirmed to have reengaged and returned to
       the battlefield. That’s just under 6 percent of the total
       transferred since 2009.
-    url: http://www.cbsnews.com/news/trump-incorrectly-claims-122-gitmo-detainees-released-under-obama-returned-to-battlefield/
+    source: http://www.cbsnews.com/news/trump-incorrectly-claims-122-gitmo-detainees-released-under-obama-returned-to-battlefield/
   - checker: the-independent
     short:
       113 of ‘122 vicious prisoners’ mentioned by President were
       released by Bush administration
-    url: https://www.independent.co.uk/news/world/americas/donald-trump-guantanamo-barack-obama-vicious-prisoners-122-terrorists-released-bush-administration-a7616096.html
+    source: https://www.independent.co.uk/news/world/americas/donald-trump-guantanamo-barack-obama-vicious-prisoners-122-terrorists-released-bush-administration-a7616096.html
   - checker: snopes
     short:
       The majority of those detainees (113) were released under the
       administration of President George W. Bush, only 9 were
       transferred during the Obama administration.
-    url: http://www.snopes.com/obama-prisoner-release/
+    source: http://www.snopes.com/obama-prisoner-release/
   - checker: factcheck-org
     short:
       According to the government’s latest “Summary of Reengagement of
@@ -42,5 +42,5 @@ checks:
       majority of the released Gitmo detainees who were “confirmed of
       reengaging” — 113 of the 122 — were released or transferred out
       of Gitmo by President Bush.
-    url: http://www.factcheck.org/2017/03/trumps-false-gitmo-blame/
+    source: http://www.factcheck.org/2017/03/trumps-false-gitmo-blame/
 ---

@@ -4,7 +4,7 @@ summary: George H.W. Bush, Bill Clinton and Barack Obama all won bigger margins 
 checks:
   - checker: new-york-times
     short: George H.W. Bush, Bill Clinton and Barack Obama all won bigger margins in the Electoral College.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: time
     short: Except, it wasn’t.
     quote:
@@ -37,5 +37,5 @@ checks:
       than fellow Republican President George H.W. Bush, who earned
       79.2% of the electoral vote in 1988. At the time Bush 41 did, in
       fact, have the biggest win since Reagan.
-    url: http://time.com/4673993/donald-trump-campaign-electoral-college-win/
+    source: http://time.com/4673993/donald-trump-campaign-electoral-college-win/
 ---

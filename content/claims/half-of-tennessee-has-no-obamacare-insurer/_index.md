@@ -4,7 +4,7 @@ summary: There's at least one insurer in every Tennessee county.
 checks:
   - checker: new-york-times
     short: There's at least one insurer in every Tennessee county.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: factcheck-org
     quote:
       Tennessee divides the state into eight rating areas. Three of
@@ -20,5 +20,5 @@ checks:
       government provides tax credits and subsidies to help pay for
       insurance only for those who purchase plans on the exchanges set
       up by the Affordable Care Act.
-    url: http://www.factcheck.org/2017/03/trumps-tennessee-tale/
+    source: http://www.factcheck.org/2017/03/trumps-tennessee-tale/
 ---

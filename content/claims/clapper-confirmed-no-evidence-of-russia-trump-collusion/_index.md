@@ -4,10 +4,10 @@ summary: Clapper only said he wasn't aware of an investigation.
 checks:
   - checker: new-york-times
     short: Clapper only said he wasn't aware of an investigation.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: new-york-times
     short: Clapper said he wouldn't have been told of an investigation into collusion.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: politifact
     short:
       Clapper’s comments have not been as definitive as Trump
@@ -23,5 +23,5 @@ checks:
       his capacity as DNI would not necessarily give him the kind of
       access to the FBI investigation that one would need in order to
       determine whether or not evidence of collusion exists.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/may/12/donald-trump/trumps-mostly-false-claim-clapper-said-no-collusio/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/may/12/donald-trump/trumps-mostly-false-claim-clapper-said-no-collusio/
 ---

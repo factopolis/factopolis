@@ -24,5 +24,5 @@ checks:
       uranium to the Russians, but that is not the case. Then, he
       further claimed the sale went forward in exchange “for a big
       payment.” There’s no evidence for that claim either.
-    url: https://www.washingtonpost.com/news/fact-checker/wp/2016/10/26/the-facts-behind-trumps-repeated-claim-about-hillary-clintons-role-in-the-russian-uranium-deal/
+    source: https://www.washingtonpost.com/news/fact-checker/wp/2016/10/26/the-facts-behind-trumps-repeated-claim-about-hillary-clintons-role-in-the-russian-uranium-deal/
 ---

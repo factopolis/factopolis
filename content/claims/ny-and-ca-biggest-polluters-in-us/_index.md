@@ -16,5 +16,5 @@ checks:
       actually among the most effective states at reducing their
       impact on the atmosphere – beating even Sununu’s home state of
       New Hampshire.
-    url: http://www.politifact.com/new-hampshire/statements/2017/jul/28/chris-sununu/nh-governor-calls-new-york-california-biggest-poll/
+    source: http://www.politifact.com/new-hampshire/statements/2017/jul/28/chris-sununu/nh-governor-calls-new-york-california-biggest-poll/
 ---

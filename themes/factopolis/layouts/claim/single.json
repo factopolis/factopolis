@@ -7,7 +7,7 @@
       {
         {{ if $check.short }}"short": {{ $check.short | jsonify }}, {{ end }}
         {{ if $check.quote }}"quote": {{ $check.quote | jsonify }}, {{ end }}
-        {{ if $check.url }}"url": {{ $check.url | jsonify }}, {{ end }}
+        {{ if $check.source }}"url": {{ $check.url | jsonify }}, {{ end }}
         {{ if $check.name }}
           "name": {{ $check.name | jsonify }}
         {{ else }}

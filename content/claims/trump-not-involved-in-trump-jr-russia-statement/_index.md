@@ -10,5 +10,5 @@ checks:
       reported](https://www.washingtonpost.com/politics/trump-dictated-sons-misleading-statement-on-meeting-with-russian-lawyer/2017/07/31/04c94f96-73ae-11e7-8f39-eeb7d3a2d304_story.html)
       that Trump had changed the statement at the last minute to be
       more misleading.
-    url: https://www.washingtonpost.com/news/the-fix/wp/2017/08/02/7-things-the-trump-team-denied-and-then-later-confirmed/
+    source: https://www.washingtonpost.com/news/the-fix/wp/2017/08/02/7-things-the-trump-team-denied-and-then-later-confirmed/
 ---

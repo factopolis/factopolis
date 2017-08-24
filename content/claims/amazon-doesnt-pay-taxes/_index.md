@@ -15,12 +15,12 @@ checks:
       New Hampshire and Oregon — do not.) Amazon does not, however,
       require third-party sellers on its marketplace to collect sales
       taxes, but offers the service to them.
-    url: https://www.nytimes.com/2017/08/16/us/politics/trump-amazon-taxes.html
+    source: https://www.nytimes.com/2017/08/16/us/politics/trump-amazon-taxes.html
   - checker: politifact
     quote:
       While Amazon takes advantage of tax breaks and loopholes, it pays
       federal corporate tax, and charges sales taxes in 46 U.S.
       jurisdictions. It also supports federal legislation that would
       require other online retailers to pay state tax on internet sales.
-    url: http://www.politifact.com/truth-o-meter/statements/2017/jul/26/donald-trump/amazon-no-tax-monopoly-donald-trump-said/
+    source: http://www.politifact.com/truth-o-meter/statements/2017/jul/26/donald-trump/amazon-no-tax-monopoly-donald-trump-said/
 ---

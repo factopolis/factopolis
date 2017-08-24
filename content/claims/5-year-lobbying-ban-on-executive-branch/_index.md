@@ -4,7 +4,7 @@ summary: They can't lobby their former agency but can still become lobbyists.
 checks:
   - checker: new-york-times
     short: They can't lobby their former agency but can still become lobbyists.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
   - checker: washington-post
     quote:
       Trump did sign an order that he said would result in a lifetime
@@ -16,5 +16,5 @@ checks:
       a lobbyist. Moreover, Trump actually weakened some of the
       language from similar bans under Obama and George W. Bush, and
       reduced the level of transparency.
-    url: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
+    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
 ---

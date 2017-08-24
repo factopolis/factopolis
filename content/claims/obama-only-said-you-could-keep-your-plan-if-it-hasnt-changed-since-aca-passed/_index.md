@@ -13,5 +13,5 @@ checks:
       changed after the law’s passage. And seven of those 37 cases came
       after the release of the HHS regulations that defined the
       "grandfathering" process, when the impact would be clear.
-    url: http://www.politifact.com/truth-o-meter/statements/2013/nov/06/barack-obama/barack-obama-says-what-hed-said-was-you-could-keep/
+    source: http://www.politifact.com/truth-o-meter/statements/2013/nov/06/barack-obama/barack-obama-says-what-hed-said-was-you-could-keep/
 ---
