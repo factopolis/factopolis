@@ -6,6 +6,10 @@ publishDir = "web"
 paginate = 25
 theme = "factopolis"
 
+uglyurls = true
+[outputFormats.HTML]
+    nougly = true
+
 [taxonomies]
     claim = "claims"
     theme = "themes"
