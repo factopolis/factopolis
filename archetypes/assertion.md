@@ -7,7 +7,9 @@ claims:
 
 quote:
   
-source: 
+sources:
+- type: web
+  url: 
 
 checks:
 - checker: 

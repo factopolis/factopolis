@@ -7,7 +7,7 @@
         <div class="content-name"><a href="{{ .Permalink }}">{{ $person.Title }}</a></div>
         <div class="content-claim-count">
           {{ $claimCount := (where (where $.Site.Pages "Type" "assertion") ".Parent.UniqueID" $person.UniqueID) | len }}
-          {{ $claimCount }} false statement{{ if ne $claimCount 1 }}s{{ end }} on file.
+          {{ $claimCount }} statement{{ if ne $claimCount 1 }}s{{ end }} on file.
         </div>
       </li>
     {{ end }}

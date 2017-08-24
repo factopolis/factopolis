@@ -14,7 +14,18 @@
       <div>
         <a href="{{ $.Parent.Permalink }}">{{ $.Parent.Title }}</a>
         on
-        <a href="{{ $.Params.source }}">
+        <a
+          {{ if $.Params.sources}}
+            {{ $source := index $.Params.sources 0 }}
+            {{ if eq $source.type "youtube" }}
+              href="https://www.youtube.com/watch?v={{ $source.id }}{{ if $source.startTime }}&amp;t={{ $source.startTime }}{{  end }}"
+            {{ else }}
+              href="{{ $source.url }}"
+            {{ end }}
+          {{ else }}
+            href="{{ $.Params.source }}"
+          {{ end }}
+        >
           <time datetime="{{ $.Params.date }}">
             {{ $.Date | dateFormat "Jan 2, 2006" }}
           </time>

@@ -1,37 +1,48 @@
 {
-  "offices": [
-    {{ $offices := .Params.offices }}
-    {{ range $idx, $office := .Params.offices }}
-	    {{ if $idx }}, {{ end }}
-	    {
-		  	{{ if $office.from }}"from": {{ $office.from | jsonify }},{{ end }}
-	  		{{ if $office.thru }}"thru": {{ $office.thru | jsonify }},{{ end }}
-	      "title": {{ $office.title | jsonify }}
-  	  }
-		{{ end }}
-  ],
-  "claims": [
-    {{ $claims := .Params.claims }}
-		{{ range $idx, $claim := .Params.claims }}
-			{{ $claimInfo := $.Site.GetPage "page" "claim" (printf "%s.md" $claim.id) }}
-	    {{ if $idx }}, {{ end }}
-			{
-				"claim": {{ $claim.id | jsonify}},
-				"claimName": {{ $claimInfo.Title | jsonify }},
-				"summary": {{ $claimInfo.Params.summary | jsonify }},
-	  		"assertions": [
-					{{ $assertions := $claim.assertions }}
-					{{ range $idx, $assertion := $claim.assertions }}
-						{{ if $idx }}, {{ end }}
-						{
-						  {{ if $assertion.date }}"date": {{ $assertion.date | jsonify }},{{ end }}
-						  {{ if $assertion.source }}"source": {{ $assertion.source | jsonify }},{{ end }}
-			  			"quote": {{ $assertion.quote | jsonify }}
-						}
-					{{ end }}
-	  		]
-			}
-	  {{ end }}
-  ],
+  {{ if eq .Page.Type "person" }}
+    "offices": [
+      {{ $offices := .Params.offices }}
+      {{ range $idx, $office := .Params.offices }}
+        {{ if $idx }}, {{ end }}
+        {
+          {{ if $office.from }}"from": {{ $office.from | jsonify }},{{ end }}
+          {{ if $office.thru }}"thru": {{ $office.thru | jsonify }},{{ end }}
+          "title": {{ $office.title | jsonify }}
+        }
+      {{ end }}
+    ],
+    "statements": [
+      {{ range $idx, $stmt := where (where $.Site.Pages "Type" "assertion") ".Parent.UniqueID" $.UniqueID }}
+        {{ if $idx }},{{ end }}
+        {
+          "id": {{ index (split $stmt.URL "/") 3 | jsonify }},
+          "quote": {{ $stmt.Params.quote | jsonify }},
+          "claims": {{ $stmt.Params.claims | jsonify }},
+          {{ partial "source.json" $stmt.Params }},
+          "checks": [
+            {{ range $idx, $check := $stmt.Params.checks }}
+              {{ if $idx }},{{ end }}
+              {
+                "checker": {{ $check.checker | jsonify }},
+                {{ if $check.rating  }}"rating": {{ $check.rating | jsonify }},{{ end }}
+                {{ partial "source.json" $check }}
+              }
+            {{ end }}
+          ]
+        }
+      {{ end }}
+    ],
+  {{ else }}
+    "people": [
+      {{ range $idx, $person := where .Site.Pages "Type" "person" }}
+        {{ if $idx }},{{ end }}
+        {
+          "id": {{ index (split $person.URL "/") 2 | jsonify }},
+          "name": {{ $person.Title | jsonify }},
+          "statementCount": {{ (where (where $.Site.Pages "Type" "assertion") ".Parent.UniqueID" $person.UniqueID) | len }}
+        }
+      {{ end }}
+    ],
+  {{ end }}
   {{ partial "page.json" . }}
 }

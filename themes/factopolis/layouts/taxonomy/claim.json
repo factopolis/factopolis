@@ -23,7 +23,7 @@
       {
         "id": {{ (index (split $statement.URL "/") 3) | jsonify }},
         "date": {{ $statement.Date | dateFormat "2006-01-02" | jsonify }},
-        "source": {{ $statement.Params.source | jsonify }},
+        {{ partial "source.json" $statement.Params }},
         "quote":
         {{ if $statement.Params.quote }}
           {{ $statement.Params.quote | jsonify }},

@@ -35,7 +35,7 @@
                 ],
               {{ end }}
               {{ if $stmt.Params.claims }}"claims": {{ $stmt.Params.claims | jsonify }},{{ end }}
-              "source": {{ $stmt.Params.source | jsonify }}
+              {{ partial "source.json" $stmt.Params }}
             }
           {{ end }}
         ],
@@ -58,7 +58,7 @@
             {
               {{ if $check.quote }}"quote": {{ $check.quote | jsonify }},{{ end }}
               {{ if $check.short }}"short": {{ $check.short | jsonify }},{{ end }}
-              {{ if $check.source }}"source": {{ $check.source | jsonify }}{{ end }}
+              {{ partial "source.json" $check }}
             }
           {{ end }}
         ],

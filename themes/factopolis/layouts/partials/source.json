@@ -1,0 +1,29 @@
+"sources": [
+{{ if .sources }}
+  {{ range $idx, $source := .sources }}
+    {{ if $idx }},{{ end }}
+    {
+      {{ if $source.id }}"id": {{ $source.id | jsonify }},{{ end }}
+      {{ if $source.startTime }}"startTime": {{ $source.startTime | jsonify }},{{ end }}
+      {{ if $source.duration }}"duration": {{ $source.duration | jsonify }},{{ end }}
+      {{ if $source.url }}
+        "url": {{ $source.url | jsonify }},
+      {{ else if eq $source.type "youtube" }}
+        "url":
+        {{ if $source.startTime }}
+          {{ printf "https://youtu.be/%s?t=%d" $source.id $source.startTime | jsonify }}
+        {{ else }}
+          {{ printf "https://youtu.be/%s" $source.id | jsonify }}
+        {{ end }}
+        ,
+      {{ end }}
+      "type": {{ $source.type | jsonify }}
+    }
+  {{ end }}
+{{ else }}
+    {
+      "type": "web",
+      "url": {{ .source | jsonify }}
+    }
+{{ end }}
+]
