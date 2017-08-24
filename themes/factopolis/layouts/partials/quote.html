@@ -85,14 +85,11 @@
     {{ if $.Params.claims }}
       <dl class="claims">
         {{ range $claimID := $.Params.claims }}
-          {{ $needle := printf "/claims/%s/" $claimID }}
-          {{/*  TODO: why does't ($.Site.GetPage "taxonomyTerm" "claims" $claimID) work? */}}
-          {{ range $claim := where $.Site.Pages ".URL" $needle }}
-            <dt><a href="{{ $claim.Permalink }}">{{ $claim.Title }}</a></dt>
-            <dd class="truth">
-              {{ $claim.Params.summary | markdownify }}
-            </dd>
-          {{ end }}
+          {{ $claim := $.Site.GetPage "taxonomy" "claims" $claimID }}
+          <dt><a href="{{ $claim.Permalink }}">{{ $claim.Title }}</a></dt>
+          <dd class="truth">
+            {{ $claim.Params.summary | markdownify }}
+          </dd>
         {{ end }}
       </dl>
     {{ end }}

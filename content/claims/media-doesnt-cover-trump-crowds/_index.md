@@ -1,6 +1,6 @@
 ---
-title: Media didn't cover large crowds for Trump in Florida
-summary: The media did cover it.
+title: Media doesn't cover Trump crowd sizes
+summary: They do.
 checks:
   - checker: new-york-times
     short: The media did cover it.
