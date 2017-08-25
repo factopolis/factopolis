@@ -27,12 +27,9 @@ same person, it also includes instances of other people making the
 same claim, including surrogates and pundits.
 
 Factopolis accomplishes this by separating the core claim from
-individual quotes, which has a very important effect. While most fact
-checking sites will only examine specific instances, Factopolis also
-attempts to speak to the truthfulness of the underlying claim,
-regardless of the specific wording. In other words, just because
-something is technically true doesn't mean it's not misleading, or
-downright deceptive. This makes factopolis much less tolerant of
+individual statements and listing all instances of that claim we can
+find, even if fact checkers haven't looked at a specific statement. Our
+hope is that this will make Factopolis less tolerant of
 [weasel words](https://en.wikipedia.org/wiki/Weasel_word) and vaugery.
 
 ### Contributing
