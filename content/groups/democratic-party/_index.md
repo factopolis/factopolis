@@ -7,5 +7,5 @@ instagram: thedemocrats
 snapchat: thedemocrats
 youtube: DemocraticVideo
 medium: to-the-left
-web: https://www.gop.com/
+web: https://www.democrats.org/
 ---
