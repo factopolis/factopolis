@@ -1,9 +1,5 @@
 ---
 title: Nancy Pelosi
-picture: /person/nancy-pelosi.jpg
-pictureCopyright:
-  Official U.S. Government Portrait (public domain),
-  [via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Nancy_Pelosi_2012.jpg)
 wikipedia: Nancy_Pelosi
 twitter: NancyPelosi
 flickr: speakerpelosi
@@ -12,6 +8,16 @@ facebook: NancyPelosi
 youtube: NancyPelosi
 medium: "@leaderpelosi"
 web: http://www.democraticleader.gov/
+
+images:
+  photo:
+    author:
+      name: U.S. Government
+    license:
+      name: public domain
+    source:
+      name: Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Nancy_Pelosi_2012.jpg
 
 factcheckorg: nancy-pelosi
 politifact: nancy-pelosi

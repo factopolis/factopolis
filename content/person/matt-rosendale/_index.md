@@ -1,13 +1,17 @@
 ---
 title: Matt Rosendale
 web: http://www.mattformontana.com/
-picture: /person/matt-rosendale.jpg
-
 wikipedia: Matt_Rosendale
 twitter: MattForMontana
 facebook: mattformontana
 instagram: MattForMontana
 youtube: MattForMontana
+
+images:
+  photo:
+    source:
+      name: Office of Montana State Auditor
+      url: http://csimt.gov/about/matt-m-rosendale/
 
 politifact: matthew-rosendale
 

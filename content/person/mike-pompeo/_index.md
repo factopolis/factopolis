@@ -1,11 +1,17 @@
 ---
 title: Mike Pompeo
-picture: /person/mike-pompeo.jpg
-pictureCopyright:
-  Official U.S. Government Portrait (public domain),
-  [via Wikimedia Commons](https://en.wikipedia.org/wiki/File:Mike_Pompeo_official_CIA_portrait.jpg)
 wikipedia: Mike_Pompeo
 twitter: RealMikePompeo
+
+images:
+  photo:
+    author:
+      name: U.S. Government
+    license:
+      name: public domain
+    source:
+      name: Wikimedia Commons
+      url: https://en.wikipedia.org/wiki/File:Mike_Pompeo_official_CIA_portrait.jpg
 
 factcheckorg: mike-pompeo
 snopes: mike-pompeo

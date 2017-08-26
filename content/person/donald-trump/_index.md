@@ -1,9 +1,5 @@
 ---
 title: Donald Trump
-picture: /person/donald-trump.jpg
-pictureCopyright:
-  U.S. Air Force Staff Sgt. Jette Carr (Public domain),
-  [via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Donald_Trump_Pentagon_2017.jpg)
 wikipedia: Donald_Trump
 twitter: realDonaldTrump
 facebook: DonaldTrump
@@ -13,6 +9,16 @@ factcheckorg: donald-trump
 politifact: donald-trump
 snopes: donald-trump
 washingtonPost: donald-trump
+
+images:
+  photo:
+    author:
+      name: U.S. Air Force Staff / Sgt. Jette Carr
+    license:
+      name: public domain
+    source:
+      name: Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Donald_Trump_Pentagon_2017.jpg
 
 groups:
   - gop

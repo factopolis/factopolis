@@ -1,18 +1,23 @@
 ---
 title: Paul Ryan
 web: https://paulryan.house.gov/
-picture: /person/paul-ryan.jpg
-pictureCopyright:
-  Official U.S. Government Portrait (public domain),
-  [via Wikimedia Commons](https://en.wikipedia.org/wiki/File:Speaker_Paul_Ryan_official_photo_(cropped_2).jpg)
-feed: https://paulryan.house.gov/news/rss.aspx
-
 wikipedia: Paul_Ryan
 twitter: SpeakerRyan
 facebook: speakerryan
 instagram: SpeakerRyan
 youtube: RepPaulRyan
 googleplus: SpeakerRyan
+feed: https://paulryan.house.gov/news/rss.aspx
+
+images:
+  photo:
+    author:
+      name: U.S. Government
+    license:
+      name: public domain
+    source:
+      name: Wikimedia Commons
+      url: https://en.wikipedia.org/wiki/File:Speaker_Paul_Ryan_official_photo_(cropped_2).jpg
 
 factcheckorg: paul-ryan
 politifact: paul-ryan

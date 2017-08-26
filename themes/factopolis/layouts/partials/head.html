@@ -69,14 +69,26 @@
           <div>
             <div class="sticky-middle">
               <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h2>
-              {{ if .Params.picture }}
-                <img class="profile-pic" alt="{{ .Page.Title }}" src="{{ .Params.picture }}" />
+
+              {{ if and .Params.images }}
+                {{ if .Params.images.photo }}
+                  <img class="profile-pic" alt="{{ .Page.Title }}" src="{{ replaceRE "/?$" ".jpg" .URL }}" />
+                  <div class="profile-pic-copyright">
+                    {{ if .Params.images.photo.author }}
+                      Photo by
+                      {{ if .Params.images.photo.author.url }}
+                        <a href="{{ .Params.images.photo.author.url }}">{{ .Params.images.photo.author.name }}</a>
+                      {{ else }}
+                        {{ .Params.images.photo.author.name }}
+                      {{ end }}
+                    {{ end }}
+                    {{ if or .Params.images.photo.license .Params.images.photo.source }}
+                      ({{ if .Params.images.photo.license }}{{ if .Params.images.photo.license.url }}<a href="{{ .Params.images.photo.author.url }}">{{ .Params.images.photo.license.name }}</a>{{ else }}{{ .Params.images.photo.license.name }}{{ end }}{{ end }}{{ if .Params.images.photo.source }}{{ if .Params.images.photo.license }}, {{ end }}courtesy of {{ if .Params.images.photo.source.url }}<a href="{{ .Params.images.photo.author.url }}">{{ .Params.images.photo.source.name }}</a>{{ else }}{{ .Params.images.photo.source.name }}{{ end }}{{ end }})
+                    {{ end }}
+                  </div>
+                {{ end }}
               {{ end }}
-              {{ if .Params.pictureCopyright }}
-                <div class="profile-pic-copyright">
-                  Photo by {{ .Params.pictureCopyright | markdownify }}
-                </div>
-              {{ end }}
+
               <ul class="links">
                 {{ if .Params.web }}
                   <li>

@@ -1,13 +1,18 @@
 ---
 title: Barack Obama
-picture: /person/barack-obama.jpg
-pictureCopyright:
-  Pete Souza ([P120612PS-0463](https://www.flickr.com/photos/obamawhitehouse/8390033709/), public domain)
 wikipedia: Barack_Obama
 twitter: BarackObama
 facebook: barackobama
 web: https://barackobama.com/
 linkedin: in/barackobama
+
+images:
+  photo:
+    author:
+      name: Pete Souza
+      url: https://www.flickr.com/photos/obamawhitehouse/8390033709/
+    license:
+      name: public domain
 
 factcheckorg: barack-obama
 politifact: barack-obama

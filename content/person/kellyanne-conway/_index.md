@@ -1,11 +1,18 @@
 ---
 title: Kellyanne Conway
-picture: /person/kellyanne-conway.jpg
-pictureCopyright:
-  Gage Skidmore [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0),
-  [via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kellyanne_Conway_by_Gage_Skidmore_3.jpg)
 wikipedia: Kellyanne_Conway
 twitter: KellyannePolls
+
+images:
+  photo:
+    author:
+      name: Gage Skidmore
+    license:
+      name: CC BY-SA 3.0
+      url: http://creativecommons.org/licenses/by-sa/3.0
+    source:
+      name: Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Kellyanne_Conway_by_Gage_Skidmore_3.jpg
 
 factcheckorg: kellyanne-conway
 politifact: kellyanne-conway

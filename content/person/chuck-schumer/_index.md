@@ -1,9 +1,5 @@
 ---
 title: Chuck Schumer
-picture: /person/chuck-schumer.jpg
-pictureCopyright:
-  U.S. Senate Photographic Studio/Jeff McEvoy
-  (public domain)
 wikipedia: Chuck_Schumer
 twitter: senschumer
 facebook: senschumer
@@ -12,6 +8,13 @@ youtube: ChuckSchumer
 medium: "@SenSchumer"
 flickr: senatorschumer
 web: https://www.schumer.senate.gov/
+
+images:
+  photo:
+    author:
+      name: U.S. Senate Photographic Studio / Jeff McEvoy
+    license:
+      name: public domain
 
 factcheckorg: chuck-schumer
 politifact: charles-schumer

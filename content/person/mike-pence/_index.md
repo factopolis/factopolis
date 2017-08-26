@@ -1,15 +1,22 @@
 ---
 title: Mike Pence
-picture: /person/mike-pence.jpg
-pictureCopyright:
-  Gage Skidmore [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0),
-  [via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mike_Pence_by_Gage_Skidmore_6.jpg)
 wikipedia: Mike_Pence
 twitter: mike_pence
 facebook: mikepence
 instagram: mike.pence
 youtube: GovernorMikePence
 flickr: mikepence
+
+images:
+  photo:
+    author:
+      name: Gage Skidmore
+    license:
+      name: CC BY-SA 3.0
+      url: http://creativecommons.org/licenses/by-sa/3.0
+    source:
+      name: Wikimedia Commons
+      url: https://commons.wikimedia.org/wiki/File:Mike_Pence_by_Gage_Skidmore_6.jpg
 
 factcheckorg: mike-pence
 politifact: mike-pence
