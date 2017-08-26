@@ -19,6 +19,8 @@
             {{ $source := index $.Params.sources 0 }}
             {{ if eq $source.type "youtube" }}
               href="https://www.youtube.com/watch?v={{ $source.id }}{{ if $source.startTime }}&amp;t={{ $source.startTime }}{{  end }}"
+            {{ else if eq $source.type "twitter" }}
+              href="{{ printf "https://twitter.com/%s/status/%s" $source.user $source.id }}"
             {{ else }}
               href="{{ $source.url }}"
             {{ end }}

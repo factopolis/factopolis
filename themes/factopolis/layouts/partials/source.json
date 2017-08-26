@@ -6,9 +6,7 @@
       {{ if $source.id }}"id": {{ $source.id | jsonify }},{{ end }}
       {{ if $source.startTime }}"startTime": {{ $source.startTime | jsonify }},{{ end }}
       {{ if $source.duration }}"duration": {{ $source.duration | jsonify }},{{ end }}
-      {{ if $source.url }}
-        "url": {{ $source.url | jsonify }},
-      {{ else if eq $source.type "youtube" }}
+      {{ if eq $source.type "youtube" }}
         "url":
         {{ if $source.startTime }}
           {{ printf "https://youtu.be/%s?t=%d" $source.id $source.startTime | jsonify }}
@@ -16,6 +14,11 @@
           {{ printf "https://youtu.be/%s" $source.id | jsonify }}
         {{ end }}
         ,
+      {{ else if eq $source.type "twitter" }}
+        "user": {{ $source.user | jsonify }},
+        "id": {{ $source.id | jsonify }},
+      {{ else if $source.url }}
+        "url": {{ $source.url | jsonify }},
       {{ end }}
       "type": {{ $source.type | jsonify }}
     }
