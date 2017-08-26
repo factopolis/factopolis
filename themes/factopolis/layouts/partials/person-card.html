@@ -5,6 +5,7 @@
     {{ end }}
   </div>
   <div class="contents">
+    <header>
     <h4>{{ $.Title }}</h4>
     {{ if $.Params.offices }}
       <h5>
@@ -15,6 +16,7 @@
         {{ end }}
       </h5>
     {{ end }}
+    </header>
     <p class="claim-count">
       {{ $claimCount := (where (where $.Site.Pages "Type" "assertion") ".Parent.UniqueID" $.UniqueID) | len }}
       {{ $claimCount }} statement{{ if ne $claimCount 1 }}s{{ end }} on file.

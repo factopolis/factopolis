@@ -470,20 +470,25 @@ section.truth > * {
 
 .summary-card:hover {
   background-color: #f0f8d3;
+  text-decoration: none;
 }
 
 .summary-card > :nth-child(2) {
   margin: 0.3em 0 0 0.5em;
 }
 
-.summary-card > .contents > h4 {
+.summary-card header > h4 {
+  font-size: 1.1em;
+  font-weight: bold;
+  font-variant: small-caps;
   border-bottom: 1px #b0c26e solid;
   margin: 0;
 }
-.summary-card > .contents > h5 {
+.summary-card header > h5 {
+  font-size: small;
   margin: 0;
 }
 
-.summary-card > .contents > div {
-  margin-top: 1em;
+.summary-card header {
+  margin-bottom: 0.25em;
 }

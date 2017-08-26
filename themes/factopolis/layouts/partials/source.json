@@ -4,12 +4,12 @@
     {{ if $idx }},{{ end }}
     {
       {{ if $source.id }}"id": {{ $source.id | jsonify }},{{ end }}
-      {{ if $source.startTime }}"startTime": {{ $source.startTime | jsonify }},{{ end }}
+      {{ if $source.start }}"start": {{ $source.start | jsonify }},{{ end }}
       {{ if $source.duration }}"duration": {{ $source.duration | jsonify }},{{ end }}
       {{ if eq $source.type "youtube" }}
         "url":
-        {{ if $source.startTime }}
-          {{ printf "https://youtu.be/%s?t=%d" $source.id $source.startTime | jsonify }}
+        {{ if $source.start }}
+          {{ printf "https://youtu.be/%s?t=%d" $source.id $source.start | jsonify }}
         {{ else }}
           {{ printf "https://youtu.be/%s" $source.id | jsonify }}
         {{ end }}

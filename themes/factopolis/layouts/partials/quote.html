@@ -14,24 +14,65 @@
       <div>
         <a href="{{ $.Parent.Permalink }}">{{ $.Parent.Title }}</a>
         on
-        <a
-          {{ if $.Params.sources}}
-            {{ $source := index $.Params.sources 0 }}
-            {{ if eq $source.type "youtube" }}
-              href="https://www.youtube.com/watch?v={{ $source.id }}{{ if $source.startTime }}&amp;t={{ $source.startTime }}{{  end }}"
-            {{ else if eq $source.type "twitter" }}
-              href="{{ printf "https://twitter.com/%s/status/%s" $source.user $source.id }}"
-            {{ else }}
-              href="{{ $source.url }}"
-            {{ end }}
-          {{ else }}
-            href="{{ $.Params.source }}"
-          {{ end }}
-        >
-          <time datetime="{{ $.Params.date }}">
-            {{ $.Date | dateFormat "Jan 2, 2006" }}
-          </time>
-        </a>
+        {{ if $.Params.sources }}
+            <span class="dropdown show">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <time datetime="{{ $.Params.date }}">
+                  {{ $.Date | dateFormat "Jan 2, 2006" }}
+                </time>
+              </a>
+              <div class="dropdown-menu">
+                {{ range $source := $.Params.sources }}
+                  {{ if eq $source.type "youtube" }}
+                    <a class="dropdown-item" href="https://www.youtube.com/watch?v={{ $source.id }}{{ if $source.start }}&amp;t={{ $source.start }}{{  end }}">
+                      <i class="fa fa-youtube" aria-hidden="true"></i>
+                      YouTube
+                    </a>
+                  {{ else if eq $source.type "transcript" }}
+                   <a class="dropdown-item" href="{{ $source.url }}">
+                      <i class="fa fa-file-text" aria-hidden="true"></i>
+                      Transcript
+                      ({{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url }})
+                    </a>
+                  {{ else if eq $source.type "audio" }}
+                    <a class="dropdown-item" href="{{ $source.url }}">
+                      <i class="fa fa-headphones" aria-hidden="true"></i>
+                      Audio
+                      {{ if $source.start }}
+                        ({{ div $source.start 60 }}:{{ mod $source.start 60 }}{{ if $source.duration }} - {{ $endTime := add $source.start $source.duration }}{{ div $endTime 60 }}:{{ mod $endTime 60 }}{{ end }})
+                      {{ end }}
+                    </a>
+                  {{ else if eq $source.type "web" }}
+                    <a class="dropdown-item" href="{{ $source.url }}">
+                      <i class="fa fa-globe" aria-hidden="true"></i>
+                      {{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url | title }}
+                    </a>
+                  {{ else if eq $source.type "twitter" }}
+                    <a class="dropdown-item" href="https://twitter.com/{{ $source.user }}/status/{{ $source.id }}">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      Twitter (@{{ $source.user }})
+                    </a>
+                  {{ else }}
+                    <span clas="dropdown-item">Unknown type</span>
+                  {{ end }}
+                {{ end }}
+              </div>
+            </span>
+        {{ else }}
+          <span class="dropdown show">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <time datetime="{{ $.Params.date }}">
+                {{ $.Date | dateFormat "Jan 2, 2006" }}
+              </time>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{{ $.Params.source }}">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+                {{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $.Params.source | title }}
+              </a>
+            </div>
+          </span>
+        {{ end }}
       </div>
       {{ if $.Params.retraction }}
         <div class="retraction">
