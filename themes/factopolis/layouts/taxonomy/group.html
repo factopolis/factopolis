@@ -9,41 +9,10 @@
 <section>
 <h2>People</h2>
 
-<ul>
+<ul class="content-list person-list">
   {{ range $person := $.Paginator.Pages }}
     <li>
-      <div>
-        <a href="{{ $person.Permalink }}">{{ $person.Title }}</a>
-        {{ if $person.Params.offices }}
-          —
-          {{ range $office := first 1 $person.Params.offices }}
-            {{ $office.title }}
-            {{ if $office.thru }}
-              ({{ dateFormat "2006" $office.from }}{{ if sub (int (dateFormat "2006" $office.thru)) (int (dateFormat "2006" $office.from)) }} - {{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }}{{ end }})
-            {{ end }}
-          {{ end }}
-        {{ end }}
-      </div>
-      <div>
-        {{ $personStmts := (where (where $.Site.Pages "Type" "assertion") "Parent.UniqueID" $person.UniqueID) }}
-        {{ $nPersonStmts := $personStmts | len }}
-        {{ $nPersonStmts }} statement{{ if ne ($nPersonStmts) 1 }}s{{ end }}
-        {{ if gt $nPersonStmts 1 }}
-          between
-          {{ range $stmt := last 1 $personStmts }}
-            {{ dateFormat "2006-01-02" $stmt.Date }}
-          {{ end }}
-          and
-          {{ range $stmt := first 1 $personStmts }}
-            {{ dateFormat "2006-01-02" $stmt.Date }}
-          {{ end }}
-        {{ else }}
-          on
-          {{ range $stmt := last 1 $personStmts }}
-            {{ dateFormat "2006-01-02" $stmt.Date }}
-          {{ end }}
-        {{ end }}
-      </div>
+      {{ partial "person-card" $person }}
     </li>
   {{ end }}
 </ul>

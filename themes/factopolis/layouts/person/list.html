@@ -4,11 +4,7 @@
   <ul class="content-list person-list">
     {{ range $person := where .Site.Pages "Type" "person" }}
       <li>
-        <div class="content-name"><a href="{{ .Permalink }}">{{ $person.Title }}</a></div>
-        <div class="content-claim-count">
-          {{ $claimCount := (where (where $.Site.Pages "Type" "assertion") ".Parent.UniqueID" $person.UniqueID) | len }}
-          {{ $claimCount }} statement{{ if ne $claimCount 1 }}s{{ end }} on file.
-        </div>
+        {{ partial "person-card" $person }}
       </li>
     {{ end }}
   </ul>

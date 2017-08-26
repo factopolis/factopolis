@@ -440,3 +440,50 @@ section.truth > * {
   padding-top: 50vh;
   transform: translate(0, -1.5em);
 }
+
+
+.person-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.summary-card {
+  display: flex;
+  border: 1px #b0c26e solid;
+  color: inherit;
+  text-decoration: none;
+  margin: 0.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .person-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .person-list > * {
+    width: 45%;
+  }
+}
+
+.summary-card:hover {
+  background-color: #f0f8d3;
+}
+
+.summary-card > :nth-child(2) {
+  margin: 0.3em 0 0 0.5em;
+}
+
+.summary-card > .contents > h4 {
+  border-bottom: 1px #b0c26e solid;
+  margin: 0;
+}
+.summary-card > .contents > h5 {
+  margin: 0;
+}
+
+.summary-card > .contents > div {
+  margin-top: 1em;
+}

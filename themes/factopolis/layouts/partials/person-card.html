@@ -1,0 +1,23 @@
+<a class="summary-card person-card" href="{{ $.Permalink }}">
+  <div>
+    {{ if and $.Params.images $.Params.images.photo }}
+      <img src="{{ replaceRE "/?$" "-64.jpg" $.URL }}" />
+    {{ end }}
+  </div>
+  <div class="contents">
+    <h4>{{ $.Title }}</h4>
+    {{ if $.Params.offices }}
+      <h5>
+        {{ $office := index $.Params.offices 0 }}
+        {{ $office.title }}
+        {{ if $office.thru }}
+          ({{ dateFormat "2006" $office.from }}{{ if sub (int (dateFormat "2006" $office.thru)) (int (dateFormat "2006" $office.from)) }} - {{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }}{{ end }})
+        {{ end }}
+      </h5>
+    {{ end }}
+    <p class="claim-count">
+      {{ $claimCount := (where (where $.Site.Pages "Type" "assertion") ".Parent.UniqueID" $.UniqueID) | len }}
+      {{ $claimCount }} statement{{ if ne $claimCount 1 }}s{{ end }} on file.
+    </p>
+  </div>
+</a>
