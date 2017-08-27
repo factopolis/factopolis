@@ -4,7 +4,7 @@ wikipedia: Donald_Trump
 twitter: realDonaldTrump
 facebook: DonaldTrump
 instagram: realdonaldtrump
-web: https://whitehouse.gov/administration/president-trump
+web: https://WhiteHouse.gov/administration/president-trump
 factcheckorg: donald-trump
 politifact: donald-trump
 snopes: donald-trump
