@@ -27,7 +27,7 @@
               <div class="dropdown-menu">
                 {{ range $source := $.Params.sources }}
                   {{ if eq $source.type "youtube" }}
-                    <a class="dropdown-item" href="https://www.youtube.com/watch?v={{ $source.id }}{{ if $source.start }}&amp;t={{ $source.start }}{{  end }}">
+                    <a class="dropdown-item" {{ if $source.start }}data-start-time="{{ $source.start }}" {{ if $source.duration }}data-end-time="{{ add $source.start $source.duration }}"{{ end }}{{ end }} href="https://www.youtube.com/watch?v={{ $source.id }}{{ if $source.start }}&amp;t={{ $source.start }}{{  end }}">
                       <i class="fa fa-youtube" aria-hidden="true"></i>
                       YouTube
                     </a>
