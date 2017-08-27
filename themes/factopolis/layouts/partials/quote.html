@@ -45,7 +45,7 @@
                   {{ else if eq $source.type "web" }}
                     <a class="dropdown-item" href="{{ $source.url }}">
                       <i class="fa fa-globe" aria-hidden="true"></i>
-                      {{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url | title }}
+                      {{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url }}
                     </a>
                   {{ else if eq $source.type "twitter" }}
                     <a class="dropdown-item" href="https://twitter.com/{{ $source.user }}/status/{{ $source.id }}">
@@ -68,7 +68,7 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="{{ $.Params.source }}">
                 <i class="fa fa-globe" aria-hidden="true"></i>
-                {{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $.Params.source | title }}
+                {{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $.Params.source }}
               </a>
             </div>
           </span>
