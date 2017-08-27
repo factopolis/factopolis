@@ -1,3 +1,9 @@
+
+$('#mediaModal').on('hidden.bs.modal', function () {
+  $('#mediaModal .modal-video-content').html('');
+});
+
+/* YouTube videos */
 $(document).ready(function () {
   $('a[href^="https://www.youtube.com/watch"]').on('click', function (e) {
     var queryVars = (function (url) {
@@ -15,8 +21,6 @@ $(document).ready(function () {
     if ('v' in queryVars) {
       e.preventDefault();
 
-      var startTime = $(this).attr('data-start-time') ? parseInt($(this).attr('data-start-time')) : 0;
-      var endTime = $(this).attr('data-end-time') ? parseInt($(this).attr('data-end-time')) : 0;
       var videoUrl = 'http://www.youtube.com/embed/' + queryVars['v'] + '?autoplay=1&';
       if ($(this).attr('data-start-time')) {
         videoUrl += '&start=' + $(this).attr('data-start-time');
@@ -27,13 +31,37 @@ $(document).ready(function () {
         }
       }
 
-      $('#mediaModal .modal-body').html('<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><div class="embed-responsive embed-responsive-16by9"><iframe src="' + videoUrl + '" allowscriptaccess="always"></iframe></div>');
+      $('#mediaModal .modal-video-content').html('<iframe src="' + videoUrl + '" allowscriptaccess="always"></iframe>');
       $('#mediaModal').modal();
     }
   });
+});
 
-  $('#mediaModal').on('hidden.bs.modal', function () {
-    $('#mediaModal .modal-body').html('');
+/* HTML5 videos */
+$(document).ready(function() {
+  $('.video-link').on('click', function(e) {
+    var videoPlayer = document.createElement('video');
+    videoPlayer.controls = true;
+    videoPlayer.autoplay = true;
+
+    var videoUrl = $(this).attr("href");
+    var startTime = parseFloat($(this).attr('data-start-time'));
+    var duration = parseFloat($(this).attr('data-duration'));
+    if (isFinite(startTime) || isFinite(duration)) {
+      if (isNaN(startTime))
+        startTime = 0;
+
+      videoUrl += "#t=" + startTime;
+
+      if (duration) {
+        videoUrl += ',' + (startTime + duration);
+      }
+    }
+    videoPlayer.src = videoUrl;
+
+    $('#mediaModal .modal-video-content').html(videoPlayer);
+    $('#mediaModal').modal();
+
+    e.preventDefault();
   });
-
 });

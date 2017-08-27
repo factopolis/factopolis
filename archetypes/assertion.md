@@ -10,6 +10,19 @@ quote:
 sources:
 - type: web
   url: 
+- type: youtube
+  id: 
+  start: 
+  duration: 
+- type: audio
+  start: duration
+  url: 
+- type: video
+  start: 
+  duration: 
+  url: 
+- type: transcript
+  url: 
 
 checks:
 - checker: 

@@ -38,11 +38,39 @@
                       ({{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url }})
                     </a>
                   {{ else if eq $source.type "audio" }}
-                    <a class="dropdown-item" href="{{ $source.url }}">
-                      <i class="fa fa-headphones" aria-hidden="true"></i>
-                      Audio
-                      {{ if $source.start }}
-                        ({{ div $source.start 60 }}:{{ mod $source.start 60 }}{{ if $source.duration }} - {{ $endTime := add $source.start $source.duration }}{{ div $endTime 60 }}:{{ mod $endTime 60 }}{{ end }})
+                    <audio class="dropdown-item" controls preload="none" src="{{ $source.url }}{{ if $source.start }}#t={{ $source.start }}{{ if $source.duration }},{{ add $source.start $source.duration }}{{ end }}{{ end }}">
+                      <a href="{{ $source.url }}">
+                        <i class="fa fa-headphones" aria-hidden="true"></i>
+                        Audio
+                        {{ if $source.start }}
+                          {{ if or $source.start $source.duration }}
+                            {{ $startTime := default 0 $source.start }}
+                            (
+                              {{ printf "%d:%02d" (div $startTime 60) (mod $startTime 60) }}
+                              {{ if $source.duration }}
+                                -
+                                {{ $endTime := add $startTime $source.duration }}
+                                {{ printf "%d:%02d" (div $endTime 60) (mod $endTime 60) }}
+                              {{ end }}
+                            )
+                          {{ end }}
+                        {{ end }}
+                      </a>
+                    </audio>
+                  {{ else if eq $source.type "video" }}
+                    <a class="dropdown-item video-link" {{ if gt $source.start 0.0 }}data-start-time="{{ $source.start }}"{{ end }} {{ if $source.duration }}data-duration="{{ $source.duration }}"{{ end }} href="{{ $source.url }}">
+                      <i class="fa fa-film" aria-hidden="true"></i>
+                      Video
+                      {{ if or $source.start $source.duration }}
+                        {{ $startTime := default 0 $source.start }}
+                        (
+                          {{ printf "%d:%02d" (div $startTime 60) (mod $startTime 60) }}
+                          {{ if $source.duration }}
+                            -
+                            {{ $endTime := add $startTime $source.duration }}
+                            {{ printf "%d:%02d" (div $endTime 60) (mod $endTime 60) }}
+                          {{ end }}
+                        )
                       {{ end }}
                     </a>
                   {{ else if eq $source.type "web" }}
