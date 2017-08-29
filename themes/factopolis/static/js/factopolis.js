@@ -1,6 +1,6 @@
 
 $('#mediaModal').on('hidden.bs.modal', function () {
-  $('#mediaModal .modal-video-content').html('');
+  $('#modal-target').html('');
 });
 
 /* YouTube videos */
@@ -31,15 +31,15 @@ $(document).ready(function () {
         }
       }
 
-      $('#mediaModal .modal-video-content').html('<iframe src="' + videoUrl + '" allowscriptaccess="always"></iframe>');
+      $('#modal-target').html('<div class="embed-responsive embed-responsive-16by9"><iframe src="' + videoUrl + '" allowscriptaccess="always"></iframe></div>');
       $('#mediaModal').modal();
     }
   });
 });
 
 /* HTML5 videos */
-$(document).ready(function() {
-  $('.video-link').on('click', function(e) {
+$(document).ready(function () {
+  $('.video-link').on('click', function (e) {
     var videoPlayer = document.createElement('video');
     videoPlayer.controls = true;
     videoPlayer.autoplay = true;
@@ -59,9 +59,28 @@ $(document).ready(function() {
     }
     videoPlayer.src = videoUrl;
 
-    $('#mediaModal .modal-video-content').html(videoPlayer);
+    $('#modal-target').html('<div class="embed-responsive embed-responsive-16by9"></div>');
+    $('#modal-target > div').html(videoPlayer);
     $('#mediaModal').modal();
 
     e.preventDefault();
+  });
+});
+
+/* Twitter */
+$(document).ready(function () {
+  $('.twitter-link').on('click', function (e) {
+    try {
+      var tweetId = $(this).attr('data-tweet');
+
+      twttr.widgets.createTweet(tweetId,
+        document.getElementById('modal-target'),
+        {
+          "conversation": "all"
+        });
+
+      $('#mediaModal').modal();
+      e.preventDefault();
+    } catch (e) { }
   });
 });
