@@ -40,30 +40,41 @@ $(document).ready(function () {
 /* HTML5 videos */
 $(document).ready(function () {
   $('.video-link').on('click', function (e) {
-    var videoPlayer = document.createElement('video');
-    videoPlayer.controls = true;
-    videoPlayer.autoplay = true;
+    var videoPlayer = null;
+    if ($(this).attr('data-url')) {
+      videoPlayer = document.createElement('video');
+      videoPlayer.controls = true;
+      videoPlayer.autoplay = true;
 
-    var videoUrl = $(this).attr("href");
-    var startTime = parseFloat($(this).attr('data-start-time'));
-    var duration = parseFloat($(this).attr('data-duration'));
-    if (isFinite(startTime) || isFinite(duration)) {
-      if (isNaN(startTime))
-        startTime = 0;
+      var videoUrl = $(this).attr("data-url");
+      var startTime = parseFloat($(this).attr('data-start'));
+      var duration = parseFloat($(this).attr('data-duration'));
+      if (isFinite(startTime) || isFinite(duration)) {
+        if (isNaN(startTime))
+          startTime = 0;
 
-      videoUrl += "#t=" + startTime;
+        videoUrl += "#t=" + startTime;
 
-      if (duration) {
-        videoUrl += ',' + (startTime + duration);
+        if (duration) {
+          videoUrl += ',' + (startTime + duration);
+        }
       }
+      videoPlayer.src = videoUrl;
+    } else if ($(this).attr('data-iframe')) {
+      videoPlayer = document.createElement('iframe');
+      videoPlayer.src = $(this).attr('data-iframe');
+      videoPlayer.scrolling = "no";
+      videoPlayer.border = "no";
+      videoPlayer.sandbox = "allow-scripts allow-same-origin";
     }
-    videoPlayer.src = videoUrl;
 
-    $('#modal-target').html('<div class="embed-responsive embed-responsive-16by9"></div>');
-    $('#modal-target > div').html(videoPlayer);
-    $('#mediaModal').modal();
+    if (videoPlayer !== null) {
+      $('#modal-target').html('<div class="embed-responsive embed-responsive-16by9"></div>');
+      $('#modal-target > div').html(videoPlayer);
+      $('#mediaModal').modal();
 
-    e.preventDefault();
+      e.preventDefault();
+    }
   });
 });
 

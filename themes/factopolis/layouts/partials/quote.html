@@ -39,16 +39,32 @@
                   ({{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url }})
                 </a>
               {{ else if eq $source.type "audio" }}
-                <audio class="dropdown-item" controls preload="none" src="{{ $source.url }}{{ if $source.start }}#t={{ $source.start }}{{ if $source.duration }},{{ add $source.start $source.duration }}{{ end }}{{ end }}">
-                  <a href="{{ $source.url }}" target="_blank">
+                <audio class="dropdown-item" controls preload="none" src="{{ $source.url }}{{ if $source.start }}#t={{ $source.start }}{{ if $source.duration }},{{ add $source.start $source.duration }}{{ end }}{{ end }}"></audio>
+                {{ if $source.source }}
+                  <a class="dropdown-item" href="#">
                     <i class="fa fa-headphones" aria-hidden="true"></i>
-                    Audio {{ partial "time-range.html" $source }}
+                    {{ default (replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.source) $source.name }}
+                    {{ partial "time-range.html" $source }}
                   </a>
-                </audio>
+                {{ end }}
               {{ else if eq $source.type "video" }}
-                <a class="dropdown-item video-link" {{ if gt $source.start 0.0 }}data-start-time="{{ $source.start }}"{{ end }} {{ if $source.duration }}data-duration="{{ $source.duration }}"{{ end }} href="{{ $source.url }}" target="_blank">
+                <a class="dropdown-item video-link"
+                href="{{ default $source.iframe (default $source.url $source.source) }}"
+                    {{ if gt $source.start 0.0 }}data-start="{{ $source.start }}"{{ end }}
+                    {{ if $source.duration }}data-duration="{{ $source.duration }}"{{ end }}
+                    {{ if $source.source }}
+                      data-source="{{ $source.source }}"
+                    {{ end }}
+                    {{ if $source.url }}
+                      data-url="{{ $source.url }}"
+                    {{ end }}
+                    {{ if $source.iframe }}
+                      data-iframe="{{ $source.iframe }}"
+                    {{ end }}
+                    target="_blank">
                   <i class="fa fa-film" aria-hidden="true"></i>
-                  Video {{ partial "time-range.html" $source }}
+                  {{ default (replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.source) $source.name }}
+                  {{ partial "time-range.html" $source }}
                 </a>
               {{ else if eq $source.type "web" }}
                 <a class="dropdown-item" href="{{ $source.url }}" target="_blank">
