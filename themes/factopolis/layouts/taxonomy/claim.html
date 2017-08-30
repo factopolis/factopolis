@@ -74,7 +74,7 @@
           <ul class="quote-list">
             {{ range $statement := $personClaims }}
               <li>
-                {{ partial "quote.html" $statement }}
+                {{ partial "quote.html" (slice $ $statement) }}
               </li>
             {{ end }}
           </ul>
@@ -87,7 +87,7 @@
   <ol class="quote-list">
     {{ range $statement := $.Data.Pages }}
       <li>
-        {{ partial "quote.html" $statement }}
+        {{ partial "quote.html" (slice $ $statement) }}
       </li>
     {{ end }}
   </ol>

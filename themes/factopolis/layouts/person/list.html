@@ -83,7 +83,7 @@
   <ol class="statements quote-list">
     {{ range $stmt := .Paginator.Pages }}
       <li>
-        {{ partial "quote.html" $stmt }}
+        {{ partial "quote.html" (slice $ $stmt) }}
       </li>
     {{ end }}
   </ol>

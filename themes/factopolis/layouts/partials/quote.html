@@ -1,30 +1,32 @@
+{{ $page := index $ 0 }}
+{{ $stmt := index $ 1 }}
 <blockquote>
   <div class="quote-contents">
-    {{ if $.Params.retraction }}<del>{{end}}
-    {{ if $.Params.quote }}
+    {{ if $stmt.Params.retraction }}<del>{{end}}
+    {{ if $stmt.Params.quote }}
       <p>
-        {{ $.Params.quote | markdownify }}
+        {{ $stmt.Params.quote | markdownify }}
       </p>
     {{ end }}
-    {{ if $.Params.retraction }}</del>{{end}}
+    {{ if $stmt.Params.retraction }}</del>{{end}}
   </div>
 
   <footer>
     <cite>
       <div>
-        <a href="{{ $.Parent.Permalink }}">{{ $.Parent.Title }}</a>{{ if $.Params.where }},{{ else }} on {{ end }}
+        <a href="{{ $stmt.Parent.Permalink }}">{{ $stmt.Parent.Title }}</a>{{ if $stmt.Params.where }},{{ else }} on {{ end }}
         <span class="dropdown show">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{ if $.Params.where }}
-              {{ $.Params.where | title }}
+            {{ if $stmt.Params.where }}
+              {{ $stmt.Params.where | title }}
             {{ else }}
-              <time datetime="{{ $.Params.date }}">
-              {{ $.Date | dateFormat "Jan 2, 2006" }}
+              <time datetime="{{ $stmt.Params.date }}">
+              {{ $stmt.Date | dateFormat "Jan 2, 2006" }}
               </time>
             {{ end }}
           </a>
           <div class="dropdown-menu">
-            {{ range $source := $.Params.sources }}
+            {{ range $source := $stmt.Params.sources }}
               {{ if eq $source.type "youtube" }}
                 <a class="dropdown-item" {{ if $source.start }}data-start-time="{{ $source.start }}" {{ if $source.duration }}data-end-time="{{ add $source.start $source.duration }}"{{ end }}{{ end }} href="https://www.youtube.com/watch?v={{ $source.id }}{{ if $source.start }}&amp;t={{ $source.start }}{{  end }}" target="_blank">
                   <i class="fa fa-youtube" aria-hidden="true"></i>
@@ -86,82 +88,82 @@
             {{ end }}
           </div>
         </span>
-        {{ if $.Params.where }}
+        {{ if $stmt.Params.where }}
           on
-          <time datetime="{{ $.Params.date }}">
-            {{ $.Date | dateFormat "Jan 2, 2006" }}
+          <time datetime="{{ $stmt.Params.date }}">
+            {{ $stmt.Date | dateFormat "Jan 2, 2006" }}
           </time>
         {{ end }}
       </div>
-      {{ if $.Params.retraction }}
+      {{ if $stmt.Params.retraction }}
         <div class="retraction">
-          {{ if eq $.Params.retraction.type "clarification" }}
+          {{ if eq $stmt.Params.retraction.type "clarification" }}
             Clarified
           {{ else }}
             Retracted
           {{ end }}
 
-          {{ if $.Params.retraction.issuer }}
+          {{ if $stmt.Params.retraction.issuer }}
             by
 
-            {{ if $.Params.retraction.issuer.position }}
-              {{ $.Params.retraction.issuer.position }}
+            {{ if $stmt.Params.retraction.issuer.position }}
+              {{ $stmt.Params.retraction.issuer.position }}
             {{ end }}
 
-            {{ if $.Params.retraction.issuer.id }}
-              {{ $retractor := $.Site.GetPage "section" "person" $.Params.retraction.issuer.id }}
-              {{ if $retractor }}
-                <a href="{{ $retractor.Permalink }}">
-                  {{ $retractor.Title }}
+            {{ if $stmt.Params.retraction.issuer.id }}
+              {{ $stmtretractor := $stmt.Site.GetPage "section" "person" $stmt.Params.retraction.issuer.id }}
+              {{ if $stmtretractor }}
+                <a href="{{ $stmtretractor.Permalink }}">
+                  {{ $stmtretractor.Title }}
                 </a>
               {{ else }}
-                {{ (replace $.Params.retraction.issuer.id "-" " ") | humanize }}
+                {{ (replace $stmt.Params.retraction.issuer.id "-" " ") | humanize }}
               {{ end }}
             {{ else }}
-              {{ $.Params.retraction.issuer.name }}
+              {{ $stmt.Params.retraction.issuer.name }}
             {{ end }}
           {{ end }}
 
           on
 
-          <a href="{{ $.Params.retraction.source }}">
-            <time datetime="{{ $.Params.retraction.date }}">
-              {{ $.Params.retraction.date | dateFormat "Jan 2, 2006" }}
+          <a href="{{ $stmt.Params.retraction.source }}">
+            <time datetime="{{ $stmt.Params.retraction.date }}">
+              {{ $stmt.Params.retraction.date | dateFormat "Jan 2, 2006" }}
             </time>
           </a>
         </div>
       {{ end }}
     </cite>
 
-    {{ if $.Params.checks }}
+    {{ if $stmt.Params.checks }}
       <ul class="fact-checks">
-        {{ range $check := $.Params.checks }}
-        {{ $checker := $.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
+        {{ range $stmtcheck := $stmt.Params.checks }}
+        {{ $stmtchecker := $stmt.Site.GetPage "page" "checker" (printf "%s.md" $stmtcheck.checker) }}
           <li>
-            {{ if $checker }}
-              <a class="check-source" href="{{ $check.source }}">
-                {{ if $checker.Params.abbr }}
-                  <abbr title="{{ $checker.Title }}">{{ $checker.Params.abbr }}</abbr>
+            {{ if $stmtchecker }}
+              <a class="check-source" href="{{ $stmtcheck.source }}">
+                {{ if $stmtchecker.Params.abbr }}
+                  <abbr title="{{ $stmtchecker.Title }}">{{ $stmtchecker.Params.abbr }}</abbr>
                 {{ else }}
-                  {{ $checker.Title }}
+                  {{ $stmtchecker.Title }}
                 {{ end }}
               </a>
             {{ end }}
-            {{ if $check.rating }}
-              <span class="check-rating">{{ humanize $check.rating }}</span>
+            {{ if $stmtcheck.rating }}
+              <span class="check-rating">{{ humanize $stmtcheck.rating }}</span>
             {{ end }}
           </li>
         {{ end }}
       </ul>
     {{ end }}
 
-    {{ if $.Params.claims }}
+    {{ if $stmt.Params.claims }}
       <dl class="claims">
-        {{ range $claimID := $.Params.claims }}
-          {{ $claim := $.Site.GetPage "taxonomy" "claims" $claimID }}
-          <dt><a href="{{ $claim.Permalink }}">{{ $claim.Title }}</a></dt>
+        {{ range $stmtclaimID := $stmt.Params.claims }}
+          {{ $stmtclaim := $stmt.Site.GetPage "taxonomy" "claims" $stmtclaimID }}
+          <dt><a href="{{ $stmtclaim.Permalink }}">{{ $stmtclaim.Title }}</a></dt>
           <dd class="truth">
-            {{ $claim.Params.summary | markdownify }}
+            {{ $stmtclaim.Params.summary | markdownify }}
           </dd>
         {{ end }}
       </dl>
