@@ -30,7 +30,7 @@
               {{ if eq $source.type "youtube" }}
                 <a class="dropdown-item" {{ if $source.start }}data-start-time="{{ $source.start }}" {{ if $source.duration }}data-end-time="{{ add $source.start $source.duration }}"{{ end }}{{ end }} href="https://www.youtube.com/watch?v={{ $source.id }}{{ if $source.start }}&amp;t={{ $source.start }}{{  end }}" target="_blank">
                   <i class="fa fa-youtube" aria-hidden="true"></i>
-                  YouTube
+                  YouTube {{ partial "time-range.html" $source }}
                 </a>
               {{ else if eq $source.type "transcript" }}
                <a class="dropdown-item" href="{{ $source.url }}" target="_blank">
@@ -42,42 +42,19 @@
                 <audio class="dropdown-item" controls preload="none" src="{{ $source.url }}{{ if $source.start }}#t={{ $source.start }}{{ if $source.duration }},{{ add $source.start $source.duration }}{{ end }}{{ end }}">
                   <a href="{{ $source.url }}" target="_blank">
                     <i class="fa fa-headphones" aria-hidden="true"></i>
-                    Audio
-                    {{ if $source.start }}
-                      {{ if or $source.start $source.duration }}
-                        {{ $startTime := default 0 $source.start }}
-                        (
-                          {{ printf "%d:%02d" (div $startTime 60) (mod $startTime 60) }}
-                          {{ if $source.duration }}
-                            -
-                          {{ $endTime := add $startTime $source.duration }}
-                            {{ printf "%d:%02d" (div $endTime 60) (mod $endTime 60) }}
-                          {{ end }}
-                        )
-                      {{ end }}
-                    {{ end }}
+                    Audio {{ partial "time-range.html" $source }}
                   </a>
                 </audio>
               {{ else if eq $source.type "video" }}
                 <a class="dropdown-item video-link" {{ if gt $source.start 0.0 }}data-start-time="{{ $source.start }}"{{ end }} {{ if $source.duration }}data-duration="{{ $source.duration }}"{{ end }} href="{{ $source.url }}" target="_blank">
                   <i class="fa fa-film" aria-hidden="true"></i>
-                  Video
-                  {{ if or $source.start $source.duration }}
-                    {{ $startTime := default 0 $source.start }}
-                    (
-                      {{ printf "%d:%02d" (div $startTime 60) (mod $startTime 60) }}
-                      {{ if $source.duration }}
-                        -
-                        {{ $endTime := add $startTime $source.duration }}
-                        {{ printf "%d:%02d" (div $endTime 60) (mod $endTime 60) }}
-                      {{ end }}
-                    )
-                  {{ end }}
+                  Video {{ partial "time-range.html" $source }}
                 </a>
               {{ else if eq $source.type "web" }}
                 <a class="dropdown-item" href="{{ $source.url }}" target="_blank">
                   <i class="fa fa-globe" aria-hidden="true"></i>
                   {{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url }}
+                  {{ partial "time-range.html" $source }}
                 </a>
               {{ else if eq $source.type "twitter" }}
                 <a class="dropdown-item twitter-link" data-tweet="{{ $source.id }}" href="https://twitter.com/{{ $source.user }}/status/{{ $source.id }}">
