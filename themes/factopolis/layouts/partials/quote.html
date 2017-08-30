@@ -26,19 +26,19 @@
           <div class="dropdown-menu">
             {{ range $source := $.Params.sources }}
               {{ if eq $source.type "youtube" }}
-                <a class="dropdown-item" {{ if $source.start }}data-start-time="{{ $source.start }}" {{ if $source.duration }}data-end-time="{{ add $source.start $source.duration }}"{{ end }}{{ end }} href="https://www.youtube.com/watch?v={{ $source.id }}{{ if $source.start }}&amp;t={{ $source.start }}{{  end }}">
+                <a class="dropdown-item" {{ if $source.start }}data-start-time="{{ $source.start }}" {{ if $source.duration }}data-end-time="{{ add $source.start $source.duration }}"{{ end }}{{ end }} href="https://www.youtube.com/watch?v={{ $source.id }}{{ if $source.start }}&amp;t={{ $source.start }}{{  end }}" target="_blank">
                   <i class="fa fa-youtube" aria-hidden="true"></i>
                   YouTube
                 </a>
               {{ else if eq $source.type "transcript" }}
-               <a class="dropdown-item" href="{{ $source.url }}">
+               <a class="dropdown-item" href="{{ $source.url }}" target="_blank">
                   <i class="fa fa-file-text" aria-hidden="true"></i>
                   Transcript
                   ({{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url }})
                 </a>
               {{ else if eq $source.type "audio" }}
                 <audio class="dropdown-item" controls preload="none" src="{{ $source.url }}{{ if $source.start }}#t={{ $source.start }}{{ if $source.duration }},{{ add $source.start $source.duration }}{{ end }}{{ end }}">
-                  <a href="{{ $source.url }}">
+                  <a href="{{ $source.url }}" target="_blank">
                     <i class="fa fa-headphones" aria-hidden="true"></i>
                     Audio
                     {{ if $source.start }}
@@ -57,7 +57,7 @@
                   </a>
                 </audio>
               {{ else if eq $source.type "video" }}
-                <a class="dropdown-item video-link" {{ if gt $source.start 0.0 }}data-start-time="{{ $source.start }}"{{ end }} {{ if $source.duration }}data-duration="{{ $source.duration }}"{{ end }} href="{{ $source.url }}">
+                <a class="dropdown-item video-link" {{ if gt $source.start 0.0 }}data-start-time="{{ $source.start }}"{{ end }} {{ if $source.duration }}data-duration="{{ $source.duration }}"{{ end }} href="{{ $source.url }}" target="_blank">
                   <i class="fa fa-film" aria-hidden="true"></i>
                   Video
                   {{ if or $source.start $source.duration }}
@@ -73,7 +73,7 @@
                   {{ end }}
                 </a>
               {{ else if eq $source.type "web" }}
-                <a class="dropdown-item" href="{{ $source.url }}">
+                <a class="dropdown-item" href="{{ $source.url }}" target="_blank">
                   <i class="fa fa-globe" aria-hidden="true"></i>
                   {{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url }}
                 </a>
