@@ -12,48 +12,38 @@
 </p>
 
 <ul class="claims">
-  {{ range $page := .Paginator.Pages }}
-    <li class="claim">
+  {{ range $claim := (.Paginate .Data.Pages.ByDate.Reverse).Pages }}
+    {{ $.Scratch.Set "claimants" (slice) }}
+    {{ $.Scratch.Set "claimantPaths" (slice) }}
+    {{ range $stmt := $claim.Data.Pages }}
+      {{ if not (in ($.Scratch.Get "claimantPaths") $stmt.Parent.File.Path) }}
+        {{ $.Scratch.Add "claimantPaths" $stmt.Parent.File.Path }}
+        {{ $.Scratch.Add "claimants" $stmt.Parent }}
+        {{ $.Scratch.Set (printf "stmtsBy-%s" $stmt.Parent.File.Path) (slice $stmt) }}
+      {{ else }}
+        {{ $.Scratch.Add (printf "stmtsBy-%s" $stmt.Parent.File.Path) $stmt }}
+      {{ end }}
+    {{ end }}
+
+    <li>
       <h4>
-	      <a href="{{ $page.Permalink }}">{{ .Title }}</a>
+        <a href="{{ $claim.Permalink }}">{{ $claim.Title }}</a>
       </h4>
 
-      {{ if 0 }}
-        <!-- This version is slow… -->
+      <div>
         <ul class="quick-claimants-list">
-          <li>
-            {{ range $person := where (where $.Site.Pages "Type" "person") "Kind" "section" }}
-              {{ $personClaims := intersect (where (where $.Site.Pages "Type" "assertion") "Parent.UniqueID" $person.UniqueID) $page.Data.Pages }}
-              {{ if $personClaims | len }}
-                <a href="{{ $person.Permalink }}">{{ $person.Title }}</a>
-                {{ if gt ($personClaims | len) 1 }}
-                  ({{ $personClaims | len }} times)
-                {{ end }}
-              {{ end }}
-            {{ end }}
-          </li>
+          {{ range $claimant := $.Scratch.Get "claimants" }}
+            {{ $stmtCount := $.Scratch.Get (printf "stmtsBy-%s" $claimant.File.Path) | len }}
+            <li><a href="{{ $claimant.Permalink }}">{{ $claimant.Title }}</a>{{ if gt $stmtCount 1 }} {{ $stmtCount }} times{{ end }}</li>
+          {{ end }}
         </ul>
-      {{ else }}
-        <div>
-          {{ $nStatements := $page.Data.Pages | len }}
-          {{ if gt $nStatements 1 }}
-            {{ $nStatements }} statements, between
-            {{ range $stmt := last 1 $page.Data.Pages }}
-              {{ $stmt.Date | dateFormat "Jan 2, 2006" }}
-            {{ end }}
-            and
-          {{ end }}
-          {{ range $stmt := first 1 $page.Data.Pages }}
-            {{ $stmt.Date | dateFormat "Jan 2, 2006" }}.
-          {{ end }}
-        </div>
-      {{ end }}
 
-      <section class="truth">
-        <p>
-          {{ $page.Params.summary | markdownify }}
-        </p>
-      </section>
+        <section class="truth">
+          <p>
+            {{ $claim.Params.summary | markdownify }}
+          </p>
+        </section>
+      </div>
     </li>
   {{ end }}
 </ul>
