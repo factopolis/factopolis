@@ -11,4 +11,8 @@ checks:
   quote:
     The numbers don’t back that up. Cruz might have been focused on the difference between immediate emergency relief and longer term reconstruction, but his words skipped over that distinction.
   source: http://www.politifact.com/truth-o-meter/statements/2017/aug/30/ted-cruz/ted-cruzs-mostly-false-claim-two-thirds-sandy-reli/
+- checker: factcheck-org
+  quote:
+    Cruz could have said he thought the Sandy relief legislation included too many non-emergency items. That’s fair enough, and his opinion. But he was wrong to specifically say two-thirds of the bill “had nothing to do with Sandy,” or “little or nothing to do with Hurricane Sandy.”
+  source: http://www.factcheck.org/2017/08/cruz-wrong-sandy-relief/
 ---

@@ -7,6 +7,7 @@ claims:
 
 quote:
   
+where: 
 sources:
 - type: web
   url: 
@@ -17,10 +18,13 @@ sources:
 - type: audio
   start: duration
   url: 
+  source: 
 - type: video
   start: 
   duration: 
   url: 
+  iframe: 
+  source: 
 - type: transcript
   url: 
 
