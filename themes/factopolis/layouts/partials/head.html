@@ -57,16 +57,16 @@
         <nav>
           <ul>
             <li>
-              <a {{ if hasPrefix "person/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}person">People</a>
+              <a {{ if hasPrefix "/person/" $.Page.URL }}class="active" {{ end }}href="{{ $.Site.BaseURL }}person">People</a>
             </li>
             <li>
-              <a {{ if hasPrefix "claims/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}claims">Claims</a>
+              <a {{ if hasPrefix "/claims/" $.Page.URL }}class="active" {{ end }}href="{{ $.Site.BaseURL }}claims">Claims</a>
             </li>
             <li>
-              <a {{ if hasPrefix "themes/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}themes">Themes</a>
+              <a {{ if hasPrefix "/themes/" $.Page.URL }}class="active" {{ end }}href="{{ $.Site.BaseURL }}themes">Themes</a>
             </li>
             <li>
-              <a {{ if hasPrefix "groups/" $.Page.Type }}class="active" {{ end }}href="{{ $.Site.BaseURL }}groups">Groups</a>
+              <a {{ if hasPrefix "/groups/" $.Page.URL }}class="active" {{ end }}href="{{ $.Site.BaseURL }}groups">Groups</a>
             </li>
           </ul>
         </nav>
