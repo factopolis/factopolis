@@ -18,6 +18,9 @@ theme = "factopolis"
     taxonomy = [ "HTML", "JSON" ]
     taxonomyTerm = [ "HTML", "JSON" ]
 
+[blackfriday]
+    fractions = false
+
 [params]
 # Whether to enable Dart front-end (unfinished). This will become the
 # default once the Dart front-end reaches parity.
