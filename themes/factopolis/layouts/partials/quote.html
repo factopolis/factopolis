@@ -1,5 +1,6 @@
 {{ $page := index $ 0 }}
 {{ $stmt := index $ 1 }}
+{{ $slug := replaceRE "^.*/([^/]+)/?$" "$1" $page.URL }}
 <blockquote>
   <div class="quote-contents">
     {{ if $stmt.Params.retraction }}<del>{{end}}
@@ -128,38 +129,84 @@
       {{ end }}
     </cite>
 
-    {{ if $stmt.Params.checks }}
-      <ul class="fact-checks">
-        {{ range $stmtcheck := $stmt.Params.checks }}
-        {{ $stmtchecker := $stmt.Site.GetPage "page" "checker" (printf "%s.md" $stmtcheck.checker) }}
-          <li>
-            {{ if $stmtchecker }}
-              <a class="check-source" href="{{ $stmtcheck.source }}">
-                {{ if $stmtchecker.Params.abbr }}
-                  <abbr title="{{ $stmtchecker.Title }}">{{ $stmtchecker.Params.abbr }}</abbr>
-                {{ else }}
-                  {{ $stmtchecker.Title }}
-                {{ end }}
-              </a>
-            {{ end }}
-            {{ if $stmtcheck.rating }}
-              <span class="check-rating">{{ humanize $stmtcheck.rating }}</span>
-            {{ end }}
-          </li>
+    {{ if and (eq $page.Type "claims") (eq $page.Kind "taxonomy") }}
+      {{ $page.Scratch.Set "##partials/quote.html/claims" (slice) }}
+      {{ range $claim := $stmt.Params.claims }}
+        {{ if ne $claim $slug }}
+          {{ $page.Scratch.Add "##partials/quote.html/claims" $claim }}
         {{ end }}
-      </ul>
+      {{ end }}
+    {{ else }}
+      {{ $page.Scratch.Set "##partials/quote.html/claims" $stmt.Params.claims }}
     {{ end }}
 
-    {{ if $stmt.Params.claims }}
-      <dl class="claims">
-        {{ range $stmtclaimID := $stmt.Params.claims }}
-          {{ $stmtclaim := $stmt.Site.GetPage "taxonomy" "claims" $stmtclaimID }}
-          <dt><a href="{{ $stmtclaim.Permalink }}">{{ $stmtclaim.Title }}</a></dt>
-          <dd class="truth">
-            {{ $stmtclaim.Params.summary | markdownify }}
-          </dd>
+    {{ if ($page.Scratch.Get "##partials/quote.html/claims") | len }}
+      <section class="claims">
+        {{ if and (eq $page.Type "claims") (eq $page.Kind "taxonomy") }}
+          <h4>Other Claims</h4>
+        {{ else }}
+          <h4>Claims</h4>
         {{ end }}
-      </dl>
+
+        <ul class="subtle-list">
+          {{ range $claimId := $page.Scratch.Get "##partials/quote.html/claims" }}
+            <li>
+            {{ $claim := $page.Site.GetPage "taxonomy" "claims" $claimId }}
+            <h5>
+              <a href="{{ $claim.Permalink }}">{{ $claim.Title }}</a>
+            </h5>
+            <div class="truth">
+              {{ $claim.Params.summary | markdownify }}
+            </div>
+            </li>
+          {{ end }}
+        </ul>
+      </section>
+    {{ end }}
+
+    {{ $page.Scratch.Set "##partials/quote.html/checks" (slice) }}
+    {{ if $stmt.Params.checks }}
+      {{ range $check := $stmt.Params.checks }}
+        {{ if or (or (ne $page.Type "claims") (ne $page.Kind "taxonomy")) (or (not $check.claims) (in $check.claims $slug)) }}
+          {{ $page.Scratch.Add "##partials/quote.html/checks" $check }}
+        {{ end }}
+      {{ end }}
+
+      {{ $checks := $page.Scratch.Get "##partials/quote.html/checks" }}
+      {{ if ($checks | len) }}
+        <section class="fact-checks">
+          <h4>Fact Checks</h4>
+
+          {{ range $check := shuffle $checks }}
+            <blockquote>
+              <div class="quote-contents">
+                {{ if $check.quote }}
+                  {{ $check.quote | markdownify }}
+                {{ else if $check.short }}
+                  {{ $check.short | markdownify }}
+                {{ else }}
+                  QUOTE MISSING
+                {{ end }}
+              </div>
+
+              <footer>
+                <cite>
+                  <div>
+                    {{ $checker := $page.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
+                    <a href="{{ $check.source }}">
+                      {{ if $checker }}
+                        {{ $checker.Title }}
+                      {{ else }}
+                        {{ $check.checker | title }}
+                      {{ end }}
+                    </a>
+                  </div>
+                </cite>
+              </footer>
+            </blockquote>
+          {{ end }}
+        </section>
+      {{ end }}
     {{ end }}
   </footer>
 </blockquote>

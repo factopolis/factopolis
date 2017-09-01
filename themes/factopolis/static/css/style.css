@@ -265,79 +265,46 @@ ul.pagination > li.disabled > a {
 
 .quote-list > li > blockquote {
   margin: 0;
-  padding-bottom: 1em;
 }
 
-.quote-list > li > blockquote > footer > .fact-checks {
-  padding: 1em 0 0 1em;
-  border-top: 1px #a8b2b7 solid;
+.quote-list > li > blockquote > footer h4 {
+  font-size: 1.2em;
+  font-variant: small-caps;
+  font-weight: bold;
+  border-bottom: 2px #b0c26e solid;
+}
+
+.quote-list > li > blockquote > footer h5 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.subtle-list {
   list-style-type: none;
+  padding: 0;
 }
 
-.quote-list > li > blockquote > footer > .fact-checks:before {
-  content: "Fact Checks:";
-  font-weight: bold;
-  display: block;
-  font-variant: small-caps;
-  border-bottom: 2px #b0c26e solid;
-  margin: 0.25em 0;
-}
-
-.quote-list > li > blockquote > footer > .fact-checks > li {
-  border: 1px red solid;
-  display: table-row;
-}
-
-.quote-list > li > blockquote > footer > .fact-checks > li > * {
-  display: table-cell;
-}
-
-.quote-list > li > blockquote > footer > .fact-checks > li > a {
-  width: 11em;
-  /* text-align: right; */
-  padding-right: 1em;
-}
-
-.quote-list > li > blockquote > footer > .claims {
-  padding: 1em 0 0 1em;
-}
-
-.quote-list > li > blockquote > footer > .claims:before {
-  content: "Claims:";
-  font-weight: bold;
-  display: block;
-  font-variant: small-caps;
-  border-bottom: 2px #b0c26e solid;
-  margin: 0.25em 0;
-}
-
-.quote-list > li > blockquote > footer > .claims > dd:before {
-  content: "The Truth: ";
-  font-variant: small-caps;
-  font-weight: bold;
-}
-
-.quote-list > li > blockquote > footer > .claims > dd {
-  margin: 0 0 0.5em 0;
-}
-
-section.truth {
+.truth {
   display: block;
   margin: 0.5em 0;
   border-left: 5px #b0c26e solid;
   background-color: #f8ffdd;
-  padding: 1em;
   border-radius: 3px;
+  padding: 0.2em 0.5em;
 }
 
-section.truth:before {
+section.truth {
+  padding: 1em;
+}
+
+.truth:before {
   content: "The Truth: ";
   font-variant: small-caps;
   font-weight: bold;
   font-size: 0.85em;
 }
 
-section.truth > * {
+.truth > * {
   display: inline;
 }
 
@@ -348,9 +315,13 @@ section.truth > * {
 }
 
 .quote-list > li {
-  margin: 1em 0;
+  margin-bottom: 4em;
   padding: 0 1em;
   border-left: 5px #a8b2b7 solid;
+}
+
+.quote-list > li:last-child {
+  margin-bottom: 0;
 }
 
 .quote-contents {

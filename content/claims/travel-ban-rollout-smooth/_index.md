@@ -1,18 +1,4 @@
 ---
 title: Travel ban rollout was smooth
 summary: The rollout was chaotic.
-checks:
-  - checker: new-york-times
-    short: The rollout was chaotic.
-    source: https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html
-  - checker: washington-post
-    quote:
-      Trump appears to have forgotten that imprecise wording in the
-      executive order led to confusion over whether U.S. permanent
-      residents — green-card holders — were also banned from returning
-      to the United States. The White House counsel later issued
-      guidance making clear that they were not covered. The Court of
-      Appeals later said that the counsel’s statement was not a
-      sufficient fix.
-    source: https://www.washingtonpost.com/news/fact-checker/wp/2017/02/16/fact-checking-president-trumps-news-conference/
 ---

@@ -12,85 +12,24 @@
 {{ end }}
 
 <section id="truth">
+  <h2>The Truth</h2>
+
   <p>{{ $claim.summary | markdownify }}</p>
 </section>
 
-<section id="sources">
-  <h2>Sources</h3>
-
-  <ul class="quote-list">
-    {{ range $check := (shuffle .Params.checks) }}
-      <li>
-        <blockquote>
-          <div class="quote-contents">
-            <p>
-              {{ if $check.quote }}
-                {{ $check.quote | markdownify }}
-              {{ else if $check.short }}
-                {{ $check.short | markdownify }}
-              {{ end }}
-            </p>
-          </div>
-
-          <footer>
-            <cite>
-              <div>
-                {{ if $check.source }}<a href="{{ $check.source }}">{{ end }}
-                {{ if $check.checker }}
-                  {{ range where $.Site.Pages "URL" (printf "/checker/%s/" $check.checker) }}
-                    {{ .Title }}
-                  {{ end }}
-                {{ else }}
-                  {{ $check.name }}
-                {{ end }}
-
-                {{ if $check.date }}
-                  on {{ $check.date }}
-                {{ end }}
-
-                {{ if $check.source }}</a>{{ end }}
-              </div>
-            </cite>
-          </footer>
-        </blockquote>
-      </li>
-    {{ end }}
-  </ul>
-</section>
-
-<section id="statements">
+<section id="fact-checks">
   <h2>Statements</h2>
 
-  {{/*
-  <dl>
-    {{ range $person := where (where $.Site.Pages "Type" "person") "Kind" "section" }}
-      {{ $personClaims := intersect (where (where $.Site.Pages "Type" "assertion") "Parent.UniqueID" $person.UniqueID) $.Data.Pages }}
-      {{ if $personClaims | len }}
-        <dt>
-          <a href="{{ $person.Permalink }}">{{ $person.Title }}</a>
-        </dt>
-
-        <dd>
-          <ul class="quote-list">
-            {{ range $statement := $personClaims }}
-              <li>
-                {{ partial "quote.html" (slice $ $statement) }}
-              </li>
-            {{ end }}
-          </ul>
-        </dd>
+  {{ $claimId := replaceRE "^/claims/(.*)/$" "$1" $.URL }}
+  <ul class="quote-list">
+    {{ range $stmt := where $.Site.Pages "Type" "assertion" }}
+      {{ if in $stmt.Params.claims $claimId }}
+        <li>
+          {{ partial "quote.html" (slice $ $stmt) }}
+        </li>
       {{ end }}
     {{ end }}
-  </dl>
-  */}}
-
-  <ol class="quote-list">
-    {{ range $statement := $.Data.Pages }}
-      <li>
-        {{ partial "quote.html" (slice $ $statement) }}
-      </li>
-    {{ end }}
-  </ol>
+  </ul>
 </section>
 
 {{ partial "footer.html" . }}
