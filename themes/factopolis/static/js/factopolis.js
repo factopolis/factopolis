@@ -95,3 +95,16 @@ $(document).ready(function () {
     } catch (e) { }
   });
 });
+
+/* Share the Facts */
+$(document).ready(function() {
+  $('.share-the-facts-widget').each(function(idx, container) {
+    /* Still on the fence about this, but leaning towards not enabling it. */
+    return;
+    var reqUrl = 'http://www.sharethefacts.co/services/oembed?format=json&url=https://www.sharethefacts.co/share/';
+    reqUrl += $(container).attr('data-share-the-facts-id');
+    $.getJSON(reqUrl, function(data) {
+      $(container).replaceWith('<div class="share-the-fact">' + data.html + '</div>');
+    });
+  });
+});

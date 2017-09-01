@@ -178,7 +178,7 @@
           <h4>Fact Checks</h4>
 
           {{ range $check := shuffle $checks }}
-            <blockquote>
+            <blockquote{{ if $check.sharethefacts }} class="share-the-facts-widget" data-share-the-facts-id="{{ $check.sharethefacts }}"{{ end }}>
               <div class="quote-contents">
                 {{ if $check.quote }}
                   {{ $check.quote | markdownify }}
