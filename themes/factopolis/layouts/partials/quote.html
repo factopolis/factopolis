@@ -1,33 +1,256 @@
-{{ $page := index $ 0 }}
-{{ $stmt := index $ 1 }}
-{{ $slug := replaceRE "^.*/([^/]+)/?$" "$1" $page.URL }}
-<blockquote>
+{{ $slug := replaceRE "^.*/([^/]+)/?$" "$1" $.page.URL }}
+{{ $claimantId := replaceRE "/person/(.+)/" "$1" $.stmt.Parent.URL }}
+<div class="statement">
+  <div class="statement-gutter">
+    {{ if ne $.stmt.Parent.UniqueID $.page.UniqueID }}
+      <a href="{{ $.stmt.Parent.Permalink }}">
+        <img src="{{ replaceRE "/?$" "-64.jpg" $.stmt.Parent.URL }}" alt="{{ $.stmt.Parent.Title }}" />
+      </a>
+    {{ else }}
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square fa-stack-2x"></i>
+        <i class="fa fa-quote-left fa-stack-1x fa-inverse"></i>
+      </span>
+    {{ end }}
+  </div>
+  <div class="statement-contents">
+    <blockquote>
+      {{ $.stmt.Params.quote | markdownify }}
+    </blockquote>
+    <div class="statement-source">
+      {{ if ne $.stmt.Parent.UniqueID $.page.UniqueID }}
+        <a href="{{ $.stmt.Parent.Permalink }}">{{ $.stmt.Parent.Title }}</a>,
+      {{ end }}
+      <span class="dropdown show">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ if $.stmt.Params.where }}
+            {{ $.stmt.Params.where | title }}
+          {{ else }}
+            <time datetime="{{ $.stmt.Params.date }}">
+              {{ $.stmt.Date | dateFormat "Jan 2, 2006" }}
+            </time>
+          {{ end }}
+        </a>
+        <div class="dropdown-menu">
+          {{ range $source := $.stmt.Params.sources }}
+            {{ if eq $source.type "youtube" }}
+              <a class="dropdown-item" {{ if $source.start }}data-start-time="{{ $source.start }}" {{ if $source.duration }}data-end-time="{{ add $source.start $source.duration }}"{{ end }}{{ end }} href="https://www.youtube.com/watch?v={{ $source.id }}{{ if $source.start }}&amp;t={{ $source.start }}{{  end }}" target="_blank">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+                YouTube {{ partial "time-range.html" $source }}
+              </a>
+            {{ else if eq $source.type "transcript" }}
+             <a class="dropdown-item" href="{{ $source.url }}" target="_blank">
+                <i class="fa fa-file-text" aria-hidden="true"></i>
+                Transcript
+                ({{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url }})
+              </a>
+            {{ else if eq $source.type "audio" }}
+              <audio class="dropdown-item" controls preload="none" src="{{ $source.url }}{{ if $source.start }}#t={{ $source.start }}{{ if $source.duration }},{{ add $source.start $source.duration }}{{ end }}{{ end }}"></audio>
+              {{ if $source.source }}
+                <a class="dropdown-item" href="#">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  {{ default (replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.source) $source.name }}
+                  {{ partial "time-range.html" $source }}
+                </a>
+              {{ end }}
+            {{ else if eq $source.type "video" }}
+              <a class="dropdown-item video-link"
+              href="{{ default $source.iframe (default $source.url $source.source) }}"
+                  {{ if gt $source.start 0.0 }}data-start="{{ $source.start }}"{{ end }}
+                  {{ if $source.duration }}data-duration="{{ $source.duration }}"{{ end }}
+                  {{ if $source.source }}
+                    data-source="{{ $source.source }}"
+                  {{ end }}
+                  {{ if $source.url }}
+                    data-url="{{ $source.url }}"
+                  {{ end }}
+                  {{ if $source.iframe }}
+                    data-iframe="{{ $source.iframe }}"
+                  {{ end }}
+                  target="_blank">
+                <i class="fa fa-film" aria-hidden="true"></i>
+                {{ default (replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.source) $source.name }}
+                {{ partial "time-range.html" $source }}
+              </a>
+            {{ else if eq $source.type "web" }}
+              <a class="dropdown-item" href="{{ $source.url }}" target="_blank">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+                {{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url }}
+                {{ partial "time-range.html" $source }}
+              </a>
+            {{ else if eq $source.type "twitter" }}
+              <a class="dropdown-item twitter-link" data-tweet="{{ $source.id }}" href="https://twitter.com/{{ $source.user }}/status/{{ $source.id }}">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                Twitter (@{{ $source.user }})
+              </a>
+            {{ end }}
+          {{ end }}
+        </div>
+      </span>
+      {{ if $.stmt.Params.where }}
+        on
+        <time datetime="{{ $.stmt.Params.date }}">
+          {{ $.stmt.Date | dateFormat "Jan 2, 2006" }}
+        </time>
+      {{ end }}
+    </div>
+
+    {{ if and (eq $.page.Type "claims") (eq $.page.Kind "taxonomy") }}
+      {{ $.page.Scratch.Set "##partials/quote.html/claims" (slice) }}
+      {{ range $claim := $.stmt.Params.claims }}
+        {{ if ne $claim $slug }}
+          {{ $.page.Scratch.Add "##partials/quote.html/claims" $claim }}
+        {{ end }}
+      {{ end }}
+    {{ else }}
+      {{ $.page.Scratch.Set "##partials/quote.html/claims" $.stmt.Params.claims }}
+    {{ end }}
+
+    {{ if ($.page.Scratch.Get "##partials/quote.html/claims") | len }}
+      <div class="statement-claims">
+        <h4>
+          {{ if and (eq $.page.Type "claims") (eq $.page.Kind "taxonomy") }}Other{{ end }}
+          Claims
+        </h4>
+        <dl>
+          {{ range $claimId := $.page.Scratch.Get "##partials/quote.html/claims" }}
+            {{ $claim := $.page.Site.GetPage "taxonomy" "claims" $claimId }}
+            <dt>
+              <a href="{{ $claim.Permalink }}">{{ $claim.Title | title }}</a>
+            </dt>
+            <dd>
+              <div class="statement-claim-truth">
+                {{ $claim.Params.summary | markdownify }}
+              </div>
+              {{ $.page.Scratch.Set "##partials/quote.html/other-claimants" (slice) }}
+              {{ range $c := $claim.Data.Pages }}
+                {{ $claimant := replaceRE "/person/(.+)/" "$1" $c.Parent.URL }}
+                {{ if and (ne $claimant $claimantId) (not (in ($.page.Scratch.Get "##partials/quote.html/other-claimants") $claimant)) }}
+                  {{ $.page.Scratch.Add "##partials/quote.html/other-claimants" $claimant }}
+                {{ end }}
+              {{ end }}
+              {{ $others := $.page.Scratch.Get "##partials/quote.html/other-claimants" }}
+              {{ if $others }}
+                <ol class="list-inline statement-claim-others">
+                  {{ range $otherId := $others }}
+                    {{ $other := $.stmt.Site.GetPage "section" "person" $otherId }}
+                    <li class="list-inline-item">
+                      <a href="{{ $other.Permalink }}">
+                        <img title="{{ $other.Title }}" src="{{ $.Site.BaseURL }}/person/{{ $otherId }}-48x.jpg" alt="{{ $other.Title }}" />
+                        {{ $other.Title }}
+                      </a>
+                    </li>
+                  {{ end }}
+                </ol>
+              {{ end }}
+            </dd>
+          {{ end }}
+        </dl>
+      </div>
+    {{ end }}
+
+    {{ if $.stmt.Params.checks }}
+      <div class="statement-checks">
+        <h4>Fact Checks</h4>
+
+        {{ if 1 }}
+          <ul class="subtle-list">
+            {{ range $check := shuffle $.stmt.Params.checks }}
+              {{ $checker := $.page.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
+              <li class="statement-check-full">
+                <div class="statement-check-full-gutter">
+                  <a href="{{ $check.source }}">
+                    <img src="{{ replaceRE "/?$" "-48x.png" $checker.URL }}" alt="" />
+                  </a>
+                </div>
+                <div class="statement-check-full-contents">
+                  <blockquote>
+                    {{ default $check.short $check.quote | markdownify }}
+                  </blockquote>
+
+                  {{ $.page.Scratch.Set "partials/quote.html/rating-search" nil }}
+                  {{ if $check.rating }}
+                    {{ if $checker.Params.ratings }}
+                      {{ range $rating := $checker.Params.ratings }}
+                        {{ if eq $rating.id $check.rating }}
+                          {{ $.page.Scratch.Set "partials/quote.html/rating-search" $rating }}
+                        {{ end }}
+                      {{ end }}
+                    {{ end }}
+                  {{ end }}
+
+                  {{ $rating := $.page.Scratch.Get "partials/quote.html/rating-search" }}
+                  {{ if and $rating $rating.img }}
+                    <div class="statement-check-full-source-img">
+                      {{ if and $rating $rating.img }}
+                        <div class="statement-check-full-source-img-rating">
+                          <img alt="{{ default ($check.rating | humanize | title) $rating.name }}" src="{{ replaceRE "/?$" (printf "/rating/%s.%s" $rating.id $rating.img) $checker.URL }}" />
+                        </div>
+                      {{ end }}
+                      <div class="statement-check-full-source-name">
+                        <a href="{{ $check.source }}">{{ $checker.Title }}</a>
+                      </div>
+                    </div>
+                  {{ else }}
+                    <div class="statement-check-full-source-text">
+                      <div class="statement-check-full-source-name">
+                        <a href="{{ $check.source }}">{{ $checker.Title }}</a>
+                      </div>
+                      {{ if $check.rating }}
+                        <div class="statement-check-full-source-text-rating">
+                          {{ $check.rating | humanize | title }}
+                        </div>
+                      {{ end }}
+                    </div>
+                  {{ end }}
+                </div>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+{{/*
+<blockquote{{ if $.compact }}class="compact"{{ end }}>
+  {{ if ne $.stmt.Parent.UniqueID $.UniqueID }}
+    <header style="float: left">
+      <img src="{{ replaceRE "/?$" "-64.jpg" $.stmt.Parent.URL }}" />
+    </header>
+  {{ end }}
+
   <div class="quote-contents">
-    {{ if $stmt.Params.retraction }}<del>{{end}}
-    {{ if $stmt.Params.quote }}
+    {{ if $.stmt.Params.retraction }}<del>{{end}}
+    {{ if $.stmt.Params.quote }}
       <p>
-        {{ $stmt.Params.quote | markdownify }}
+        {{ $.stmt.Params.quote | markdownify }}
       </p>
     {{ end }}
-    {{ if $stmt.Params.retraction }}</del>{{end}}
+    {{ if $.stmt.Params.retraction }}</del>{{end}}
   </div>
 
   <footer>
     <cite>
       <div>
-        <a href="{{ $stmt.Parent.Permalink }}">{{ $stmt.Parent.Title }}</a>{{ if $stmt.Params.where }},{{ else }} on {{ end }}
+        {{ if ne $.stmt.Parent.UniqueID $.page.UniqueID }}
+          <a href="{{ $.stmt.Parent.Permalink }}">{{ $.stmt.Parent.Title }}</a>{{ if $.stmt.Params.where }},{{ else }} on {{ end }}
+        {{ else }}
+          {{ $.stmt.Parent.Title }}{{ if $.stmt.Params.where }},{{ else }} on {{ end }}
+        {{ end }}
         <span class="dropdown show">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{ if $stmt.Params.where }}
-              {{ $stmt.Params.where | title }}
+            {{ if $.stmt.Params.where }}
+              {{ $.stmt.Params.where | title }}
             {{ else }}
-              <time datetime="{{ $stmt.Params.date }}">
-              {{ $stmt.Date | dateFormat "Jan 2, 2006" }}
+              <time datetime="{{ $.stmt.Params.date }}">
+              {{ $.stmt.Date | dateFormat "Jan 2, 2006" }}
               </time>
             {{ end }}
           </a>
           <div class="dropdown-menu">
-            {{ range $source := $stmt.Params.sources }}
+            {{ range $source := $.stmt.Params.sources }}
               {{ if eq $source.type "youtube" }}
                 <a class="dropdown-item" {{ if $source.start }}data-start-time="{{ $source.start }}" {{ if $source.duration }}data-end-time="{{ add $source.start $source.duration }}"{{ end }}{{ end }} href="https://www.youtube.com/watch?v={{ $source.id }}{{ if $source.start }}&amp;t={{ $source.start }}{{  end }}" target="_blank">
                   <i class="fa fa-youtube" aria-hidden="true"></i>
@@ -82,76 +305,76 @@
             {{ end }}
           </div>
         </span>
-        {{ if $stmt.Params.where }}
+        {{ if $.stmt.Params.where }}
           on
-          <time datetime="{{ $stmt.Params.date }}">
-            {{ $stmt.Date | dateFormat "Jan 2, 2006" }}
+          <time datetime="{{ $.stmt.Params.date }}">
+            {{ $.stmt.Date | dateFormat "Jan 2, 2006" }}
           </time>
         {{ end }}
       </div>
-      {{ if $stmt.Params.retraction }}
+      {{ if $.stmt.Params.retraction }}
         <div class="retraction">
-          {{ if eq $stmt.Params.retraction.type "clarification" }}
+          {{ if eq $.stmt.Params.retraction.type "clarification" }}
             Clarified
           {{ else }}
             Retracted
           {{ end }}
 
-          {{ if $stmt.Params.retraction.issuer }}
+          {{ if $.stmt.Params.retraction.issuer }}
             by
 
-            {{ if $stmt.Params.retraction.issuer.position }}
-              {{ $stmt.Params.retraction.issuer.position }}
+            {{ if $.stmt.Params.retraction.issuer.position }}
+              {{ $.stmt.Params.retraction.issuer.position }}
             {{ end }}
 
-            {{ if $stmt.Params.retraction.issuer.id }}
-              {{ $stmtretractor := $stmt.Site.GetPage "section" "person" $stmt.Params.retraction.issuer.id }}
+            {{ if $.stmt.Params.retraction.issuer.id }}
+              {{ $stmtretractor := $.stmt.Site.GetPage "section" "person" $.stmt.Params.retraction.issuer.id }}
               {{ if $stmtretractor }}
                 <a href="{{ $stmtretractor.Permalink }}">
                   {{ $stmtretractor.Title }}
                 </a>
               {{ else }}
-                {{ (replace $stmt.Params.retraction.issuer.id "-" " ") | humanize }}
+                {{ (replace $.stmt.Params.retraction.issuer.id "-" " ") | humanize }}
               {{ end }}
             {{ else }}
-              {{ $stmt.Params.retraction.issuer.name }}
+              {{ $.stmt.Params.retraction.issuer.name }}
             {{ end }}
           {{ end }}
 
           on
 
-          <a href="{{ $stmt.Params.retraction.source }}">
-            <time datetime="{{ $stmt.Params.retraction.date }}">
-              {{ $stmt.Params.retraction.date | dateFormat "Jan 2, 2006" }}
+          <a href="{{ $.stmt.Params.retraction.source }}">
+            <time datetime="{{ $.stmt.Params.retraction.date }}">
+              {{ $.stmt.Params.retraction.date | dateFormat "Jan 2, 2006" }}
             </time>
           </a>
         </div>
       {{ end }}
     </cite>
 
-    {{ if and (eq $page.Type "claims") (eq $page.Kind "taxonomy") }}
-      {{ $page.Scratch.Set "##partials/quote.html/claims" (slice) }}
-      {{ range $claim := $stmt.Params.claims }}
+    {{ if and (eq $.page.Type "claims") (eq $.page.Kind "taxonomy") }}
+      {{ $.page.Scratch.Set "##partials/quote.html/claims" (slice) }}
+      {{ range $claim := $.stmt.Params.claims }}
         {{ if ne $claim $slug }}
-          {{ $page.Scratch.Add "##partials/quote.html/claims" $claim }}
+          {{ $.page.Scratch.Add "##partials/quote.html/claims" $claim }}
         {{ end }}
       {{ end }}
     {{ else }}
-      {{ $page.Scratch.Set "##partials/quote.html/claims" $stmt.Params.claims }}
+      {{ $.page.Scratch.Set "##partials/quote.html/claims" $.stmt.Params.claims }}
     {{ end }}
 
-    {{ if ($page.Scratch.Get "##partials/quote.html/claims") | len }}
+    {{ if ($.page.Scratch.Get "##partials/quote.html/claims") | len }}
       <section class="claims">
-        {{ if and (eq $page.Type "claims") (eq $page.Kind "taxonomy") }}
+        {{ if and (eq $.page.Type "claims") (eq $.page.Kind "taxonomy") }}
           <h4>Other Claims</h4>
         {{ else }}
           <h4>Claims</h4>
         {{ end }}
 
         <ul class="subtle-list">
-          {{ range $claimId := $page.Scratch.Get "##partials/quote.html/claims" }}
+          {{ range $claimId := $.page.Scratch.Get "##partials/quote.html/claims" }}
             <li>
-            {{ $claim := $page.Site.GetPage "taxonomy" "claims" $claimId }}
+            {{ $claim := $.page.Site.GetPage "taxonomy" "claims" $claimId }}
             <h5>
               <a href="{{ $claim.Permalink }}">{{ $claim.Title }}</a>
             </h5>
@@ -164,49 +387,61 @@
       </section>
     {{ end }}
 
-    {{ $page.Scratch.Set "##partials/quote.html/checks" (slice) }}
-    {{ if $stmt.Params.checks }}
-      {{ range $check := $stmt.Params.checks }}
-        {{ if or (or (ne $page.Type "claims") (ne $page.Kind "taxonomy")) (or (not $check.claims) (in $check.claims $slug)) }}
-          {{ $page.Scratch.Add "##partials/quote.html/checks" $check }}
+    {{ $.page.Scratch.Set "##partials/quote.html/checks" (slice) }}
+    {{ if $.stmt.Params.checks }}
+      {{ range $check := $.stmt.Params.checks }}
+        {{ if or (or (ne $.page.Type "claims") (ne $.page.Kind "taxonomy")) (or (not $check.claims) (in $check.claims $slug)) }}
+          {{ $.page.Scratch.Add "##partials/quote.html/checks" $check }}
         {{ end }}
       {{ end }}
 
-      {{ $checks := $page.Scratch.Get "##partials/quote.html/checks" }}
+      {{ $checks := $.page.Scratch.Get "##partials/quote.html/checks" }}
       {{ if ($checks | len) }}
         <section class="fact-checks">
           <h4>Fact Checks</h4>
 
-          {{ range $check := shuffle $checks }}
-            <blockquote{{ if $check.sharethefacts }} class="share-the-facts-widget" data-share-the-facts-id="{{ $check.sharethefacts }}"{{ end }}>
-              <div class="quote-contents">
-                {{ if $check.quote }}
-                  {{ $check.quote | markdownify }}
-                {{ else if $check.short }}
-                  {{ $check.short | markdownify }}
-                {{ else }}
-                  QUOTE MISSING
-                {{ end }}
-              </div>
+          {{ if $.compact }}
+            <ul class="list-inline text-right">
+              {{ range $check := shuffle $checks }}
+                {{ $checker := $.page.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
+                <li class="list-inline-item">
+                  <a href="{{ $check.source }}">
+                    <img src="{{ replaceRE "/?$" "-48x.png" $checker.URL }}" alt="{{ $checker.Title }}" />
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          {{ else }}
+            {{ range $check := shuffle $checks }}
+              <blockquote{{ if $check.sharethefacts }} class="share-the-facts-widget" data-share-the-facts-id="{{ $check.sharethefacts }}"{{ end }}>
+                <div class="quote-contents">
+                  {{ if $check.quote }}
+                    {{ $check.quote | markdownify }}
+                  {{ else if $check.short }}
+                    {{ $check.short | markdownify }}
+                  {{ end }}
+                </div>
 
-              <footer>
-                <cite>
-                  <div>
-                    {{ $checker := $page.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
-                    <a href="{{ $check.source }}">
-                      {{ if $checker }}
-                        {{ $checker.Title }}
-                      {{ else }}
-                        {{ $check.checker | title }}
-                      {{ end }}
-                    </a>
-                  </div>
-                </cite>
-              </footer>
-            </blockquote>
+                <footer>
+                  <cite>
+                    <div>
+                      {{ $checker := $.page.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
+                      <a href="{{ $check.source }}">
+                        {{ if $checker }}
+                          {{ $checker.Title }}
+                        {{ else }}
+                          {{ $check.checker | title }}
+                        {{ end }}
+                      </a>
+                    </div>
+                  </cite>
+                </footer>
+              </blockquote>
+            {{ end }}
           {{ end }}
         </section>
       {{ end }}
     {{ end }}
   </footer>
 </blockquote>
+*/}}

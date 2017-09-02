@@ -19,13 +19,17 @@ ratings:
  - id: 1-pinocchio
    name: 1 Pinocchio
    value: 1
+   img: jpg
  - id: 2-pinocchios
    name: 2 Pinocchios
    value: 2
+   img: jpg
  - id: 3-pinocchios
    name: 3 Pinocchios
    value: 3
+   img: jpg
  - id: 4-pinocchios
    name: 4 Pinocchios
    value: 4
+   img: jpg
 ---

@@ -1,6 +1,6 @@
 ---
 title: Associated Press
-web: https://www.ap.com/org
+web: https://www.apnews.com/
 # https://www.apnews.com/tag/APFactCheck
 
 wikipedia: Associated_Press

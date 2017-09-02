@@ -1,5 +1,16 @@
 {{ partial "head.html" . }}
 
+<section id="latest-statements">
+  <h3>Latest Statements</h3>
+
+  <ol class="subtle-list">
+    {{ range $stmt := first 10 (where $.Site.Pages "Type" "assertion") }}
+      <li class="no-context-quote">
+        {{ partial "quote.html" (dict "page" $ "stmt" $stmt "compact" 1) }}
+      </li>
+    {{ end }}
+  </ol>
+
 {{ .Content }}
 
 {{ partial "footer.html" . }}

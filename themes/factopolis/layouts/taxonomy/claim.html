@@ -25,7 +25,7 @@
     {{ range $stmt := where $.Site.Pages "Type" "assertion" }}
       {{ if in $stmt.Params.claims $claimId }}
         <li>
-          {{ partial "quote.html" (slice $ $stmt) }}
+          {{ partial "quote.html" (dict "page" $ "stmt" $stmt) }}
         </li>
       {{ end }}
     {{ end }}

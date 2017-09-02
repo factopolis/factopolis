@@ -252,7 +252,7 @@ ul.pagination > li.disabled > a {
 
 /* Quotes */
 
-.quote-list > li > blockquote > p {
+/* .quote-list > li > blockquote > p {
   margin: 0;
   padding: 0;
 }
@@ -277,7 +277,7 @@ ul.pagination > li.disabled > a {
 .quote-list > li > blockquote > footer h5 {
   font-size: 1em;
   font-weight: bold;
-}
+} */
 
 .subtle-list {
   list-style-type: none;
@@ -312,47 +312,6 @@ section.truth {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.quote-list > li {
-  margin-bottom: 4em;
-  padding: 0 1em;
-  border-left: 5px #a8b2b7 solid;
-}
-
-.quote-list > li:last-child {
-  margin-bottom: 0;
-}
-
-.quote-contents {
-  display: table-row;
-}
-
-.quote-contents del {
-  color: gray;
-}
-
-.quote-contents del > * {
-  color: black;
-}
-
-.quote-contents:before,
-.quote-contents:after {
-  /* font: normal normal normal 14px/1 FontAwesome; */
-  font-size: 2em;
-  display: table-cell;
-  color: #a8b2b7;
-  padding: 0.25em;
-}
-
-.quote-contents:before {
-  /* content: "\f10d"; */
-  content: "“";
-}
-
-.quote-contents:after {
-  /* content: "\f10e"; */
-  content: "”";
 }
 
 .claims {
@@ -462,4 +421,97 @@ section.truth {
 
 .summary-card header {
   margin-bottom: 0.25em;
+}
+
+
+.statement {
+  margin: 2em 0;
+  display: flex;
+  align-items: flex-top;
+  clear: both;
+}
+
+.statement:first-child {
+  margin-top: 0;
+}
+
+.statement-gutter {
+  color: #a8b2b7;
+  padding-right: 0.5em;
+  margin-right: 0.5em;
+  border-right: 3px #a8b2b7 solid;
+}
+
+.statement-contents {
+  flex-grow: 1;
+}
+
+.statement-source {
+  clear: left;
+  text-align: right;
+}
+
+.statement-source:before {
+  content: "— ";
+}
+
+.statement h4 {
+  font-size: 1.1em;
+  font-variant: small-caps;
+  font-weight: bold;
+  border-bottom: 2px #b0c26e solid;
+}
+
+.statement-claim-truth:before {
+  content: "The truth: ";
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+.statement-claim-others:before {
+  content: "Other claimants: ";
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+.statement-check-full {
+  display: flex;
+  align-items: flex-top;
+  margin-top: 0.5em;
+}
+
+.statement-check-full-gutter {
+  padding-right: 0.5em;
+  margin-right: 0.5em;
+  border-right: 2px #b0c26e solid;
+}
+
+.statement-check-full-contents {
+  flex: 1;
+}
+
+.statement-check-full-source:before,
+.statement-check-full-source-name:before {
+  content: "— ";
+}
+
+.statement-check-full-source-img {
+  display: flex;
+}
+
+.statement-check-full-source-img img {
+  max-height: 72px;
+}
+
+.statement-check-full-source-img {
+  align-items: center;
+}
+
+.statement-check-full-source-img > *:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.statement-check-full-source-text {
+  text-align: right;
 }
