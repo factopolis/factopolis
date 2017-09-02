@@ -31,5 +31,8 @@ sources:
 checks:
 - checker: 
   rating: 
+  sharethefacts: 
+  quote: 
+  short: 
   source: 
 ---
