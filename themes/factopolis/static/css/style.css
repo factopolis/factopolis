@@ -250,58 +250,24 @@ ul.pagination > li.disabled > a {
   content: "";
 }
 
-/* Quotes */
-
-/* .quote-list > li > blockquote > p {
-  margin: 0;
-  padding: 0;
-}
-
-.quote-list > li > blockquote cite {
-  text-align: right;
-  font-variant: italic;
-  padding: 1em;
-}
-
-.quote-list > li > blockquote {
-  margin: 0;
-}
-
-.quote-list > li > blockquote > footer h4 {
-  font-size: 1.2em;
-  font-variant: small-caps;
-  font-weight: bold;
-  border-bottom: 2px #b0c26e solid;
-}
-
-.quote-list > li > blockquote > footer h5 {
-  font-size: 1em;
-  font-weight: bold;
-} */
-
 .subtle-list {
   list-style-type: none;
   padding: 0;
 }
 
-.truth {
+/* .truth {
   display: block;
   margin: 0.5em 0;
   border-left: 5px #b0c26e solid;
   background-color: #f8ffdd;
   border-radius: 3px;
   padding: 0.2em 0.5em;
-}
-
-section.truth {
-  padding: 1em;
-}
+} */
 
 .truth:before {
   content: "The Truth: ";
   font-variant: small-caps;
   font-weight: bold;
-  font-size: 0.85em;
 }
 
 .truth > * {
@@ -477,7 +443,16 @@ section.truth {
 .statement-check-full {
   display: flex;
   align-items: flex-top;
-  margin-top: 0.5em;
+  margin-top: 1em;
+}
+
+.statement-check-full > * {
+  padding-top: 0.5em;
+}
+
+.statement-check-full:first-child {
+  margin-top: 0;
+  border-top: none;
 }
 
 .statement-check-full-gutter {
