@@ -69,8 +69,10 @@ $(document).ready(function () {
     }
 
     if (videoPlayer !== null) {
-      $('#modal-target').html('<div class="embed-responsive embed-responsive-16by9"></div>');
-      $('#modal-target > div').html(videoPlayer);
+      var link = '<a class="modal-external-link" href="' + $(this).attr('href') + '" target="_blank">Watch on ' + $(this).text() + ' <i class="fa fa-external-link" aria-hidden="true"></i></a>';
+
+      $('#modal-target').html('<div class="embed-responsive embed-responsive-16by9"></div>' + link);
+      $('#modal-target > div.embed-responsive').html(videoPlayer);
       $('#mediaModal').modal();
 
       e.preventDefault();

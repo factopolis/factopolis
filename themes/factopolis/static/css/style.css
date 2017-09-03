@@ -268,14 +268,13 @@ ul.pagination > li.disabled > a {
   padding: 0;
 }
 
-/* .truth {
+.modal-external-link {
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  text-align: center;
+  border-top: 2px #b0c26e solid;
   display: block;
-  margin: 0.5em 0;
-  border-left: 5px #b0c26e solid;
-  background-color: #f8ffdd;
-  border-radius: 3px;
-  padding: 0.2em 0.5em;
-} */
+}
 
 .truth:before {
   content: "The Truth: ";
