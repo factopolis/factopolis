@@ -1,16 +1,16 @@
 {{ partial "head.html" . }}
 
 <section id="latest-statements">
-  <h3>Latest Statements</h3>
-
   <ol class="subtle-list">
-    {{ range $stmt := first 10 (where $.Site.Pages "Type" "assertion") }}
+    {{ $paginator := .Paginate (where $.Site.Pages "Type" "assertion") }}
+    {{ range $stmt := $paginator.Pages }}
       <li class="no-context-quote">
         {{ partial "quote.html" (dict "page" $ "stmt" $stmt "compact" 1) }}
       </li>
     {{ end }}
   </ol>
+</section>
 
-{{ .Content }}
+{{ template "_internal/pagination.html" . }}
 
 {{ partial "footer.html" . }}
