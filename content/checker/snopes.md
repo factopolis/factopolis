@@ -15,6 +15,9 @@ ratings:
 - id: unproven
   name: Unproven
   img: gif
+- id: mostly-false
+  name: "Mostly false"
+  img: gif
 - id: "false"
   name: "False"
   img: gif

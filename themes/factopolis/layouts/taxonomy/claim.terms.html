@@ -27,14 +27,14 @@
 
     <li>
       <h4>
-        <a href="{{ $claim.Permalink }}">{{ $claim.Title }}</a>
+        <a href="{{ $claim.Permalink }}">{{ $claim.Title | title }}</a>
       </h4>
 
       <div>
-        <ul class="quick-claimants-list">
+        <ul class="quick-claimants-list list-inline">
           {{ range $claimant := $.Scratch.Get "claimants" }}
             {{ $stmtCount := $.Scratch.Get (printf "stmtsBy-%s" $claimant.File.Path) | len }}
-            <li><a href="{{ $claimant.Permalink }}">{{ $claimant.Title }}</a>{{ if gt $stmtCount 1 }} {{ $stmtCount }} times{{ end }}</li>
+            <li class="list-inline-item"><a href="{{ $claimant.Permalink }}"><img src="{{ replaceRE "/?$" "-48x.jpg" $claimant.URL }}" alt="" /> {{ $claimant.Title }}</a>{{ if gt $stmtCount 1 }} {{ $stmtCount }} times{{ end }}</li>
           {{ end }}
         </ul>
 

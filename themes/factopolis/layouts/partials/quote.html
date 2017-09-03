@@ -156,55 +156,57 @@
         {{ if 1 }}
           <ul class="subtle-list">
             {{ range $check := shuffle $.stmt.Params.checks }}
-              {{ $checker := $.page.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
-              <li class="statement-check-full">
-                <div class="statement-check-full-gutter">
-                  <a href="{{ $check.source }}">
-                    <img src="{{ replaceRE "/?$" "-48x.png" $checker.URL }}" alt="" />
-                  </a>
-                </div>
-                <div class="statement-check-full-contents">
-                  <blockquote>
-                    {{ default $check.short $check.quote | markdownify }}
-                  </blockquote>
+              {{ if or (ne $.page.Type "checker") (eq $check.checker $slug) }}
+                {{ $checker := $.page.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
+                <li class="statement-check-full">
+                  <div class="statement-check-full-gutter">
+                    <a href="{{ $check.source }}">
+                      <img src="{{ replaceRE "/?$" "-48x.png" $checker.URL }}" alt="" />
+                    </a>
+                  </div>
+                  <div class="statement-check-full-contents">
+                    <blockquote>
+                      {{ default $check.short $check.quote | markdownify }}
+                    </blockquote>
 
-                  {{ $.page.Scratch.Set "partials/quote.html/rating-search" nil }}
-                  {{ if $check.rating }}
-                    {{ if $checker.Params.ratings }}
-                      {{ range $rating := $checker.Params.ratings }}
-                        {{ if eq $rating.id $check.rating }}
-                          {{ $.page.Scratch.Set "partials/quote.html/rating-search" $rating }}
+                    {{ $.page.Scratch.Set "partials/quote.html/rating-search" nil }}
+                    {{ if $check.rating }}
+                      {{ if $checker.Params.ratings }}
+                        {{ range $rating := $checker.Params.ratings }}
+                          {{ if eq $rating.id $check.rating }}
+                            {{ $.page.Scratch.Set "partials/quote.html/rating-search" $rating }}
+                          {{ end }}
                         {{ end }}
                       {{ end }}
                     {{ end }}
-                  {{ end }}
 
-                  {{ $rating := $.page.Scratch.Get "partials/quote.html/rating-search" }}
-                  {{ if and $rating $rating.img }}
-                    <div class="statement-check-full-source-img">
-                      {{ if and $rating $rating.img }}
-                        <div class="statement-check-full-source-img-rating">
-                          <img alt="{{ default ($check.rating | humanize | title) $rating.name }}" src="{{ replaceRE "/?$" (printf "/rating/%s.%s" $rating.id $rating.img) $checker.URL }}" />
+                    {{ $rating := $.page.Scratch.Get "partials/quote.html/rating-search" }}
+                    {{ if and $rating $rating.img }}
+                      <div class="statement-check-full-source-img">
+                        {{ if and $rating $rating.img }}
+                          <div class="statement-check-full-source-img-rating">
+                            <img alt="{{ default ($check.rating | humanize | title) $rating.name }}" title="{{ default ($check.rating | humanize | title) $rating.name }}" src="{{ replaceRE "/?$" (printf "/rating/%s.%s" $rating.id $rating.img) $checker.URL }}" />
+                          </div>
+                        {{ end }}
+                        <div class="statement-check-full-source-name">
+                          <a href="{{ $check.source }}">{{ $checker.Title }}</a>
                         </div>
-                      {{ end }}
-                      <div class="statement-check-full-source-name">
-                        <a href="{{ $check.source }}">{{ $checker.Title }}</a>
                       </div>
-                    </div>
-                  {{ else }}
-                    <div class="statement-check-full-source-text">
-                      <div class="statement-check-full-source-name">
-                        <a href="{{ $check.source }}">{{ $checker.Title }}</a>
-                      </div>
-                      {{ if $check.rating }}
-                        <div class="statement-check-full-source-text-rating">
-                          {{ $check.rating | humanize | title }}
+                    {{ else }}
+                      <div class="statement-check-full-source-text">
+                        <div class="statement-check-full-source-name">
+                          <a href="{{ $check.source }}">{{ $checker.Title }}</a>
                         </div>
-                      {{ end }}
-                    </div>
-                  {{ end }}
-                </div>
-              </li>
+                        {{ if $check.rating }}
+                          <div class="statement-check-full-source-text-rating">
+                            {{ $check.rating | humanize | title }}
+                          </div>
+                        {{ end }}
+                      </div>
+                    {{ end }}
+                  </div>
+                </li>
+              {{ end }}
             {{ end }}
           </ul>
         {{ end }}

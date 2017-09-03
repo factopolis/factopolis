@@ -197,6 +197,17 @@ article {
   border-bottom: 5px #b0c26e solid;
 }
 
+h4 {
+  font-size: 1.2em;
+  border-bottom: 2px #b0c26e solid;
+}
+
+/* Claims */
+
+.claims > * {
+  margin-top: 1em;
+}
+
 /* Pagination */
 
 ul.pagination {
@@ -236,10 +247,12 @@ ul.pagination > li.disabled > a {
 
 .quick-claimants-list:before {
   content: "Claimed by: ";
+  font-weight: bold;
+  font-variant: small-caps;
 }
 
 .quick-claimants-list > li {
-  display: inline;
+  display: inline-block;
 }
 
 .quick-claimants-list > li:after {
