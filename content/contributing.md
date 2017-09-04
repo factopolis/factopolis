@@ -2,7 +2,7 @@
 title: "Contributing"
 ---
 
-# Help Wanted!
+### Help Wanted!
 
 Factopolis is a community-driven project, and a fairly large
 undertaking, so we need all the help we can get.
@@ -14,7 +14,7 @@ We are always looking for new ideas, so if you have an something you'd
 like to work on we'd love to discuss it with you. If you aren't sure
 how you could help, here are some ideas:
 
-## Content Editors
+#### Content Editors
 
 One of the best ways to help Factopolis is to dive in and start
 editing content.  Not only is it difficult for us to keep up with the
@@ -70,30 +70,17 @@ the
 [content/person](https://github.com/factopolis/factopolis/tree/master/content/person)
 directory.  Once that's done you can submit a pull request.
 
-## Writers
+#### Designers
 
-Several pages on the site are in need of some prose to help explain the
-issues.  This is especially true for [themes](/theme), which should
-each have simple explanations of:
+If you're a skilled designer you can probably already tell that we need help pretty badly; our web site is ugly, and we don't even have a logo. Unfortunately, it's about the best we can do without help from someone with a talent for design.
 
- * Where the claims are coming from (*i.e.*, Republicans or Democrats).
- * If applicable, historical information.
- * Links to more in-depth **credible** material.
+If you are able (and willing) to help, please [get in touch with us](https://github.com/factopolis/factopolis/labels/design).
 
-Claims can also benefit from summaries, but for the most part links to
-fact checkers fulfill those. In general, Factopolis shouldn't be doing
-any fact checking, merely linking to sites which do.
+#### Front-end Developers
 
-We could also benefit from new text on pages about Factopolis, such as
-this page, the [contributing](/contributing) page, the home page, etc.
+Our site currently uses [Hugo](http://www.gohugo.io) to generate a static web site, but we're interested in supplementing this with a client-side interface, which could provide capabilities beyond what we can do with Hugo.
 
-## Designers & Front-end Developers
-
-If you're a skilled designer you can probably already tell that we need help badly!  If you're willing (and able) to provide it, please get in touch with us.
-
-Our current site uses [Hugo](http://www.gohugo.io) to generate a static web site, but if you're interested in working on the implementation we're open to other possibilities, including client-side Dart or JavaScript interfaces.
-
-## Data Visualization
+#### Data Visualization
 
 There are lots of opportunities to create interesting visualizations
 using Factopolis's data.  While you are free (and encouraged) to copy
@@ -104,7 +91,7 @@ Factopolis's web site.
 You may want to take a look at the [API](/api) page, which should help
 you discover what data is available.
 
-## Something Else
+#### Something Else
 
 Do you have a skillset, or an idea, not covered by something above?
 We'd love to hear about what it! Just head over to [our chat
