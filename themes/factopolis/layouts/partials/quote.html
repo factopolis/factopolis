@@ -90,7 +90,7 @@
       {{ if $.stmt.Params.where }}
         on
         <time datetime="{{ $.stmt.Params.date }}">
-          {{ $.stmt.Date | dateFormat "Jan 2, 2006" }}
+          <a href="{{ $.stmt.Permalink }}">{{ $.stmt.Date | dateFormat "Jan 2, 2006" }}</a>
         </time>
       {{ end }}
     </div>

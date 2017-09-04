@@ -78,141 +78,148 @@
             <div class="sticky-middle">
               <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h2>
 
-              {{ if and .Params.images }}
-                {{ if .Params.images.photo }}
-                  <img class="profile-pic" alt="{{ .Page.Title }}" src="{{ replaceRE "/?$" ".jpg" .URL }}" />
+              {{ if eq .Type "assertion" }}
+                {{ $.Scratch.Set "headerPage" $.Parent }}
+              {{ else }}
+                {{ $.Scratch.Set "headerPage" $ }}
+              {{ end }}
+              {{ $headerPage := $.Scratch.Get "headerPage" }}
+
+              {{ if $headerPage.Params.images }}
+                {{ if $headerPage.Params.images.photo }}
+                  <img class="profile-pic" alt="{{ .Page.Title }}" src="{{ replaceRE "/?$" ".jpg" $headerPage.URL }}" />
                   <div class="profile-pic-copyright">
-                    {{ if .Params.images.photo.author }}
+                    {{ if $headerPage.Params.images.photo.author }}
                       Photo by
-                      {{ if .Params.images.photo.author.url }}
-                        <a href="{{ .Params.images.photo.author.url }}">{{ .Params.images.photo.author.name }}</a>
+                      {{ if $headerPage.Params.images.photo.author.url }}
+                        <a href="{{ $headerPage.Params.images.photo.author.url }}">{{ $headerPage.Params.images.photo.author.name }}</a>
                       {{ else }}
-                        {{ .Params.images.photo.author.name }}
+                        {{ $headerPage.Params.images.photo.author.name }}
                       {{ end }}
                     {{ end }}
-                    {{ if or .Params.images.photo.license .Params.images.photo.source }}
-                      ({{ if .Params.images.photo.license }}{{ if .Params.images.photo.license.url }}<a href="{{ .Params.images.photo.author.url }}">{{ .Params.images.photo.license.name }}</a>{{ else }}{{ .Params.images.photo.license.name }}{{ end }}{{ end }}{{ if .Params.images.photo.source }}{{ if .Params.images.photo.license }}, {{ end }}courtesy of {{ if .Params.images.photo.source.url }}<a href="{{ .Params.images.photo.author.url }}">{{ .Params.images.photo.source.name }}</a>{{ else }}{{ .Params.images.photo.source.name }}{{ end }}{{ end }})
+                    {{ if or $headerPage.Params.images.photo.license $headerPage.Params.images.photo.source }}
+                      ({{ if $headerPage.Params.images.photo.license }}{{ if $headerPage.Params.images.photo.license.url }}<a href="{{ $headerPage.Params.images.photo.author.url }}">{{ $headerPage.Params.images.photo.license.name }}</a>{{ else }}{{ $headerPage.Params.images.photo.license.name }}{{ end }}{{ end }}{{ if $headerPage.Params.images.photo.source }}{{ if $headerPage.Params.images.photo.license }}, {{ end }}courtesy of {{ if $headerPage.Params.images.photo.source.url }}<a href="{{ $headerPage.Params.images.photo.author.url }}">{{ $headerPage.Params.images.photo.source.name }}</a>{{ else }}{{ $headerPage.Params.images.photo.source.name }}{{ end }}{{ end }})
                     {{ end }}
                   </div>
                 {{ end }}
               {{ end }}
 
               <ul class="links">
-                {{ if .Params.web }}
+                {{ if $headerPage.Params.web }}
                   <li>
-                    <a href="{{ .Params.web }}">
+                    <a href="{{ $headerPage.Params.web }}">
                       <i class="fa fa-globe" aria-hidden="true"></i>
                       <span class="sr-only">Web Site</span>
                     </a>
                   </li>
                 {{ end }}
-                {{ if .Params.feed }}
+                {{ if $headerPage.Params.feed }}
                   <li>
-                    <a href="{{ .Params.feed }}">
+                    <a href="{{ $headerPage.Params.feed }}">
                       <i class="fa fa-rss" aria-hidden="true"></i>
                       <span class="sr-only">Feed</span>
                     </a>
                   </li>
                 {{ end }}
-                {{ if .Params.wikipedia }}
+                {{ if $headerPage.Params.wikipedia }}
                   <li>
-                    <a href="https://en.wikipedia.org/wiki/{{ .Params.wikipedia }}">
+                    <a href="https://en.wikipedia.org/wiki/{{ $headerPage.Params.wikipedia }}">
                       <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
                       <span class="sr-only">Wikipedia</span>
                     </a>
                   </li>
                 {{ end }}
-                {{ if .Params.twitter }}
+                {{ if $headerPage.Params.twitter }}
                   <li>
-                    <a href="https://twitter.com/{{ .Params.Twitter }}">
+                    <a href="https://twitter.com/{{ $headerPage.Params.Twitter }}">
                       <i class="fa fa-twitter" aria-hidden="true"></i>
                       <span class="sr-only">Twitter</span>
                     </a>
                   </li>
                 {{ end }}
-                {{ if .Params.facebook }}
+                {{ if $headerPage.Params.facebook }}
                   <li>
-                    <a href="https://facebook.com/{{ .Params.facebook }}">
+                    <a href="https://facebook.com/{{ $headerPage.Params.facebook }}">
                       <i class="fa fa-facebook" aria-hidden="true"></i>
                       <span class="sr-only">Facebook</span>
                   </a>
                   </li>
                 {{ end }}
-                {{ if .Params.instagram }}
+                {{ if $headerPage.Params.instagram }}
                   <li>
-                    <a href="https://www.instagram.com/{{ .Params.instagram }}">
+                    <a href="https://www.instagram.com/{{ $headerPage.Params.instagram }}">
                       <i class="fa fa-instagram" aria-hidden="true"></i>
                       <span class="sr-only">Instagram</span>
                     </a>
                   </li>
                 {{ end }}
-                {{ if .Params.snapchat }}
+                {{ if $headerPage.Params.snapchat }}
                   <li>
-                    <a href="https://www.snapchat.com/add/{{ .Params.snapchat }}">
+                    <a href="https://www.snapchat.com/add/{{ $headerPage.Params.snapchat }}">
                       <i class="fa fa-snapchat" aria-hidden="true"></i>
                       <span class="sr-only">Snapchat</span>
                     </a>
                   </li>
                 {{ end }}
-                {{ if .Params.youtube }}
+                {{ if $headerPage.Params.youtube }}
                   <li>
-                    <a href="https://www.youtube.com/user/{{ .Params.youtube }}">
+                    <a href="https://www.youtube.com/user/{{ $headerPage.Params.youtube }}">
                       <i class="fa fa-youtube" aria-hidden="true"></i>
                       <span class="sr-only">Youtube</span>
                     </a>
                   </li>
                 {{ end }}
-                {{ if .Params.vimeo }}
+                {{ if $headerPage.Params.vimeo }}
                   <li>
-                    <a href="https://vimeo.com/{{ .Params.vimeo }}">
+                    <a href="https://vimeo.com/{{ $headerPage.Params.vimeo }}">
                       <i class="fa fa-vimeo" aria-hidden="true"></i>
                       <span class="sr-only">Vimeo</span>
                     </a>
                   </li>
                 {{ end }}
-                {{ if .Params.medium }}
+                {{ if $headerPage.Params.medium }}
                   <li>
-                    <a href="https://medium.com/{{ .Params.medium }}">
+                    <a href="https://medium.com/{{ $headerPage.Params.medium }}">
                       <i class="fa fa-medium" aria-hidden="true"></i>
                       <span class="sr-only">Flickr</span>
                     </a>
                   </li>
                 {{ end }}
-                {{ if .Params.flickr }}
+                {{ if $headerPage.Params.flickr }}
                   <li>
-                    <a href="https://www.flickr.com/photos/{{ .Params.flickr }}">
+                    <a href="https://www.flickr.com/photos/{{ $headerPage.Params.flickr }}">
                       <i class="fa fa-flickr" aria-hidden="true"></i>
                       <span class="sr-only">Flickr</span>
                     </a>
                   </li>
                 {{ end }}
-                {{ if .Params.tumblr }}
+                {{ if $headerPage.Params.tumblr }}
                   <li>
-                    <a href="https://{{ .Params.tumblr }}.tumblr.com">
+                    <a href="https://{{ $headerPage.Params.tumblr }}.tumblr.com">
                       <i class="fa fa-tumblr" aria-hidden="true"></i>
                       <span class="sr-only">Tumblr</span>
                     </a>
                   </li>
                 {{ end }}
-                {{ if .Params.pinterest }}
+                {{ if $headerPage.Params.pinterest }}
                   <li>
-                    <a href="https://pinterest.com/{{ .Params.pinterest }}">
+                    <a href="https://pinterest.com/{{ $headerPage.Params.pinterest }}">
                       <i class="fa fa-pinterest" aria-hidden="true"></i>
                       <span class="sr-only">Pinterest</span>
                     </a>
                   </li>
                 {{ end }}
-                {{ if .Params.googleplus }}
+                {{ if $headerPage.Params.googleplus }}
                   <li>
-                    <a href="https://plus.google.com/+{{ .Params.googleplus }}">
+                    <a href="https://plus.google.com/+{{ $headerPage.Params.googleplus }}">
                       <i class="fa fa-google-plus" aria-hidden="true"></i>
                       <span class="sr-only">Google+</span>
                     </a>
                   </li>
                 {{ end }}
-                {{ if .Params.linkedin }}
+                {{ if $headerPage.Params.linkedin }}
                   <li>
-                    <a href="https://linkedin.com/+{{ .Params.linkedin }}">
+                    <a href="https://linkedin.com/+{{ $headerPage.Params.linkedin }}">
                       <i class="fa fa-linkedin" aria-hidden="true"></i>
                       <span class="sr-only">LinkedIn</span>
                     </a>
