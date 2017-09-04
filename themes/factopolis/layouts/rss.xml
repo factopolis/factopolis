@@ -1,0 +1,41 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <link>https://www.factopolis.com/</link>
+    <description>Factopolis : Statements</description>{{ with .Site.LanguageCode }}
+    <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
+    <managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}{{ with .Site.Author.email }}
+    <webMaster>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</webMaster>{{end}}{{ with .Site.Copyright }}
+    <copyright>{{.}}</copyright>{{end}}{{ if not .Date.IsZero }}
+    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    {{ range first 10 (where .Data.Pages "Type" "assertion") }}
+    <item>
+      <title>
+        {{ .Parent.Title }}: {{ range $idx, $claimId := first 25 .Params.claims }}{{ if $idx }}, {{ end }}{{ ($.Site.GetPage "taxonomy" "claims" $claimId).Title }}{{ end }}
+      </title>
+      <link>https://www.factopolis.com{{ .URL }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
+      <guid>https://www.factopolis.com{{ .URL }}</guid>
+      <description>{{ safeHTML "<![CDATA" }}[
+        <p>{{ .Parent.Title }}, {{ .Params.where }}:</p>
+        <blockquote>{{ .Params.quote | markdownify }}</blockquote>
+        {{ if .Params.checks }}
+        <p>
+        Fact checks:
+        </p>
+        <dl>
+          {{ range $check := .Params.checks }}
+            {{ $checker := $.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
+            <dt><a href="{{ $check.source }}">{{ $checker.Title }}</a></dt>
+            <dd>
+              <blockquote>{{ (default $check.short $check.quote) | markdownify }}</blockquote>
+            </dd>
+          {{ end }}
+        </dl>
+        {{ end }}
+      {{ safeHTML "]]>" }}</description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>
