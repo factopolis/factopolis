@@ -190,16 +190,33 @@ factopolis-app > footer a {
   white-space: nowrap;
 }
 
-article {
+main > :nth-child(2) {
   background-color: white;
-  padding: 1em;
   flex-grow: 1;
   border-bottom: 5px #b0c26e solid;
+}
+
+article {
+  padding: 1em 1em;
 }
 
 h4 {
   font-size: 1.2em;
   border-bottom: 2px #b0c26e solid;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper > :first-child {
+  flex-grow: 1;
+}
+
+.content-wrapper > :last-child {
+  text-align: center;
+  font-size: smaller;
 }
 
 /* Claims */

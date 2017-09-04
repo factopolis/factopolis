@@ -5,6 +5,7 @@ GoogleAnalytics = "UA-101930305-1"
 publishDir = "web"
 paginate = 25
 theme = "factopolis"
+enableGitInfo = true
 
 [taxonomies]
     claim = "claims"

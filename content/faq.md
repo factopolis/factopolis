@@ -75,6 +75,14 @@ We try very hard to examine issues for veracity as dispassionately as possible, 
 
 If you feel we have made a factual error we encourage you to contact us as soon as possible, but keep in mind that we don't generally do any fact checking ourselves. Our role is largely as an aggregator of fact checks done by [credible organizations](/checker).
 
+#### The "last modified" date is confusing.
+
+The the date shown at the bottom of each page is the last time we modified that page, but many pages pull in content from other pages, and that information is not taken into account when generating the last modified date.
+
+For example, the date shown on a person's page is the last time we changed something in the data about that person, such as altering a social media link, the office(s) they have held, etc. Adding a new statement or modifying an existing statement does *not* alter this date; for that information you would need to browse to the statement's page.
+
+Factopolis' entire history is stored in a [Git](https://en.wikipedia.org/wiki/Git) repository, which is [hosted on GitHub](https://github.com/factopolis/factopolis). If you know where to look you can see what the site looked like at any point in time, and determine exactly who changed what, but git is designed for programmers and can be a bit unfriendly for a layperson. If you're trying to do something specific and having trouble, please drop by [our chat room](https://gitter.im/factopolis/) and we'll be happy to help you.
+
 #### How can I contact you?
 
 We have a very strong preference for transparency, so whenever possible we try to make sure all discourse takes place in a public forum:

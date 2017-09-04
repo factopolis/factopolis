@@ -1,5 +1,11 @@
-
-        </article>
+          </article>
+          <div class="page-info">
+            {{ if $.GitInfo }}
+              Page <a href="{{ $.Site.BaseURL }}/faq#the-last-modified-date-is-confusing">last modified</a> {{ $.GitInfo.AuthorDate | dateFormat "2006-01-02" }}.
+            {{ end }}
+            <a href="https://github.com/factopolis/factopolis/commits/master/content/{{ replaceRE "/_index.md$" "" $.File.Path }}">View history</a>.
+          </div>
+        </div>
       </main>
 
       <footer{{ if $.Site.Params.Dart }} class="noscript"{{ end }}>
