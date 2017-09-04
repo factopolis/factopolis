@@ -18,8 +18,11 @@ factcheckorg: sarah-huckabee-sanders
 politifact: sarah-huckabee-sanders
 
 offices:
+  - title: White House Press Secretary
+    from: 2017-07-26
   - title: White House Deputy Press Secretary
     from: 2017-01-20
+    thru: 2017-07-26
 
 groups:
   - gop

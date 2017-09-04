@@ -30,6 +30,6 @@ groups:
 
 offices:
   - title: White House Director of Communications
-    from: 2017-07-25
+    from: 2017-07-21
     thru: 2017-07-31
 ---
