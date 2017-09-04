@@ -1,10 +1,10 @@
 {{ partial "head.html" . }}
 
 <section>
-  <ul>
+  <ul class="subtle-list">
     {{ range $group := $.Paginator.Pages }}
       <li>
-        <h3><a href="{{ $group.Permalink }}">{{ $group.Title }}</a></h3>
+        <h4><a href="{{ $group.Permalink }}">{{ $group.Title }}</a></h4>
         <ol class="content-list person-list">
           {{ range $person := $group.Data.Pages }}
             <li>
