@@ -2,10 +2,14 @@
 
 {{ if eq .Page.Type "people" }}
   <ul class="content-list person-list">
-    {{ range $person := where .Site.Pages "Type" "person" }}
-      <li>
-        {{ partial "person-card" $person }}
-      </li>
+    {{ $.Scratch.Set "people-by-stmt-date" (slice) }}
+    {{ range $stmt := where .Site.Pages "Type" "assertion" }}
+      {{ if not (in ($.Scratch.Get "people-by-stmt-date") $stmt.Parent.File.Path) }}
+        {{ $.Scratch.Add "people-by-stmt-date" $stmt.Parent.File.Path }}
+        <li>
+          {{ partial "person-card" $stmt.Parent }}
+        </li>
+      {{ end }}
     {{ end }}
   </ul>
 {{ else }}
