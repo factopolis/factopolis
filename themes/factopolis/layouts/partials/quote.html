@@ -38,6 +38,12 @@
                 <i class="fa fa-youtube" aria-hidden="true"></i>
                 YouTube {{ partial "time-range.html" $source }}
               </a>
+            {{ else if eq $source.type "prepared" }}
+             <a class="dropdown-item" href="{{ $source.url }}" target="_blank">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                Prepared Remarks
+                ({{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url }})
+              </a>
             {{ else if eq $source.type "transcript" }}
              <a class="dropdown-item" href="{{ $source.url }}" target="_blank">
                 <i class="fa fa-file-text" aria-hidden="true"></i>

@@ -27,6 +27,8 @@ sources:
   source: 
 - type: transcript
   url: 
+- type: prepared
+  url: 
 
 checks:
 - checker: 
