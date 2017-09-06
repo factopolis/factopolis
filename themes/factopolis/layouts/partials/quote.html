@@ -85,7 +85,7 @@
                 {{ partial "time-range.html" $source }}
               </a>
             {{ else if eq $source.type "twitter" }}
-              <a class="dropdown-item twitter-link" data-tweet="{{ $source.id }}" href="https://twitter.com/{{ $source.user }}/status/{{ $source.id }}">
+              <a class="dropdown-item twitter-link" data-tweet="{{ $source.id }}" href="https://twitter.com/{{ $source.user }}/status/{{ $source.id }}" target="_blank">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
                 Twitter (@{{ $source.user }})
               </a>
