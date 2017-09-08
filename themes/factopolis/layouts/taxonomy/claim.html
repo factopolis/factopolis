@@ -12,13 +12,13 @@
 {{ end }}
 
 <section id="truth">
-  <h2>The Truth</h2>
+  <h3>The Truth</h3>
 
   <p>{{ $claim.summary | markdownify }}</p>
 </section>
 
 <section id="fact-checks">
-  <h2>Statements</h2>
+  <h3>Statements</h3>
 
   {{ $claimId := replaceRE "^/claims/(.*)/$" "$1" $.URL }}
   <ul class="quote-list">
