@@ -159,9 +159,9 @@
       <div class="statement-checks">
         <h4>Fact Checks</h4>
 
-        {{ if 1 }}
-          <ul class="subtle-list">
-            {{ range $check := shuffle $.stmt.Params.checks }}
+        <ul class="subtle-list">
+          {{ range $check := shuffle $.stmt.Params.checks }}
+            {{ if or (not $check.claims) (in $check.claims $slug) }}
               {{ if or (ne $.page.Type "checker") (eq $check.checker $slug) }}
                 {{ $checker := $.page.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
                 <li class="statement-check-full">
@@ -214,8 +214,8 @@
                 </li>
               {{ end }}
             {{ end }}
-          </ul>
-        {{ end }}
+          {{ end }}
+        </ul>
       </div>
     {{ end }}
   </div>
