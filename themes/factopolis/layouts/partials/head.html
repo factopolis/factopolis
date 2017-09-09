@@ -98,7 +98,7 @@
                       {{ end }}
                     {{ end }}
                     {{ if or $headerPage.Params.images.photo.license $headerPage.Params.images.photo.source }}
-                      ({{ if $headerPage.Params.images.photo.license }}{{ if $headerPage.Params.images.photo.license.url }}<a href="{{ $headerPage.Params.images.photo.author.url }}">{{ $headerPage.Params.images.photo.license.name }}</a>{{ else }}{{ $headerPage.Params.images.photo.license.name }}{{ end }}{{ end }}{{ if $headerPage.Params.images.photo.source }}{{ if $headerPage.Params.images.photo.license }}, {{ end }}courtesy of {{ if $headerPage.Params.images.photo.source.url }}<a href="{{ $headerPage.Params.images.photo.author.url }}">{{ $headerPage.Params.images.photo.source.name }}</a>{{ else }}{{ $headerPage.Params.images.photo.source.name }}{{ end }}{{ end }})
+                      ({{ if $headerPage.Params.images.photo.license }}{{ if $headerPage.Params.images.photo.license.url }}<a href="{{ $headerPage.Params.images.photo.author.url }}">{{ $headerPage.Params.images.photo.license.name }}</a>{{ else }}{{ $headerPage.Params.images.photo.license.name }}{{ end }}{{ end }}{{ if $headerPage.Params.images.photo.source }}{{ if $headerPage.Params.images.photo.license }}, {{ end }}courtesy of {{ if $headerPage.Params.images.photo.source.url }}<a href="{{ $headerPage.Params.images.photo.source.url }}">{{ $headerPage.Params.images.photo.source.name }}</a>{{ else }}{{ $headerPage.Params.images.photo.source.name }}{{ end }}{{ end }})
                     {{ end }}
                   </div>
                 {{ end }}
