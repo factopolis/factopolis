@@ -1,9 +1,19 @@
 ---
 title: {{ .TranslationBaseName | humanize | title }}
 web: 
-picture: /person/{{ .TranslationBaseName }}.jpg
-pictureCopyright: 
 feed: 
+
+images:
+  photo:
+    author:
+      name: 
+      url: 
+    license: 
+      name: 
+      url: 
+    source:
+      name: 
+      url: 
 
 wikipedia: {{ replace (.TranslationBaseName | humanize | title) " " "_" }}
 twitter: 
