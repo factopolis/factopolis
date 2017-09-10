@@ -12,13 +12,9 @@ enableGitInfo = true
     theme = "themes"
     group = "groups"
 
-# So we can build special JSON for Algolia alongside the normal JSON
-[mediaTypes]
-    [mediaTypes."application/prs.factopolis-algolia"]
-    suffix = "algolia.json"
-
 [outputFormats.Algolia]
-    mediaType = "application/prs.factopolis-algolia"
+    mediaType = "application/json"
+    baseName = "algolia"
     isPlainText = true
 
 [outputs]
