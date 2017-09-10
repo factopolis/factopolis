@@ -21,7 +21,7 @@ instagram: dave_brat
 politifact: dave-brat
 
 groups:
-- gcp
+- gop
 
 offices:
 - title: Member of the U.S. House of Representatives from Virginia's 7th district
