@@ -20,7 +20,7 @@ $(document).ready(function () {
     if ('v' in queryVars) {
       e.preventDefault();
 
-      var videoUrl = 'http://www.youtube.com/embed/' + queryVars['v'] + '?autoplay=1&';
+      var videoUrl = 'https://www.youtube.com/embed/' + queryVars['v'] + '?autoplay=1&';
       if ($(this).attr('data-start-time')) {
         videoUrl += '&start=' + $(this).attr('data-start-time');
         if ($(this).attr('data-end-time')) {
