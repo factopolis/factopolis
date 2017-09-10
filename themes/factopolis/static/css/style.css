@@ -513,6 +513,11 @@ ul.pagination > li.disabled > a {
   align-items: center;
 }
 
+.search-container {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
 .statement-check-full-source-img > *:last-child {
   flex-grow: 1;
   text-align: right;

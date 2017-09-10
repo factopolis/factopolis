@@ -1,4 +1,3 @@
-
 $('#mediaModal').on('hidden.bs.modal', function () {
   $('#modal-target').html('');
 });
@@ -108,5 +107,74 @@ $(document).ready(function() {
     $.getJSON(reqUrl, function(data) {
       $(container).replaceWith('<div class="share-the-fact">' + data.html + '</div>');
     });
+  });
+});
+
+/* Algolia */
+$(document).ready(function() {
+    $('#search-results').each(function() {
+    var search = instantsearch({
+      appId: '65DA5UO9TI',
+      apiKey: 'bc6aa5e04ce6e9341b0c97f337e0d06d',
+      indexName: 'factopolis',
+      searchFunction: function(helper) {
+        if (helper.state.query === '') {
+          $('#latest-statements').show();
+          $('#search-results').hide();
+        } else {
+          $('#latest-statements').hide();
+          $('#search-results').show();
+          helper.search();
+        }
+      }
+    });
+
+    search.addWidget(instantsearch.widgets.searchBox({
+      container: '#search-query',
+      placeholder: "Search",
+      autofocus: true,
+      poweredBy: true
+    }));
+
+    search.addWidget(instantsearch.widgets.infiniteHits({
+      container: '#search-results',
+      autoHideContainer: true,
+      transformData: function(data) {
+        if (data.quote)
+          data.quote = data.quote.replace(/<(\/)?a[^>]*>/g, '<$1span>');
+        return data;
+      },
+      templates: {
+        empty: 'No results',
+        item:
+          '<a class="summary-card" href="/{{objectID}}">' +
+            '<div>' +
+              '{{#isPerson}}<img src="/{{objectID}}-64.jpg" />{{/isPerson}}' +
+              '{{#isStatement}}<img src="/person/{{claimant}}-64.jpg" />{{/isStatement}}' +
+            '</div>' +
+            '<div class="contents">' +
+              '<header>' +
+                '<h4>' +
+                  '{{#isPerson}}Person: {{name}}{{/isPerson}}' +
+                  '{{#isClaim}}Claim: {{title}}{{/isClaim}}' +
+                  '{{#isStatement}}Statement by {{claimantName}}{{/isStatement}}' +
+                '</h4>' +
+                '<h5>' +
+                '{{#isClaim}}Made on {{count}} occasion(s).{{/isClaim}}' +
+                '{{#isPerson}}{{#highestOffice}}{{highestOffice}}{{#highestOfficeThru}} ({{highestOfficeFrom}} - {{highestOfficeThru}}){{/highestOfficeThru}}{{/highestOffice}}{{/isPerson}}' +
+                '{{#isStatement}}{{date}}{{/isStatement}}' +
+                '</h5>' +
+              '</header>' +
+              '<div>' +
+                '{{#isPerson}}{{count}} statement(s) on file.{{/isPerson}}' +
+                '{{#isClaim}}{{{truth}}}{{/isClaim}}' +
+                '{{#isStatement}}{{{quote}}}{{/isStatement}}' +
+              '</div>' +
+            '</div>' +
+          '</a>'
+      }
+    }));
+
+    search.start();
   });
 });

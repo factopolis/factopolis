@@ -1,16 +1,26 @@
 {{ partial "head.html" . }}
 
-<section id="latest-statements">
-  <ol class="subtle-list">
-    {{ $paginator := .Paginate (where $.Site.Pages "Type" "assertion") }}
-    {{ range $stmt := $paginator.Pages }}
-      <li class="no-context-quote">
-        {{ partial "quote.html" (dict "page" $ "stmt" $stmt "compact" 1) }}
-      </li>
-    {{ end }}
-  </ol>
-</section>
+<form>
+  <div class="search-container">
+    <input id="search-query" type="text" placeholder="Search" />
+  </div>
+</form>
 
-{{ template "_internal/pagination.html" . }}
+<section>
+  <div id="search-results"></div>
+
+  <div id="latest-statements">
+    <ol class="subtle-list">
+      {{ $paginator := .Paginate (where $.Site.Pages "Type" "assertion") }}
+      {{ range $stmt := $paginator.Pages }}
+        <li class="no-context-quote">
+          {{ partial "quote.html" (dict "page" $ "stmt" $stmt "compact" 1) }}
+        </li>
+      {{ end }}
+    </ol>
+
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</section>
 
 {{ partial "footer.html" . }}

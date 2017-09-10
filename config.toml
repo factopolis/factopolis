@@ -12,10 +12,19 @@ enableGitInfo = true
     theme = "themes"
     group = "groups"
 
+# So we can build special JSON for Algolia alongside the normal JSON
+[mediaTypes]
+    [mediaTypes."application/prs.factopolis-algolia"]
+    suffix = "algolia.json"
+
+[outputFormats.Algolia]
+    mediaType = "application/prs.factopolis-algolia"
+    isPlainText = true
+
 [outputs]
     page = [ "HTML", "JSON" ]
     section = [ "HTML", "JSON" ]
-    home = [ "HTML", "JSON", "RSS" ]
+    home = [ "HTML", "JSON", "RSS", "Algolia" ]
     taxonomy = [ "HTML", "JSON" ]
     taxonomyTerm = [ "HTML", "JSON" ]
 

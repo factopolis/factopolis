@@ -32,9 +32,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link rel="stylesheet" href="{{ $.Site.BaseURL }}css/style.css">
 
+    {{ if $.Params.extraCSS }}
+      {{ range $css := $.Params.extraCSS }}
+        <link rel="stylesheet" href="{{ $css.url }}" {{ if $css.sri }}integrity="{{ $css.sri }}"{{ end }} {{ if $css.anonymous }}crossorigin="anonymous"{{ end }} />
+      {{ end }}
+    {{ end }}
+
     {{ if $.Site.Params.Dart }}
       <script defer type="application/dart" src="{{ .Site.BaseURL }}main.dart"></script>
       <script defer src="{{ .Site.BaseURL }}packages/browser/dart.js"></script>
+    {{ end }}
+
+    {{ if $.Params.extraJS }}
+      {{ range $js := $.Params.extraJS }}
+        <script {{ if $js.defer }}defer{{ end }} type="text/javascript" src="{{ $js.url }}" {{ if $js.sri }}integrity="{{ $js.sri }}"{{ end }} {{ if $js.anonymous }}crossorigin="anonymous"{{ end }}></script>
+      {{ end }}
     {{ end }}
 
     <script defer type="text/javascript" src="{{ $.Site.BaseURL }}js/factopolis.js"></script>

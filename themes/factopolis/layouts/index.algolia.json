@@ -1,0 +1,63 @@
+{{ $.Scratch.Set "pages" (slice) }}
+{{ range $page := $.Site.Pages }}
+  {{ if eq $page.Kind "page" }}
+    {{ if in (slice "assertion") $page.Type }}
+      {{ $.Scratch.Add "pages" $page }}
+    {{ end }}
+  {{ else if eq $page.Kind "section" }}
+    {{ if in (slice "person") $page.Type }}
+      {{ $.Scratch.Add "pages" $page }}
+    {{ end }}
+  {{ else if eq $page.Kind "taxonomy" }}
+    {{ if in (slice "claims") $page.Type }}
+      {{ $.Scratch.Add "pages" $page }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{
+  "requests": [
+    {{ range $idx, $page := $.Scratch.Get "pages" }}
+      {{ if $idx }},{{ end }}
+      {
+        "action": "updateObject",
+        "body": {
+          {{ if and (eq $page.Type "person") (eq $page.Kind "section") }}
+            "isPerson": true,
+            "name": {{ $page.Title | jsonify }},
+            {{ range $stmt := last 1 $page.Pages.ByDate }}
+              "date": {{ $stmt.Date | dateFormat "2006-01-02" | jsonify }},
+            {{ end }}
+            {{ if $page.Params.offices }}
+                {{ range $idx, $office := first 1 $page.Params.offices }}
+                  {{ if $office.from }}"highestOfficeFrom": {{ $office.from | replaceRE "([0-9]{4}).+" "$1" }},{{ end }}
+                  {{ if $office.thru }}"highestOfficeThru": {{ $office.thru | replaceRE "([0-9]{4}).+" "$1" }},{{ end }}
+                  "highestOffice": {{ $office.title | jsonify }},
+                {{ end }}
+            {{ end }}
+          {{ end }}
+
+          {{ if and (eq $page.Type "claims") (eq $page.Kind "taxonomy") }}
+            "isClaim": true,
+            "count": {{ $page.Pages | len }},
+            {{ range $stmt := last 1 $page.Pages.ByDate }}
+              "date": {{ $stmt.Date | dateFormat "2006-01-02" | jsonify }},
+            {{ end }}
+            "title": {{ $page.Title | title | jsonify }},
+            "truth": {{ $page.Params.summary | markdownify | jsonify }},
+          {{ end }}
+
+          {{ if and (eq $page.Type "assertion") (eq $page.Kind "page") }}
+            "isStatement": true,
+            "claimantName": {{ $page.Parent.Title | jsonify }},
+            "claimant": {{ $page.Parent.URL | replaceRE "^/person/(.+)/+$" "$1" | jsonify }},
+            "quote": {{ $page.Params.quote | markdownify | jsonify }},
+            "date": {{ $page.Date | dateFormat "2006-01-02" | jsonify }},
+          {{ end }}
+
+          {{ if $page.Pages }}"count": {{ $page.Pages | len }},{{ end }}
+          "objectID": {{ $page.URL | replaceRE "^/?(.+)/+$" "$1" | jsonify }}
+        }
+      }
+    {{ end }}
+  ]
+}

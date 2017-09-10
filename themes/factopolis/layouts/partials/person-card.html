@@ -6,16 +6,16 @@
   </div>
   <div class="contents">
     <header>
-    <h4>{{ $.Title }}</h4>
-    {{ if $.Params.offices }}
-      <h5>
-        {{ $office := index $.Params.offices 0 }}
-        {{ $office.title }}
-        {{ if $office.thru }}
-          ({{ dateFormat "2006" $office.from }}{{ if sub (int (dateFormat "2006" $office.thru)) (int (dateFormat "2006" $office.from)) }} - {{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }}{{ end }})
-        {{ end }}
-      </h5>
-    {{ end }}
+      <h4>{{ $.Title }}</h4>
+      {{ if $.Params.offices }}
+        <h5>
+          {{ $office := index $.Params.offices 0 }}
+          {{ $office.title }}
+          {{ if $office.thru }}
+            ({{ dateFormat "2006" $office.from }}{{ if sub (int (dateFormat "2006" $office.thru)) (int (dateFormat "2006" $office.from)) }} - {{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }}{{ end }})
+          {{ end }}
+        </h5>
+      {{ end }}
     </header>
     <p class="claim-count">
       {{ $claimCount := (where (where $.Site.Pages "Type" "assertion") ".Parent.UniqueID" $.UniqueID) | len }}
