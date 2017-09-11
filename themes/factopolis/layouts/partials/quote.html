@@ -53,7 +53,7 @@
             {{ else if eq $source.type "audio" }}
               <audio class="dropdown-item" controls preload="none" src="{{ $source.url }}{{ if $source.start }}#t={{ $source.start }}{{ if $source.duration }},{{ add $source.start $source.duration }}{{ end }}{{ end }}"></audio>
               {{ if $source.source }}
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{{ $source.source }}">
                   <i class="fa fa-headphones" aria-hidden="true"></i>
                   {{ default (replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.source) $source.name }}
                   {{ partial "time-range.html" $source }}
