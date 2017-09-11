@@ -88,7 +88,7 @@
         <header>
           <div>
             <div class="sticky-middle">
-              <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h2>
+              <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title | title }}</a></h2>
 
               {{ if eq .Type "assertion" }}
                 {{ $.Scratch.Set "headerPage" $.Parent }}
