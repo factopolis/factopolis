@@ -501,8 +501,16 @@ ul.pagination > li.disabled > a {
   content: "— ";
 }
 
-.statement-check-full-source-img {
-  display: flex;
+@media screen and (max-width: 767px) {
+  .statement-check-full-source-img-rating {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .statement-check-full-source-img {
+    display: flex;
+  }
 }
 
 .statement-check-full-source-img img {
