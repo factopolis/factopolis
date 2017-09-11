@@ -159,7 +159,7 @@
       <div class="statement-checks">
         <h4>Fact Checks</h4>
 
-        <ul class="subtle-list">
+        <ul class="subtle-list shuffle">
           {{ range $check := shuffle $.stmt.Params.checks }}
             {{ if or (not $check.claims) (in $check.claims $slug) }}
               {{ if or (ne $.page.Type "checker") (eq $check.checker $slug) }}
