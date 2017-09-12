@@ -15,7 +15,9 @@
   </div>
   <div class="statement-contents">
     <blockquote>
-      {{ $.stmt.Params.quote | markdownify }}
+      {{ if $.stmt.Params.retraction }}<del class="{{ default "retraction" $.stmt.Params.retraction.type }}">{{ end }}
+      <div>{{ $.stmt.Params.quote | markdownify }}</div>
+      {{ if $.stmt.Params.retraction }}</del>{{ end }}
     </blockquote>
     <div class="statement-source">
       {{ if ne $.stmt.Parent.UniqueID $.page.UniqueID }}
@@ -100,6 +102,32 @@
         </time>
       {{ end }}
     </div>
+
+    {{ with $.stmt.Params.retraction }}
+      <div class="statement-retraction">
+        {{ if eq $.stmt.Params.retraction.type "clarification" }}
+          Clarified
+        {{ else }}
+          Retracted
+        {{ end }}
+        {{ if .issuer }}
+          by
+          {{ .issuer.position }}
+          {{ if .issuer.id }}
+            {{ $issuer := $.page.Site.GetPage "section" "person" .issuer.id }}
+            <a href="{{ $issuer.URL }}">{{ $issuer.Title }}</a>
+          {{ else if .issuer.name }}
+            {{ .issuer.name }}
+          {{ end }}
+        {{ end }}
+        {{ if .date }}
+          on
+          <a href="{{ .source }}">
+            {{ dateFormat "Jan 2, 2006" .date }}
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
 
     {{ if and (eq $.page.Type "claims") (eq $.page.Kind "taxonomy") }}
       {{ $.page.Scratch.Set "##partials/quote.html/claims" (slice) }}

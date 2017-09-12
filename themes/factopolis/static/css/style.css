@@ -420,7 +420,6 @@ ul.pagination > li.disabled > a {
   margin-bottom: 0.25em;
 }
 
-
 .statement {
   margin: 2em 0;
   display: flex;
@@ -439,11 +438,19 @@ ul.pagination > li.disabled > a {
   border-right: 3px #a8b2b7 solid;
 }
 
+del.clarification {
+  color: grey;
+}
+
+del.clarification > * {
+  color: black;
+}
+
 .statement-contents {
   flex-grow: 1;
 }
 
-.statement-source {
+.statement-source, .statement-retraction {
   clear: left;
   text-align: right;
 }
