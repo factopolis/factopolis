@@ -25,6 +25,10 @@ sources:
   url: 
   iframe: 
   source: 
+- type: archive-org | c-span | fox-news | abc
+  id: 
+  start: 
+  duration: 
 - type: transcript
   url: 
 - type: prepared
