@@ -61,6 +61,10 @@
                   {{ partial "time-range.html" $source }}
                 </a>
               {{ end }}
+            {{ else if eq $source.type "archive-org" }}
+              {{ $end_time := add $source.start (cond (gt $source.duration 10) $source.duration 10) }}
+              {{ $end_timef := add $source.start $source.duration }}
+              {{ partial "video-link.html" (dict "name" "Archive.org" "iframe" (printf "https://archive.org/embed/%s?start=%v&end=%v" $source.id $source.start $end_time) "source" (printf "https://archive.org/details/%s/start/%v/end/%v/" $source.id $source.start $end_time) "start" (int $source.start) "duration" (sub (cond (le (int $end_timef) $end_timef) (int (add $end_timef 1)) (int $end_timef)) (int $source.start))) }}
             {{ else if eq $source.type "c-span" }}
               {{ $start_q := cond (gt $source.start 0) (printf "&start=%d" $source.start) "" }}
               {{ partial "video-link.html" (dict "name" "C-SPAN" "start" (default 0 $source.start) "duration" $source.duration "iframe" (printf "https://www.c-span.org/video/standalone/?%s%s" $source.id $start_q) "source" (printf "https://www.c-span.org/video/?%s%s" $source.id $start_q)) }}
