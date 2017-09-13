@@ -25,7 +25,7 @@ sources:
   url: 
   iframe: 
   source: 
-- type: archive-org | c-span | fox-news | abc
+- type: archive-org | c-span | fox | abc
   id: 
   start: 
   duration: 
