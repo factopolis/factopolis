@@ -1,5 +1,5 @@
 ---
 title: US has the highest business tax rate
 summary:
-  Among *industrialized* nations, the US is in a 5-way tie for highest *statutory* corporate tax rate, which is the tax rate before deductions and exemptions are applied. The *effective* rate, which is what businesses actually pay (*i.e.*, after deductions and exemptions are applied), is about average.
+  The US does have a high *statutory* rate (up to 35%), but significant deductions and exemptions mean companies pay a much lower rate on average; the *effective* tax rate is about average. Furthermore, while the statutory rate is the highest among large, advanced nations, it is not the highest in the world; that distinction goes to the United Arab Emirates with rates up to 55%.
 ---
