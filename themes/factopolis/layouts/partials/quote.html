@@ -61,25 +61,10 @@
                   {{ partial "time-range.html" $source }}
                 </a>
               {{ end }}
+            {{ else if eq $source.type "fox-news" }}
+              {{ partial "video-link.html" (dict "name" "Fox News" "iframe" (printf "https://video.foxnews.com/static/p/video/app/embed/iframe/vod.html?video_id=%d" $source.id) "source" (printf "http://video.foxnews.com/v/%d/" $source.id) "start" $source.start "duration" $source.duration) }}
             {{ else if eq $source.type "video" }}
-              <a class="dropdown-item video-link"
-              href="{{ default $source.iframe (default $source.url $source.source) }}"
-                  {{ if gt $source.start 0.0 }}data-start="{{ $source.start }}"{{ end }}
-                  {{ if $source.duration }}data-duration="{{ $source.duration }}"{{ end }}
-                  {{ if $source.source }}
-                    data-source="{{ $source.source }}"
-                  {{ end }}
-                  {{ if $source.url }}
-                    data-url="{{ $source.url }}"
-                  {{ end }}
-                  {{ if $source.iframe }}
-                    data-iframe="{{ $source.iframe }}"
-                  {{ end }}
-                  target="_blank">
-                <i class="fa fa-film" aria-hidden="true"></i>
-                {{ default (replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.source) $source.name }}
-                {{ partial "time-range.html" $source }}
-              </a>
+              {{ partial "video-link.html" $source }}
             {{ else if eq $source.type "web" }}
               <a class="dropdown-item" href="{{ $source.url }}" target="_blank">
                 <i class="fa fa-globe" aria-hidden="true"></i>
