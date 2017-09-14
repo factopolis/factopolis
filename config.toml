@@ -19,7 +19,7 @@ enableGitInfo = true
 
 [outputs]
     page = [ "HTML", "JSON" ]
-    section = [ "HTML", "JSON" ]
+    section = [ "HTML", "JSON", "RSS" ]
     home = [ "HTML", "JSON", "RSS", "Algolia" ]
     taxonomy = [ "HTML", "JSON" ]
     taxonomyTerm = [ "HTML", "JSON" ]
