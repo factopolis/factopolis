@@ -2,7 +2,7 @@
 
 <dl>
   {{ range $theme := $.Paginator.Pages }}
-    <dt><h4><a href="{{ $theme.Permalink }}">{{ $theme.Title }}</a></h4></dt>
+    <dt><h4><a href="{{ $theme.URL }}">{{ $theme.Title }}</a></h4></dt>
     <dd>
       {{ if $theme.Params.summary }}
         {{ $theme.Params.summary | markdownify }}

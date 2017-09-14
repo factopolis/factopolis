@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "Factopolis"
-baseurl = "/"
+baseurl = "https://www.factopolis.com/"
 GoogleAnalytics = "UA-101930305-1"
 publishDir = "web"
 paginate = 25

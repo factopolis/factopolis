@@ -1,4 +1,4 @@
-<a class="summary-card person-card" href="{{ $.Permalink }}">
+<a class="summary-card person-card" href="{{ $.URL }}">
   <div>
     {{ if and $.Params.images $.Params.images.photo }}
       <img src="{{ replaceRE "/?$" "-64.jpg" $.URL }}" />

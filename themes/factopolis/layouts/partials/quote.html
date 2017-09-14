@@ -3,7 +3,7 @@
 <div class="statement">
   <div class="statement-gutter">
     {{ if ne $.stmt.Parent.UniqueID $.page.UniqueID }}
-      <a href="{{ $.stmt.Parent.Permalink }}">
+      <a href="{{ $.stmt.Parent.URL }}">
         <img src="{{ replaceRE "/?$" "-64.jpg" $.stmt.Parent.URL }}" alt="{{ $.stmt.Parent.Title }}" />
       </a>
     {{ else }}
@@ -21,7 +21,7 @@
     </blockquote>
     <div class="statement-source">
       {{ if ne $.stmt.Parent.UniqueID $.page.UniqueID }}
-        <a href="{{ $.stmt.Parent.Permalink }}">{{ $.stmt.Parent.Title }}</a>,
+        <a href="{{ $.stmt.Parent.URL }}">{{ $.stmt.Parent.Title }}</a>,
       {{ end }}
       <span class="dropdown show">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -93,7 +93,7 @@
       {{ if $.stmt.Params.where }}
         on
         <time datetime="{{ $.stmt.Params.date }}">
-          <a href="{{ $.stmt.Permalink }}">{{ $.stmt.Date | dateFormat "Jan 2, 2006" }}</a>
+          <a href="{{ $.stmt.URL }}">{{ $.stmt.Date | dateFormat "Jan 2, 2006" }}</a>
         </time>
       {{ end }}
     </div>
@@ -145,7 +145,7 @@
           {{ range $claimId := $.page.Scratch.Get "##partials/quote.html/claims" }}
             {{ $claim := $.page.Site.GetPage "taxonomy" "claims" $claimId }}
             <dt>
-              <a href="{{ $claim.Permalink }}">{{ $claim.Title | title }}</a>
+              <a href="{{ $claim.URL }}">{{ $claim.Title | title }}</a>
             </dt>
             <dd>
               <div class="statement-claim-truth">
@@ -164,7 +164,7 @@
                   {{ range $otherId := $others }}
                     {{ $other := $.stmt.Site.GetPage "section" "person" $otherId }}
                     <li class="list-inline-item">
-                      <a href="{{ $other.Permalink }}">
+                      <a href="{{ $other.URL }}">
                         <img title="{{ $other.Title }}" src="{{ $.Site.BaseURL }}/person/{{ $otherId }}-48x.jpg" alt="{{ $other.Title }}" />
                         {{ $other.Title }}
                       </a>

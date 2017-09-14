@@ -23,7 +23,7 @@
       {{ range $group := $person.Params.groups }}
         {{ if eq $group $.File.BaseFileName }}
           <li>
-            <a href="{{ $person.Permalink }}">{{ $person.Title }}</a>
+            <a href="{{ $person.URL }}">{{ $person.Title }}</a>
             {{ if $person.Params.offices }}
               —
               {{ range $office := first 1 $person.Params.offices }}

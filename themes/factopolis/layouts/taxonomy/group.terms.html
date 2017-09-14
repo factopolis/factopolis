@@ -4,7 +4,7 @@
   <ul class="subtle-list">
     {{ range $group := $.Paginator.Pages }}
       <li>
-        <h4><a href="{{ $group.Permalink }}">{{ $group.Title }}</a></h4>
+        <h4><a href="{{ $group.URL }}">{{ $group.Title }}</a></h4>
         <ol class="content-list person-list">
           {{ range $person := $group.Data.Pages }}
             <li>
