@@ -17,7 +17,7 @@
       <meta name="twitter:title" content="{{ .Parent.Title }} on {{ dateFormat "2006-01-02" .Date }}" />
       <meta name="twitter:description" content="{{ .Params.quote | markdownify | chomp }}" />
       {{ if .Parent.Params.images }}
-      <meta name="twitter:image" content="{{ replaceRE "/?$" ".jpg" .Parent.Permalink }}" />
+      <meta name="twitter:image" content="{{ replaceRE "/?$" "-220x.jpg" .Parent.Permalink }}" />
       {{ end }}
       {{ if .Parent.Params.twitter }}<meta name="twitter:creator" content="{{ .Parent.Params.twitter }}" />{{ end }}
     {{ end }}
