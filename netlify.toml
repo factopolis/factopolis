@@ -1,0 +1,11 @@
+[build]
+  publish = "web"
+  command = "hugo -v -b \"${DEPLOY_URL}/\""
+
+[environment]
+  HUGO_VERSION = "0.27"
+  HUGO_ENABLEGITINFO = "true"
+  HUGO_ENV = "production"
+
+[context.production]
+  command = "hugo -v -b \"${URL}/\" && curl -X POST -H \"X-Algolia-API-Key: ${ALGOLIA_API_KEY}\" -H \"X-Algolia-Application-Id: ${ALGOLIA_APPLICATION_ID}\" --data-binary @web/algolia.json \"https://${ALGOLIA_APPLICATION_ID}.algolia.net/1/indexes/${ALGOLIA_INDEX_NAME}/batch\""
