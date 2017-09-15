@@ -1,0 +1,38 @@
+{
+  "quote": {{ .Params.quote | jsonify }},
+  "quotePlain": {{ .Params.quote | markdownify | plainify | jsonify }},
+  "date": {{ dateFormat "2006-01-02" .Date | jsonify }},
+  "name": {{ .Parent.Title | jsonify }},
+  {{ if .Params.where }}"where": {{ .Params.where | jsonify }},{{ end }}
+  {{ if .Params.checks }}
+    "checks": [
+    {{ range $idx, $check := .Params.checks }}
+      {{ if $idx }},{{ end }}
+      {
+        {{ if $check.quote }}"quote": {{ $check.quote | jsonify }},{{ end }}
+        {{ if $check.short }}"short": {{ $check.short | jsonify }},{{ end }}
+        {{ if $check.quote }}"quotePlain": {{ $check.quote | markdownify | plainify | jsonify }},{{ end }}
+        {{ if $check.short }}"shortPlain": {{ $check.short | markdownify | plainify | jsonify }},{{ end }}
+        {{ if $check.sharethefacts }}"shareTheFacts": {{ $check.sharethefacts | jsonify }},{{ end }}
+        "checkerId": {{ $check.checker | jsonify }},
+        "checker": {{ ($.Site.GetPage "page" (printf "checker/%s.md" $check.checker)).Title | jsonify }}
+      }
+    {{ end }}
+    ],
+  {{ end }}
+  {{ if .Params.claims }}
+    "claims": [
+      {{ range $idx, $claimId := .Params.claims }}
+        {{ $claim := $.Site.GetPage "taxonomy" "claims" $claimId }}
+        {{ if $idx }},{{ end }}
+        {
+          "title": {{ $claim.Title | title | jsonify }},
+          "truth": {{ $claim.Params.summary | jsonify }},
+          "truthPlain": {{ $claim.Params.summary | markdownify | plainify | jsonify }},
+          "id": {{ $claimId | jsonify }}
+        }
+      {{ end }}
+    ],
+  {{ end }}
+  {{ partial "page.json" . }}
+}
