@@ -26,21 +26,32 @@ def tweet(msg):
 
     print("@factopolisdb says:", msg)
 
-def twitterOrName(person):
+def twitterHandle(person):
     fp = open("web/person/{}/index.json".format(person))
     data = json.load(fp)
     if 'twitter' in data:
         return '@' + data['twitter']
     else:
-        return data['name']
+        None
 
 def handleStatement(filename):
     fp = open(re.sub('^content/(.+)\.md$', 'web/\\1/index.json', filename))
     stmt = json.load(fp)
 
-    msg=twitterOrName(stmt['person']) + ': ' + stmt['claims'][0]['title']
-    if (len(msg) + 25) > 140:
-        msg = 'New statement by ' + twitterOrName(stmt['person']) + ' on ' + stmt['date']
+    msg = stmt['name']
+    handle = twitterHandle(stmt['person'])
+    if handle:
+        msg += ' (' + handle + ')'
+    msg += ' says ' + stmt['claims'][0]['title']
+    if (len(msg) + 25) > 14:
+        msg = 'New statement by '
+
+        if handle:
+            msg += handle
+        else:
+            msg += stmt['name']
+
+        msg += ' on ' + stmt['date']
         if 'where' in stmt:
             lenWithWhere = len(msg) + len(stmt['where']) + 28
             if lenWithWhere <= 140:
@@ -50,7 +61,11 @@ def handleStatement(filename):
     tweet(msg)
 
 stmtRegex = re.compile("^content/person/[^/]+/[^/]+\.md$")
-stream = os.popen("git diff --name-only --diff-filter=A {}".format(os.environ["TRAVIS_COMMIT_RANGE"]))
+commit_range = "HEAD"
+if "TRAVIS_COMMIT_RANGE" in os.environ:
+    commit_range = os.environ["TRAVIS_COMMIT_RANGE"]
+
+stream = os.popen("git diff --name-only --diff-filter=A {}".format(commit_range))
 while True:
     filename = stream.readline().strip()
     if not filename:
