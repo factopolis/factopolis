@@ -3,7 +3,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
     <title>
-      {{ if not (eq .Page.Kind "home") }}
+      {{ if and (ne .Title "Factopolis") (ne .Title "") }}
         {{ .Title }} ·
       {{ end }}
       {{ .Site.Title }}
