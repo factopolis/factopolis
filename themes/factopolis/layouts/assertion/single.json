@@ -2,6 +2,7 @@
   "quote": {{ .Params.quote | jsonify }},
   "quotePlain": {{ .Params.quote | markdownify | plainify | jsonify }},
   "date": {{ dateFormat "2006-01-02" .Date | jsonify }},
+  "person": {{ replaceRE "^/person/([^/]+)/?$" "$1" .Parent.URL | jsonify }},
   "name": {{ .Parent.Title | jsonify }},
   {{ if .Params.where }}"where": {{ .Params.where | jsonify }},{{ end }}
   {{ if .Params.checks }}
@@ -26,7 +27,7 @@
         {{ $claim := $.Site.GetPage "taxonomy" "claims" $claimId }}
         {{ if $idx }},{{ end }}
         {
-          "title": {{ $claim.Title | title | jsonify }},
+          "title": {{ $claim.Title | jsonify }},
           "truth": {{ $claim.Params.summary | jsonify }},
           "truthPlain": {{ $claim.Params.summary | markdownify | plainify | jsonify }},
           "id": {{ $claimId | jsonify }}
