@@ -3,7 +3,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
     <title>
-      {{ if and (ne .Title "Factopolis") (ne .Title "") }}
+      {{ if and (ne .Title .Site.Title) (ne .Title "") }}
         {{ .Title }} ·
       {{ end }}
       {{ .Site.Title }}
@@ -11,10 +11,16 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="x-hugo-type" content="{{ .Type }}" />
-    <meta name="x-hugo-kind" content="{{ .Kind }}" />
-    <meta name="x-hugo-base-file-name" content="{{ $.Page.BaseFileName }}" />
-    <meta name="x-hugo-parent" conten="{{ .Parent }}" />
+    {{ if eq .Page.Type "assertion" }}
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@factopolisdb" />
+      <meta name="twitter:title" content="{{ .Parent.Title }} on {{ dateFormat "2006-01-02" .Date }}" />
+      <meta name="twitter:description" content="{{ .Params.quote | markdownify | chomp }}" />
+      {{ if .Parent.Params.images }}
+      <meta name="twitter:image" content="{{ replaceRE "/?$" ".jpg" .Parent.Permalink }}" />
+      {{ end }}
+      {{ if .Parent.Params.twitter }}<meta name="twitter:creator" content="{{ .Parent.Params.twitter }}" />{{ end }}
+    {{ end }}
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha256-m/h/cUDAhf6/iBRixTbuc8+Rg2cIETQtPcH9D3p2Kg0=" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
