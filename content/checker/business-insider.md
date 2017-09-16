@@ -1,7 +1,7 @@
 ---
 title: Business Insider
-web: http://www.businessinsider.com/
-feed: http://feeds2.feedburner.com/businessinsider
+web: https://www.businessinsider.com/
+feed: https://feeds2.feedburner.com/businessinsider
 
 wikipedia: Business_Insider
 twitter: businessinsider

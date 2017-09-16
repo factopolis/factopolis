@@ -1,7 +1,7 @@
 ---
 title: NBC News
-web: http://www.nbcnews.com/
-feed: http://feeds.nbcnews.com/feeds/topstories
+web: https://www.nbcnews.com/
+feed: https://feeds.nbcnews.com/feeds/topstories
 
 wikipedia:  NBC_News
 twitter: NBCNews

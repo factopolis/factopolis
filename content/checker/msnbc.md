@@ -1,7 +1,7 @@
 ---
 title: MSNBC
-web: http://www.msnbc.com/
-feed: http://www.msnbc.com/feeds/latest
+web: https://www.msnbc.com/
+feed: https://www.msnbc.com/feeds/latest
 
 wikipedia: MSNBC
 twitter: msnbc

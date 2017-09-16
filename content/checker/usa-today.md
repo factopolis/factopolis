@@ -2,7 +2,7 @@
 title: USA Today
 web: https://www.usatoday.com/
 feeds: https://www.usatoday.com/rss
-feed: http://rssfeeds.usatoday.com/usatoday-NewsTopStories
+feed: https://rssfeeds.usatoday.com/usatoday-NewsTopStories
 
 wikipedia:
 twitter: usatoday

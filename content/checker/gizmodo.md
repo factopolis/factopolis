@@ -1,7 +1,7 @@
 ---
 title: Gizmodo
-web: http://gizmodo.com/
-feed: http://gizmodo.com/rss
+web: https://gizmodo.com/
+feed: https://gizmodo.com/rss
 
 wikipedia: Gizmodo
 twitter: Gizmodo

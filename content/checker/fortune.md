@@ -1,6 +1,6 @@
 ---
 title: Fortune
-web: http://fortune.com/
+web: https://fortune.com/
 
 wikipedia: Fortune_(magazine)
 twitter: FortuneMagazine

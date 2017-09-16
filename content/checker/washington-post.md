@@ -3,7 +3,7 @@ title: The Washington Post
 abbr: WaPo
 logo48: /img/WashingtonPost.png
 web: https://www.washingtonpost.com/
-feed: http://feeds.washingtonpost.com/rss/politics
+feed: https://feeds.washingtonpost.com/rss/politics
 
 wikipedia: The_Washington_Post
 twitter: washingtonpost

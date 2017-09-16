@@ -1,7 +1,7 @@
 ---
 title: Time
-web: http://time.com/
-feed: http://feeds2.feedburner.com/time/topstories
+web: https://time.com/
+feed: https://feeds2.feedburner.com/time/topstories
 
 wikipedia: Time_(magazine)
 twitter: time

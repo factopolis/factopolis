@@ -1,7 +1,7 @@
 ---
 title: FactCheck.org
 web: https://www.factcheck.org/
-feed: http://www.factcheck.org/feed/
+feed: https://www.factcheck.org/feed/
 
 wikipedia: FactCheck.org
 twitter: factcheckdotorg

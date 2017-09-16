@@ -1,6 +1,6 @@
 ---
 title: CNN
-web: http://www.cnn.com/politics
+web: https://www.cnn.com/politics
 wikipedia: CNN
 twitter: CNNPolitics
 facebook: cnnpolitics

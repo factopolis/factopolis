@@ -1,7 +1,7 @@
 ---
 title: Chicago Tribune
-web: http://www.chicagotribune.com/
-feed: http://www.chicagotribune.com/rss2.0.xml
+web: https://www.chicagotribune.com/
+feed: https://www.chicagotribune.com/rss2.0.xml
 
 wikipedia: Chicago_Tribune
 twitter: chicagotribune

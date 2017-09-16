@@ -1,7 +1,7 @@
 ---
 title: Fox News
-web: http://www.foxnews.com/
-feed: http://feeds.feedburner.com/foxnews/latest
+web: https://www.foxnews.com/
+feed: https://feeds.feedburner.com/foxnews/latest
 
 wikipedia: Fox_News
 twitter: FoxNews

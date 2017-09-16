@@ -1,7 +1,7 @@
 ---
 title: CBS News
-web: http://www.cbsnews.com/
-feed: http://www.cbsnews.com/rss/
+web: https://www.cbsnews.com/
+feed: https://www.cbsnews.com/rss/
 
 wikipedia: CBS_News
 twitter: CBSNews

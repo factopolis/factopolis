@@ -1,7 +1,7 @@
 ---
 title: NPR
-web: http://www.npr.org/
-feed: http://www.npr.org/rss/rss.php?id=1002
+web: https://www.npr.org/
+feed: https://www.npr.org/rss/rss.php?id=1002
 
 wikipedia: NPR
 twitter: npr
