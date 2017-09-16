@@ -1,4 +1,5 @@
 {{ partial "head.html" . }}
+{{ $slug := replaceRE "^.*/([^/]+)/?$" "$1" .URL }}
 
 <section>
   <p>

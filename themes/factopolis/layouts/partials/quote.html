@@ -172,6 +172,29 @@
                   {{ end }}
                 </ol>
               {{ end }}
+              {{ if or (eq $.page.Type "assertion") (eq $.page.Type "person") }}
+                {{ $person := cond (eq $.page.Type "person") $.page $.page.Parent }}
+                {{ $person.Scratch.Set "##partials/quote.html/statementOccurances" (slice) }}
+                {{ range $stmt := $person.Pages }}
+                  {{ if in $stmt.Params.claims $claimId }}
+                    {{ $person.Scratch.Add "##partials/quote.html/statementOccurances" $stmt }}
+                  {{ end }}
+                {{ end }}
+                {{ $statementOccurances := $person.Scratch.Get "##partials/quote.html/statementOccurances" }}
+                {{ if gt (len $statementOccurances) 1 }}
+                  <p>
+                    {{ $person.Title }} has made this claim at least {{ len $statementOccurances }}
+                    times, from
+                    {{ range $stmt := last 1 $statementOccurances }}
+                      {{ dateFormat "2006-01-02" $stmt.Date }}
+                    {{ end }}
+                    thru
+                    {{ range $stmt := first 1 $statementOccurances }}
+                      {{ dateFormat "2006-01-02" $stmt.Date }}.
+                    {{ end }}
+                  </p>
+                {{ end }}
+              {{ end }}
             </dd>
           {{ end }}
         </dl>
