@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import os, re, json, twitter
+import os, re, json, twitter, datetime
 
 def tweet(msg):
     if ('TWITTER_CONSUMER_KEY' in os.environ
@@ -24,7 +24,7 @@ def tweet(msg):
             input_encoding="utf-8")
         tApi.PostUpdate(msg)
 
-    print("@factopolisdb says:", msg)
+    print(msg)
 
 def twitterHandle(person):
     fp = open("web/person/{}/index.json".format(person))
@@ -35,16 +35,36 @@ def twitterHandle(person):
         None
 
 def handleStatement(filename):
-    fp = open(re.sub('^content/(.+)\.md$', 'web/\\1/index.json', filename))
+    fp = open(re.sub('^content/person/(.+)\.md$', 'web/person/\\1/index.json', filename))
     stmt = json.load(fp)
 
-    msg = stmt['name']
+    msg = ""
+
+    m = re.match('^content/person/(([^/]+)/([0-9]{4})\-([0-9]{2})\-([0-9]{2}))(\-.+)?.md$', filename)
+    when = datetime.datetime(year=int(m.group(3), 10), month=int(m.group(4),10), day=int(m.group(5), 10))
+    archive = (when + datetime.timedelta(14)) < datetime.datetime.today()
+
     handle = twitterHandle(stmt['person'])
-    if handle:
-        msg += ' (' + handle + ')'
-    msg += ' says ' + stmt['claims'][0]['title']
+
+    if archive:
+        msg = 'Archive: '
+        if handle:
+            msg += handle
+        else:
+            msg += stmt['name']
+        msg += " said "
+    else:
+        msg = stmt['name']
+        if handle:
+            msg += ' (' + handle + ')'
+        msg += " says "
+
+    msg += stmt['claims'][0]['title']
     if (len(msg) + 25) > 140:
-        msg = 'New statement by '
+        if archive:
+            msg = 'Old statement by '
+        else:
+            msg = 'New statement by '
 
         if handle:
             msg += handle
@@ -71,7 +91,6 @@ stream = os.popen("git diff --name-only --diff-filter=A {}".format(commit_range)
 while True:
     filename = stream.readline().strip()
     if not filename:
-        print("Done tweeting.")
         break
     if stmtRegex.match(filename):
         handleStatement(filename)
