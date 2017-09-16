@@ -34,6 +34,14 @@ def twitterHandle(person):
     else:
         None
 
+def checkerTwitterHandle(checker):
+    fp = open("web/checker/{}/index.json".format(checker))
+    data = json.load(fp)
+    if 'twitter' in data:
+        return '@' + data['twitter']
+    else:
+        return None
+
 def handleStatement(filename):
     fp = open(re.sub('^content/person/(.+)\.md$', 'web/person/\\1/index.json', filename))
     stmt = json.load(fp)
@@ -79,10 +87,24 @@ def handleStatement(filename):
 
         msg += ' added'
 
+    checkerList = ''
+    if "checks" in stmt:
+        handles = []
+        for check in stmt['checks']:
+            checkerHandle = checkerTwitterHandle(check['checkerId'])
+            if checkerHandle:
+                handles.append(checkerHandle)
+        clist = " checked by " + (", ".join(handles))
+
+        if (len(msg) + len(clist) + 25) < 140:
+            checkerList = clist
+
     msg += ': https://www.factopolis.com/' + re.sub('^content/(.+)(_index)?\.md$', '\\1', filename)
+    msg += checkerList
+
     tweet(msg)
 
-stmtRegex = re.compile("^content/person/[^/]+/[^/]+\.md$")
+stmtRegex = re.compile("^content/person/(([^/]+)/([0-9]{4})\-([0-9]{2})\-([0-9]{2}))(\-.+)?.md$")
 commit_range = "HEAD"
 if "TRAVIS_COMMIT_RANGE" in os.environ:
     commit_range = os.environ["TRAVIS_COMMIT_RANGE"]
