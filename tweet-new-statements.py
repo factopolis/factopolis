@@ -57,6 +57,8 @@ def handleStatement(filename):
             if lenWithWhere <= 140:
                 msg += ' (' + stmt['where'] + ')'
 
+        msg += ' added'
+
     msg += ': https://www.factopolis.com/' + re.sub('^content/(.+)(_index)?\.md$', '\\1', filename)
     tweet(msg)
 

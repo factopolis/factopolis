@@ -31,4 +31,7 @@ ratings:
   - id: "false"
     name: "False"
     img: png
+  - id: unsupported
+    name: "Unsupported"
+    img: png
 ---
