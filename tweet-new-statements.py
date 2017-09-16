@@ -43,7 +43,7 @@ def handleStatement(filename):
     if handle:
         msg += ' (' + handle + ')'
     msg += ' says ' + stmt['claims'][0]['title']
-    if (len(msg) + 25) > 14:
+    if (len(msg) + 25) > 140:
         msg = 'New statement by '
 
         if handle:
