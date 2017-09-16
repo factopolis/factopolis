@@ -1,5 +1,13 @@
 {{ partial "head.html" . }}
 
+<section>
+  <p>
+    This is one of {{ where $.Site.Pages ".Type" "assertion" | len }} statements on Factopolis
+    made by <a href="{{ .Parent.Parent.URL }}">{{ where $.Site.Pages ".Type" "person" | len }} people</a>,
+    including <a href="{{ .Parent.URL }}">{{ .Parent.Pages | len }} by {{ .Parent.Title }}</a>.
+  </p>
+</section>
+
 {{ if .Content }}
   <section>
     {{ .Content }}
