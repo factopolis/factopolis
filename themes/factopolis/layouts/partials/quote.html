@@ -21,7 +21,16 @@
     </blockquote>
     <div class="statement-source">
       {{ if ne $.stmt.Parent.UniqueID $.page.UniqueID }}
-        <a href="{{ $.stmt.Parent.URL }}">{{ $.stmt.Parent.Title }}</a>,
+        <a href="{{ $.stmt.Parent.URL }}">{{ $.stmt.Parent.Title }}</a>{{ if $.stmt.Parent.Params.offices }},
+          <span>
+            {{ $office := index $.stmt.Parent.Params.offices 0 }}
+            {{ $office.title }}
+            {{ if $office.thru }}
+              ({{ dateFormat "2006" $office.from }}{{ if sub (int (dateFormat "2006" $office.thru)) (int (dateFormat "2006" $office.from)) }} - {{ if $office.thru }}{{ dateFormat "2006" $office.thru }}{{ end }}{{ end }})
+            {{ end }}
+          </span>
+        {{ end }}
+        <br />
       {{ end }}
       <span class="dropdown show">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -172,15 +181,16 @@
                   {{ end }}
                 </ol>
               {{ end }}
+              {{ $soName := printf "##partials/quote.html/statementOccurances/%s" $claimId }}
               {{ if or (eq $.page.Type "assertion") (eq $.page.Type "person") }}
                 {{ $person := cond (eq $.page.Type "person") $.page $.page.Parent }}
-                {{ $person.Scratch.Set "##partials/quote.html/statementOccurances" (slice) }}
+                {{ $person.Scratch.Set $soName (slice) }}
                 {{ range $stmt := $person.Pages }}
                   {{ if in $stmt.Params.claims $claimId }}
-                    {{ $person.Scratch.Add "##partials/quote.html/statementOccurances" $stmt }}
+                    {{ $person.Scratch.Add $soName $stmt }}
                   {{ end }}
                 {{ end }}
-                {{ $statementOccurances := $person.Scratch.Get "##partials/quote.html/statementOccurances" }}
+                {{ $statementOccurances := $person.Scratch.Get $soName }}
                 {{ if gt (len $statementOccurances) 1 }}
                   <p>
                     {{ $person.Title }} has made this claim at least {{ len $statementOccurances }}
