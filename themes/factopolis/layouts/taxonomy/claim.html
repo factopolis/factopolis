@@ -3,19 +3,19 @@
 {{ $claimID := .File.BaseFileName }}
 {{ $claim := .Params }}
 
-{{ if .Content }}
-  <section id="details">
-    <h2>Details</h2>
-
-    {{ .Content }}
-  </section>
-{{ end }}
-
 <section id="truth">
   <h3>The Truth</h3>
 
   <p>{{ $claim.summary | markdownify }}</p>
 </section>
+
+{{ if .Content }}
+  <section id="details">
+    <h3>Details</h3>
+
+    {{ .Content }}
+  </section>
+{{ end }}
 
 <section id="fact-checks">
   <h3>Statements</h3>

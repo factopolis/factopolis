@@ -207,6 +207,10 @@ h3, h4 {
   border-bottom: 2px #b0c26e solid;
 }
 
+h4 {
+  font-size: 100%;
+}
+
 .content-wrapper {
   display: flex;
   flex-direction: column;
@@ -540,4 +544,14 @@ del.clarification > * {
 
 .statement-check-full-source-text {
   text-align: right;
+}
+
+blockquote {
+  padding-left: 1em;
+  border-left: 3px #a8b2b7 solid;
+}
+
+.statement blockquote {
+  padding-left: 0;
+  border-left: none;
 }
