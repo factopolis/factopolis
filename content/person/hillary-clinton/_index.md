@@ -27,7 +27,7 @@ groups:
 - democratic-party
 
 offices:
-- title: 67th United States Secretary of State
+- title: United States Secretary of State
   from: 2009-01-21
   thru: 2013-02-01
 - title: United States Senator from New York

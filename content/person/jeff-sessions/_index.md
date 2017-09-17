@@ -22,7 +22,7 @@ groups:
 - gop
 
 offices:
-- title: 84th United States Attorney General
+- title: United States Attorney General
   from: 2017-02-09
 - title: United States Senator from Alabama
   from: 1997-01-03

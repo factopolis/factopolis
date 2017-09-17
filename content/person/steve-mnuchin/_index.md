@@ -22,6 +22,6 @@ groups:
 - gop
 
 offices:
-- title: 77th United States Secretary of the Treasury
+- title: United States Secretary of the Treasury
   from: 2017-02-13
 ---
