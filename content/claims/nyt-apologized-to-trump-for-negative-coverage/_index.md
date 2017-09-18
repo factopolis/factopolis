@@ -1,4 +1,5 @@
 ---
-title: New York times apologized to Trump for negative coverage
+title: New York Times apologized to Trump for coverage
+negative: New York Times did not apologize to Trump for coverage
 summary: It never apologized.
 ---

@@ -440,6 +440,11 @@ ul.pagination > li.disabled > a {
   padding-right: 0.5em;
   margin-right: 0.5em;
   border-right: 3px #a8b2b7 solid;
+  text-align: center;
+}
+
+.statement-gutter .twitter-share-button {
+  margin-top: 0.5em;
 }
 
 del.clarification {

@@ -1,4 +1,5 @@
 ---
-title: Media didn't report Trump's claim that racism is evil
+title: media didn't report on Trump's claim that racism is evil
+negative: media reported on Trump's claim that racism is evil
 summary: They did, heavily.
 ---

@@ -1,4 +1,5 @@
 ---
-title: Bill Clinton Told Loretta Lynch that the Clintons have killed
+title: Bill Clinton told Loretta Lynch that the Clintons have killed
+negative: Bill Clinton did not tell Loretta Lynch that the Clintons have killed
 summary: There is no evidence for this.
 ---

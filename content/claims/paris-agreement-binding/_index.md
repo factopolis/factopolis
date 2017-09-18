@@ -1,4 +1,5 @@
 ---
-title: Paris climate agreement binding
-summary: The Paris climate agreement is nonbinding
+title: the Paris climate agreement binding
+negative: the Paris climate agreement is non-binding
+summary: The Paris climate agreement is non-binding
 ---
