@@ -16,7 +16,7 @@
     {{ $claim := $.page.Site.GetPage "taxonomy" "claims" (index $.stmt.Params.claims 0) }}
     {{ $twitterText := (printf "No %s, %s" (cond (isset $.stmt.Parent.Params "twitter") (printf "@%s" $.stmt.Parent.Params.twitter) $.stmt.Parent.Title) (cond (isset $claim.Params "negative") $claim.Params.negative (printf "it's not true that %s" $claim.Title))) }}
     <div>
-      <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ $twitterText }}&amp;url={{ $.stmt.Permalink }}"></a>
+      <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ $twitterText }}&amp;url=https://www.factopolis.com{{ $.stmt.URL }}"></a>
     </div>
   </div>
   <div class="statement-contents">
