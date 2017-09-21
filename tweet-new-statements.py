@@ -105,7 +105,7 @@ def handleStatement(filename):
     tweet(msg)
 
 stmtRegex = re.compile("^content/person/(([^/]+)/([0-9]{4})\-([0-9]{2})\-([0-9]{2}))(\-.+)?.md$")
-commit_range = "HEAD"
+commit_range = "origin/master"
 if "TRAVIS_COMMIT_RANGE" in os.environ:
     commit_range = os.environ["TRAVIS_COMMIT_RANGE"]
 
