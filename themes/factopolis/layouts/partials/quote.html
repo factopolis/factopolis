@@ -50,12 +50,7 @@
         </a>
         <div class="dropdown-menu">
           {{ range $source := $.stmt.Params.sources }}
-            {{ if eq $source.type "youtube" }}
-              <a class="dropdown-item" {{ if $source.start }}data-start-time="{{ $source.start }}" {{ if $source.duration }}data-end-time="{{ add $source.start $source.duration }}"{{ end }}{{ end }} href="https://www.youtube.com/watch?v={{ $source.id }}{{ if $source.start }}&amp;t={{ $source.start }}{{  end }}" target="_blank">
-                <i class="fa fa-youtube" aria-hidden="true"></i>
-                YouTube {{ partial "time-range.html" $source }}
-              </a>
-            {{ else if eq $source.type "prepared" }}
+            {{ if eq $source.type "prepared" }}
              <a class="dropdown-item" href="{{ $source.url }}" target="_blank">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i>
                 Prepared Remarks
@@ -80,6 +75,8 @@
               {{ $end_time := add $source.start (cond (gt $source.duration 10) $source.duration 10) }}
               {{ $end_timef := add $source.start $source.duration }}
               {{ partial "video-link.html" (dict "name" "Archive.org" "iframe" (printf "https://archive.org/embed/%s?start=%v&end=%v" $source.id $source.start $end_time) "source" (printf "https://archive.org/details/%s/start/%v/end/%v/" $source.id $source.start $end_time) "start" (int $source.start) "duration" (sub (cond (le (int $end_timef) $end_timef) (int (add $end_timef 1)) (int $end_timef)) (int $source.start))) }}
+            {{ else if eq $source.type "youtube" }}
+              {{ partial "video-link.html" (dict "name" "YouTube" "iframe" (printf "https://www.youtube.com/embed/%s?autoplay=1&start=%d" $source.id (default 0 $source.start)) "source" (printf "https://www.youtube.com/watch?v=%s&t=%d" $source.id (default 0 $source.start)) "start" $source.start "duration" $source.duration) }}
             {{ else if eq $source.type "c-span" }}
               {{ $start_q := cond (gt $source.start 0) (printf "&start=%d" $source.start) "" }}
               {{ partial "video-link.html" (dict "name" "C-SPAN" "start" (default 0 $source.start) "duration" $source.duration "iframe" (printf "https://www.c-span.org/video/standalone/?%s%s" $source.id $start_q) "source" (printf "https://www.c-span.org/video/?%s%s" $source.id $start_q)) }}
