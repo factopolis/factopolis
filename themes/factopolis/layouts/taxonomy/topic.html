@@ -1,0 +1,46 @@
+{{ partial "head.html" . }}
+
+{{ if .Content }}
+  <section>
+    {{ .Content }}
+  </section>
+{{ end }}
+
+<ul class="claims">
+    {{ range $claim := (.Paginate .Data.Pages.ByDate.Reverse).Pages }}
+      {{ $.Scratch.Set "claimants" (slice) }}
+      {{ $.Scratch.Set "claimantPaths" (slice) }}
+      {{ range $stmt := $claim.Data.Pages }}
+        {{ if not (in ($.Scratch.Get "claimantPaths") $stmt.Parent.File.Path) }}
+          {{ $.Scratch.Add "claimantPaths" $stmt.Parent.File.Path }}
+          {{ $.Scratch.Add "claimants" $stmt.Parent }}
+          {{ $.Scratch.Set (printf "stmtsBy-%s" $stmt.Parent.File.Path) (slice $stmt) }}
+        {{ else }}
+          {{ $.Scratch.Add (printf "stmtsBy-%s" $stmt.Parent.File.Path) $stmt }}
+        {{ end }}
+      {{ end }}
+
+      <li>
+        <h4>
+          <a href="{{ $claim.URL }}">{{ $claim.Title | title }}</a>
+        </h4>
+
+        <div>
+          <ul class="quick-claimants-list list-inline">
+            {{ range $claimant := $.Scratch.Get "claimants" }}
+              {{ $stmtCount := $.Scratch.Get (printf "stmtsBy-%s" $claimant.File.Path) | len }}
+              <li class="list-inline-item"><a href="{{ $claimant.URL }}"><img src="{{ replaceRE "/?$" "-48x.jpg" $claimant.URL }}" alt="" /> {{ $claimant.Title }}</a>{{ if gt $stmtCount 1 }} {{ $stmtCount }} times{{ end }}</li>
+            {{ end }}
+          </ul>
+
+          <section class="truth">
+            <p>
+              {{ $claim.Params.summary | markdownify }}
+            </p>
+          </section>
+        </div>
+      </li>
+    {{ end }}
+  </ul>
+
+{{ partial "footer.html" . }}

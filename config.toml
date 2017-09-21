@@ -9,8 +9,8 @@ enableGitInfo = true
 
 [taxonomies]
     claim = "claims"
-    theme = "themes"
     group = "groups"
+    topic = "topics"
 
 [outputFormats.Algolia]
     mediaType = "application/json"

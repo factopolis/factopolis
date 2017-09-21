@@ -5,4 +5,6 @@ summary:
   Trump is counting his chickens before they hatch. Even if he
   succeeds in reorienting U.S. trade policy, jobs gains are still
   likely to be illusionary.
+subjects:
+- donald-trump
 ---

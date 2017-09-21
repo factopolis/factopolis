@@ -9,6 +9,24 @@
   <p>{{ $claim.summary | markdownify }}</p>
 </section>
 
+{{ if .Params.topics }}
+<section id="topics">
+  <h3>Topics</h3>
+
+  <ul>
+    {{ range $topicId := .Params.topics }}
+      {{ $topic := $.Site.GetPage "taxonomy" "topics" $topicId }}
+      <li class="list-inline-item">
+        <a href="{{ $topic.URL }}" class="btn btn-sm btn-outline-primary">
+          {{ $topic.Title }}
+          <span class="badge badge-secondary">{{ len $topic.Data.Pages }}</span>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+
 {{ if .Content }}
   <section id="details">
     <h3>Details</h3>

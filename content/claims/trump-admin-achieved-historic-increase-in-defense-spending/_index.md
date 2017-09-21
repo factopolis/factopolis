@@ -4,4 +4,9 @@ negative: the Trump admin didn't achieve a historic increase in defense spending
 summary:
   He has *proposed* a large, though not unprecedented (even in recent times), increase, which
   congress has not approved.
+subjects:
+- donald-trump
+topics:
+- bugdet
+- defense
 ---
