@@ -20,7 +20,7 @@
     {{ range first 10 (where .Data.Pages "Type" "assertion") }}
     <item>
       <title>
-        {{ if ne $.Page.UniqueID .Parent.UniqueID }} {{ .Parent.Title }}: {{ end }}{{ range $idx, $claimId := first 25 .Params.claims }}{{ if $idx }}, {{ end }}{{ ($.Site.GetPage "taxonomy" "claims" $claimId).Title }}{{ end }}
+        {{ if ne $.Page.UniqueID .Parent.UniqueID }}{{ .Parent.Title }}: {{ end }}{{ range $idx, $claimId := first 25 .Params.claims }}{{ if $idx }}, {{ end }}{{ ($.Site.GetPage "taxonomy" "claims" $claimId).Title | title }}{{ end }}
       </title>
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
