@@ -16,7 +16,8 @@
         ,
       {{ else if eq $source.type "twitter" }}
         "user": {{ $source.user | jsonify }},
-        "id": {{ $source.id | jsonify }},
+        {{ if $source.id }}"id": {{ $source.id | jsonify }},{{ end }}
+        {{ if $source.timeline }}"timeline": {{ $source.timeline | jsonify }},{{ end }}
       {{ else if $source.url }}
         "url": {{ $source.url | jsonify }},
       {{ end }}

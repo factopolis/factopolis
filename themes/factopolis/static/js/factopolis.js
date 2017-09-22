@@ -60,12 +60,21 @@ $(document).ready(function () {
   $('.twitter-link').on('click', function (e) {
     try {
       var tweetId = $(this).attr('data-tweet');
-
-      twttr.widgets.createTweet(tweetId,
-        document.getElementById('modal-target'),
-        {
-          "conversation": "all"
-        });
+      if (tweetId) {
+        twttr.widgets.createTweet(tweetId,
+          document.getElementById('modal-target'),
+          {
+            "conversation": "all"
+          });
+      } else {
+        var timelineId = $(this).attr('data-timeline');
+        twttr.widgets.createTimeline({
+            sourceType: 'collection',
+            id: timelineId
+          },
+          document.getElementById('modal-target')
+        );
+      }
 
       $('#mediaModal').modal();
       e.preventDefault();
