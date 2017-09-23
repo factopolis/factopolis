@@ -9,6 +9,14 @@
   <p>{{ $claim.summary | markdownify }}</p>
 </section>
 
+{{ if .Content }}
+  <section id="details">
+    <h3>Details</h3>
+
+    {{ .Content }}
+  </section>
+{{ end }}
+
 {{ if .Params.topics }}
 <section id="topics">
   <h3>Topics</h3>
@@ -25,14 +33,6 @@
     {{ end }}
   </ul>
 </section>
-{{ end }}
-
-{{ if .Content }}
-  <section id="details">
-    <h3>Details</h3>
-
-    {{ .Content }}
-  </section>
 {{ end }}
 
 <section id="fact-checks">

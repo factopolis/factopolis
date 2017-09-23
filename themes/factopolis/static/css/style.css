@@ -202,9 +202,12 @@ article {
 
 h3, h4 {
   font-variant: small-caps;
-  font-weight: bold;
   font-size: 120%;
   border-bottom: 2px #b0c26e solid;
+}
+
+h3 {
+  font-weight: bold;
 }
 
 h4 {
