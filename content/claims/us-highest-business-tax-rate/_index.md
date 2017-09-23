@@ -1,6 +1,6 @@
 ---
-title: US has the highest business tax rate
-negative: US doesn't have the highest business tax rate
+title: US has the highest corporate tax rate
+negative: US doesn't have the corporate business tax rate
 summary:
   The US does have a high *statutory* rate (up to 35%), but significant deductions and exemptions mean companies actually end up paying a much lower rate; the *effective* tax rate is about average. Furthermore, while the statutory rate is the highest among large, advanced nations, it is not the highest in the world; that distinction goes to the United Arab Emirates with rates up to 55%.
 topics:
@@ -9,11 +9,11 @@ topics:
 
 This talking point has a kernel of truth to it. Unfortunately it's generally presented in a misleading way.
 
-#### Business vs. Corporate
+#### Business, Corporate, and Pass-Thru
 
 You may notice that some statements of this claim say "business" while others say "corporate". As far as we can tell, everyone who makes this claim is referring to [C corporations](https://en.wikipedia.org/wiki/C_corporation), so technically both terms are really a bit too general. "Corporate" would seem to encompass [S corporations](https://en.wikipedia.org/wiki/S_corporation) as well as C corporations, and "business" would include not only S corporations but also sole proprietorships, partnerships, and [limited liability companies](https://en.wikipedia.org/wiki/Limited_liability_company).
 
-These businesses aren't just a technicality; they represent a major part of the U.S. economy. [According to The Tax Foundation](https://taxfoundation.org/overview-pass-through-businesses-united-states/):
+This isn't a minor technicality; businesses other than C corporations represent a major part of the U.S. economy. [According to The Tax Foundation](https://taxfoundation.org/overview-pass-through-businesses-united-states/):
 
 > The United States currently has a large number of pass-through businesses, or businesses that pay their taxes through the individual income tax code rather than through the corporate code. These sole proprietorships, S corporations, and partnerships make up the vast majority of businesses and more than 60 percent of net business income in America. In addition, pass-through businesses account for more than half of the private sector workforce and 37 percent of total private sector payroll. Pass-through businesses are represented in all industries in the United States.
 
@@ -31,11 +31,13 @@ While it is true that the top statutory tax rate for C corporations in the US is
 
 > Although the U.S. statutory tax rate is higher, the average effective rate is about the same, and the marginal rate on new investment is only slightly higher.
 
+When the Institute on Taxation and Economic Policy [looked at](https://itep.org/the-35-percent-corporate-tax-myth/) the effective tax rates paid by the 258 Fortune 500 companies which were profitable for every year from 2008-2015, they found that the effective tax rate was 21.2% (13.8% less than the 35% statutory rate). Moreover, 18 (roughly 8%) of those companies didn't pay any federal income taxes whatsoever over the entire 8 year period, and 48 (18.6%) averaged under 10%.
+
 It is our belief that, when most people think of the tax rate, they think about what companies actually pay (*i.e.*, the effective tax rate). Using the statutory rate is a bit like going to the store and looking at the [manufacturer's suggested retail price](https://en.wikipedia.org/wiki/List_price) instead of what the store is actually charging.
 
-In addition to common sense, it's worth noting that this statement is often made in the context of getting companies to invest in America, especially those investments which bring jobs. The next sentence in that CRS report mentions which rate is relevant in such cases:
+It is also worth noting that this statement is often made in the context of getting companies to invest in America, especially those investments which bring jobs. Going back to that CRS report mentioned earlier, the very next sentence mentions which rate is relevant in such cases:
 
-> The statutory rate differential is relevant for international profit shifting; effective rates are more relevant for firms’ investment levels.
+> The statutory rate differential is relevant for international profit shifting; effective rates are more relevant for firms' investment levels.
 
 #### Highest in the World?
 
@@ -43,11 +45,9 @@ Those who make this claim are generally using "the world" as a stand-in for the 
 
 Among [OECD members](http://www.oecd.org/about/membersandpartners/), the US [does have the highest top statutory corporate income tax rate](http://stats.oecd.org/index.aspx?DataSetCode=TABLE_II1) at 35%. France (at 34.43%) and Belgium (33%) round out the top 3, while Switzerland comes in at the other end at 8.5%.
 
-Alas, that's not the whole story. For one thing, the OECD does not include either Russia or China, two countries with massive and important economies.
+Alas, that's not the whole story. There are about [195 countries](https://www.state.gov/s/inr/rls/4250.htm) in the world, depending on how you measure ([a more complicated question than you might think](https://www.youtube.com/watch?v=4vsPB_lbo94)). The accounting firm PwC tracks [the top statutory rate of 155 of them](http://taxsummaries.pwc.com/uk/taxsummaries/wwts.nsf/ID/Corporate-income-tax-(CIT)-rates), and two are higher than the United States: the United Arab Emirates (55%) and Puerto Rico (39%). Additionally, one country not in that list, Comoros, [is at 50%](https://www.pwc.co.za/en/assets/pdf/tax-summaries/comoros_2014.pdf). There are also some rather noteworthy omissions from the OECD, such as Russia and China.
 
-There are about [195 countries](https://www.state.gov/s/inr/rls/4250.htm) in the world, depending on how you measure ([a more complicated question than you might think](https://www.youtube.com/watch?v=4vsPB_lbo94)). The accounting firm PwC tracks [the top statutory rate of 155 of them](http://taxsummaries.pwc.com/uk/taxsummaries/wwts.nsf/ID/Corporate-income-tax-(CIT)-rates), and two are higher than the United States: the United Arab Emirates (55%) and Puerto Rico (39%). Additionally, one country not in that list, Comoros, [is at 50%](https://www.pwc.co.za/en/assets/pdf/tax-summaries/comoros_2014.pdf).
-
-Sometimes people throw in the qualifier "developed"--Donald Trump has done so on three occasions that we know of at the time this was written, but we have a hard time classifying the United Arab Emirates as undeveloped. According to the UN's [2016 Human Development Report](http://hdr.undp.org/sites/default/files/2016_human_development_report.pdf), the UAE's Human Development Index (HDI) is 0.840. That is within the top classification of "very high human development", and higher than Hungary (0.836), which is an OECD member.
+Sometimes people throw in the qualifier "developed" or "industrialized"--Donald Trump has done so on three occasions that we know of at the time this was written, but we have a hard time classifying the United Arab Emirates as undeveloped. According to the UN's [2016 Human Development Report](http://hdr.undp.org/sites/default/files/2016_human_development_report.pdf), the UAE's Human Development Index (HDI) is 0.840. That is within the top classification of "very high human development". It is also higher than Hungary (0.836), which is an OECD member.
 
 If we look at the effective rate instead of the statutory rate, the claim rings even less true. A [2017 CBO report](https://www.cbo.gov/system/files/115th-congress-2017-2018/reports/52419-internationaltaxratecomp.pdf) which compared tax rates of [G20](https://en.wikipedia.org/wiki/G20) countries found that, while the US did have the highest top statutory corporate tax rate (39.1%; they included state taxes) among the G20 in 2012, the effective tax rate (18.6%) fell below three other countries: Argentina (22.6%), Japan (21.7%), and the United Kingdom (18.7%).
 
