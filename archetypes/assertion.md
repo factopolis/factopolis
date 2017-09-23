@@ -11,10 +11,10 @@ where:
 sources:
 - type: web
   url: 
-- type: youtube
+- type: twitter
+  user: 
   id: 
-  start: 
-  duration: 
+  timeline: 
 - type: audio
   start: duration
   url: 
@@ -25,7 +25,7 @@ sources:
   url: 
   iframe: 
   source: 
-- type: archive-org | c-span | fox | abc
+- type: archive-org | youtube | c-span | fox | abc
   id: 
   start: 
   duration: 
