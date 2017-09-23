@@ -1,5 +1,5 @@
 ---
-title: I.C.E. endorsed Trump
-negative: I.C.E. didn't endorse Trump
-summary: Only its union did.
+title: ICE endorsed Trump
+negative: ICE didn't endorse Trump
+summary: Only its union, which represents about ¼ of its employees, did.
 ---
