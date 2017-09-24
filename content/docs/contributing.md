@@ -16,10 +16,7 @@ how you could help, here are some ideas:
 
 #### Content Editors
 
-One of the best ways to help Factopolis is to dive in and start
-editing content.  Not only is it difficult for us to keep up with the
-new lies politicians and pundits tell, but we would also like to add
-as much historical data as we can!
+One of the best ways to help Factopolis is to dive in and start editing content.  Not only is it difficult for us to keep up with the new lies politicians and pundits tell, but we would also like to add as much historical data as we can!
 
 The first thing you need to do is find content; the archives of [PolitiFact](http://www.politifact.com/truth-o-meter/statements/), [FactCheck.org](http://www.factcheck.org/the-factcheck-wire/), as well as [others](/checker) are loaded with great information to comb through. Another surprisingly good source is fact checks which are already in our database; they often contain links to other statements and/or fact checks which aren't in our database (yet!).
 
@@ -42,13 +39,19 @@ Video and/or audio sources are generally preferable to text-only, though wheneve
 
 Excellent video sources include:
 
-* Press sections of Government web sites, such as [WhiteHouse.gov](https://www.whitehouse.gov/)
 * [Archive.org's TV News Archive](https://archive.org/details/tv)
-* [YouTube](https://www.youtube.com/) ­— Official channels for whoever produced the video are prefered, such as
+* [YouTube](https://www.youtube.com/) -- Official channels for whoever produced the video are prefered, such as
   * [White House](https://www.youtube.com/user/whitehouse/videos)
   * [CNN](https://www.youtube.com/user/CNN/videos)
   * [MSNBC](https://www.youtube.com/user/msnbcleanforward/videos)
   * [Fox News](https://www.youtube.com/user/FoxNewsChannel/videos)
+  Videos uploaded by random users tend to be taken down due to copyright violations much more often. They can also be edited selectively; for example, compare [this YouTube video](https://youtu.be/8ZADcyBDZSw?t=2396) (by "DONALD TRUMP SPEECHES & PRESS CONFERENCE") with the [full version (on C-SPAN)](https://www.c-span.org/video/?415591-1/donald-trump-campaigns-kenansville-north-carolina&start=2385). They cut out [a rather significant statement](/donald-trump/2016-09-20/).
+* [C-SPAN](https://www.c-span.org/)
+* [WhiteHouse.gov Video Gallery](https://www.whitehouse.gov/featured-videos) (they also have lots of [transcripts](https://www.whitehouse.gov/briefing-room/speeches-and-remarks))
+
+News sites can also be a good source for video, but they tend to be a bit more annoying to work with:
+
+* [Fox News]() --
 
 You should also always prefer longer videos as opposed to those which *only* show the clip in question, to make it easier for people to see the context of the statement.
 

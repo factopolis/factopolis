@@ -1,8 +1,13 @@
 ---
 title: API
+aliases:
+- /api
 ---
 
-**WARNING**: The API isn't stable yet; use it at your own risk!
+**WARNING**: The API isn't stable yet; use it at your own risk! If
+nothing else, it will change when
+[Hugo bug #3832](https://github.com/gohugoio/hugo/issues/3832) is
+fixed.
 
 Factopolis is open-source, and you can access all of our data from
 [our GitHub repository](https://github.com/factopolis/factopolis).
