@@ -4,7 +4,7 @@
 
     <title>
       {{ if and (ne .Title .Site.Title) (ne .Title "") }}
-        {{ .Title }} ·
+        {{ .Title | title }} ·
       {{ end }}
       {{ .Site.Title }}
     </title>
