@@ -42,6 +42,7 @@ deploy:
     branch: master
 
 after_script:
+- sleep 120
 - python3 ./tweet-new-statements.py
 
 notifications:
