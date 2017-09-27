@@ -21,10 +21,6 @@ While promoting President Trump's proposed tax cuts in [an interview with CNBC](
 
 The rate this claim refers to, 35%, applies only to C corporations.
 
-#### Highest in the World?
-
-The accounting firm PwC tracks [the top statutory rate of 155 countries](http://taxsummaries.pwc.com/uk/taxsummaries/wwts.nsf/ID/Corporate-income-tax-(CIT)-rates), and two are higher than the United States: the United Arab Emirates (55%) and Puerto Rico (39%). Additionally, one country not in that list, Comoros, [is at 50%](https://www.pwc.co.za/en/assets/pdf/tax-summaries/comoros_2014.pdf).
-
 #### Statutory vs. Effective
 
 Perhaps the most misleading aspect of this claim is that it refers to the *statutory* rate, which is the tax rate before any deductions or exemptions have been applied. The rate after these deductions and exemptions have been applied (*i.e.*, what the companies actually pay) is called the *effective* tax rate.
@@ -43,10 +39,12 @@ A [2017 CBO report](https://www.cbo.gov/system/files/115th-congress-2017-2018/re
 
 Using the statutory rate is a bit like going to the store and looking at the [manufacturer's suggested retail price](https://en.wikipedia.org/wiki/List_price) instead of what the store is actually charging.
 
-#### The "Developed" World
+#### Highest in the Developed World?
 
-There are about [195 countries](https://www.state.gov/s/inr/rls/4250.htm) in the world, depending on how you measure ([a more complicated question than you might think](https://www.youtube.com/watch?v=4vsPB_lbo94)). The accounting firm PwC tracks [the top statutory rate of 155 of them](http://taxsummaries.pwc.com/uk/taxsummaries/wwts.nsf/ID/Corporate-income-tax-(CIT)-rates), and two are higher than the United States: the United Arab Emirates (55%) and Puerto Rico (39%). Additionally, one country not in that list, Comoros, [is at 50%](https://www.pwc.co.za/en/assets/pdf/tax-summaries/comoros_2014.pdf).
+The accounting firm PwC tracks [the top statutory rate of 155 nations](http://taxsummaries.pwc.com/uk/taxsummaries/wwts.nsf/ID/Corporate-income-tax-(CIT)-rates), and two are higher than the United States: the United Arab Emirates (55%) and Puerto Rico (39%). Additionally, one country not in that list, Comoros, [is at 50%](https://www.pwc.co.za/en/assets/pdf/tax-summaries/comoros_2014.pdf).
 
-The people who make this claim are generally using "developed" as a stand-in for the 35 member countries of the [Organisation for Economic Co-operation and Development](http://www.oecd.org/about/) (OECD), a group of highly developed countries. However, according to the UN's [2016 Human Development Report](http://hdr.undp.org/sites/default/files/2016_human_development_report.pdf), the United Arab Emirates had a Human Development Index (HDI) score of 0.840 in 2015, the 42nd highest in the world. That's higher than 4 OECD member countries: Hungary (0.836, ranked 43rd), Latvia (0.830, ranked 44th), Turkey (0.767, ranked 71st), and Mexico (0.762, ranked 77th).
+The people who make this claim are generally using "developed" as a stand-in for the 35 member countries of the [Organisation for Economic Co-operation and Development](http://www.oecd.org/about/) (OECD), a group of highly developed countries, and it's true that America's top statutory rate for C corporations is the highest in that group.
+
+However, according to the UN's [2016 Human Development Report](http://hdr.undp.org/sites/default/files/2016_human_development_report.pdf), the United Arab Emirates had a Human Development Index (HDI) score of 0.840 in 2015, the 42nd highest in the world. That's higher than 4 OECD member countries: Hungary (0.836, ranked 43rd), Latvia (0.830, ranked 44th), Turkey (0.767, ranked 71st), and Mexico (0.762, ranked 77th).
 
 The U.A.E.'s HDI is well within the top classification of "very high human development", which includes countries with a score of 0.800 and above. It seems to us that this list is a much more reasonable definition of "developed" than the somewhat arbitrary OECD membership.
