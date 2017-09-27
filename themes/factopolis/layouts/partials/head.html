@@ -105,7 +105,7 @@
 
               {{ if $headerPage.Params.images }}
                 {{ if $headerPage.Params.images.photo }}
-                  <img class="profile-pic" alt="{{ .Page.Title }}" src="{{ replaceRE "/?$" ".jpg" $headerPage.URL }}" />
+                  <img class="profile-pic" alt="{{ .Page.Title }}" src="{{ replaceRE "/?$" "-220x330.jpg" $headerPage.URL }}" width="220" height="330" />
                   <div class="profile-pic-copyright">
                     {{ if $headerPage.Params.images.photo.author }}
                       Photo by

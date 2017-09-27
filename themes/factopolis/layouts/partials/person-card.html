@@ -1,7 +1,7 @@
 <a class="summary-card person-card" href="{{ $.URL }}">
   <div>
     {{ if and $.Params.images $.Params.images.photo }}
-      <img src="{{ replaceRE "/?$" "-64.jpg" $.URL }}" />
+      <img src="{{ replaceRE "/?$" "-64x96.jpg" $.URL }}" width="64" height="96" />
     {{ end }}
   </div>
   <div class="contents">

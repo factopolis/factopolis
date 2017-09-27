@@ -4,7 +4,7 @@
   <div class="statement-gutter">
     {{ if ne $.stmt.Parent.UniqueID $.page.UniqueID }}
       <a href="{{ $.stmt.Parent.URL }}">
-        <img src="{{ replaceRE "/?$" "-64.jpg" $.stmt.Parent.URL }}" alt="{{ $.stmt.Parent.Title }}" />
+        <img src="{{ replaceRE "/?$" "-64x96.jpg" $.stmt.Parent.URL }}" alt="{{ $.stmt.Parent.Title }}" width="64" height="96" />
       </a>
     {{ else }}
       <span class="fa-stack fa-2x">
@@ -192,7 +192,7 @@
                     {{ $other := $.stmt.Site.GetPage "section" "person" $otherId }}
                     <li class="list-inline-item">
                       <a href="{{ $other.URL }}">
-                        <img title="{{ $other.Title }}" src="{{ $.Site.BaseURL }}/person/{{ $otherId }}-48x.jpg" alt="{{ $other.Title }}" />
+                        <img title="{{ $other.Title }}" src="{{ $.Site.BaseURL }}/person/{{ $otherId }}-48x.jpg" alt="{{ $other.Title }}" width="48" height="48" />
                         {{ $other.Title }}
                       </a>
                     </li>
@@ -241,7 +241,7 @@
                 <li class="statement-check-full">
                   <div class="statement-check-full-gutter">
                     <a href="{{ $check.source }}">
-                      <img src="{{ replaceRE "/?$" "-48x.png" $checker.URL }}" alt="" />
+                      <img src="{{ replaceRE "/?$" "-48x.png" $checker.URL }}" alt="" width="48" height="48" />
                     </a>
                   </div>
                   <div class="statement-check-full-contents">

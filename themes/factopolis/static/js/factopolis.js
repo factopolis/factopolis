@@ -134,8 +134,8 @@ $(document).ready(function() {
         item:
           '<a class="summary-card" href="/{{objectID}}">' +
             '<div>' +
-              '{{#isPerson}}<img src="/{{objectID}}-64.jpg" />{{/isPerson}}' +
-              '{{#isStatement}}<img src="/person/{{claimant}}-64.jpg" />{{/isStatement}}' +
+              '{{#isPerson}}<img src="/{{objectID}}-64x96.jpg" width="64" height="96" />{{/isPerson}}' +
+              '{{#isStatement}}<img src="/person/{{claimant}}-64x96.jpg" width="64" height="96" />{{/isStatement}}' +
             '</div>' +
             '<div class="contents">' +
               '<header>' +
