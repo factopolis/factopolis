@@ -1,6 +1,6 @@
 ---
 title: US has the highest corporate tax rate
-negative: US doesn't have the corporate business tax rate
+negative: US doesn't have the corporate tax rate
 summary:
   The US does have a high *statutory* rate (up to 35%), but significant deductions and exemptions mean companies actually end up paying a much lower rate; the *effective* tax rate is about average. Furthermore, while the statutory rate relatively high, it is not the highest in the world; that distinction goes to the United Arab Emirates with rates up to 55%.
 topics:
