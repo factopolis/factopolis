@@ -13,9 +13,9 @@ images:
       url: https://commons.wikimedia.org/wiki/File:David_Perdue,_Official_Portrait,_114th_Congress.jpg
 
 wikipedia: David_Perdue
-twitter: https://twitter.com/sendavidperdue
-facebook: https://www.facebook.com/SenatorDavidPerdue
-instagram: https://www.flickr.com/photos/senatordavidperdue/
+twitter: sendavidperdue
+facebook: SenatorDavidPerdue
+instagram: senatordavidperdue
 
 factcheckorg: david-perdue
 politifact: david-perdue
