@@ -12,7 +12,7 @@ images:
       name: public domain
     source:
       name: Wikimedia Commons
-      url: https://commons.wikimedia.org/wiki/File:Sarah_huckabee_co_wh_presser_04.jpg
+      url: https://commons.wikimedia.org/wiki/File:Sarah_Huckabee_Sanders_screenshot_2.png
 
 factcheckorg: sarah-huckabee-sanders
 politifact: sarah-huckabee-sanders
