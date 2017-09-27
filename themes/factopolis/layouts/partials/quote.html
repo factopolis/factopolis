@@ -96,10 +96,17 @@
               </a>
             {{ else if eq $source.type "twitter" }}
               {{ if $source.id }}
-                <a class="dropdown-item twitter-link" data-tweet="{{ $source.id }}" href="https://twitter.com/{{ $source.user }}/status/{{ $source.id }}" target="_blank">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                  Twitter (@{{ $source.user }})
-                </a>
+                {{ if not $source.deleted }}
+                  <a class="dropdown-item twitter-link" data-tweet="{{ $source.id }}" href="https://twitter.com/{{ $source.user }}/status/{{ $source.id }}" target="_blank">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    Twitter (@{{ $source.user }})
+                  </a>
+                {{ else }}
+                  <a class="dropdown-item twitter-link" data-tweet="{{ $source.id }}" href="https://projects.propublica.org/politwoops/tweet/{{ $source.id }}" target="_blank">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    Politwoops (Twitter Backup)
+                  </a>
+                {{ end }}
               {{ else if $source.timeline }}
                 <a class="dropdown-item twitter-link" data-timeline="{{ $source.timeline }}" href="https://twitter.com/{{ $source.user }}/timelines/{{ $source.timeline }}" target="_blank">
                   <i class="fa fa-twitter" aria-hidden="true"></i>
