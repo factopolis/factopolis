@@ -25,7 +25,7 @@ def tweet(msg, in_reply_to):
         tApi.PostUpdate(msg, in_reply_to_status_id=in_reply_to)
 
     if in_reply_to:
-        print("Re " + in_reply_to + ": " + msg)
+        print("Re " + str(in_reply_to) + ": " + msg)
     else:
         print(msg)
 
@@ -114,7 +114,7 @@ def handleStatement(filename):
                 claim = stmt['claims'][0]
                 msg = "No, " + claim['negativePlain'] + " "
                 msg += 'https://www.factopolis.com/claims/' + claim['id'] + '/'
-                tweet(msg, source['id'])
+                tweet(msg, int(source['id']))
 
 stmtRegex = re.compile("^content/person/(([^/]+)/([0-9]{4})\-([0-9]{2})\-([0-9]{2}))(\-.+)?.md$")
 commit_range = "origin/master"
