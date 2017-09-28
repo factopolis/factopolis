@@ -490,6 +490,10 @@ del.clarification > * {
   font-variant: small-caps;
 }
 
+.statement-claim-others > li {
+  margin: 0.1em 0;
+}
+
 .statement-check-full {
   display: flex;
   align-items: flex-top;

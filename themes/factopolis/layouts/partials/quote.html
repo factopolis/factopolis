@@ -235,7 +235,7 @@
 
         <ul class="subtle-list shuffle">
           {{ range $check := shuffle $.stmt.Params.checks }}
-            {{ if or (not $check.claims) (in $check.claims $slug) }}
+            {{ if or (not $check.claims) (cond (and (eq $.page.Type "claims") (eq $.page.Kind "taxonomy")) (in $check.claims $slug) (gt (len (intersect $.stmt.Params.claims $check.claims)) 0)) }}
               {{ if or (ne $.page.Type "checker") (eq $check.checker $slug) }}
                 {{ $checker := $.page.Site.GetPage "page" "checker" (printf "%s.md" $check.checker) }}
                 <li class="statement-check-full">
