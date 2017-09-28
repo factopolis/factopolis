@@ -12,7 +12,19 @@
 </p>
 
 <ul class="claims">
-  {{ range $claim := (.Paginate .Data.Pages.ByDate.Reverse).Pages }}
+  {{ $.Scratch.Set "claims-by-date-active" (slice) }}
+  {{ range $stmt := where $.Site.Pages.ByDate.Reverse ".Type" "assertion" }}
+    {{ range $claimId := $stmt.Params.claims }}
+      {{ if not (in ($.Scratch.Get "claims-by-date-active") $claimId) }}
+        {{ $.Scratch.Add "claims-by-date-active" $claimId }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $claimIdsByDateActive := $.Scratch.Get "claims-by-date-active" }}
+
+  {{ $uselessPaginator := .Paginate .Data.Pages }}
+  {{ range $claimId := last $uselessPaginator.NumberOfElements (first (sub (mul $uselessPaginator.PageNumber $uselessPaginator.PageSize) 1) $claimIdsByDateActive) }}
+    {{ $claim := $.Site.GetPage "taxonomy" "claims" $claimId }}
     {{ $.Scratch.Set "claimants" (slice) }}
     {{ $.Scratch.Set "claimantPaths" (slice) }}
     {{ range $stmt := $claim.Data.Pages }}
