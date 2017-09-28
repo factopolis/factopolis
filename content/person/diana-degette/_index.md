@@ -14,9 +14,9 @@ images:
       url: https://en.wikipedia.org/wiki/File:Diana_DeGette_official_photo.jpg
 
 wikipedia: Diana_DeGette
-twitter: https://twitter.com/RepDianaDeGette
-facebook: http://www.facebook.com/DianaDeGette
-youtube: http://www.youtube.com/user/RepDianaDeGette
+twitter: RepDianaDeGette
+facebook: DianaDeGette
+youtube: RepDianaDeGette
 
 factcheckorg: diana-degette
 politifact: diana-degette
