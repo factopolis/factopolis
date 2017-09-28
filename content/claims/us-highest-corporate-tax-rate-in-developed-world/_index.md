@@ -1,6 +1,6 @@
 ---
-title: US has the highest corporate tax rate in the developed world
-negative: US doesn't have the corporate tax rate in the developed world
+title: the US has the highest corporate tax rate in the developed world
+negative: the US does not have the highest corporate tax rate in the developed world
 summary:
   The US does have a high *statutory* rate (up to 35%), but significant deductions and exemptions mean companies actually end up paying a much lower rate; the *effective* tax rate is about average. Furthermore, while the statutory rate is relatively high, it is not the highest in the developed world; that distinction goes to the United Arab Emirates with rates up to 55%.
 topics:
