@@ -2,7 +2,7 @@
 
 import os, re, json, twitter, datetime
 
-def tweet(msg):
+def tweet(msg, in_reply_to):
     if ('TWITTER_CONSUMER_KEY' in os.environ
             and 'TWITTER_CONSUMER_SECRET' in os.environ
             and 'TWITTER_ACCESS_TOKEN_KEY' in os.environ
@@ -22,9 +22,12 @@ def tweet(msg):
             access_token_key=access_token_key,
             access_token_secret=access_token_secret,
             input_encoding="utf-8")
-        tApi.PostUpdate(msg)
+        tApi.PostUpdate(msg, in_reply_to_status_id=in_reply_to)
 
-    print(msg)
+    if in_reply_to:
+        print("Re " + in_reply_to + ": " + msg)
+    else:
+        print(msg)
 
 def twitterHandle(person):
     fp = open("web/person/{}/index.json".format(person))
@@ -99,10 +102,19 @@ def handleStatement(filename):
         if (len(msg) + len(clist) + 25) < 140:
             checkerList = clist
 
-    msg += ': https://www.factopolis.com/' + re.sub('^content/(.+)(_index)?\.md$', '\\1', filename)
+    url = ': https://www.factopolis.com/' + re.sub('^content/(.+)(_index)?\.md$', '\\1/', filename)
+    msg += url
     msg += checkerList
 
-    tweet(msg)
+    tweet(msg, None)
+
+    for source in stmt['sources']:
+        if source['type'] == 'twitter':
+            if 'id' in source:
+                claim = stmt['claims'][0]
+                msg = "No, " + claim['negativePlain'] + " "
+                msg += 'https://www.factopolis.com/claims/' + claim['id'] + '/'
+                tweet(msg, source['id'])
 
 stmtRegex = re.compile("^content/person/(([^/]+)/([0-9]{4})\-([0-9]{2})\-([0-9]{2}))(\-.+)?.md$")
 commit_range = "origin/master"

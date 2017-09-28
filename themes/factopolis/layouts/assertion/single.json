@@ -1,6 +1,6 @@
 {
   "quote": {{ .Params.quote | jsonify }},
-  "quotePlain": {{ .Params.quote | markdownify | plainify | jsonify }},
+  "quotePlain": {{ .Params.quote | markdownify | plainify | htmlUnescape | jsonify }},
   "date": {{ dateFormat "2006-01-02" .Date | jsonify }},
   "person": {{ replaceRE "^/person/([^/]+)/?$" "$1" .Parent.URL | jsonify }},
   "name": {{ .Parent.Title | jsonify }},
@@ -12,8 +12,8 @@
       {
         {{ if $check.quote }}"quote": {{ $check.quote | jsonify }},{{ end }}
         {{ if $check.short }}"short": {{ $check.short | jsonify }},{{ end }}
-        {{ if $check.quote }}"quotePlain": {{ $check.quote | markdownify | plainify | jsonify }},{{ end }}
-        {{ if $check.short }}"shortPlain": {{ $check.short | markdownify | plainify | jsonify }},{{ end }}
+        {{ if $check.quote }}"quotePlain": {{ $check.quote | markdownify | plainify | htmlUnescape | jsonify }},{{ end }}
+        {{ if $check.short }}"shortPlain": {{ $check.short | markdownify | plainify | htmlUnescape | jsonify }},{{ end }}
         {{ if $check.sharethefacts }}"shareTheFacts": {{ $check.sharethefacts | jsonify }},{{ end }}
         "checkerId": {{ $check.checker | jsonify }},
         "checker": {{ ($.Site.GetPage "page" (printf "checker/%s.md" $check.checker)).Title | jsonify }}
@@ -28,9 +28,31 @@
         {{ if $idx }},{{ end }}
         {
           "title": {{ $claim.Title | jsonify }},
+          {{ if $claim.Params.negative }}
+            "negative": {{ $claim.Params.negative | jsonify }},
+            "negativePlain": {{ $claim.Params.negative | markdownify | plainify | htmlUnescape | jsonify }},
+          {{ end }}
           "truth": {{ $claim.Params.summary | jsonify }},
-          "truthPlain": {{ $claim.Params.summary | markdownify | plainify | jsonify }},
+          "truthPlain": {{ $claim.Params.summary | markdownify | plainify | htmlUnescape | jsonify }},
           "id": {{ $claimId | jsonify }}
+        }
+      {{ end }}
+    ],
+  {{ end }}
+  {{ if .Params.sources }}
+    "sources": [
+      {{ range $idx, $source := .Params.sources }}
+        {{ if $idx }},{{ end }}
+        {
+          {{ if eq $source.type "twitter" }}
+            "user": {{ $source.user | jsonify }},
+            {{ if $source.timeline }}
+              "timeline": {{ string $source.timeline | jsonify }},
+            {{ else }}
+              "id": {{ string $source.id | jsonify }},
+            {{ end }}
+          {{ end }}
+          "type": {{ $source.type | jsonify }}
         }
       {{ end }}
     ],
