@@ -12,6 +12,7 @@ For video from a news network, the best option is usually [Archive.org's TV News
 * [BBC](https://archive.org/details/TV-BBCNEWS?sort=-date)
 * [Fox Business](https://archive.org/details/TV-FBC?sort=-date)
 * [Bloomberg](https://archive.org/details/TV-BLOOMBERG?sort=-date)
+* [ABC](https://archive.org/details/TV-WJLA?sort=-date)
 
 For Fox News and Fox Business, [video.foxnews.com](http://video.foxnews.com/) can also be a good source, but be prepared for a bunch of annoying ads you can't skip. You also can't start videos at a specific time, so if you can find a source on Archive.org please do so (Fox videos make for a good second copy of the video, though).
 
