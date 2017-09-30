@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import os, re, json, twitter, datetime
+import os, re, json, tweepy, datetime
 
 def tweet(msg, in_reply_to):
     if ('TWITTER_CONSUMER_KEY' in os.environ
@@ -11,18 +11,11 @@ def tweet(msg, in_reply_to):
             and os.environ["TRAVIS_BRANCH"] == "master"
             and "TRAVIS_PULL_REQUEST" in os.environ
             and os.environ["TRAVIS_PULL_REQUEST"] == "false"):
-        consumer_key=os.environ['TWITTER_CONSUMER_KEY']
-        consumer_secret=os.environ['TWITTER_CONSUMER_SECRET']
-        access_token_key=os.environ['TWITTER_ACCESS_TOKEN_KEY']
-        access_token_secret=os.environ['TWITTER_ACCESS_TOKEN_SECRET']
+        auth = tweepy.OAuthHandler(os.environ['TWITTER_CONSUMER_KEY'], os.environ['TWITTER_CONSUMER_SECRET'])
+        auth.set_access_token(os.environ['TWITTER_ACCESS_TOKEN_KEY'], os.environ['TWITTER_ACCESS_TOKEN_SECRET'])
 
-        tApi = twitter.Api(
-            consumer_key=consumer_key,
-            consumer_secret=consumer_secret,
-            access_token_key=access_token_key,
-            access_token_secret=access_token_secret,
-            input_encoding="utf-8")
-        tApi.PostUpdate(msg, in_reply_to_status_id=in_reply_to)
+        tApi = tweepy.API(auth)
+        tApi.update_status(msg, in_reply_to)
 
     if in_reply_to:
         print("Re " + str(in_reply_to) + ": " + msg)
@@ -112,7 +105,7 @@ def handleStatement(filename):
         if source['type'] == 'twitter':
             if 'id' in source:
                 claim = stmt['claims'][0]
-                msg = "No, " + claim['negativePlain'] + " "
+                msg = '@' + source['user'] + " No, " + claim['negativePlain'] + " "
                 msg += 'https://www.factopolis.com/claims/' + claim['id'] + '/'
                 tweet(msg, int(source['id']))
 
