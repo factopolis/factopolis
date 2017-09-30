@@ -24,7 +24,7 @@ install:
 - go get -u -v github.com/kardianos/govendor
 - go get -u -v github.com/gohugoio/hugo
 - "(cd $GOPATH/src/github.com/gohugoio/hugo && govendor sync && go install)"
-- pip3 install python-twitter
+- pip3 install tweepy
 
 script:
 - "$GOPATH/bin/hugo --verbose"
@@ -42,7 +42,7 @@ deploy:
     branch: master
 
 after_script:
-- sleep 120
+- sleep 90
 - python3 ./tweet-new-statements.py
 
 notifications:
