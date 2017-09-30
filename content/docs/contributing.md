@@ -24,7 +24,7 @@ Information we need to know includes:
 
 * If the claim is already in our database (for a different statement), specify the claim.
 * The exact quote.
-* At least one source for the quote, preferably from a separate location from any fact checks. The more the better.
+* At least one source for the quote, preferably from a separate location from any fact checks. The more the better, and [video sources](/docs/video-sources).
 * Any fact checks of the statement. All *claims* must have at least one fact check, though if a statement is merely repeating a claim which has already been checked in the context of a different statement then additional fact check(s) aren't required (though they are greatly preferred).
 
 Currently supported sources include:
@@ -32,10 +32,10 @@ Currently supported sources include:
 * Video (including YouTube, raw video files, and embedded players)
 * Audio
 * Twitter
-* Transcripts
+* Transcripts and prepared remarks
 * Web sites which don't fit into one of the above types, such as news articles.
 
-Video and/or audio sources are generally preferable to text-only, though whenever possible both should be provided. To find text sources, adding "transcript" to a search for an event often produces favorable results.
+[Video and/or audio sources](/docs/video-sources) are generally preferable to text-only, though whenever possible both should be provided. To find text sources, adding "transcript" to a search for an event often produces favorable results.
 
 Excellent video sources include:
 
