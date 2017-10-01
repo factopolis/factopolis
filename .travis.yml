@@ -10,6 +10,7 @@ env:
   - secure: YtN4Ibxqy6v8TOXLImxoYCtzYeClB01CLkiKVnlpVmwaQvH4aV31/6gGG2k3EwZNkK//Ki+nIr7lDNl6nASwZVqZNeeYAiyZYUg4z6Eu0fyScR3WtSpuqXVFg8apIYWJV7TNTSal5Mn5hNa3prlPFry77xGoGD+NKb2IX1cwbk0WrdG2U/iz8XjqjJmpvQxW5V8zdrXC+oDpPNFWc7LS8ePEWS7PGRY+qUz/0v32D8z60CKCYxI6nxHSJvY8l4+T+iN1SbQok1Fh9KBItLPFO4poeZsegQyLp9pyHSQ1BUN6fiDrLfeoBK/kTmmGtuBCo/+du4LoDCylK1Rtnyjj6xTGw0PmiyMSz90TxrrLAqp1gxX8iIyc7uRZd0hDIOI5v8/gGvQ7kqnwmMens2sDbX0/lMfuvKSm9oVXm0O/LGJN9hQUWGXmgYDhKm/r4PCnnFX2G+kpw6PyPL9nXnj6ikco/mFgZeb5b/c8HKfKbFvZh3LzMYt6UIl4FMxiX7GmqLjOiRGrVOlNYuzlG2KK41EZ7F3Rgb3XBXvt5bKQxxXe31ui40VTiDnrxEP4X1SroIYazVOACN8licrljtj7C/prOy+rKYV36DHQDCVURlnzCUirvo0CniiEbqlakQnjawv/SoEqdbX4Aajz42zBnZJhfI8d6Lki4Q/FqhK5uk8=
   - secure: eJXBdpGwvGwyjaBehJJKLTvTvngL+hngzfGefFqlQ9byg4wTbamc1Brjii1AAflHsWIzoXX5yLkCef04p1WmvZQ/ANSszBTPzvEI/P/BHnchX3XVMkaLcsuXI8i7aIDEAIHL73nm2IvYXelR5I09HvPNg9rrpmfFsh60xTvs8/uSYJGK46gGecGLqkNGdovojM3wOZzg3pa/RjUcvXeHjWgme+f9gPtBMbikn65K8fpgh+RV0JHcUJ+KtvBaVgagi0+nRC9aCULOUAYcuScXgFDlzL16Ll095r3gKtMGfI1/4IOt3AHhWPbDvDqAdGSlTDfLK7xqPbHYvhrmQzWjcjbAhaFq6WVQY3R57FrGU39/V81d3+HXTPVMwR8E6NHX+edDF4/5rCiQZBtbDFjrYwzhFWqrDpEOwqSNP6JKntGo5kf5B5oVuekcHgG0fx+LfvbzNtkyZWrMmIWXmXMZOEqF7rat4BVMq7Vof8C5nDdfnhW5DVR5kSSpSKrdRYRdltKcxlADXnQfiZcAJjV2nw9W7Yr3TSiCdbWIRgz9d7D81byfhld0SZj7Q5QvHYPzRVDcZWjQSQqBV17jXwiJoUgxigH4YWrDGn7vs21+bj6lwlaxIW7w4cY0pRlNjNPcrMgDW0BapAWLBlK6NXIfA1ROD6gwD+31W5ppCDJf7W4=
   - secure: HT7zpTWzPFMRnQlNtw+yKe8VX57bOnkUyItzj8uzhBNDgPeFBPd88V5YN5r4fsxgsc/K0bNmOjxQHQkoeMcSWOxF/8+vOI4eIrYSSu3zKaAgBATcwc97XpZr4wBF1vK0CgSyK4m6G7zweAlP2s/Cdm0pTQoS1kg682aYj1ezLMFe8JCEfSlD4kW/pKPTFPNIICTBcSmaGOH3lS8qi/+6j4rpWIJPIzTvRMIyt8ltkICYTwkHj2UWGqtCLH760PC5LBUIs7HktWJ3dBzsNrd8GL3xA/BgmCByUZ5flzxh39PCyYWHu9hBqdtcSkeBhivHVh//8obVa1An6FQNyU8A9kH1Ip54OpghQGT5OUrmOrV09962krrs/miVmF+Wur4zpKTwk3b2RCyyvL/B9W86sPPPM+NE6YKixhUu/u1wj9IPoYbrN14KfRKVOMXECfY9GznzEEpfXm97K1XljuhYnsfKtldurBxvqjfKCdz3c9jlTf8FdKyghADG72bz7sGoAEN0EqxWMBtK5UA7hZb2ON5EHIITEbbJ2ZNF5eXW7pmpPfDqZKpiv1zdt+1zPs121Hk5AmQuNbfmgHBagAg2QOnWodu3b/DXGq+2/9e1Pxl+8xvNWtAN8K+5kb3mPP4199JGfU/iqXJrJrViTXLCVLbgBGNAC/8KCA30gLFZr5w=
+  - secure: "f7yi7IRTjUeCSkqZHo2cgAT6EP0EJS2gF1fhF+iCIaJ+MVCKhGP7+K7hBSy1EnS1FO+LwqibioGiu///eqllnTImH8FpTK8py32Zfd/l3XQF5M9Qk13zyVTaTsjqiJnRkYcX2VPD/g+jfj/6rrxfjA7M9f2aXXFxpC6oq2au5x4TuuTqg03j3EQvXmKoJK82VO4FIxeD9QZlzEOE9NIiex+Po9Cg2Nt0LTrDyUuCaDacYvxQ//pPUeu9HT/mCTq1fvKbYS+aOK3zsxEkdBrHWyYACsQCxjIrpb4gCQ4HRNwczzTuqlEvp8DN9yANO0UgvKcMMMyNVXfnx8Qzn3Lmm5we0kqmXTmLVAYjHsNWiwsjYzT2Lqs7eiooUvIw8iSml93UjEOeiHXtT/gV3A7B5Gk+8L3JMkOjIgnRKP9y4g5fMjdFBHt7m/dT3tpoT/QeaRNkF86kfgOSSYvW8C9j1hB1CA4yntnSWm2OOohmDERvoj9h56IpflvKTZg2zrmxm4Sm9ai/VSIt8RFrqJrGaCXB47N1HJYjn20kvSLdTtO56HCZTfJQON7vi/vvi81T01kdEKdrzvzwmIIRxLZpPB6aizjBOIWN9lDzqyWTJs7F7A5wtZnYlBUwm8etZmckTlgoyj56TgJCgG72BTScbRGb9ppl8q+CId7YIcUNTSk="
 
 addons:
   apt:
@@ -25,24 +26,20 @@ install:
 - go get -u -v github.com/gohugoio/hugo
 - "(cd $GOPATH/src/github.com/gohugoio/hugo && govendor sync && go install)"
 - pip3 install tweepy
+- npm install netlify-cli -g
 
 script:
 - "$GOPATH/bin/hugo --verbose"
 - find web/ -name '*.json' | while read json; do json_reformat -m < "$json" > "$json.min" && mv "$json.min" "$json"; done
 
 deploy:
-  provider: pages
-  local_dir: web
-  repo: factopolis/factopolis.github.io
-  fqdn: www.factopolis.com
-  target_branch: master
+- provider: script
   skip_cleanup: true
-  github_token: "$GITHUB_TOKEN"
+  script: netlify -t "$NETLIFY_ACCESS_TOKEN" deploy -s feaef3cf-c2b5-42f1-9351-a301b4d0ec5d -p web/
   on:
     branch: master
 
-after_script:
-- sleep 90
+after_deploy:
 - python3 ./tweet-new-statements.py
 
 notifications:
