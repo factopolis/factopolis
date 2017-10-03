@@ -24,7 +24,7 @@ snopes: ron-wyden
 washingtonpost: ron-wyden
 
 groups:
-- gop
+- democratic-party
 
 offices:
 - title: United States Senator from Oregon
