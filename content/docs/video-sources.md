@@ -74,3 +74,4 @@ Several networks try to make transcripts available online, though often with a d
   * [Special Report with Bret Baier](http://www.foxnews.com/on-air/special-report-bret-baier/transcripts)
 * [MSNBC](http://www.msnbc.com/transcripts)
 * [ABC News](http://abcnews.go.com/Technology/story?id=769462)
+* [CNN](http://www.cnn.com/TRANSCRIPTS/)
