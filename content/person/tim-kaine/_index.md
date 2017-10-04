@@ -13,7 +13,7 @@ images:
       url: https://en.wikipedia.org/wiki/File:Tim_Kaine,_official_113th_Congress_photo_portrait.jpg
 
 wikipedia: Tim_Kaine
-twitter: SenKaineOffice
+twitter: timkaine
 facebook: SenatorKaine
 youtube: SenatorTimKaine
 flickr: 94393826@N02
