@@ -26,7 +26,7 @@ def twitterHandle(person):
     fp = open("web/person/{}/index.json".format(person))
     data = json.load(fp)
     if 'twitter' in data:
-        return '@' + data['twitter']
+        return data['twitter']
     else:
         None
 
@@ -49,26 +49,24 @@ def handleStatement(filename):
     archive = (when + datetime.timedelta(14)) < datetime.datetime.today()
 
     handle = twitterHandle(stmt['person'])
+    if handle:
+        msg += ".@" + handle
+    else:
+        msg += stmt['name']
+
+    msg += " wrongly "
 
     if archive:
-        msg = 'Archive: '
-        if handle:
-            msg += handle
-        else:
-            msg += stmt['name']
-        msg += " said "
+        msg += "claimed "
     else:
-        msg = stmt['name']
-        if handle:
-            msg += ' (' + handle + ')'
-        msg += " says "
+        msg += "claims "
 
     msg += stmt['claims'][0]['title']
-    if (len(msg) + 25) > 140:
+    if (len(msg) + 24) > 140:
         if archive:
-            msg = 'Old statement by '
+            msg = 'Old incorrect statement by '
         else:
-            msg = 'New statement by '
+            msg = 'New incorrect statement by '
 
         if handle:
             msg += handle
@@ -95,8 +93,8 @@ def handleStatement(filename):
         if (len(msg) + len(clist) + 25) < 140:
             checkerList = clist
 
-    url = ': https://www.factopolis.com/' + re.sub('^content/(.+)(_index)?\.md$', '\\1/', filename)
-    msg += url
+    url = 'https://www.factopolis.com/' + re.sub('^content/(.+)(_index)?\.md$', '\\1/', filename)
+    msg += ' ' + url
     msg += checkerList
 
     tweet(msg, None)
