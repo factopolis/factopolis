@@ -15,7 +15,7 @@
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@factopolisdb" />
       <meta name="twitter:title" content="{{ .Parent.Title }}{{ if .Params.where }}, {{ .Params.where }}{{ end }} on {{ dateFormat "2006-01-02" .Date }}" />
-      <meta name="twitter:description" content="{{ .Params.quote | markdownify | chomp }}" />
+      <meta name="twitter:description" content="“{{ .Params.quote | markdownify | chomp }}”" />
       {{ if .Parent.Params.images }}
       <meta name="twitter:image" content="{{ replaceRE "/?$" "-220x.jpg" .Parent.Permalink }}" />
       {{ end }}
