@@ -25,7 +25,7 @@ The rate this claim refers to, 35%, applies only to C corporations.
 
 #### Highest in the World?
 
-The accounting firm PwC tracks [the top statutory rate of 155 countries](http://taxsummaries.pwc.com/uk/taxsummaries/wwts.nsf/ID/Corporate-income-tax-(CIT)-rates), and two are higher than the United States: the United Arab Emirates (55%) and Puerto Rico (39%). Additionally, one country not in that list, Comoros, [is at 50%](https://www.pwc.co.za/en/assets/pdf/tax-summaries/comoros_2014.pdf).
+According to the accounting firm PwC, which tracks [the top statutory rate of 155 nations](http://taxsummaries.pwc.com/uk/taxsummaries/wwts.nsf/ID/Corporate-income-tax-(CIT)-rates), the United Arab Emirates has a significantly higher rate (55%) than the United States.
 
 #### Statutory vs. Effective
 

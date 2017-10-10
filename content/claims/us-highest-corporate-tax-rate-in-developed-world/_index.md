@@ -41,7 +41,7 @@ Using the statutory rate is a bit like going to the store and looking at the [ma
 
 #### Highest in the Developed World?
 
-The accounting firm PwC tracks [the top statutory rate of 155 nations](http://taxsummaries.pwc.com/uk/taxsummaries/wwts.nsf/ID/Corporate-income-tax-(CIT)-rates), and two are higher than the United States: the United Arab Emirates (55%) and Puerto Rico (39%). Additionally, one country not in that list, Comoros, [is at 50%](https://www.pwc.co.za/en/assets/pdf/tax-summaries/comoros_2014.pdf).
+According to the accounting firm PwC, which tracks [the top statutory rate of 155 nations](http://taxsummaries.pwc.com/uk/taxsummaries/wwts.nsf/ID/Corporate-income-tax-(CIT)-rates), the United Arab Emirates has a significantly higher rate (55%) than the United States.
 
 The people who make this claim are generally using "developed" as a stand-in for the 35 member countries of the [Organisation for Economic Co-operation and Development](http://www.oecd.org/about/) (OECD), a group of highly developed countries, and it's true that America's top statutory rate for C corporations is the highest in that group.
 
