@@ -4,7 +4,7 @@ web: http://www.politifact.com/
 feed: http://www.politifact.com/feeds/statements/truth-o-meter/
 
 wikipedia: PolitiFact
-twitter: Politifact
+twitter: PolitiFact
 facebook: politifact
 instagram: politifact
 youtube: PolitiFact
