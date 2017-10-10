@@ -1,7 +1,8 @@
 ---
 title: Sarah Huckabee Sanders
 wikipedia: Sarah_Huckabee_Sanders
-twitter: SHSanders45
+twitter: PressSec
+# twitter: SHSanders45
 facebook: realSarahHuckabeeSanders
 
 images:
