@@ -13,7 +13,7 @@ images:
       url: https://en.wikipedia.org/wiki/File:John_Barrasso_official_portrait_112th_Congress.jpg
 
 wikipedia: John_Barrasso
-twitter: senjohnbarrasso
+twitter: barrassoforwyo
 facebook: johnbarrasso
 instagram: senjohnbarrasso
 youtube: barrassowyo
