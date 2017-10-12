@@ -62,7 +62,11 @@
             }
           {{ end }}
         ],
-        "summary": {{ $claim.Params.summary | jsonify }},
+        {{ if not $claim.Params.summary }}
+          {{ errorf "Missing summary for %v" $claim.URL }}
+        {{ else }}
+          "summary": {{ $claim.Params.summary | jsonify }},
+        {{ end }}
         "name": {{ $claim.Title | jsonify }},
         "id": {{ $claim.URL | jsonify }}
       }
