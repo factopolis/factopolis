@@ -72,6 +72,7 @@ Several networks try to make transcripts available online, though often with a d
   * [Meet the Press](https://www.nbcnews.com/meet-the-press/meet-press-transcripts-n51976)
 * Fox News transcripts are buried in the web site for each show. Here are a few:
   * [Special Report with Bret Baier](http://www.foxnews.com/on-air/special-report-bret-baier/transcripts)
+  * [Hannity](http://www.foxnews.com/on-air/hannity/transcripts)
 * [MSNBC](http://www.msnbc.com/transcripts)
 * [ABC News](http://abcnews.go.com/Technology/story?id=769462)
 * [CNN](http://www.cnn.com/TRANSCRIPTS/)
