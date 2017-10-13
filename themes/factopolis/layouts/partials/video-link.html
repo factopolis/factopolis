@@ -10,6 +10,9 @@
     {{ end }}
     {{ if $.iframe }}
       data-iframe="{{ $.iframe }}"
+      {{ if $.nosandbox }}
+        data-iframe-no-sandbox="true"
+      {{ end }}
     {{ end }}
     target="_blank">
   <i class="fa fa-film" aria-hidden="true"></i>

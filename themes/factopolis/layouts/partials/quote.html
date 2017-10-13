@@ -88,6 +88,8 @@
               {{ partial "video-link.html" (dict "name" "Fox News" "iframe" (printf "https://video.foxnews.com/static/p/video/app/embed/iframe/vod.html?video_id=%d" $source.id) "source" (printf "http://video.foxnews.com/v/%d/" $source.id) "start" $source.start "duration" $source.duration) }}
             {{ else if eq $source.type "fox-business" }}
               {{ partial "video-link.html" (dict "name" "Fox Business" "iframe" (printf "https://video.foxbusiness.com/static/p/video/app/embed/iframe/vod.html?video_id=%d" $source.id) "source" (printf "http://video.foxbusiness.com/v/%d/" $source.id) "start" $source.start "duration" $source.duration) }}
+            {{ else if eq $source.type "msnbc" }}
+              {{ partial "video-link.html" (dict "name" "MSNBC" "iframe" (safeHTMLAttr (delimit (slice  "data:text/html;base64," (base64Encode (delimit (slice "<html><head><meta http-equiv='refresh' content='0; url=http://player.theplatform.com/p/7wvmTC/MSNBCEmbeddedOffSite?guid=" $source.id "'></head><body></body></html>") ""))) "")) "start" $source.start "duration" $source.duration "nosandbox" true) }}
             {{ else if eq $source.type "video" }}
               {{ partial "video-link.html" $source }}
             {{ else if eq $source.type "web" }}

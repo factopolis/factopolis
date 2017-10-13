@@ -40,7 +40,9 @@ $(document).ready(function () {
       videoPlayer.src = $(this).attr('data-iframe');
       videoPlayer.scrolling = "no";
       videoPlayer.border = "no";
-      videoPlayer.sandbox = "allow-scripts allow-same-origin";
+      if (!$(this).attr('data-iframe-no-sandbox')) {
+        videoPlayer.sandbox = "allow-scripts allow-same-origin";
+      }
     }
 
     if (videoPlayer !== null) {
