@@ -9,6 +9,20 @@
   <p>{{ $claim.summary | markdownify }}</p>
 </section>
 
+{{ if $claim.related }}
+<section id="related">
+  <h3>Related Claims</h3>
+
+  <dl>
+    {{ range $relClaimId := $claim.related }}
+      {{ $relClaim := $.Site.GetPage "taxonomy" "claims" $relClaimId }}
+      <dt><a href="{{ $relClaim.URL }}">{{ $relClaim.Title | title }}</a></dt>
+      <dd>{{ $relClaim.Params.summary | markdownify }}</dd>
+    {{ end }}
+  </dl>
+</section>
+{{ end }}
+
 {{ if .Content }}
   <section id="details">
     <h3>Details</h3>
