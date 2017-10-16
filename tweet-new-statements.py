@@ -69,7 +69,7 @@ def handleStatement(filename):
             msg = 'New incorrect statement by '
 
         if handle:
-            msg += handle
+            msg += '@' + handle
         else:
             msg += stmt['name']
 
