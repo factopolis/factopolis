@@ -5,6 +5,10 @@ summary:
   The US does have a high *statutory* rate (up to 35%), but significant deductions and exemptions mean companies actually end up paying a much lower rate; the *effective* tax rate is about average. Furthermore, while the statutory rate is relatively high, it is not the highest in the developed world; that distinction goes to the United Arab Emirates with rates up to 55%.
 topics:
 - taxes
+related:
+- us-highest-tax-rate
+- us-highest-corporate-tax-rate
+- us-one-of-the-highest-taxed-nations
 ---
 
 #### Business, Corporate, and Pass-Thru
