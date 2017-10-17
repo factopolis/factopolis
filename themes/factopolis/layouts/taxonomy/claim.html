@@ -1,7 +1,23 @@
 {{ partial "head.html" . }}
 
-{{ $claimID := .File.BaseFileName }}
+{{ $claimID := replaceRE "^/claims/([^/]+)/?$" "$1" .URL }}
 {{ $claim := .Params }}
+
+{{ $.Scratch.Set (printf "claim::%s" $claimID) (slice) }}
+{{ range $stmt := where $.Site.Pages "Type" "assertion" }}
+  {{ if in $stmt.Params.claims $claimID }}
+    {{ $claimantID := replaceRE "^/person/([^/]+)/?$" "$1" $stmt.Parent.URL }}
+    {{ $key := printf "claim::%s::%s" $claimID $claimantID }}
+
+    {{ $oldData := $.Scratch.Get $key }}
+    {{ if $oldData }}
+      {{ $.Scratch.Add $key $stmt }}
+    {{ else }}
+      {{ $.Scratch.Set $key (slice $stmt) }}
+      {{ $.Scratch.Add (printf "claim::%s" $claimID) $claimantID }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
 <section id="truth">
   <h3>The Truth</h3>
@@ -48,6 +64,27 @@
   </ul>
 </section>
 {{ end }}
+
+<section id="claimants">
+  <h3>Claimants</h3>
+
+  <ul class="claimants-list">
+    {{ range $claimantID := ($.Scratch.Get (printf "claim::%s" $claimID)) }}
+      {{ $claimant := $.Site.GetPage "section" "person" $claimantID }}
+      {{ $statements := $.Scratch.Get (printf "claim::%s::%s" $claimID $claimantID) }}
+      {{ $stmtCount := len $statements }}
+      <li>
+        <img src="/person/{{ $claimantID }}-48x.jpg" />
+        <span>
+          {{ $claimant.Title }}
+          {{ if gt $stmtCount 1 }}
+            × {{ len $statements }}
+          {{ end }}
+        </span>
+      </li>
+    {{ end }}
+  </ul>
+</section>
 
 <section id="fact-checks">
   <h3>Statements</h3>

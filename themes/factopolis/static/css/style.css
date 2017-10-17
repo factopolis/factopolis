@@ -572,3 +572,22 @@ blockquote {
 .tag-cloud li {
   margin-bottom: 0.25em;
 }
+
+.claimants-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12em, max-content));
+  grid-gap: 0.25em;
+}
+
+.claimants-list > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.claimants-list > li > span {
+  margin-left: 0.25em;
+}
