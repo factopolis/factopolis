@@ -1,6 +1,5 @@
-
   {{ if or $.start $.duration }}
-    {{ $startTime := default 0 $.start }}
+    {{ $startTime := (int (math.Floor (float (default 0 $.start)))) }}
     (
       {{ if ge $startTime 3600 }}
         {{ printf "%d:%02d:%02d" (div $startTime 3600) (div (mod $startTime 3600) 60) (mod $startTime 60) }}
@@ -9,7 +8,7 @@
       {{ end }}
       {{ if $.duration }}
         -
-        {{ $endTime := add $startTime $.duration }}
+        {{ $endTime := add $startTime (int (math.Ceil (float $.duration))) }}
         {{ if ge $endTime 3600 }}
           {{ printf "%d:%02d:%02d" (div $endTime 3600) (div (mod $endTime 3600) 60) (mod $endTime 60) }}
         {{ else }}

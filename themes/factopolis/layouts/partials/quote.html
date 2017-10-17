@@ -63,7 +63,8 @@
                 ({{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url }})
               </a>
             {{ else if eq $source.type "audio" }}
-              <audio class="dropdown-item" controls preload="none" src="{{ $source.url }}{{ if $source.start }}#t={{ $source.start }}{{ if $source.duration }},{{ add $source.start $source.duration }}{{ end }}{{ end }}"></audio>
+              {{ $startTime := default $source.start $source.rawStart }}
+              <audio class="dropdown-item" controls preload="none" src="{{ $source.url }}{{ if $startTime }}#t={{ $startTime }}{{ if $source.duration }},{{ add $startTime $source.duration }}{{ end }}{{ end }}"></audio>
               {{ if $source.source }}
                 <a class="dropdown-item" href="{{ $source.source }}">
                   <i class="fa fa-headphones" aria-hidden="true"></i>
