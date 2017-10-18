@@ -134,6 +134,8 @@
       <div class="statement-retraction">
         {{ if eq $.stmt.Params.retraction.type "clarification" }}
           Clarified
+        {{ else if eq $.stmt.Params.retraction.type "deletion" }}
+          Deleted
         {{ else }}
           Retracted
         {{ end }}
@@ -149,9 +151,13 @@
         {{ end }}
         {{ if .date }}
           on
-          <a href="{{ .source }}">
+          {{ if .source }}
+            <a href="{{ .source }}">
+              {{ dateFormat "Jan 2, 2006" .date }}
+            </a>
+          {{ else }}
             {{ dateFormat "Jan 2, 2006" .date }}
-          </a>
+          {{ end }}
         {{ end }}
       </div>
     {{ end }}
