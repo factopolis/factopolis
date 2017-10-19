@@ -5,4 +5,6 @@ summary:
   Cost-sharing reductions are subsidies to lower insurance costs for low-income people, not save insurance companies.
 topics:
 - healthcare
+related:
+- csr-subsidies-are-a-gift-to-insurance-companies
 ---
