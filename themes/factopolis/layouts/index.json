@@ -29,7 +29,11 @@
                     {
                       {{ if $check.rating }}"rating": {{ $check.rating | jsonify }},{{ end }}
                       "checker": {{ $check.checker | jsonify }},
-                      "source": {{ $check.source | jsonify }}
+                      {{ if not $check.source }}
+                        {{ errorf "Missing source for %s check in %s" $check.checker $stmt.URL }}
+                      {{ else }}
+                        "source": {{ $check.source | jsonify }}
+                      {{ end }}
                     }
                   {{ end }}
                 ],
