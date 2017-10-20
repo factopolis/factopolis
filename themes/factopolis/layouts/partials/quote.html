@@ -80,10 +80,9 @@
               {{ partial "video-link.html" (dict "name" "YouTube" "iframe" (printf "https://www.youtube.com/embed/%s?autoplay=1&start=%d" $source.id (default 0 $source.start)) "source" (printf "https://www.youtube.com/watch?v=%s&t=%d" $source.id (default 0 $source.start)) "start" $source.start "duration" $source.duration) }}
             {{ else if eq $source.type "c-span" }}
               {{ $start_q := cond (gt $source.start 0) (printf "&start=%d" $source.start) "" }}
-              {{ partial "video-link.html" (dict "name" "C-SPAN" "start" (default 0 $source.start) "duration" $source.duration "iframe" (printf "https://www.c-span.org/video/standalone/?%s%s" $source.id $start_q) "source" (printf "https://www.c-span.org/video/?%s%s" $source.id $start_q)) }}
+              {{ partial "video-link.html" (dict "name" "C-SPAN" "start" (default 0 $source.start) "duration" $source.duration "iframe" (printf "https://www.c-span.org/video/standalone/?%s%s" $source.id $start_q) "source" (printf "https://www.c-span.org/video/?%s%s" $source.id $start_q) "nosandbox" true) }}
             {{ else if eq $source.type "abc" }}
               {{ $start_q := cond (gt $source.start 0) (printf "&ts=%d" $source.start) "" }}
-              {{/* {{ partial "video-link.html" (dict "name" "ABC News" "start" (default 0 $source.start) "duration" $source.duration "iframe" (printf "//ABCNews.go.com/video/embed?id=%d%s" $source.id $start_q) "source" (printf "http://abcnews.go.com/US/video/id-%d" $source.id)) }} */}}
               {{ partial "video-link.html" (dict "name" "ABC News" "start" (default 0 $source.start) "duration" $source.duration "source" (printf "http://abcnews.go.com/US/video/id-%d" $source.id)) }}
             {{ else if eq $source.type "fox" }}
               {{ partial "video-link.html" (dict "name" "Fox News" "iframe" (printf "https://video.foxnews.com/static/p/video/app/embed/iframe/vod.html?video_id=%d" $source.id) "source" (printf "http://video.foxnews.com/v/%d/" $source.id) "start" $source.start "duration" $source.duration) }}
