@@ -62,6 +62,8 @@
                 Transcript
                 ({{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url }})
               </a>
+            {{ else if eq $source.type "soundcloud" }}
+              {{ partial "video-link.html" (dict "name" "SoundCloud" "iframe" (printf "https://w.soundcloud.com/player/?url=https://soundcloud.com/%s" $source.id) "source" (printf "https://soundcloud.com/%s" $source.id) "start" $source.start "duration" $source.duration "icon" "headphones") }}
             {{ else if eq $source.type "audio" }}
               {{ $startTime := default $source.start $source.rawStart }}
               <audio class="dropdown-item" controls preload="none" src="{{ $source.url }}{{ if $startTime }}#t={{ $startTime }}{{ if $source.duration }},{{ add $startTime $source.duration }}{{ end }}{{ end }}"></audio>

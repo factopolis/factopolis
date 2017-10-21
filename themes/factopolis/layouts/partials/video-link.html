@@ -15,7 +15,7 @@
       {{ end }}
     {{ end }}
     target="_blank">
-  <i class="fa fa-film" aria-hidden="true"></i>
+  <i class="fa fa-{{ default "film" $.icon }}" aria-hidden="true"></i>
   {{ default (replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $.source) $.name }}
   {{ partial "time-range.html" $ }}
 </a>
