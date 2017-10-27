@@ -22,7 +22,11 @@
   <div class="statement-contents">
     <blockquote>
       {{ if $.stmt.Params.retraction }}<del class="{{ default "retraction" $.stmt.Params.retraction.type }}">{{ end }}
-      <div>{{ $.stmt.Params.quote | markdownify }}</div>
+      {{ if $.stmt.Params.quote }}
+        <div>{{ $.stmt.Params.quote | markdownify }}</div>
+      {{ else }}
+        {{ errorf "%s: missing quote" $.stmt.URL }}
+      {{ end }}
       {{ if $.stmt.Params.retraction }}</del>{{ end }}
     </blockquote>
     <div class="statement-source">
