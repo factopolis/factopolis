@@ -50,7 +50,7 @@ def handleStatement(stmt, onlyReply=False):
     archive = (when + datetime.timedelta(14)) < datetime.datetime.today()
 
     handle = twitterHandle(stmt['person'])
-    if handle:
+    if handle and False:
         msg += ".@" + handle
     else:
         msg += stmt['name']

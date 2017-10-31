@@ -27,7 +27,11 @@
 {{ else }}
     {
       "type": "web",
-      "url": {{ .source | jsonify }}
+      {{ if .source }}
+        "url": {{ .source | jsonify }}
+      {{ else }}
+        {{ errorf "Missing source for %s" $ }}
+      {{ end }}
     }
 {{ end }}
 ]
