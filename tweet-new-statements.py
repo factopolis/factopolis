@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-import os, re, json, tweepy, datetime
+# Yes, this is in desparate need of refactoring. Functionality grew without proper planning.
+
+import os, re, json, tweepy, datetime, pprint
 
 def tweet(msg, in_reply_to):
     if ('TWITTER_CONSUMER_KEY' in os.environ
@@ -38,13 +40,12 @@ def checkerTwitterHandle(checker):
     else:
         return None
 
-def handleStatement(filename):
-    fp = open(re.sub('^content/person/(.+)\.md$', 'web/person/\\1/index.json', filename))
-    stmt = json.load(fp)
+statementsToHandle = {}
 
+def handleStatement(stmt, onlyReply=False):
     msg = ""
 
-    m = re.match('^content/person/(([^/]+)/([0-9]{4})\-([0-9]{2})\-([0-9]{2}))(\-.+)?.md$', filename)
+    m = re.match('^/person/(([^/]+)/([0-9]{4})\-([0-9]{2})\-([0-9]{2}))(\-.+)?/$', stmt["id"])
     when = datetime.datetime(year=int(m.group(3), 10), month=int(m.group(4),10), day=int(m.group(5), 10))
     archive = (when + datetime.timedelta(14)) < datetime.datetime.today()
 
@@ -93,11 +94,12 @@ def handleStatement(filename):
         if (len(msg) + len(clist) + 25) < 140:
             checkerList = clist
 
-    url = 'https://www.factopolis.com/' + re.sub('^content/(.+)(_index)?\.md$', '\\1/', filename)
+    url = 'https://www.factopolis.com' + stmt['id']
     msg += ' ' + url
     msg += checkerList
 
-    tweet(msg, None)
+    if not onlyReply:
+        tweet(msg, None)
 
     for source in stmt['sources']:
         if source['type'] == 'twitter':
@@ -107,7 +109,29 @@ def handleStatement(filename):
                 msg += 'https://www.factopolis.com/claims/' + claim['id'] + '/'
                 tweet(msg, int(source['id']))
 
-stmtRegex = re.compile("^content/person/(([^/]+)/([0-9]{4})\-([0-9]{2})\-([0-9]{2}))(\-.+)?.md$")
+def parseStatement(person, stmtId):
+    fp = open('web/person/' + person + '/' + stmtId + '/index.json')
+    stmt = json.load(fp)
+    claimId = stmt['claims'][0]['id']
+
+    if not person in statementsToHandle:
+        statementsToHandle[person] = {}
+
+    if not claimId in statementsToHandle[person]:
+        statementsToHandle[person][claimId] = []
+
+    statementsToHandle[person][claimId].append(stmt)
+
+def handleStatements():
+    for person in statementsToHandle:
+        for claim in statementsToHandle[person]:
+            isFirst = True
+            for stmt in statementsToHandle[person][claim]:
+                handleStatement(stmt, not isFirst)
+                isFirst = False
+
+
+stmtRegex = re.compile("^content/person/([^/]+)/(([0-9]{4})\-([0-9]{2})\-([0-9]{2})(\-.+)?).md$")
 commit_range = "origin/master"
 if "TRAVIS_COMMIT_RANGE" in os.environ:
     commit_range = os.environ["TRAVIS_COMMIT_RANGE"]
@@ -117,5 +141,11 @@ while True:
     filename = stream.readline().strip()
     if not filename:
         break
-    if stmtRegex.match(filename):
-        handleStatement(filename)
+    else:
+        match = stmtRegex.match(filename)
+        if match:
+            parseStatement(match.group(1), match.group(2))
+            # handleStatement(filename)
+
+handleStatements()
+
