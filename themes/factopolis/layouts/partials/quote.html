@@ -67,10 +67,14 @@
                 ({{ replaceRE "[a-z]+://((www[0-9]*)\\.)?([^/]+)(/.*)?" "$3" $source.url }})
               </a>
             {{ else if eq $source.type "soundcloud" }}
-              {{ partial "video-link.html" (dict "name" "SoundCloud" "iframe" (printf "https://w.soundcloud.com/player/?url=https://soundcloud.com/%s" $source.id) "source" (printf "https://soundcloud.com/%s" $source.id) "start" $source.start "duration" $source.duration "icon" "headphones") }}
+              {{ partial "multimedia-link.html" (dict "name" "SoundCloud" "iframe" (printf "https://w.soundcloud.com/player/?url=https://soundcloud.com/%s" $source.id) "source" (printf "https://soundcloud.com/%s" $source.id) "start" $source.start "duration" $source.duration "icon" "headphones") }}
+            {{ else if eq $source.type "audioboom" }}
+              {{ partial "multimedia-link.html" (dict "name" "audioBoom" "iframe" (printf "https://embeds.audioboom.com/posts/%v/embed/v3?eid=%v" $source.id $source.eid) "source" (printf "https://boo.fm/b%v" $source.id) "start" $source.start "duration" $source.duration "icon" "headphones") }}
             {{ else if eq $source.type "audio" }}
               {{ $startTime := default $source.start $source.rawStart }}
-              <audio class="dropdown-item" controls preload="none" src="{{ $source.url }}{{ if $startTime }}#t={{ $startTime }}{{ if $source.duration }},{{ add $startTime $source.duration }}{{ end }}{{ end }}"></audio>
+              {{ if $source.url }}
+                <audio class="dropdown-item" controls preload="none" src="{{ $source.url }}{{ if $startTime }}#t={{ $startTime }}{{ if $source.duration }},{{ add $startTime $source.duration }}{{ end }}{{ end }}"></audio>
+              {{ end }}
               {{ if $source.source }}
                 <a class="dropdown-item" href="{{ $source.source }}">
                   <i class="fa fa-headphones" aria-hidden="true"></i>
@@ -81,23 +85,23 @@
             {{ else if eq $source.type "archive-org" }}
               {{ $end_time := add $source.start (cond (gt $source.duration 10) $source.duration 10) }}
               {{ $end_timef := add $source.start $source.duration }}
-              {{ partial "video-link.html" (dict "name" "Archive.org" "iframe" (printf "https://archive.org/embed/%s?start=%v&end=%v" $source.id $source.start $end_time) "source" (printf "https://archive.org/details/%s/start/%v/end/%v/" $source.id $source.start $end_time) "start" (int $source.start) "duration" (sub (cond (le (int $end_timef) $end_timef) (int (add $end_timef 1)) (int $end_timef)) (int $source.start))) }}
+              {{ partial "multimedia-link.html" (dict "name" "Archive.org" "iframe" (printf "https://archive.org/embed/%s?start=%v&end=%v" $source.id $source.start $end_time) "source" (printf "https://archive.org/details/%s/start/%v/end/%v/" $source.id $source.start $end_time) "start" (int $source.start) "duration" (sub (cond (le (int $end_timef) $end_timef) (int (add $end_timef 1)) (int $end_timef)) (int $source.start))) }}
             {{ else if eq $source.type "youtube" }}
-              {{ partial "video-link.html" (dict "name" "YouTube" "iframe" (printf "https://www.youtube.com/embed/%s?autoplay=1&start=%d" $source.id (default 0 $source.start)) "source" (printf "https://www.youtube.com/watch?v=%s&t=%d" $source.id (default 0 $source.start)) "start" $source.start "duration" $source.duration) }}
+              {{ partial "multimedia-link.html" (dict "name" "YouTube" "iframe" (printf "https://www.youtube.com/embed/%s?autoplay=1&start=%d" $source.id (default 0 $source.start)) "source" (printf "https://www.youtube.com/watch?v=%s&t=%d" $source.id (default 0 $source.start)) "start" $source.start "duration" $source.duration) }}
             {{ else if eq $source.type "c-span" }}
               {{ $start_q := cond (gt $source.start 0) (printf "&start=%d" $source.start) "" }}
-              {{ partial "video-link.html" (dict "name" "C-SPAN" "start" (default 0 $source.start) "duration" $source.duration "iframe" (printf "https://www.c-span.org/video/standalone/?%s%s" $source.id $start_q) "source" (printf "https://www.c-span.org/video/?%s%s" $source.id $start_q) "nosandbox" true) }}
+              {{ partial "multimedia-link.html" (dict "name" "C-SPAN" "start" (default 0 $source.start) "duration" $source.duration "iframe" (printf "https://www.c-span.org/video/standalone/?%s%s" $source.id $start_q) "source" (printf "https://www.c-span.org/video/?%s%s" $source.id $start_q) "nosandbox" true) }}
             {{ else if eq $source.type "abc" }}
               {{ $start_q := cond (gt $source.start 0) (printf "&ts=%d" $source.start) "" }}
-              {{ partial "video-link.html" (dict "name" "ABC News" "start" (default 0 $source.start) "duration" $source.duration "source" (printf "http://abcnews.go.com/US/video/id-%d" $source.id)) }}
+              {{ partial "multimedia-link.html" (dict "name" "ABC News" "start" (default 0 $source.start) "duration" $source.duration "source" (printf "http://abcnews.go.com/US/video/id-%d" $source.id)) }}
             {{ else if eq $source.type "fox" }}
-              {{ partial "video-link.html" (dict "name" "Fox News" "iframe" (printf "https://video.foxnews.com/static/p/video/app/embed/iframe/vod.html?video_id=%d" $source.id) "source" (printf "http://video.foxnews.com/v/%d/" $source.id) "start" $source.start "duration" $source.duration) }}
+              {{ partial "multimedia-link.html" (dict "name" "Fox News" "iframe" (printf "https://video.foxnews.com/static/p/video/app/embed/iframe/vod.html?video_id=%d" $source.id) "source" (printf "http://video.foxnews.com/v/%d/" $source.id) "start" $source.start "duration" $source.duration) }}
             {{ else if eq $source.type "fox-business" }}
-              {{ partial "video-link.html" (dict "name" "Fox Business" "iframe" (printf "https://video.foxbusiness.com/static/p/video/app/embed/iframe/vod.html?video_id=%d" $source.id) "source" (printf "http://video.foxbusiness.com/v/%d/" $source.id) "start" $source.start "duration" $source.duration) }}
+              {{ partial "multimedia-link.html" (dict "name" "Fox Business" "iframe" (printf "https://video.foxbusiness.com/static/p/video/app/embed/iframe/vod.html?video_id=%d" $source.id) "source" (printf "http://video.foxbusiness.com/v/%d/" $source.id) "start" $source.start "duration" $source.duration) }}
             {{ else if eq $source.type "msnbc" }}
-              {{ partial "video-link.html" (dict "name" "MSNBC" "iframe" (safeHTMLAttr (delimit (slice  "data:text/html;base64," (base64Encode (delimit (slice "<html><head><meta http-equiv='refresh' content='0; url=http://player.theplatform.com/p/7wvmTC/MSNBCEmbeddedOffSite?guid=" $source.id "'></head><body></body></html>") ""))) "")) "start" $source.start "duration" $source.duration "nosandbox" true) }}
+              {{ partial "multimedia-link.html" (dict "name" "MSNBC" "iframe" (safeHTMLAttr (delimit (slice  "data:text/html;base64," (base64Encode (delimit (slice "<html><head><meta http-equiv='refresh' content='0; url=http://player.theplatform.com/p/7wvmTC/MSNBCEmbeddedOffSite?guid=" $source.id "'></head><body></body></html>") ""))) "")) "start" $source.start "duration" $source.duration "nosandbox" true) }}
             {{ else if eq $source.type "video" }}
-              {{ partial "video-link.html" $source }}
+              {{ partial "multimedia-link.html" $source }}
             {{ else if eq $source.type "web" }}
               <a class="dropdown-item" href="{{ $source.url }}" target="_blank">
                 <i class="fa fa-globe" aria-hidden="true"></i>
