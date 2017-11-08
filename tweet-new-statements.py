@@ -120,7 +120,7 @@ def parseStatement(person, stmtId):
     if not claimId in statementsToHandle[person]:
         statementsToHandle[person][claimId] = []
 
-    statementsToHandle[person][claimId].append(stmt)
+    statementsToHandle[person][claimId].insert(0, stmt)
 
 def handleStatements():
     for person in statementsToHandle:
