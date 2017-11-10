@@ -13,6 +13,7 @@ For video from a news network, the best option is usually [Archive.org's TV News
 * [Fox Business](https://archive.org/details/TV-FBC?sort=-date)
 * [Bloomberg](https://archive.org/details/TV-BLOOMBERG?sort=-date)
 * [ABC](https://archive.org/details/TV-WJLA?sort=-date)
+* [CBS](https://archive.org/details/TV-KPIX?sort=-date)
 
 For Fox News and Fox Business, [video.foxnews.com](http://video.foxnews.com/) can also be a good source, but be prepared for a bunch of annoying ads you can't skip. You also can't start videos at a specific time, so if you can find a source on Archive.org please do so (Fox videos make for a good second copy of the video, though).
 
@@ -76,3 +77,5 @@ Several networks try to make transcripts available online, though often with a d
 * [MSNBC](http://www.msnbc.com/transcripts)
 * [ABC News](http://abcnews.go.com/Technology/story?id=769462)
 * [CNN](http://www.cnn.com/TRANSCRIPTS/)
+* CBS
+  * Face the Nation: [2017](https://www.cbsnews.com/news/face-the-nation-transcripts-2017/), [2016](https://www.cbsnews.com/news/face-the-nation-transcripts-2016/), [2015](https://www.cbsnews.com/news/face-the-nation-transcripts-2015/), [2014](https://www.cbsnews.com/news/face-the-nation-transcripts-2014/), [2013](https://www.cbsnews.com/news/face-the-nation-transcripts-2013/), [2012](https://www.cbsnews.com/news/face-the-nation-transcripts-2012/), [2011](https://www.cbsnews.com/news/face-the-nation-transcripts-2011/), [2010](https://www.cbsnews.com/news/face-the-nation-transcripts-2010/), [2009](https://www.cbsnews.com/news/face-the-nation-transcripts-2009/), [2008](https://www.cbsnews.com/news/face-the-nation-transcripts-2008/)
