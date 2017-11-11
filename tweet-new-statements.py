@@ -63,7 +63,7 @@ def handleStatement(stmt, onlyReply=False):
         msg += "claims "
 
     msg += stmt['claims'][0]['title']
-    if (len(msg) + 24) > 140:
+    if (len(msg) + 24) > 280:
         if archive:
             msg = 'Old incorrect statement by '
         else:
@@ -77,7 +77,7 @@ def handleStatement(stmt, onlyReply=False):
         msg += ' on ' + stmt['date']
         if 'where' in stmt:
             lenWithWhere = len(msg) + len(stmt['where']) + 28
-            if lenWithWhere <= 140:
+            if lenWithWhere <= 280:
                 msg += ' (' + stmt['where'] + ')'
 
         msg += ' added'
@@ -91,7 +91,7 @@ def handleStatement(stmt, onlyReply=False):
                 handles.append(checkerHandle)
         clist = " checked by " + (", ".join(handles))
 
-        if (len(msg) + len(clist) + 25) < 140:
+        if (len(msg) + len(clist) + 25) < 280:
             checkerList = clist
 
     url = 'https://www.factopolis.com' + stmt['id']
