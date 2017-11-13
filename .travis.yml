@@ -23,7 +23,7 @@ before_install:
 install:
 - go version
 - go get -v github.com/gohugoio/hugo
-- pip3 install tweepy
+- pip3 install tweepy humanize
 - npm install netlify-cli -g
 
 script:

@@ -2,7 +2,7 @@
 
 # Yes, this is in desparate need of refactoring. Functionality grew without proper planning.
 
-import os, re, json, tweepy, datetime, pprint
+import os, re, json, tweepy, datetime, pprint, humanize
 
 def tweet(msg, in_reply_to):
     if ('TWITTER_CONSUMER_KEY' in os.environ
@@ -45,13 +45,21 @@ statementsToHandle = {}
 def handleStatement(stmt, onlyReply=False):
     msg = ""
 
+    handle = twitterHandle(stmt['person'])
+
     m = re.match('^/person/(([^/]+)/([0-9]{4})\-([0-9]{2})\-([0-9]{2}))(\-.+)?/$', stmt["id"])
     when = datetime.datetime(year=int(m.group(3), 10), month=int(m.group(4),10), day=int(m.group(5), 10))
     archive = (when + datetime.timedelta(14)) < datetime.datetime.today()
 
+    if archive:
+        msg = humanize.naturaltime(datetime.datetime.today() - when)
+        msg = msg[0].upper() + msg[1:] + " "
+
     handle = twitterHandle(stmt['person'])
-    if handle and False:
-        msg += ".@" + handle
+    if handle:
+        if len(msg) == 0:
+            msg += '.'
+        msg += "@" + handle
     else:
         msg += stmt['name']
 
